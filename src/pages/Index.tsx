@@ -5,6 +5,7 @@ import TestimonialsTicker from "@/components/TestimonialsTicker";
 import ForWhoSection from "@/components/ForWhoSection";
 import FAQSection from "@/components/FAQSection";
 import GridSection from "@/components/GridSection";
+import BonusSection from "@/components/BonusSection";
 
 const Index = () => {
   return (
@@ -15,6 +16,7 @@ const Index = () => {
       <TestimonialsTicker />
       <ForWhoSection />
       <GridSection />
+      <BonusSection />
       <FAQSection />
     </main>
   );
