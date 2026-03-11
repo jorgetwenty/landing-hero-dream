@@ -62,8 +62,13 @@ const BonusSection = () => {
         {/* Header */}
         <header className="text-center mb-16">
           <h2
-            className="text-[28px] md:text-[42px] font-semibold leading-tight text-foreground"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight drop-shadow-lg"
+            style={{
+              background: "linear-gradient(81deg, #FFF 25.49%, #939DB8 100%)",
+              backgroundClip: "text",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
           >
             + 3 Bônus exclusivos para quem adquirir o Kit nessa página
           </h2>
