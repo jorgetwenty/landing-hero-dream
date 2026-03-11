@@ -3,6 +3,7 @@ import WisdomCards from "@/components/WisdomCards";
 import GuaranteeSection from "@/components/GuaranteeSection";
 import TestimonialsTicker from "@/components/TestimonialsTicker";
 import ForWhoSection from "@/components/ForWhoSection";
+import FAQSection from "@/components/FAQSection";
 
 const Index = () => {
   return (
@@ -12,6 +13,7 @@ const Index = () => {
       <GuaranteeSection />
       <TestimonialsTicker />
       <ForWhoSection />
+      <FAQSection />
     </main>
   );
 };
