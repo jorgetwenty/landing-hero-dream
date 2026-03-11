@@ -16,9 +16,9 @@ const Index = () => {
       <WisdomCards />
       <BookPartsCarousel />
       <BonusSection />
-      <TestimonialsTicker />
-      <FAQSection />
       <PricingSection />
+      <FAQSection />
+      <TestimonialsTicker />
       <GuaranteeSection />
     </main>
   );
