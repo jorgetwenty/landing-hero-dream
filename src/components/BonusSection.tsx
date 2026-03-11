@@ -31,32 +31,6 @@ const bonuses = [
 const BonusSection = () => {
   return (
     <section className="relative w-full overflow-hidden py-16 md:py-24 bg-background">
-      {/* Blobs decorativos roxos */}
-      <div
-        className="absolute rounded-full pointer-events-none"
-        style={{
-          width: 400,
-          height: 400,
-          background: 'rgba(138, 43, 226, 0.15)',
-          top: '10%',
-          left: -100,
-          filter: 'blur(80px)',
-          animation: 'float 10s ease-in-out infinite alternate',
-        }}
-      />
-      <div
-        className="absolute rounded-full pointer-events-none"
-        style={{
-          width: 500,
-          height: 500,
-          background: 'rgba(100, 50, 200, 0.12)',
-          bottom: '20%',
-          right: -150,
-          filter: 'blur(80px)',
-          animation: 'float 10s ease-in-out infinite alternate',
-          animationDelay: '-5s',
-        }}
-      />
 
       <div className="relative z-10 max-w-6xl mx-auto px-5">
         {/* Header */}
