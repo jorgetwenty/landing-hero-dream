@@ -27,9 +27,9 @@ const GuaranteeSection = () => {
                 <path id="circlePath" d="M153.5,10 a143.5,143.5 0 1,1 0,287 a143.5,143.5 0 1,1 0,-287" fill="none"/>
               </defs>
               <g id="texto">
-                <text fill="white" fontSize="14" fontFamily="'Poppins', sans-serif" fontWeight="600" letterSpacing="4">
+                <text fill="white" fontSize="13.5" fontFamily="'Poppins', sans-serif" fontWeight="600" letterSpacing="2.5">
                   <textPath href="#circlePath" startOffset="0%">
-                    GARANTIA DE 30 DIAS SEM RISCOS • GARANTIA DE 30 DIAS SEM RISCOS •
+                    GARANTIA DE 30 DIAS SEM RISCOS • GARANTIA DE 30 DIAS SEM RISCOS • GARANTIA DE 30 DIAS SEM RISCOS •
                   </textPath>
                 </text>
               </g>
