@@ -8,12 +8,12 @@ const GuaranteeSection = () => {
             <g id="selo-garantia">
               <style>{`
                 #borda,#texto{transform-origin:50% 50%;transform-box:view-box}
-                #borda{animation:girarHorario 3.5s linear infinite}
-                #texto{animation:girarAnti 2.5s linear infinite}
+                #borda{animation:girarHorario 8s linear infinite}
+                #texto{animation:girarAnti 6s linear infinite}
                 @keyframes girarHorario{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
                 @keyframes girarAnti{from{transform:rotate(360deg)}to{transform:rotate(0deg)}}
               `}</style>
-              <path id="b4" d="M153.663 268.23C217.33 268.23 268.942 216.617 268.942 152.95C268.942 89.2825 217.33 37.6699 153.663 37.6699C89.9954 37.6699 38.3828 89.2825 38.3828 152.95C38.3828 216.617 89.9954 268.23 153.663 268.23Z" fill="#22005A"/>
+              <path id="b4" d="M153.663 268.23C217.33 268.23 268.942 216.617 268.942 152.95C268.942 89.2825 217.33 37.6699 153.663 37.6699C89.9954 37.6699 38.3828 89.2825 38.3828 152.95C38.3828 216.617 89.9954 268.23 153.663 268.23Z" fill="#3A1078"/>
               <path id="b3" d="M153.663 268.23C217.33 268.23 268.942 216.617 268.942 152.95C268.942 89.2825 217.33 37.6699 153.663 37.6699C89.9954 37.6699 38.3828 89.2825 38.3828 152.95C38.3828 216.617 89.9954 268.23 153.663 268.23Z" fill="url(#paint0_radial_2214_1667)"/>
               <path id="b2" d="M153.663 268.23C217.33 268.23 268.942 216.617 268.942 152.95C268.942 89.2825 217.33 37.6699 153.663 37.6699C89.9954 37.6699 38.3828 89.2825 38.3828 152.95C38.3828 216.617 89.9954 268.23 153.663 268.23Z" fill="url(#paint1_radial_2214_1667)"/>
               <path id="b1" d="M153.663 268.23C217.33 268.23 268.942 216.617 268.942 152.95C268.942 89.2825 217.33 37.6699 153.663 37.6699C89.9954 37.6699 38.3828 89.2825 38.3828 152.95C38.3828 216.617 89.9954 268.23 153.663 268.23Z" fill="url(#paint2_radial_2214_1667)"/>
@@ -63,10 +63,10 @@ const GuaranteeSection = () => {
               WebkitTextFillColor: "transparent",
             }}
           >
-            Teste 7 Dias Sem Riscos
+            Teste 30 Dias Sem Riscos
           </h2>
-          <p className="text-[#9494a5] text-base md:text-lg leading-relaxed">
-            Nós confiamos tanto no conteúdo do livro Sabedoria Oculta que oferecemos uma garantia incondicional de 7 dias. Se por qualquer motivo você não ficar satisfeito, devolvemos 100% do seu investimento — sem perguntas, sem burocracia. O risco é zero.
+          <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+            Nós confiamos tanto no conteúdo do livro Sabedoria Oculta que oferecemos uma garantia incondicional de 30 dias. Se por qualquer motivo você não ficar satisfeito, devolvemos 100% do seu investimento — sem perguntas, sem burocracia. O risco é zero.
           </p>
         </div>
       </div>
