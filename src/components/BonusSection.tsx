@@ -55,11 +55,11 @@ const BonusSection = () => {
               key={i}
               className={`rounded-[32px] p-6 md:p-12 flex flex-col ${bonus.reverse ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-8 md:gap-12 transition-transform duration-300 hover:-translate-y-1`}
               style={{
-                background: 'rgba(255, 255, 255, 0.04)',
-                backdropFilter: 'blur(16px)',
-                WebkitBackdropFilter: 'blur(16px)',
-                border: '1px solid rgba(138, 43, 226, 0.2)',
-                boxShadow: '0 8px 32px rgba(138, 43, 226, 0.08)',
+                background: 'rgba(255, 255, 255, 0.06)',
+                backdropFilter: 'blur(24px)',
+                WebkitBackdropFilter: 'blur(24px)',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
+                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08)',
               }}
             >
               {/* Texto */}
