@@ -130,7 +130,7 @@ const BonusSection = () => {
         }
 
         .glass-card:hover::after {
-          animation-duration: 4s;
+          animation-duration: 8s;
         }
       `}</style>
     </section>
