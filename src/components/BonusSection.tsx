@@ -5,7 +5,7 @@ const bonuses = [
     highlight: "Livro de Enoque",
     description: "Retratando a Queda dos Anjos Caídos Completo.",
     oldPrice: "R$ 159,00",
-    image: "https://i.postimg.cc/xCbj6wv5/image.png",
+    image: "https://i.postimg.cc/3R5rcKKL/Design-sem-nome-(5).png",
     reverse: false,
   },
   {
@@ -14,7 +14,7 @@ const bonuses = [
     highlight: "Nova Ordem Mundial",
     description: "O grande livro da maçonaria retrata sobre os segredos da sociedade.",
     oldPrice: "R$ 110,00",
-    image: "https://i.postimg.cc/Vvqf8XVy/image.png",
+    image: "https://i.postimg.cc/KjQZjBtr/Design-sem-nome-(4).png",
     reverse: true,
   },
   {
@@ -23,7 +23,7 @@ const bonuses = [
     highlight: "Glândula Pineal",
     description: "Ative Seu Verdadeiro Potencial Espiritual.",
     oldPrice: "R$ 143,00",
-    image: "https://i.postimg.cc/pLX2whQy/image.png",
+    image: "https://i.postimg.cc/nLQc2stH/Design-sem-nome-(3).png",
     reverse: false,
   },
 ];
