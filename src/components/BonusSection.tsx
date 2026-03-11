@@ -14,7 +14,7 @@ const bonuses = [
     highlight: "Nova Ordem Mundial",
     description: "O grande livro da maçonaria retrata sobre os segredos da sociedade.",
     oldPrice: "R$ 110,00",
-    image: "https://i.postimg.cc/Vvqf8XVy/image.png",
+    image: "https://i.postimg.cc/KjQZjBtr/Design-sem-nome-(4).png",
     reverse: true,
   },
   {
