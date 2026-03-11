@@ -25,45 +25,37 @@ const ForWhoSection = () => {
     if (!section || !list) return;
 
     const checkItems = list.querySelectorAll(".check-item");
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: section,
-          start: "center center",
-          end: "+=300%",
-          pin: true,
-          scrub: 1,
-          anticipatePin: 1,
-        },
-      });
 
-      checkItems.forEach((item, index) => {
+    const ctx = gsap.context(() => {
+      checkItems.forEach((item) => {
         const checkIcon = item.querySelector(".check-icon-bg");
 
-        tl.to(
-          item,
-          {
-            opacity: 1,
-            autoAlpha: 1,
-            y: 0,
-            duration: 1,
-            ease: "power2.out",
+        gsap.to(item, {
+          opacity: 1,
+          autoAlpha: 1,
+          y: 0,
+          duration: 0.6,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: item,
+            start: "top 85%",
+            toggleActions: "play none none none",
           },
-          index * 0.8
-        );
+        });
 
         if (checkIcon) {
-          tl.from(
-            checkIcon,
-            {
-              scale: 0,
-              rotation: -45,
-              opacity: 0,
-              duration: 0.6,
-              ease: "back.out(2)",
+          gsap.from(checkIcon, {
+            scale: 0,
+            rotation: -45,
+            opacity: 0,
+            duration: 0.5,
+            ease: "back.out(2)",
+            scrollTrigger: {
+              trigger: item,
+              start: "top 85%",
+              toggleActions: "play none none none",
             },
-            "-=0.4"
-          );
+          });
         }
       });
     }, section);
