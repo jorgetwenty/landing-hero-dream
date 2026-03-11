@@ -7,6 +7,7 @@ import ForWhoSection from "@/components/ForWhoSection";
 import FAQSection from "@/components/FAQSection";
 import BonusSection from "@/components/BonusSection";
 import BookPartsCarousel from "@/components/BookPartsCarousel";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
       <TestimonialsTicker />
       <GuaranteeSection />
       <FAQSection />
+      <Footer />
     </main>
   );
 };
