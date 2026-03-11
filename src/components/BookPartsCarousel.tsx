@@ -14,6 +14,7 @@ const images = [
 const BookPartsCarousel = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "center" });
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
@@ -59,8 +60,9 @@ const BookPartsCarousel = () => {
             {images.map((img, i) => (
               <div
                 key={i}
-                className="flex-shrink-0 basis-[75%] sm:basis-[50%] md:basis-[40%] rounded-2xl overflow-hidden shadow-2xl transition-opacity duration-300"
+                className="flex-shrink-0 basis-[75%] sm:basis-[50%] md:basis-[40%] rounded-2xl overflow-hidden shadow-2xl transition-opacity duration-300 cursor-pointer"
                 style={{ opacity: selectedIndex === i ? 1 : 0.5 }}
+                onClick={() => setLightboxIndex(i)}
               >
                 <img
                   src={img.src}
@@ -87,6 +89,50 @@ const BookPartsCarousel = () => {
           ))}
         </div>
       </div>
+      {/* Lightbox */}
+      {lightboxIndex !== null && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm p-4"
+          onClick={() => setLightboxIndex(null)}
+        >
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              setLightboxIndex((prev) => (prev !== null ? (prev - 1 + images.length) % images.length : null));
+            }}
+            className="absolute left-2 md:left-8 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-purple-600/80 hover:bg-purple-500 transition-colors text-white"
+            aria-label="Anterior"
+          >
+            <ChevronLeft className="w-5 h-5 md:w-6 md:h-6" />
+          </button>
+
+          <img
+            src={images[lightboxIndex].src}
+            alt={images[lightboxIndex].alt}
+            className="max-w-[90vw] max-h-[85vh] object-contain rounded-2xl shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          />
+
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              setLightboxIndex((prev) => (prev !== null ? (prev + 1) % images.length : null));
+            }}
+            className="absolute right-2 md:right-8 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-purple-600/80 hover:bg-purple-500 transition-colors text-white"
+            aria-label="Próximo"
+          >
+            <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
+          </button>
+
+          <button
+            onClick={() => setLightboxIndex(null)}
+            className="absolute top-4 right-4 text-white/80 hover:text-white text-3xl font-light"
+            aria-label="Fechar"
+          >
+            ✕
+          </button>
+        </div>
+      )}
     </section>
   );
 };
