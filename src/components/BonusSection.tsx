@@ -117,9 +117,22 @@ const BonusSection = () => {
           animation: spin-border 8s linear infinite;
         }
 
+        .glass-card-reverse::after {
+          animation: spin-border-reverse 8s linear infinite;
+        }
+
         @keyframes spin-border {
           to {
             --angle: 360deg;
+          }
+        }
+
+        @keyframes spin-border-reverse {
+          from {
+            --angle: 360deg;
+          }
+          to {
+            --angle: 0deg;
           }
         }
 
