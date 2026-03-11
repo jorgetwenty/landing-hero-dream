@@ -65,17 +65,24 @@ const HeroSection = () => {
           align-items: center;
           justify-content: center;
           transform: translateY(100%);
-          transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+          opacity: 0;
+          transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.4s ease;
           pointer-events: none;
           z-index: 2;
           font-family: 'Sora', 'Inter', sans-serif;
           font-weight: 600;
         }
+        .hero-btn .hero-btn-text {
+          transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.4s ease;
+          opacity: 1;
+        }
         .hero-btn:hover .hero-btn-text {
-          transform: translateY(-250%);
+          transform: translateY(-100%);
+          opacity: 0;
         }
         .hero-btn:hover::after {
           transform: translateY(0%);
+          opacity: 1;
         }
       `}</style>
     </section>
