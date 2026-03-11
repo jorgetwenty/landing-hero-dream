@@ -13,9 +13,9 @@ const Index = () => {
     <main className="bg-background">
       <HeroSection />
       <ForWhoSection />
-      <BookPartsCarousel />
-      <TestimonialsTicker />
       <WisdomCards />
+      <TestimonialsTicker />
+      <BookPartsCarousel />
       <BonusSection />
       <FAQSection />
       <PricingSection />
