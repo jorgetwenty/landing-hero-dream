@@ -44,7 +44,7 @@ const BonusSection = () => {
           {bonuses.map((bonus, i) => (
             <article
               key={i}
-              className={`glass-card rounded-[32px] p-6 md:p-12 flex flex-col ${bonus.reverse ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-8 md:gap-12`}
+              className={`glass-card ${i === 1 ? 'glass-card-reverse' : ''} rounded-[32px] p-6 md:p-12 flex flex-col ${bonus.reverse ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-8 md:gap-12`}
             >
               {/* Texto */}
               <div className="flex-1 flex flex-col items-start w-full">
