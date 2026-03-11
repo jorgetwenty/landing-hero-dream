@@ -17,8 +17,8 @@ const Index = () => {
       <BookPartsCarousel />
       <BonusSection />
       <PricingSection />
-      <FAQSection />
       <TestimonialsTicker />
+      <FAQSection />
       <GuaranteeSection />
     </main>
   );
