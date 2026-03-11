@@ -8,8 +8,8 @@ const GuaranteeSection = () => {
             <g id="selo-garantia">
               <style>{`
                 #borda,#texto{transform-origin:50% 50%;transform-box:view-box}
-                #borda{animation:girarHorario 3.5s linear infinite}
-                #texto{animation:girarAnti 2.5s linear infinite}
+                #borda{animation:girarHorario 8s linear infinite}
+                #texto{animation:girarAnti 6s linear infinite}
                 @keyframes girarHorario{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
                 @keyframes girarAnti{from{transform:rotate(360deg)}to{transform:rotate(0deg)}}
               `}</style>
