@@ -23,7 +23,7 @@ const bonuses = [
     highlight: "Glândula Pineal",
     description: "Ative Seu Verdadeiro Potencial Espiritual.",
     oldPrice: "R$ 143,00",
-    image: "https://i.postimg.cc/pLX2whQy/image.png",
+    image: "https://i.postimg.cc/nLQc2stH/Design-sem-nome-(3).png",
     reverse: false,
   },
 ];
