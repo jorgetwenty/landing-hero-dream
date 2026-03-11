@@ -53,7 +53,7 @@ const ForWhoSection = () => {
             scrollTrigger: {
               trigger: item,
               start: "top 85%",
-              toggleActions: "play none none none",
+              toggleActions: "play reverse play reverse",
             },
           });
         }
