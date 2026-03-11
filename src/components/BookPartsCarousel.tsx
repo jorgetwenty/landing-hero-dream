@@ -60,8 +60,9 @@ const BookPartsCarousel = () => {
             {images.map((img, i) => (
               <div
                 key={i}
-                className="flex-shrink-0 basis-[75%] sm:basis-[50%] md:basis-[40%] rounded-2xl overflow-hidden shadow-2xl transition-opacity duration-300"
+                className="flex-shrink-0 basis-[75%] sm:basis-[50%] md:basis-[40%] rounded-2xl overflow-hidden shadow-2xl transition-opacity duration-300 cursor-pointer"
                 style={{ opacity: selectedIndex === i ? 1 : 0.5 }}
+                onClick={() => setLightboxIndex(i)}
               >
                 <img
                   src={img.src}
