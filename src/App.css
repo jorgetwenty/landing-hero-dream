@@ -1,20 +1,58 @@
 #root {
   margin: 0 auto;
-  text-align: center;
 }
 
-/* Wisdom Cards Effect */
-.wisdom-card {
+/* ===== Wisdom Section ===== */
+.wisdom-section {
+  background-color: #0b0710;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.wisdom-container {
+  padding: 100px 50px;
+  width: 100%;
+}
+
+.wisdom-headline {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #e0d6f0;
+  margin-bottom: 80px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.3;
+}
+
+/* ===== Cards Effect ===== */
+.card-efeitoxpai {
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.x {
+  margin-right: 0px !important;
+}
+
+.card-efeitox {
   box-sizing: border-box;
   margin-right: -40px;
-  width: 220px;
+  width: 220px !important;
   min-height: 360px;
   border-radius: 30px;
   overflow: hidden;
   padding: 30px 20px;
   background: linear-gradient(to bottom, #1f0033, #0a0011);
   box-shadow: -20px 20px 35px 10px rgba(0, 0, 0, 0.85);
-  transition: 0.5s;
+  transition: 0.5s !important;
   cursor: pointer;
   position: relative;
   z-index: 1;
@@ -27,22 +65,18 @@
   flex-shrink: 0;
 }
 
-.wisdom-card > * {
+.card-efeitox > * {
   position: relative;
   z-index: 2;
 }
 
-.wisdom-card.last-card {
-  margin-right: 0px;
-}
-
-.wisdom-card:hover {
+.card-efeitox:hover {
   margin-right: 20px;
   transform: rotate(-5deg) translateY(-40px);
   z-index: 10;
 }
 
-.wisdom-card::after {
+.card-efeitox::after {
   content: "";
   position: absolute;
   top: 0%;
@@ -58,11 +92,11 @@
   z-index: 0;
 }
 
-.wisdom-card:hover::after {
+.card-efeitox:hover::after {
   opacity: 1;
 }
 
-.wisdom-card::before {
+.card-efeitox::before {
   content: "";
   position: absolute;
   top: 0;
@@ -80,56 +114,65 @@
   pointer-events: none;
 }
 
-.wisdom-card-icon {
+.card-efeitox .card-icon {
+  font-size: 2.5rem;
   color: #b100ff;
   margin-bottom: 15px;
   filter: drop-shadow(0 0 10px rgba(177, 0, 255, 0.6));
   transition: 0.3s;
 }
 
-.wisdom-card:hover .wisdom-card-icon {
+.card-efeitox:hover .card-icon {
   transform: scale(1.1);
   color: #d066ff;
 }
 
-.wisdom-card-title {
+.card-efeitox h2 {
   font-size: 1.2rem;
-  font-weight: 700;
   margin-bottom: 15px;
   margin-top: 0;
-  background: linear-gradient(to bottom, #fff, #888);
+  background: -webkit-linear-gradient(#fff, #888);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.wisdom-card-desc {
+.card-efeitox p {
   color: #9494a5;
   line-height: 1.4;
   font-size: 0.8rem;
   margin: 0;
 }
 
+/* ===== Responsividade ===== */
 @media (max-width: 900px) {
-  .card-row {
-    flex-direction: column !important;
-    align-items: center;
+  .wisdom-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
-  .wisdom-card {
-    width: 280px;
+  .wisdom-headline {
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+  }
+
+  .card-efeitoxpai {
+    flex-direction: column;
+  }
+
+  .card-efeitox {
+    width: 280px !important;
     min-height: 200px;
     margin-right: 0px !important;
     margin-bottom: -40px;
   }
 
-  .wisdom-card.last-card {
-    margin-bottom: 0px;
-  }
-
-  .wisdom-card:hover {
-    margin-right: 0px !important;
+  .card-efeitox:hover {
     margin-bottom: 20px;
     transform: rotate(0deg) translateY(-30px);
+  }
+
+  .x {
+    margin-bottom: 0px !important;
   }
 }

@@ -11,24 +11,21 @@ const cards = [
 
 const WisdomCards = () => {
   return (
-    <section className="wisdom-section relative w-full bg-[#0b0710] py-20 md:py-28 overflow-hidden">
-      <div className="max-w-6xl mx-auto px-6 md:px-12">
-        <h2 className="text-center text-2xl md:text-4xl font-bold mb-16 md:mb-24 leading-snug max-w-3xl mx-auto" style={{ color: "#e0d6f0" }}>
+    <section className="wisdom-section">
+      <div className="wisdom-container">
+        <h2 className="wisdom-headline">
           Veja o que você vai aprender com o livro da Sabedoria Oculta
         </h2>
 
-        <div className="card-row flex justify-center items-center flex-wrap md:flex-nowrap">
+        <div className="card-efeitoxpai">
           {cards.map((card, i) => {
             const Icon = card.icon;
             const isLast = i === cards.length - 1;
             return (
-              <div
-                key={i}
-                className={`wisdom-card ${isLast ? "last-card" : ""}`}
-              >
-                <Icon className="wisdom-card-icon" size={40} />
-                <h3 className="wisdom-card-title">{card.title}</h3>
-                <p className="wisdom-card-desc">{card.desc}</p>
+              <div key={i} className={`card-efeitox${isLast ? " x" : ""}`}>
+                <Icon className="card-icon" size={40} strokeWidth={1.5} />
+                <h2>{card.title}</h2>
+                <p>{card.desc}</p>
               </div>
             );
           })}
