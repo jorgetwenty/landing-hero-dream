@@ -1,5 +1,9 @@
 import { Check } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const items = [
   "Para quem está pronto para rasgar o véu da ilusão e enxergar a verdade.",
@@ -12,37 +16,73 @@ const items = [
 ];
 
 const ForWhoSection = () => {
-  const [visibleItems, setVisibleItems] = useState<number[]>([]);
-  const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const sectionRef = useRef<HTMLElement>(null);
+  const listRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const index = Number(entry.target.getAttribute("data-index"));
-            setVisibleItems((prev) =>
-              prev.includes(index) ? prev : [...prev, index]
-            );
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
+    const section = sectionRef.current;
+    const list = listRef.current;
+    if (!section || !list) return;
 
-    itemRefs.current.forEach((ref) => {
-      if (ref) observer.observe(ref);
-    });
+    const checkItems = list.querySelectorAll(".check-item");
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: "center center",
+          end: "+=300%",
+          pin: true,
+          scrub: 1,
+          anticipatePin: 1,
+        },
+      });
 
-    return () => observer.disconnect();
+      checkItems.forEach((item, index) => {
+        const checkIcon = item.querySelector(".check-icon-bg");
+
+        tl.to(
+          item,
+          {
+            opacity: 1,
+            autoAlpha: 1,
+            y: 0,
+            duration: 1,
+            ease: "power2.out",
+          },
+          index * 0.8
+        );
+
+        if (checkIcon) {
+          tl.from(
+            checkIcon,
+            {
+              scale: 0,
+              rotation: -45,
+              opacity: 0,
+              duration: 0.6,
+              ease: "back.out(2)",
+            },
+            "-=0.4"
+          );
+        }
+      });
+    }, section);
+
+    return () => ctx.revert();
   }, []);
 
   return (
-    <section className="w-full bg-black py-24 px-6 md:px-12 overflow-hidden">
-      <div className="max-w-4xl mx-auto">
+    <section
+      ref={sectionRef}
+      className="relative w-full bg-black min-h-screen py-16 md:py-24 flex flex-col justify-center items-center px-4 overflow-hidden"
+    >
+      {/* Ambient purple glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] md:w-[800px] h-[500px] md:h-[800px] rounded-full blur-[100px] md:blur-[150px] pointer-events-none z-0 bg-purple-900/10" />
+
+      <div className="w-full max-w-4xl mx-auto relative z-10">
         {/* Headline */}
         <h2
-          className="text-center text-3xl md:text-5xl font-bold leading-tight mb-16"
+          className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-8 md:mb-12 drop-shadow-lg"
           style={{
             background: "linear-gradient(81deg, #FFF 25.49%, #939DB8 100%)",
             backgroundClip: "text",
@@ -50,53 +90,51 @@ const ForWhoSection = () => {
             WebkitTextFillColor: "transparent",
           }}
         >
-          Para quem é esse kit de livros da Sabedoria Oculta?
+          Para quem é esse kit de livros da
+          <br />
+          Sabedoria Oculta?
         </h2>
 
-        {/* Items */}
-        <div className="space-y-5">
-          {items.map((item, i) => {
-            const isVisible = visibleItems.includes(i);
-            return (
+        {/* Items List */}
+        <div ref={listRef} className="flex flex-col gap-2 md:gap-4">
+          {items.map((item, i) => (
+            <div
+              key={i}
+              className="check-item flex items-center p-3 md:p-5 rounded-xl cursor-default border border-transparent transition-all duration-300 hover:translate-x-[5px]"
+              style={{
+                opacity: 0,
+                visibility: "hidden",
+                transform: "translateY(30px)",
+                backgroundColor: "#0a0a0a",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = "#111111";
+                e.currentTarget.style.borderColor = "rgba(168, 85, 247, 0.4)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = "#0a0a0a";
+                e.currentTarget.style.borderColor = "transparent";
+              }}
+            >
+              {/* Check icon with neon glow */}
               <div
-                key={i}
-                ref={(el) => (itemRefs.current[i] = el)}
-                data-index={i}
-                className="relative group"
+                className="check-icon-bg flex-shrink-0 w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center mr-3 md:mr-4 relative z-20"
                 style={{
-                  opacity: isVisible ? 1 : 0,
-                  transform: isVisible
-                    ? "translateX(0)"
-                    : "translateX(-60px)",
-                  transition: `all 0.6s cubic-bezier(0.16, 1, 0.3, 1) ${i * 0.05}s`,
+                  background: "linear-gradient(135deg, #c084fc 0%, #7e22ce 100%)",
+                  boxShadow:
+                    "0 0 10px #a855f7, 0 0 25px rgba(168, 85, 247, 0.7), inset 0 0 8px rgba(255, 255, 255, 0.4)",
+                  border: "1px solid rgba(255, 255, 255, 0.2)",
                 }}
               >
-                <div className="flex items-center gap-5 px-6 py-5 rounded-2xl border border-transparent hover:border-[#8a2be2]/30 bg-gradient-to-r from-[#0d0d0d] to-transparent hover:from-[#1a0a2e] hover:to-[#0d0d0d] transition-all duration-500 cursor-default">
-                  {/* Icon */}
-                  <div
-                    className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center"
-                    style={{
-                      background: "linear-gradient(135deg, #8a2be2, #b100ff)",
-                      boxShadow: isVisible
-                        ? "0 0 20px rgba(177, 0, 255, 0.4)"
-                        : "none",
-                      transition: "box-shadow 0.6s ease",
-                    }}
-                  >
-                    <Check className="w-5 h-5 text-white" strokeWidth={3} />
-                  </div>
-
-                  {/* Text */}
-                  <p className="text-[#c8c0d8] text-base md:text-lg font-medium group-hover:text-white transition-colors duration-300">
-                    {item}
-                  </p>
-                </div>
-
-                {/* Glow line on hover */}
-                <div className="absolute bottom-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-[#8a2be2]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <Check className="w-3.5 h-3.5 md:w-5 md:h-5 text-white drop-shadow-md" strokeWidth={3} />
               </div>
-            );
-          })}
+
+              {/* Text */}
+              <p className="text-gray-200 text-sm md:text-base font-medium">
+                {item}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
