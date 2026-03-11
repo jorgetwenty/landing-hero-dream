@@ -11,11 +11,11 @@ const Index = () => {
     <main className="bg-background">
       <HeroSection />
       <WisdomCards />
-      <GuaranteeSection />
       <TestimonialsTicker />
       <ForWhoSection />
       <BonusSection />
       <FAQSection />
+      <GuaranteeSection />
     </main>
   );
 };
