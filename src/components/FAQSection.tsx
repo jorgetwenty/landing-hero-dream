@@ -43,15 +43,7 @@ const FAQSection = () => {
     <section className="w-full bg-black py-24 px-6 md:px-12">
       <div className="max-w-3xl mx-auto">
         {/* Heading */}
-        <h2
-          className="text-center text-3xl md:text-5xl font-bold leading-tight mb-4"
-          style={{
-            background: "linear-gradient(135deg, #CDAEFF 0%, #BD95FF 50%, #5B3F88 100%)",
-            backgroundClip: "text",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-          }}
-        >
+        <h2 className="wisdom-headline">
           Perguntas Frequentes
         </h2>
         <p className="text-center text-[#8a7ca8] text-base md:text-lg mb-14">

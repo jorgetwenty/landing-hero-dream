@@ -17,7 +17,7 @@ const TestimonialsTicker = () => {
 
   return (
     <section className="w-full bg-black py-20 overflow-hidden">
-      <h2 className="text-center text-2xl md:text-4xl font-bold text-foreground mb-12 px-6">
+      <h2 className="wisdom-headline">
         Veja o que nossos alunos estão dizendo
       </h2>
 

@@ -30,8 +30,8 @@ const BookPartsCarousel = () => {
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
   return (
-    <section className="w-full py-16 md:py-24 px-4" style={{ backgroundColor: "#050505" }}>
-      <h2 className="text-center text-2xl md:text-4xl font-bold text-foreground mb-12 px-6">
+    <section className="w-full py-16 md:py-24 px-4" style={{ backgroundColor: "#000000" }}>
+      <h2 className="wisdom-headline">
         Partes do Livro da Sabedoria Oculta
       </h2>
 
