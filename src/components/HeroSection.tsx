@@ -65,6 +65,7 @@ const HeroSection = () => {
           A verdade é que dentro de você existe uma energia capaz de transformar sua realidade.<br />
           E agora, você vai reativá-la.
         </p>
+      </div>
 
       <style>{`
         .hero-btn::after {
