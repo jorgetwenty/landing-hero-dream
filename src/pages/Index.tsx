@@ -18,8 +18,8 @@ const Index = () => {
       <BonusSection />
       <PricingSection />
       <TestimonialsTicker />
-      <FAQSection />
       <GuaranteeSection />
+      <FAQSection />
     </main>
   );
 };
