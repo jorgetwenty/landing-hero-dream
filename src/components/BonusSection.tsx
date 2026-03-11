@@ -30,7 +30,7 @@ const bonuses = [
 
 const BonusSection = () => {
   return (
-    <section className="relative w-full overflow-hidden py-12 md:py-20 bg-background">
+    <section className="relative w-full overflow-hidden py-12 md:py-20" style={{ backgroundColor: '#000000' }}>
       <div className="relative z-10 max-w-6xl mx-auto px-5">
         {/* Header */}
         <header className="text-center mb-16">
