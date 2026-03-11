@@ -1,42 +1,135 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Wisdom Cards Effect */
+.wisdom-card {
+  box-sizing: border-box;
+  margin-right: -40px;
+  width: 220px;
+  min-height: 360px;
+  border-radius: 30px;
+  overflow: hidden;
+  padding: 30px 20px;
+  background: linear-gradient(to bottom, #1f0033, #0a0011);
+  box-shadow: -20px 20px 35px 10px rgba(0, 0, 0, 0.85);
+  transition: 0.5s;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.wisdom-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.wisdom-card.last-card {
+  margin-right: 0px;
+}
+
+.wisdom-card:hover {
+  margin-right: 20px;
+  transform: rotate(-5deg) translateY(-40px);
+  z-index: 10;
+}
+
+.wisdom-card::after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  opacity: 0.3;
+  width: 220px;
+  height: 150px;
+  transform: translate(-50%, -50%);
+  background: #b100ff;
+  border-radius: 100%;
+  filter: blur(60px);
+  transition: 1s;
+  z-index: 0;
+}
+
+.wisdom-card:hover::after {
+  opacity: 1;
+}
+
+.wisdom-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2px;
+  border-radius: inherit;
+  background: linear-gradient(to bottom, #8a2be2, #1a0033);
+  -webkit-mask: linear-gradient(#8a2be2 0 0) content-box, linear-gradient(#8a2be2 0 0);
+  mask: linear-gradient(#8a2be2 0 0) content-box, linear-gradient(#8a2be2 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.wisdom-card-icon {
+  color: #b100ff;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 10px rgba(177, 0, 255, 0.6));
+  transition: 0.3s;
+}
+
+.wisdom-card:hover .wisdom-card-icon {
+  transform: scale(1.1);
+  color: #d066ff;
+}
+
+.wisdom-card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  margin-top: 0;
+  background: linear-gradient(to bottom, #fff, #888);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.wisdom-card-desc {
+  color: #9494a5;
+  line-height: 1.4;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .card-row {
+    flex-direction: column !important;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .wisdom-card {
+    width: 280px;
+    min-height: 200px;
+    margin-right: 0px !important;
+    margin-bottom: -40px;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .wisdom-card.last-card {
+    margin-bottom: 0px;
   }
-}
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  .wisdom-card:hover {
+    margin-right: 0px !important;
+    margin-bottom: 20px;
+    transform: rotate(0deg) translateY(-30px);
+  }
 }
