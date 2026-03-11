@@ -74,7 +74,7 @@ const GuaranteeSection = () => {
           >
             Teste 30 Dias Sem Riscos
           </h2>
-          <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+          <p className="text-foreground text-base md:text-lg leading-relaxed">
             Nós confiamos tanto no conteúdo do livro Sabedoria Oculta que oferecemos uma garantia incondicional de 30 dias. Se por qualquer motivo você não ficar satisfeito, devolvemos 100% do seu investimento — sem perguntas, sem burocracia. O risco é zero.
           </p>
         </div>
