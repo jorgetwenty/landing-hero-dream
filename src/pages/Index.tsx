@@ -6,12 +6,14 @@ import TestimonialsTicker from "@/components/TestimonialsTicker";
 import ForWhoSection from "@/components/ForWhoSection";
 import FAQSection from "@/components/FAQSection";
 import BonusSection from "@/components/BonusSection";
+import BookPartsCarousel from "@/components/BookPartsCarousel";
 
 const Index = () => {
   return (
     <main className="bg-background">
       <HeroSection />
       <WisdomCards />
+      <BookPartsCarousel />
       <TestimonialsTicker />
       <ForWhoSection />
       <BonusSection />
