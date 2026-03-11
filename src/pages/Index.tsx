@@ -1,6 +1,7 @@
 import HeroSection from "@/components/HeroSection";
 import WisdomCards from "@/components/WisdomCards";
 import GuaranteeSection from "@/components/GuaranteeSection";
+import PricingSection from "@/components/PricingSection";
 import TestimonialsTicker from "@/components/TestimonialsTicker";
 import ForWhoSection from "@/components/ForWhoSection";
 import FAQSection from "@/components/FAQSection";
@@ -15,6 +16,7 @@ const Index = () => {
       <ForWhoSection />
       <BonusSection />
       <FAQSection />
+      <PricingSection />
       <GuaranteeSection />
     </main>
   );
