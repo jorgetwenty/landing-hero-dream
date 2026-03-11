@@ -54,16 +54,12 @@ const HeroSection = () => {
       </div>
 
       {/* Texto inferior direito */}
-      <div className="absolute bottom-12 md:bottom-16 right-6 md:right-16 z-10 max-w-sm text-right">
+      <div className="absolute bottom-12 md:bottom-16 right-6 md:right-16 z-10 max-w-xs text-right">
         <p
-          className="text-white/60 text-xs md:text-sm leading-relaxed"
-          style={{ fontFamily: "'SF Pro Display', 'Inter', sans-serif", fontWeight: 300 }}
+          className="text-white/65 text-xs md:text-sm leading-snug"
+          style={{ fontFamily: "'SF Pro Display', 'Inter', sans-serif", fontWeight: 400 }}
         >
-          Durante anos, te ensinaram a ser fraco. A aceitar migalhas.<br />
-          Disseram que você devia se contentar com pouco…<br />
-          Mentiram.<br />
-          A verdade é que dentro de você existe uma energia capaz de transformar sua realidade.<br />
-          E agora, você vai reativá-la.
+          Durante anos, te ensinaram a ser fraco. A aceitar migalhas. Disseram que você devia se contentar com pouco… Mentiram. A verdade é que dentro de você existe uma energia capaz de transformar sua realidade. E agora, você vai reativá-la.
         </p>
       </div>
 
