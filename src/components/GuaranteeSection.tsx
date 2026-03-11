@@ -63,10 +63,10 @@ const GuaranteeSection = () => {
               WebkitTextFillColor: "transparent",
             }}
           >
-            Teste 7 Dias Sem Riscos
+            Teste 30 Dias Sem Riscos
           </h2>
-          <p className="text-[#9494a5] text-base md:text-lg leading-relaxed">
-            Nós confiamos tanto no conteúdo do livro Sabedoria Oculta que oferecemos uma garantia incondicional de 7 dias. Se por qualquer motivo você não ficar satisfeito, devolvemos 100% do seu investimento — sem perguntas, sem burocracia. O risco é zero.
+          <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+            Nós confiamos tanto no conteúdo do livro Sabedoria Oculta que oferecemos uma garantia incondicional de 30 dias. Se por qualquer motivo você não ficar satisfeito, devolvemos 100% do seu investimento — sem perguntas, sem burocracia. O risco é zero.
           </p>
         </div>
       </div>
