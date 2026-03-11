@@ -15,8 +15,8 @@ const Index = () => {
       <ForWhoSection />
       <WisdomCards />
       <BookPartsCarousel />
-      <TestimonialsTicker />
       <BonusSection />
+      <TestimonialsTicker />
       <FAQSection />
       <PricingSection />
       <GuaranteeSection />
