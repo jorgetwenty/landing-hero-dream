@@ -36,35 +36,48 @@ const HeroSection = () => {
           className="text-white text-2xl md:text-4xl lg:text-[42px] leading-tight md:leading-[1.2] mb-8"
           style={{ fontFamily: "'SF Pro Display', 'Inter', sans-serif", fontWeight: 400 }}
         >
-          Descubra os Códigos proibidos que despertam uma energia brutal dentro de você capaz de mudar seu corpo, sua mente e seu destino em poucos dias.
+          Descubra os Códigos proibidos que despertam uma energia brutal dentro de você.
         </h1>
 
         <button
-          className="group cursor-pointer font-bold transition-all duration-200 px-5 py-2.5 rounded-full border border-transparent flex items-center text-[15px] outline-none active:scale-95"
+          className="hero-btn relative inline-flex items-center justify-center overflow-hidden cursor-pointer text-white font-semibold text-lg md:text-[21px] rounded-[15.623px] px-[50px] py-[20px] min-w-[220px] transition-all duration-[600ms] ease-[cubic-bezier(0.23,1,0.32,1)] hover:scale-[1.02] hover:brightness-110 active:scale-95 border-none"
           style={{
-            background: "linear-gradient(135deg, #8a2be2, #6a1bb4)",
-            color: "#fff",
+            background: "radial-gradient(67.54% 100.03% at 50% 0%, #E8D5FF 0%, #C9A0FF 25.48%, #8A2BE2 62.5%, #4A0E8F 100%)",
+            boxShadow: "0 5.98px 23.203px 0 rgba(138, 43, 226, 0.20), 0 14.352px 53.701px 0 rgba(138, 43, 226, 0.50)",
+            fontFamily: "'Sora', 'Inter', sans-serif",
           }}
-          onMouseEnter={(e) => (e.currentTarget.style.background = "linear-gradient(135deg, #9b3ff3, #7b2cc5)")}
-          onMouseLeave={(e) => (e.currentTarget.style.background = "linear-gradient(135deg, #8a2be2, #6a1bb4)")}
         >
-          <span>QUERO COMEÇAR AGORA</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 74 74"
-            height="34"
-            width="34"
-            className="ml-2.5 transition-transform duration-300 ease-in-out group-hover:translate-x-1"
-          >
-            <circle strokeWidth="3" stroke="white" r="35.5" cy="37" cx="37" />
-            <path
-              fill="white"
-              d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
-            />
-          </svg>
+          <span className="inline-block transition-transform duration-[600ms] ease-[cubic-bezier(0.23,1,0.32,1)] hero-btn-text">
+            Quero começar
+          </span>
         </button>
       </div>
+
+      <style>{`
+        .hero-btn::after {
+          content: "Boa escolha...";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transform: translateY(100%);
+          transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+          pointer-events: none;
+          z-index: 2;
+          font-family: 'Sora', 'Inter', sans-serif;
+          font-weight: 600;
+        }
+        .hero-btn:hover .hero-btn-text {
+          transform: translateY(-250%);
+        }
+        .hero-btn:hover::after {
+          transform: translateY(0%);
+        }
+      `}</style>
     </section>
   );
 };
