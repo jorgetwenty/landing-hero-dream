@@ -106,7 +106,7 @@ const PricingSection = () => {
           href="https://checkout4.xgrow.com/pt/c573c0c6-f642-4a4a-ae09-3f2edd1c67e2/NzUyMzA="
           target="_blank"
           rel="noopener noreferrer"
-          className="group relative inline-flex items-center justify-center gap-3 bg-white text-black font-bold text-[22px] px-12 py-5 rounded-full hover:bg-gray-200 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto mb-8"
+          className="group relative inline-flex items-center justify-center gap-3 bg-white text-black font-bold text-base sm:text-[22px] px-8 sm:px-12 py-4 sm:py-5 rounded-full hover:bg-gray-200 transition-all duration-300 transform hover:scale-105 w-auto max-w-[280px] sm:max-w-none mb-8"
           style={{ boxShadow: '0 0 30px rgba(255,255,255,0.1)' }}
         >
           <span>COMPRAR AGORA</span>
