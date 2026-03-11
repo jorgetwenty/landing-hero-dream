@@ -30,7 +30,7 @@ const bonuses = [
 
 const BonusSection = () => {
   return (
-    <section className="relative w-full overflow-hidden py-16 md:py-24" style={{ backgroundColor: 'hsl(0 0% 4%)' }}>
+    <section className="relative w-full overflow-hidden py-16 md:py-24 bg-background">
       {/* Blobs decorativos roxos */}
       <div
         className="absolute rounded-full pointer-events-none"
