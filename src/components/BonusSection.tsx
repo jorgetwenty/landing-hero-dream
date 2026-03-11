@@ -5,7 +5,7 @@ const bonuses = [
     highlight: "Livro de Enoque",
     description: "Retratando a Queda dos Anjos Caídos Completo.",
     oldPrice: "R$ 159,00",
-    image: "https://i.postimg.cc/xCbj6wv5/image.png",
+    image: "https://i.postimg.cc/3R5rcKKL/Design-sem-nome-(5).png",
     reverse: false,
   },
   {
