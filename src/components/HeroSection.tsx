@@ -40,7 +40,7 @@ const HeroSection = () => {
         </h1>
 
         <button
-          className="hero-btn relative inline-flex items-center justify-center overflow-hidden cursor-pointer text-white font-semibold text-lg md:text-[21px] rounded-[15.623px] px-[50px] py-[20px] min-w-[220px] transition-all duration-[600ms] ease-[cubic-bezier(0.23,1,0.32,1)] hover:scale-[1.02] hover:brightness-110 active:scale-95 border-none"
+          className="hero-btn relative inline-flex items-center justify-center overflow-hidden cursor-pointer text-white font-semibold text-base md:text-lg rounded-[12px] px-[36px] py-[14px] min-w-[180px] transition-all duration-[600ms] ease-[cubic-bezier(0.23,1,0.32,1)] hover:scale-[1.02] hover:brightness-110 active:scale-95 border-none"
           style={{
             background: "radial-gradient(67.54% 100.03% at 50% 0%, #E8D5FF 0%, #C9A0FF 25.48%, #8A2BE2 62.5%, #4A0E8F 100%)",
             boxShadow: "0 5.98px 23.203px 0 rgba(138, 43, 226, 0.20), 0 14.352px 53.701px 0 rgba(138, 43, 226, 0.50)",
