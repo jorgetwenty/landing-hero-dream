@@ -27,35 +27,45 @@ const ForWhoSection = () => {
     const checkItems = list.querySelectorAll(".check-item");
 
     const ctx = gsap.context(() => {
-      checkItems.forEach((item) => {
+      // Set initial state
+      gsap.set(checkItems, { opacity: 0, y: 40, visibility: "hidden" });
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: list,
+          start: "top 70%",
+          end: `+=${checkItems.length * 150}`,
+          scrub: 0.5,
+        },
+      });
+
+      checkItems.forEach((item, index) => {
         const checkIcon = item.querySelector(".check-icon-bg");
 
-        gsap.to(item, {
-          opacity: 1,
-          autoAlpha: 1,
-          y: 0,
-          duration: 0.6,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: item,
-            start: "top 85%",
-            toggleActions: "play reverse play reverse",
+        tl.to(
+          item,
+          {
+            opacity: 1,
+            autoAlpha: 1,
+            y: 0,
+            duration: 1,
+            ease: "power2.out",
           },
-        });
+          index * 1.2
+        );
 
         if (checkIcon) {
-          gsap.from(checkIcon, {
-            scale: 0,
-            rotation: -45,
-            opacity: 0,
-            duration: 0.5,
-            ease: "back.out(2)",
-            scrollTrigger: {
-              trigger: item,
-              start: "top 85%",
-              toggleActions: "play reverse play reverse",
+          tl.from(
+            checkIcon,
+            {
+              scale: 0,
+              rotation: -45,
+              opacity: 0,
+              duration: 0.6,
+              ease: "back.out(2)",
             },
-          });
+            index * 1.2 + 0.3
+          );
         }
       });
     }, section);
