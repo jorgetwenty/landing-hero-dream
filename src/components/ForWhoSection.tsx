@@ -84,15 +84,7 @@ const ForWhoSection = () => {
 
       <div className="w-full max-w-4xl mx-auto relative z-10">
         {/* Headline */}
-        <h2
-          className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-8 md:mb-12 drop-shadow-lg"
-          style={{
-            background: "linear-gradient(81deg, #FFF 25.49%, #939DB8 100%)",
-            backgroundClip: "text",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-          }}
-        >
+        <h2 className="wisdom-headline">
           Para quem é esse kit de livros da
           <br />
           Sabedoria Oculta?

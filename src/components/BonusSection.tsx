@@ -34,7 +34,7 @@ const BonusSection = () => {
       <div className="relative z-10 max-w-6xl mx-auto px-5">
         {/* Header */}
         <header className="text-center mb-16">
-          <h2 className="text-[30px] md:text-[45px] font-semibold leading-tight text-foreground">
+          <h2 className="wisdom-headline">
             + 3 Bônus exclusivos para quem adquirir o Kit nessa página
           </h2>
         </header>
