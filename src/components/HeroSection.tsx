@@ -25,8 +25,8 @@ const HeroSection = () => {
       {/* Overlay escuro para legibilidade */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-[1]" />
 
-      {/* Blur effect na transição para próxima seção */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 md:h-48 backdrop-blur-[20px] bg-gradient-to-t from-background/80 to-transparent z-[2]" />
+      {/* Blur effect preto na transição para próxima seção */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 md:h-40 backdrop-blur-[30px] bg-gradient-to-t from-black/90 via-black/50 to-transparent z-[2]" />
 
       {/* Logo topo centro */}
       <div className="absolute top-8 left-0 right-0 flex justify-center z-10">
