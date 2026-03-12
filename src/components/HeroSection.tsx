@@ -15,7 +15,7 @@ const HeroSection = () => {
       <video
         ref={videoRef}
         className="absolute inset-0 h-full w-full object-cover"
-        src="/hero-video.webm"
+        src="/hero-video.mp4"
         autoPlay
         muted
         loop
