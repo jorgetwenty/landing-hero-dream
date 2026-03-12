@@ -12,10 +12,10 @@ const HeroSection = () => {
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      <video
+<video
         ref={videoRef}
         className="absolute inset-0 h-full w-full object-cover"
-        src="/hero-video.mp4"
+        src="/hero-video.webm"
         autoPlay
         muted
         loop
