@@ -153,6 +153,7 @@ const HeroSection = () => {
             50% { transform: translate(-50%, -50%) scale(1.20); }
           }
         `}</style>
+      </div>
     </section>
   );
 };
