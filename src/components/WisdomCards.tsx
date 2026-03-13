@@ -148,9 +148,11 @@ const WisdomCards = () => {
           <span className="text-[#9D4EDD]">Sabedoria Oculta</span>
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
+        <div className="flex flex-wrap justify-center gap-6 sm:gap-8 max-w-5xl mx-auto">
           {cards.map((card, i) => (
-            <WisdomCard key={i} {...card} />
+            <div key={i} className="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)]">
+              <WisdomCard {...card} />
+            </div>
           ))}
         </div>
       </div>
