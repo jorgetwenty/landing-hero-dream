@@ -58,11 +58,21 @@ const BonusSection = () => {
                 <p className="text-[16px] md:text-[20px] text-muted-foreground mb-8 leading-relaxed">
                   {bonus.description}
                 </p>
-                <div className="bg-gradient-to-r from-[#4B0082] to-[#8A2BE2] px-7 py-3.5 rounded-xl text-[20px] md:text-[25px] font-semibold text-foreground shadow-sm">
-                  <s className="opacity-50 text-sm md:text-base font-medium align-middle mr-2">
-                    {bonus.oldPrice}
-                  </s>
-                  por R$ 0,00
+                <div className="flex flex-col items-start gap-3">
+                  <div className="bg-gradient-to-r from-[#4B0082] to-[#8A2BE2] px-7 py-3.5 rounded-xl text-[20px] md:text-[25px] font-semibold text-foreground shadow-sm">
+                    <s className="opacity-50 text-sm md:text-base font-medium align-middle mr-2">
+                      {bonus.oldPrice}
+                    </s>
+                    por R$ 0,00
+                  </div>
+                  <a
+                    href="https://checkout4.xgrow.com/pt/c573c0c6-f642-4a4a-ae09-3f2edd1c67e2/NzUyMzA="
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="shiny-cta-bonus"
+                  >
+                    <span>GARANTIR BÔNUS</span>
+                  </a>
                 </div>
               </div>
 
