@@ -111,7 +111,7 @@ const WisdomCard = ({ nome, descricao, foto, imagePosition = "object-top" }: Car
       <div
         ref={ref}
         style={style}
-        className="relative w-full h-[480px] sm:h-[520px] lg:h-[560px] bg-card border border-border rounded-2xl overflow-hidden shadow-2xl flex flex-col"
+        className="relative w-full h-[480px] sm:h-[520px] lg:h-[560px] bg-card border border-[#4B0082]/50 rounded-2xl overflow-hidden shadow-2xl flex flex-col"
       >
         {/* Background gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-muted/50 to-background pointer-events-none" />
