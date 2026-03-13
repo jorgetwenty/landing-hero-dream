@@ -91,7 +91,7 @@ const WisdomCard = ({ nome, descricao, foto, imagePosition = "object-top" }: Car
           height="100%"
           rx="16"
           fill="none"
-          stroke="hsl(var(--primary))"
+          stroke="#9D4EDD"
           strokeWidth="4"
           className="transition-all duration-1000 ease-in-out"
           style={{ strokeDasharray: "2000", strokeDashoffset: "2000" }}
