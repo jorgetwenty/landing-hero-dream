@@ -39,62 +39,120 @@ const HeroSection = () => {
           Descubra os Códigos proibidos que despertam uma energia brutal dentro de você.
         </h1>
 
-        <button
-          className="hero-btn relative inline-flex items-center justify-center overflow-hidden cursor-pointer text-white font-semibold text-base md:text-lg rounded-[12px] px-[36px] py-[14px] min-w-[180px] transition-all duration-[600ms] ease-[cubic-bezier(0.23,1,0.32,1)] hover:scale-[1.02] hover:brightness-110 active:scale-95 border-none"
-          style={{
-            background: "radial-gradient(67.54% 100.03% at 50% 0%, #E8D5FF 0%, #C9A0FF 25.48%, #8A2BE2 62.5%, #4A0E8F 100%)",
-            boxShadow: "0 5.98px 23.203px 0 rgba(138, 43, 226, 0.20), 0 14.352px 53.701px 0 rgba(138, 43, 226, 0.50)",
-            fontFamily: "'Sora', 'Inter', sans-serif",
-          }}
+        <a
+          href="https://checkout4.xgrow.com/pt/c573c0c6-f642-4a4a-ae09-3f2edd1c67e2/NzUyMzA="
+          target="_blank"
+          rel="noopener noreferrer"
+          className="shiny-cta-hero"
         >
-          <span className="inline-block transition-transform duration-[600ms] ease-[cubic-bezier(0.23,1,0.32,1)] hero-btn-text">
-            Quero começar
-          </span>
-        </button>
-      </div>
+          <span>Quero começar</span>
+        </a>
 
-      {/* Texto inferior direito */}
-      <div className="absolute bottom-12 md:bottom-16 right-6 md:right-16 z-10 max-w-xs text-right">
-        <p
-          className="text-white/65 text-xs md:text-sm leading-snug"
-          style={{ fontFamily: "'SF Pro Display', 'Inter', sans-serif", fontWeight: 400 }}
-        >
-          Durante anos, te ensinaram a ser fraco. A aceitar migalhas. Disseram que você devia se contentar com pouco… Mentiram. A verdade é que dentro de você existe uma energia capaz de transformar sua realidade. E agora, você vai reativá-la.
-        </p>
-      </div>
+        <style>{`
+          @property --hero-gradient-angle {
+            syntax: "<angle>";
+            initial-value: 0deg;
+            inherits: false;
+          }
 
-      <style>{`
-        .hero-btn::after {
-          content: "Boa escolha...";
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          left: 0;
-          top: 0;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          transform: translateY(100%);
-          opacity: 0;
-          transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.4s ease;
-          pointer-events: none;
-          z-index: 2;
-          font-family: 'Sora', 'Inter', sans-serif;
-          font-weight: 600;
-        }
-        .hero-btn .hero-btn-text {
-          transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.4s ease;
-          opacity: 1;
-        }
-        .hero-btn:hover .hero-btn-text {
-          transform: translateY(-100%);
-          opacity: 0;
-        }
-        .hero-btn:hover::after {
-          transform: translateY(0%);
-          opacity: 1;
-        }
-      `}</style>
+          .shiny-cta-hero {
+            --hero-gradient-angle: 0deg;
+            position: relative;
+            overflow: hidden;
+            border-radius: 9999px;
+            padding: 1rem 2.25rem;
+            font-size: 1.125rem;
+            line-height: 1.2;
+            font-weight: 600;
+            color: #ffffff;
+            background: linear-gradient(#000000, #000000) padding-box,
+              conic-gradient(
+                from var(--hero-gradient-angle),
+                transparent 0%, #a855f7 5%, #d8b4fe 15%, #a855f7 30%, transparent 40%, transparent 100%
+              ) border-box;
+            border: 2px solid transparent;
+            box-shadow: inset 0 0 0 1px #1a1818;
+            cursor: pointer;
+            isolation: isolate;
+            font-family: 'Inter', 'Helvetica Neue', sans-serif;
+            z-index: 0;
+            animation: hero-border-spin 2.5s linear infinite;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.15s;
+          }
+
+          @keyframes hero-border-spin {
+            to { --hero-gradient-angle: 360deg; }
+          }
+
+          .shiny-cta-hero:active {
+            transform: translateY(1px);
+          }
+
+          .shiny-cta-hero::before {
+            content: '';
+            pointer-events: none;
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            --size: calc(100% - 6px);
+            --position: 2px;
+            --space: 4px;
+            width: var(--size); height: var(--size);
+            background: radial-gradient(circle at var(--position) var(--position), white 0.5px, transparent 0) padding-box;
+            background-size: var(--space) var(--space);
+            background-repeat: space;
+            mask-image: conic-gradient(from calc(var(--hero-gradient-angle) + 45deg), black, transparent 10% 90%, black);
+            border-radius: inherit;
+            opacity: 0.4;
+          }
+
+          .shiny-cta-hero::after {
+            content: '';
+            pointer-events: none;
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            width: 100%; aspect-ratio: 1;
+            background: linear-gradient(-50deg, transparent, #a855f7, transparent);
+            mask-image: radial-gradient(circle at bottom, transparent 40%, black);
+            opacity: 0.6;
+            animation: hero-shimmer 4s linear infinite;
+          }
+
+          @keyframes hero-shimmer {
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+          }
+
+          .shiny-cta-hero span {
+            position: relative;
+            z-index: 2;
+            display: inline-block;
+          }
+
+          .shiny-cta-hero span::before {
+            content: '';
+            pointer-events: none;
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            --size: calc(100% + 1rem);
+            width: var(--size); height: var(--size);
+            box-shadow: inset 0 -1ex 2rem 4px #a855f7;
+            opacity: 0;
+            border-radius: inherit;
+            animation: hero-breathe 4.5s linear infinite;
+          }
+
+          @keyframes hero-breathe {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.20); }
+          }
+        `}</style>
     </section>
   );
 };
