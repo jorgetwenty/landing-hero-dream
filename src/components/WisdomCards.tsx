@@ -91,7 +91,7 @@ const WisdomCard = ({ nome, descricao, foto, imagePosition = "object-top" }: Car
           height="100%"
           rx="16"
           fill="none"
-          stroke="hsl(var(--primary))"
+          stroke="#9D4EDD"
           strokeWidth="4"
           className="transition-all duration-1000 ease-in-out"
           style={{ strokeDasharray: "2000", strokeDashoffset: "2000" }}
@@ -99,7 +99,7 @@ const WisdomCard = ({ nome, descricao, foto, imagePosition = "object-top" }: Car
       </svg>
 
       {/* Outer glow */}
-      <div className="absolute -inset-1 bg-primary rounded-2xl blur opacity-0 group-hover:opacity-20 transition duration-700" />
+      <div className="absolute -inset-1 bg-[#9D4EDD] rounded-2xl blur opacity-0 group-hover:opacity-20 transition duration-700" />
 
       <div
         ref={ref}
@@ -126,7 +126,7 @@ const WisdomCard = ({ nome, descricao, foto, imagePosition = "object-top" }: Car
           <h3 className="font-hero text-xl sm:text-2xl font-bold text-foreground leading-tight mb-3 mt-1">
             {nome}
           </h3>
-          <div className="w-12 h-1 bg-primary mb-4 group-hover:w-full transition-all duration-1000" />
+          <div className="w-12 h-1 bg-[#9D4EDD] mb-4 group-hover:w-full transition-all duration-1000" />
           <p className="text-muted-foreground text-sm leading-relaxed">
             {descricao}
           </p>
@@ -143,12 +143,12 @@ const WisdomCards = () => {
   return (
     <section className="bg-background py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-12 sm:mb-20 max-w-3xl mx-auto leading-tight font-hero">
+        <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-12 sm:mb-20 max-w-3xl mx-auto leading-tight">
           Veja o que você vai aprender com o livro da{" "}
-          <span className="text-primary">Sabedoria Oculta</span>
+          <span className="text-[#9D4EDD]">Sabedoria Oculta</span>
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
           {cards.map((card, i) => (
             <WisdomCard key={i} {...card} />
           ))}
