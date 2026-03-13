@@ -34,17 +34,18 @@ const BonusSection = () => {
       <div className="relative z-10 max-w-6xl mx-auto px-5">
         {/* Header */}
         <header className="text-center mb-16">
-          <h2 className="wisdom-headline">
-            + 3 Bônus exclusivos para quem adquirir o Kit nessa página
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground leading-tight max-w-[700px] mx-auto">
+            + 3 Bônus exclusivos para quem adquirir o Kit{' '}
+            <span className="text-[#9D4EDD]">nessa página</span>
           </h2>
         </header>
 
         {/* Cards */}
-        <div className="flex flex-col gap-10 md:gap-14">
+        <div className="flex flex-col gap-10 md:gap-14 items-center">
           {bonuses.map((bonus, i) => (
             <article
               key={i}
-              className={`glass-card ${i === 1 ? 'glass-card-reverse' : ''} rounded-[32px] p-6 md:p-12 flex flex-col ${bonus.reverse ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-8 md:gap-12`}
+              className={`glass-card ${i === 1 ? 'glass-card-reverse' : ''} rounded-[32px] p-6 md:p-12 flex flex-col ${bonus.reverse ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-8 md:gap-12 w-full max-w-5xl`}
             >
               {/* Texto */}
               <div className="flex-1 flex flex-col items-start w-full">
