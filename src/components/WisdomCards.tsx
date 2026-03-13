@@ -126,7 +126,7 @@ const WisdomCard = ({ nome, descricao, foto, imagePosition = "object-top" }: Car
           <h3 className="font-hero text-xl sm:text-2xl font-bold text-foreground leading-tight mb-3 mt-1">
             {nome}
           </h3>
-          <div className="w-12 h-1 bg-primary mb-4 group-hover:w-full transition-all duration-1000" />
+          <div className="w-12 h-1 bg-[#9D4EDD] mb-4 group-hover:w-full transition-all duration-1000" />
           <p className="text-muted-foreground text-sm leading-relaxed">
             {descricao}
           </p>
