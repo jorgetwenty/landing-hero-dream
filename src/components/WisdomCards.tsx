@@ -84,6 +84,13 @@ const WisdomCard = ({ nome, descricao, foto, imagePosition = "object-top" }: Car
     >
       {/* Animated border SVG */}
       <svg className="absolute inset-0 w-full h-full pointer-events-none z-30 overflow-visible">
+        <defs>
+          <linearGradient id={`stroke-grad-${foto}`} x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#9D4EDD" />
+            <stop offset="50%" stopColor="#4B0082" />
+            <stop offset="100%" stopColor="#000000" />
+          </linearGradient>
+        </defs>
         <rect
           x="0"
           y="0"
@@ -91,7 +98,7 @@ const WisdomCard = ({ nome, descricao, foto, imagePosition = "object-top" }: Car
           height="100%"
           rx="16"
           fill="none"
-          stroke="#9D4EDD"
+          stroke={`url(#stroke-grad-${foto})`}
           strokeWidth="4"
           className="transition-all duration-1000 ease-in-out"
           style={{ strokeDasharray: "2000", strokeDashoffset: "2000" }}
