@@ -99,7 +99,7 @@ const WisdomCard = ({ nome, descricao, foto, imagePosition = "object-top" }: Car
       </svg>
 
       {/* Outer glow */}
-      <div className="absolute -inset-1 bg-primary rounded-2xl blur opacity-0 group-hover:opacity-20 transition duration-700" />
+      <div className="absolute -inset-1 bg-[#9D4EDD] rounded-2xl blur opacity-0 group-hover:opacity-20 transition duration-700" />
 
       <div
         ref={ref}
