@@ -88,6 +88,50 @@ const BonusSection = () => {
         />
         <div className="absolute inset-0 bg-purple-500/0 group-hover:bg-purple-500/10 transition-colors duration-700 pointer-events-none" />
       </div>
+
+      <style>{`
+        @property --bonus-angle {
+          syntax: "<angle>";
+          initial-value: 0deg;
+          inherits: false;
+        }
+
+        .bonus-card-wrapper {
+          position: relative;
+          border-radius: 12px;
+          overflow: hidden;
+        }
+
+        .bonus-animated-border {
+          position: absolute;
+          inset: 0;
+          border-radius: 12px;
+          padding: 1.5px;
+          background: conic-gradient(
+            from var(--bonus-angle),
+            transparent 0%,
+            #b026ff 10%,
+            #d8b4fe 20%,
+            #b026ff 35%,
+            transparent 50%,
+            transparent 100%
+          );
+          -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          -webkit-mask-composite: xor;
+          mask-composite: exclude;
+          animation: bonus-border-spin 3s linear infinite;
+          z-index: 5;
+        }
+
+        .bonus-card-wrapper:nth-child(2) .bonus-animated-border {
+          animation-direction: reverse;
+        }
+
+        @keyframes bonus-border-spin {
+          to { --bonus-angle: 360deg; }
+        }
+      `}</style>
     </section>
   );
 };
