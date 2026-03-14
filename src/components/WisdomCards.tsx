@@ -152,6 +152,9 @@ const WisdomCards = () => {
       {/* Grid Background */}
       <div className="absolute inset-0 grid-background pointer-events-none" />
       
+      {/* Rotating purple blur */}
+      <div className="purple-glow-orb pointer-events-none" />
+      
       <div className="max-w-7xl mx-auto relative z-10">
         <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-12 sm:mb-20 max-w-3xl mx-auto leading-tight">
           Veja o que você vai aprender com o livro da{" "}
@@ -199,6 +202,26 @@ const WisdomCards = () => {
           z-index: 2;
           pointer-events: none;
         }
+        
+        .purple-glow-orb {
+          position: absolute;
+          top: 50%;
+          left: 60%;
+          transform: translate(-50%, -50%);
+          width: 1154px;
+          height: 600px;
+          background: conic-gradient(from 0deg, #9D4EDD, #4B0082, #7B2FBE, #9D4EDD);
+          border-radius: 50%;
+          filter: blur(180px);
+          z-index: 0;
+          animation: purple-turn 10s linear infinite;
+          transform-origin: center;
+          opacity: 0.4;
+        }
+        
+        @keyframes purple-turn {
+          0% { transform: translate(-50%, -50%) rotate(0deg); }
+          100% { transform: translate(-50%, -50%) rotate(360deg); }
       `}</style>
     </section>
   );
