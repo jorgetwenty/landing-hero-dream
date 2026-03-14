@@ -5,7 +5,8 @@ const cards = [
     nome: "Desperte Sua Glândula Pineal",
     descricao: "Ative sua glândula pineal para despertar a visão interior e atrair clareza, sucesso e prosperidade.",
     foto: "/images/card-pineal.png",
-    imagePosition: "object-center",
+    imagePosition: "sm:object-center",
+    mobileImagePosition: "object-[50%_20%]",
   },
   {
     nome: "A Ciência Oculta da Numerologia",
