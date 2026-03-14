@@ -255,6 +255,35 @@ const PricingSection = () => {
           </div>
         </div>
       </div>
+
+      <style>{`
+        .pricing-grid-bg::before {
+          content: "";
+          opacity: 0.3;
+          background-color: transparent;
+          background-image: linear-gradient(90deg, #d9d9d9, #d9d9d9 1px, transparent 1px, transparent 11px), 
+                            linear-gradient(0deg, #d9d9d9, #d9d9d9 1px, transparent 1px, transparent 11px);
+          background-size: 50px 50px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          pointer-events: none;
+        }
+        .pricing-grid-bg::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-image: radial-gradient(transparent 0%, #000 70%);
+          width: 100%;
+          height: 100%;
+          z-index: 2;
+          pointer-events: none;
+        }
+      `}</style>
     </section>
   );
 };
