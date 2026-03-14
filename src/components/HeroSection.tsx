@@ -1,5 +1,18 @@
 import { useRef, useEffect } from "react";
 import logo from "@/assets/logo.png";
+import testimonialAdriano from "@/assets/testimonial-adriano.png";
+import testimonialDebora from "@/assets/testimonial-debora.png";
+import testimonialDoglas from "@/assets/testimonial-doglas.png";
+import testimonialMikael from "@/assets/testimonial-mikael.png";
+import testimonialRayssa from "@/assets/testimonial-rayssa.png";
+
+const avatars = [
+  { src: testimonialAdriano, alt: "Adriano" },
+  { src: testimonialDebora, alt: "Débora" },
+  { src: testimonialDoglas, alt: "Doglas" },
+  { src: testimonialMikael, alt: "Mikael" },
+  { src: testimonialRayssa, alt: "Rayssa" },
+];
 
 const HeroSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -41,6 +54,16 @@ const HeroSection = () => {
 
       {/* Texto + Botão inferior esquerdo */}
       <div className="absolute bottom-12 md:bottom-16 left-6 md:left-16 z-10 max-w-xl">
+        {/* Avatars de depoimento */}
+        <div className="flex items-center mb-5">
+          {avatars.map((avatar, i) => (
+            <div key={i} className="imgg">
+              <img src={avatar.src} alt={avatar.alt} className="w-10 h-10 md:w-12 md:h-12 object-cover" />
+            </div>
+          ))}
+          <span className="ml-3 text-white/70 text-sm font-medium">+2.400 alunos</span>
+        </div>
+
         <h1
           className="text-white text-2xl md:text-4xl lg:text-[42px] leading-tight md:leading-[1.2] mb-8"
           style={{ fontFamily: "'SF Pro Display', 'Inter', sans-serif", fontWeight: 400 }}
@@ -160,6 +183,22 @@ const HeroSection = () => {
           @keyframes hero-breathe {
             0%, 100% { transform: translate(-50%, -50%) scale(1); }
             50% { transform: translate(-50%, -50%) scale(1.20); }
+          }
+
+          .imgg {
+            margin-right: -15px;
+            transition: 0.5s ease all;
+          }
+
+          .imgg:hover {
+            margin-left: 10px;
+            filter: grayscale(100%);
+          }
+
+          .imgg img {
+            border-radius: 200px;
+            border: solid 1px rgba(255, 255, 255, 0.38);
+            transition: 0.5s ease all;
           }
         `}</style>
       </div>
