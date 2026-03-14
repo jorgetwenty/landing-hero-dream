@@ -106,7 +106,7 @@ const MacbookReveal: FC = () => {
           display: flex;
           justify-content: center;
           align-items: center;
-          min-height: 100vh;
+          padding: 2rem 0;
         }
 
         .macbook-wrapper {
