@@ -87,6 +87,7 @@ const MacbookReveal: FC = () => {
   );
 };
 
+const BonusSection = () => {
   return (
     <section className="min-h-screen bg-black text-foreground py-20 px-4 md:px-8 flex flex-col items-center overflow-hidden">
       
