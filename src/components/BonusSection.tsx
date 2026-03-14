@@ -48,9 +48,6 @@ const BonusSection = () => {
       
       {/* Header */}
       <div className="text-center mb-16 relative z-10">
-        <p className="text-[#b026ff] font-mono text-xs md:text-sm uppercase tracking-[0.25em] mb-4 flex items-center justify-center gap-2">
-          <span className="opacity-50">//</span> E não para por aí viu?
-        </p>
         <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">
           <span className="text-[#b026ff]">3 Bônus</span> Exclusivos + Área de membros!
         </h2>
