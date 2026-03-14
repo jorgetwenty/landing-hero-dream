@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 
 interface SmallCardProps {
   title: string;
@@ -42,6 +42,51 @@ const SmallCard: FC<SmallCardProps> = ({ title, description, imageSrc, badgeText
   </div>
 );
 
+const MacbookReveal: FC = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!sectionRef.current) return;
+      const rect = sectionRef.current.getBoundingClientRect();
+      const trigger = window.innerHeight * 0.8;
+      setIsOpen(rect.top <= trigger);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <div ref={sectionRef} className="mt-10 w-full max-w-[1000px] mx-auto relative z-10" style={{ aspectRatio: '16/9' }}>
+      {/* Screen content */}
+      <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[55%] md:w-[55%] pointer-events-none transition-all duration-700 z-[1]`}
+        style={{ marginTop: '-15.5%', opacity: isOpen ? 1 : 0, filter: isOpen ? 'blur(0px)' : 'blur(10px)' }}>
+        <img src="https://i.postimg.cc/vBQgBNKG/Design-sem-nome-(8).webp" alt="Área de Membros" className="w-full block rounded-t-lg" loading="lazy" />
+      </div>
+      {/* Screen frame */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[72%] pointer-events-none z-[2]" style={{ marginTop: '-12%' }}>
+        <img
+          src="/images/macbook-tela.png"
+          alt="Tela do MacBook"
+          className="w-full block transition-all duration-700"
+          style={{
+            transform: isOpen
+              ? 'perspective(2800px) rotateX(0deg)'
+              : 'perspective(2800px) translateY(-5%) rotateX(-90deg)',
+            transformOrigin: 'center bottom',
+          }}
+        />
+      </div>
+      {/* Base */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] pointer-events-none z-[3]" style={{ marginTop: '10%' }}>
+        <img src="/images/macbook-base.png" alt="Base do MacBook" className="w-full block" />
+      </div>
+    </div>
+  );
+};
+
 const BonusSection = () => {
   return (
     <section className="min-h-screen bg-black text-foreground py-20 px-4 md:px-8 flex flex-col items-center overflow-hidden">
@@ -75,16 +120,8 @@ const BonusSection = () => {
         />
       </div>
 
-      {/* Large Featured Card */}
-      <div className="mt-6 max-w-[2200px] w-full mx-auto rounded-2xl border border-white/[0.04] overflow-hidden relative shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-10 group cursor-pointer">
-        <img 
-          src="https://i.postimg.cc/vBQgBNKG/Design-sem-nome-(8).webp" 
-          alt="Membros e Bónus" 
-          className="w-full h-auto block object-cover transform group-hover:scale-[1.03] transition-transform duration-700"
-          loading="lazy"
-        />
-        <div className="absolute inset-0 bg-purple-500/0 group-hover:bg-purple-500/10 transition-colors duration-700 pointer-events-none" />
-      </div>
+      {/* MacBook Animation */}
+      <MacbookReveal />
 
       <style>{`
         @property --bonus-angle {
