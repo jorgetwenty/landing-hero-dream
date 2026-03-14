@@ -62,16 +62,16 @@ const PricingSection = () => {
       <div className="max-w-[1000px] w-full flex flex-col md:flex-row gap-8 justify-center items-center md:items-stretch">
 
         {/* CARTÃO ESQUERDO */}
-        <div className="w-full md:w-[460px] rounded-[32px] p-8 md:p-10 bg-gradient-to-bl from-[#f3e8ff] via-[#e9d5ff] to-[#d8b4fe] shadow-xl relative shrink-0">
-          <h2 className="text-[28px] sm:text-[32px] md:text-[36px] leading-[1.1] font-bold text-[#3b0764] mb-6 tracking-tight pr-4">
+        <div className="w-full md:w-[460px] rounded-[32px] p-8 md:p-10 bg-black shadow-xl relative shrink-0 border border-[#4B0082]/50">
+          <h2 className="text-[28px] sm:text-[32px] md:text-[36px] leading-[1.1] font-bold text-foreground mb-6 tracking-tight pr-4">
             O que você vai receber hoje:
           </h2>
 
-          <p className="text-[#3b0764] text-[15px] sm:text-[16px] md:text-[17px] font-medium mb-6 leading-snug opacity-90">
+          <p className="text-muted-foreground text-[15px] sm:text-[16px] md:text-[17px] font-medium mb-6 leading-snug">
             Ao acessar o Livro da Sabedoria Oculta, você também recebe gratuitamente:
           </p>
 
-          <ul className="flex flex-col gap-6 text-[#3b0764] text-[15px] sm:text-[16px] md:text-[17px]">
+          <ul className="flex flex-col gap-6 text-foreground text-[15px] sm:text-[16px] md:text-[17px]">
             <ListItem>
               <span className="block font-extrabold mb-1">Áudio de Reprogramação da Consciência</span>
               <span className="block font-medium text-[13px] sm:text-[14px] md:text-[15px] leading-snug opacity-80">
