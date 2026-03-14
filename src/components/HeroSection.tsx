@@ -54,6 +54,16 @@ const HeroSection = () => {
 
       {/* Texto + Botão inferior esquerdo */}
       <div className="absolute bottom-12 md:bottom-16 left-6 md:left-16 z-10 max-w-xl">
+        {/* Avatars de depoimento */}
+        <div className="flex items-center mb-5">
+          {avatars.map((avatar, i) => (
+            <div key={i} className="imgg">
+              <img src={avatar.src} alt={avatar.alt} className="w-10 h-10 md:w-12 md:h-12 object-cover" />
+            </div>
+          ))}
+          <span className="ml-3 text-white/70 text-sm font-medium">+2.400 alunos</span>
+        </div>
+
         <h1
           className="text-white text-2xl md:text-4xl lg:text-[42px] leading-tight md:leading-[1.2] mb-8"
           style={{ fontFamily: "'SF Pro Display', 'Inter', sans-serif", fontWeight: 400 }}
