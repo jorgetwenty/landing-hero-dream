@@ -38,7 +38,7 @@ const cards = [
     imagePosition: "object-center",
   },
   {
-    nome: "Libere os 7 Chakras",
+    nome: "Os segredos do Vaticano",
     descricao: "Entenda e ative os 7 chakras para equilibrar corpo e alma, desvendando os segredos do seu corpo energético.",
     foto: "/images/card-chakras.webp",
     imagePosition: "object-top",
@@ -130,7 +130,7 @@ const WisdomCard = ({ nome, descricao, foto, imagePosition = "object-top" }: Car
 
         {/* Content */}
         <div className="relative p-6 sm:p-8 flex flex-col flex-grow z-20">
-          <h3 className="font-hero text-xl sm:text-2xl font-bold text-foreground leading-tight mb-3 mt-1">
+          <h3 className="font-sans text-xl sm:text-2xl font-bold text-foreground leading-tight mb-3 mt-1">
             {nome}
           </h3>
           <div className="w-12 h-1 bg-[#9D4EDD] mb-4 group-hover:w-full transition-all duration-1000" />
