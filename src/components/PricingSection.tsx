@@ -205,7 +205,7 @@ const PricingSection = () => {
 
             {/* Botão CTA */}
             <a
-              href="https://checkout4.xgrow.com/pt/c573c0c6-f642-4a4a-ae09-3f2edd1c67e2/NzUyMzA="
+              href="https://pay.cakto.com.br/i82pi7k"
               target="_blank"
               rel="noopener noreferrer"
               className="w-[95%] mt-7 group cursor-pointer border bg-[#120f16] border-[#2e144a] gap-3 h-[68px] flex items-center p-[10px] rounded-full transition-all duration-500 hover:shadow-2xl hover:shadow-[#9333ea]/20 no-underline"
