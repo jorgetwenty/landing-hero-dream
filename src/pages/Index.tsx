@@ -13,8 +13,8 @@ const Index = () => {
   return (
     <main className="bg-background">
       <HeroSection />
-      <ForWhoSection />
       <WisdomCards />
+      <ForWhoSection />
       <BookPartsCarousel />
       <BonusSection />
       <PricingSection />
