@@ -79,7 +79,7 @@ const BonusSection = () => {
       </div>
 
       {/* Large Featured Card */}
-      <div className="mt-6 max-w-[1100px] w-full mx-auto rounded-2xl border border-white/[0.04] overflow-hidden relative shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-10 group cursor-pointer">
+      <div className="mt-6 max-w-[2200px] w-full mx-auto rounded-2xl border border-white/[0.04] overflow-hidden relative shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-10 group cursor-pointer">
         <img 
           src="https://i.postimg.cc/vBQgBNKG/Design-sem-nome-(8).webp" 
           alt="Membros e Bónus" 
