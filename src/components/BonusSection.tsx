@@ -75,16 +75,8 @@ const BonusSection = () => {
         />
       </div>
 
-      {/* Large Featured Card */}
-      <div className="mt-6 max-w-[2200px] w-full mx-auto rounded-2xl border border-white/[0.04] overflow-hidden relative shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-10 group cursor-pointer">
-        <img 
-          src="https://i.postimg.cc/vBQgBNKG/Design-sem-nome-(8).webp" 
-          alt="Membros e Bónus" 
-          className="w-full h-auto block object-cover transform group-hover:scale-[1.03] transition-transform duration-700"
-          loading="lazy"
-        />
-        <div className="absolute inset-0 bg-purple-500/0 group-hover:bg-purple-500/10 transition-colors duration-700 pointer-events-none" />
-      </div>
+      {/* MacBook Animation */}
+      <MacbookReveal />
 
       <style>{`
         @property --bonus-angle {
