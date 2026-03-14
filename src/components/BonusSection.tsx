@@ -59,7 +59,7 @@ const MacbookReveal: FC = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="mt-10 w-full max-w-[1000px] mx-auto relative z-10" style={{ aspectRatio: '16/9' }}>
+    <div ref={sectionRef} className="mt-10 pt-16 w-full max-w-[1000px] mx-auto relative z-10" style={{ aspectRatio: '16/9' }}>
       {/* Screen content */}
       <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[55%] md:w-[55%] pointer-events-none transition-all duration-700 z-[1]`}
         style={{ marginTop: '-15.5%', opacity: isOpen ? 1 : 0, filter: isOpen ? 'blur(0px)' : 'blur(10px)' }}>
