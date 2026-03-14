@@ -107,3 +107,9 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .wisdom-headline {
+    @apply text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-12 sm:mb-20 max-w-3xl mx-auto leading-tight;
+  }
+}
