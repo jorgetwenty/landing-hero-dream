@@ -149,11 +149,8 @@ const WisdomCard = ({ nome, descricao, foto, imagePosition = "object-top" }: Car
 const WisdomCards = () => {
   return (
     <section className="relative bg-black py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      {/* Grid Background */}
-      <div className="absolute inset-0 grid-background pointer-events-none" />
-      
-      {/* Rotating purple blur */}
-      <div className="purple-glow-orb pointer-events-none" />
+      {/* Animated blob background */}
+      <div className="wisdom-blob-bg absolute inset-0 pointer-events-none" />
       
       <div className="max-w-7xl mx-auto relative z-10">
         <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-12 sm:mb-20 max-w-3xl mx-auto leading-tight">
@@ -175,53 +172,35 @@ const WisdomCards = () => {
           stroke-dashoffset: 0;
         }
         
-        .grid-background::before {
+        .wisdom-blob-bg::before {
           content: "";
-          opacity: 0.3;
-          background-color: transparent;
-          background-image: linear-gradient(90deg, #d9d9d9, #d9d9d9 1px, transparent 1px, transparent 11px), 
-                            linear-gradient(0deg, #d9d9d9, #d9d9d9 1px, transparent 1px, transparent 11px);
-          background-size: 50px 50px;
           position: absolute;
           top: 0;
           left: 0;
           width: 100%;
           height: 100%;
-          z-index: 1;
-          pointer-events: none;
+          background: url("/images/bg-blob.png");
+          background-repeat: no-repeat;
+          background-position: top center;
+          background-size: cover;
+          filter: blur(200px);
+          animation: 12s linear infinite blob-mov;
+          opacity: 1;
+          transform-origin: 50% 50%;
         }
         
-        .grid-background::after {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          background-image: radial-gradient(transparent 0%, #000 70%);
-          width: 100%;
-          height: 100%;
-          z-index: 2;
-          pointer-events: none;
+        @keyframes blob-mov {
+          0%, 100% {
+            transform: scale(0.8) rotate(45deg);
+            filter: blur(200px);
+            transform-origin: 50% 50%;
+          }
+          50% {
+            transform: scale(1.5) rotate(90deg);
+            filter: blur(200px);
+            transform-origin: 50% 50%;
+          }
         }
-        
-        .purple-glow-orb {
-          position: absolute;
-          top: 50%;
-          left: 60%;
-          transform: translate(-50%, -50%);
-          width: 1154px;
-          height: 600px;
-          background: conic-gradient(from 0deg, #9D4EDD, #4B0082, #7B2FBE, #9D4EDD);
-          border-radius: 50%;
-          filter: blur(180px);
-          z-index: 0;
-          animation: purple-turn 10s linear infinite;
-          transform-origin: center;
-          opacity: 0.4;
-        }
-        
-        @keyframes purple-turn {
-          0% { transform: translate(-50%, -50%) rotate(0deg); }
-          100% { transform: translate(-50%, -50%) rotate(360deg); }
       `}</style>
     </section>
   );
