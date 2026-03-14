@@ -58,7 +58,7 @@ const PricingSection = () => {
   const seconds = (timeLeft % 60).toString().padStart(2, "0");
 
   return (
-    <section className="w-full bg-[#120f16] flex items-center justify-center py-12 sm:py-16 md:py-20 px-4 font-sans selection:bg-[#c084fc] selection:text-white">
+    <section className="w-full bg-black flex items-center justify-center py-12 sm:py-16 md:py-20 px-4 font-sans selection:bg-[#c084fc] selection:text-white">
       <div className="max-w-[1000px] w-full flex flex-col md:flex-row gap-8 justify-center items-center md:items-stretch">
 
         {/* CARTÃO ESQUERDO */}
