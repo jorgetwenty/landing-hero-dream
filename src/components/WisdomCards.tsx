@@ -52,9 +52,10 @@ interface CardProps {
   descricao: string;
   foto: string;
   imagePosition?: string;
+  mobileImagePosition?: string;
 }
 
-const WisdomCard = ({ nome, descricao, foto, imagePosition = "object-top" }: CardProps) => {
+const WisdomCard = ({ nome, descricao, foto, imagePosition = "sm:object-top", mobileImagePosition = "" }: CardProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const [style, setStyle] = useState<React.CSSProperties>({});
 
