@@ -5,13 +5,15 @@ const cards = [
     nome: "Desperte Sua Glândula Pineal",
     descricao: "Ative sua glândula pineal para despertar a visão interior e atrair clareza, sucesso e prosperidade.",
     foto: "/images/card-pineal.png",
-    imagePosition: "object-center",
+    imagePosition: "sm:object-center",
+    mobileImagePosition: "object-[50%_20%]",
   },
   {
     nome: "A Ciência Oculta da Numerologia",
     descricao: "Aprenda a calcular seu número de destino e entender como os números influenciam sua vida, decisões e propósito.",
     foto: "/images/card-numerologia.png",
-    imagePosition: "object-top",
+    imagePosition: "sm:object-top",
+    mobileImagePosition: "object-[50%_30%]",
   },
   {
     nome: "Mistérios da Maçonaria Revelados",
@@ -50,9 +52,10 @@ interface CardProps {
   descricao: string;
   foto: string;
   imagePosition?: string;
+  mobileImagePosition?: string;
 }
 
-const WisdomCard = ({ nome, descricao, foto, imagePosition = "object-top" }: CardProps) => {
+const WisdomCard = ({ nome, descricao, foto, imagePosition = "sm:object-top", mobileImagePosition = "" }: CardProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const [style, setStyle] = useState<React.CSSProperties>({});
 
@@ -122,7 +125,7 @@ const WisdomCard = ({ nome, descricao, foto, imagePosition = "object-top" }: Car
           <img
             src={foto}
             alt={nome}
-            className={`w-full h-full object-cover ${imagePosition} transition-all duration-700 group-hover:scale-110`}
+            className={`w-full h-full object-cover ${mobileImagePosition} ${imagePosition} transition-all duration-700 group-hover:scale-110`}
             loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
