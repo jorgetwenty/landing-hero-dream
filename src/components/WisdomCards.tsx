@@ -8,8 +8,8 @@ const cards = [
     imagePosition: "object-center",
   },
   {
-    nome: "A Ciência da Numerologia",
-    descricao: "Calcule e entenda a numerologia para descobrir seu número guia, alcançando autoconhecimento e sucesso.",
+    nome: "A Ciência Oculta da Numerologia",
+    descricao: "Aprenda a calcular seu número de destino e entender como os números influenciam sua vida, decisões e propósito.",
     foto: "/images/card-numerologia.png",
     imagePosition: "object-top",
   },
