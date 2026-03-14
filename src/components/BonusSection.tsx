@@ -32,7 +32,7 @@ const SmallCard: FC<SmallCardProps> = ({ title, description, imageSrc, badgeText
 
 const BonusSection = () => {
   return (
-    <section className="min-h-screen bg-[#07030a] text-foreground py-20 px-4 md:px-8 flex flex-col items-center overflow-hidden">
+    <section className="min-h-screen bg-black text-foreground py-20 px-4 md:px-8 flex flex-col items-center overflow-hidden">
       
       {/* Header */}
       <div className="text-center mb-16 relative z-10">
