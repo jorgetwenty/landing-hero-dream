@@ -99,7 +99,9 @@ const ForWhoSection = () => {
         <h2 className="wisdom-headline">
           Para quem é esse kit de livros da
           <br />
-          <span className="text-[#9D4EDD]">Sabedoria Oculta?</span>
+          <span className="caixa-destaque">
+            <span className="texto-gradiente">Sabedoria Oculta?</span>
+          </span>
         </h2>
 
         {/* Items List */}
