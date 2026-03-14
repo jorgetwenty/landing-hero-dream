@@ -1,5 +1,18 @@
 import { useRef, useEffect } from "react";
 import logo from "@/assets/logo.png";
+import testimonialAdriano from "@/assets/testimonial-adriano.png";
+import testimonialDebora from "@/assets/testimonial-debora.png";
+import testimonialDoglas from "@/assets/testimonial-doglas.png";
+import testimonialMikael from "@/assets/testimonial-mikael.png";
+import testimonialRayssa from "@/assets/testimonial-rayssa.png";
+
+const avatars = [
+  { src: testimonialAdriano, alt: "Adriano" },
+  { src: testimonialDebora, alt: "Débora" },
+  { src: testimonialDoglas, alt: "Doglas" },
+  { src: testimonialMikael, alt: "Mikael" },
+  { src: testimonialRayssa, alt: "Rayssa" },
+];
 
 const HeroSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
