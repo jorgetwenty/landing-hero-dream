@@ -83,9 +83,9 @@ const MacbookReveal: FC = () => {
       <div className="absolute left-1/2 -translate-x-1/2 w-[80%] pointer-events-none z-[3]" style={{ top: '42%', marginTop: '10%' }}>
         <img src="/images/macbook-base.png" alt="Base do MacBook" className="w-full block" />
       </div>
-      </div>
     </div>
   );
+};
 };
 
 const BonusSection = () => {
