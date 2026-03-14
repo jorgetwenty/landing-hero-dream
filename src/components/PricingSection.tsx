@@ -58,8 +58,11 @@ const PricingSection = () => {
   const seconds = (timeLeft % 60).toString().padStart(2, "0");
 
   return (
-    <section className="w-full bg-black flex items-center justify-center py-12 sm:py-16 md:py-20 px-4 font-sans selection:bg-[#c084fc] selection:text-white">
-      <div className="max-w-[1000px] w-full flex flex-col md:flex-row gap-8 justify-center items-center md:items-stretch">
+    <section className="relative w-full bg-black flex items-center justify-center py-12 sm:py-16 md:py-20 px-4 font-sans selection:bg-[#c084fc] selection:text-white overflow-hidden">
+      {/* Grid Background */}
+      <div className="absolute inset-0 pricing-grid-bg pointer-events-none" />
+
+      <div className="max-w-[1000px] w-full flex flex-col md:flex-row gap-8 justify-center items-center md:items-stretch relative z-10">
 
         {/* CARTÃO ESQUERDO */}
         <div className="w-full md:w-[460px] rounded-[32px] p-8 md:p-10 bg-gradient-to-bl from-[#f3e8ff] via-[#e9d5ff] to-[#d8b4fe] shadow-xl relative shrink-0">
