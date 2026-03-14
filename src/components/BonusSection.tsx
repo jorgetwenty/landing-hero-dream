@@ -86,7 +86,8 @@ const MacbookReveal: FC = () => {
     </div>
   );
 };
-};
+
+
 
 const BonusSection = () => {
   return (
