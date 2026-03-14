@@ -12,7 +12,8 @@ const cards = [
     nome: "A Ciência Oculta da Numerologia",
     descricao: "Aprenda a calcular seu número de destino e entender como os números influenciam sua vida, decisões e propósito.",
     foto: "/images/card-numerologia.png",
-    imagePosition: "object-top",
+    imagePosition: "sm:object-top",
+    mobileImagePosition: "object-[50%_30%]",
   },
   {
     nome: "Mistérios da Maçonaria Revelados",
