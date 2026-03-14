@@ -148,7 +148,7 @@ const WisdomCard = ({ nome, descricao, foto, imagePosition = "object-top" }: Car
 
 const WisdomCards = () => {
   return (
-    <section className="bg-background py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="bg-black py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-12 sm:mb-20 max-w-3xl mx-auto leading-tight">
           Veja o que você vai aprender com o livro da{" "}
