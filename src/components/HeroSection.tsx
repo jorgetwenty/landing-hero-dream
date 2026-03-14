@@ -29,10 +29,8 @@ const HeroSection = () => {
       <div
         className="absolute bottom-0 left-0 w-full z-[2] pointer-events-none"
         style={{
-          height: '120px',
-          background: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.85) 80%, rgba(0,0,0,1) 100%)',
-          backdropFilter: 'blur(4px)',
-          WebkitBackdropFilter: 'blur(4px)',
+          height: '140px',
+          background: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 25%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.65) 75%, rgba(0,0,0,1) 100%)',
         }}
       />
 
