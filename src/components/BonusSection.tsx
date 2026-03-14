@@ -1,258 +1,81 @@
-const bonuses = [
-  {
-    label: "Bônus 1",
-    title: "Todas as edições do",
-    highlight: "Livro de Enoque",
-    description: "Retratando a Queda dos Anjos Caídos Completo.",
-    oldPrice: "R$ 159,00",
-    image: "https://i.postimg.cc/3R5rcKKL/Design-sem-nome-(5).png",
-    reverse: false,
-  },
-  {
-    label: "Bônus 2",
-    title: "Prepare-se para a",
-    highlight: "Nova Ordem Mundial",
-    description: "O grande livro da maçonaria retrata sobre os segredos da sociedade.",
-    oldPrice: "R$ 110,00",
-    image: "https://i.postimg.cc/KjQZjBtr/Design-sem-nome-(4).png",
-    reverse: true,
-  },
-  {
-    label: "Bônus 3",
-    title: "Descalcificação da",
-    highlight: "Glândula Pineal",
-    description: "Ative Seu Verdadeiro Potencial Espiritual.",
-    oldPrice: "R$ 143,00",
-    image: "https://i.postimg.cc/nLQc2stH/Design-sem-nome-(3).png",
-    reverse: false,
-  },
-];
+import { FC } from 'react';
+
+interface SmallCardProps {
+  title: string;
+  description: string;
+  imageSrc: string;
+  badgeText: string;
+}
+
+const SmallCard: FC<SmallCardProps> = ({ title, description, imageSrc, badgeText }) => (
+  <div className="bg-[#110a1a] rounded-xl p-8 border border-white/5 relative overflow-hidden group hover:border-purple-500/20 transition-all duration-500 flex flex-col h-full shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
+    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-1 bg-purple-500/10 blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+    
+    <div className="flex justify-start mb-4">
+      <span className="bg-[#b026ff] text-black px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-[0_0_15px_rgba(176,38,255,0.4)]">
+        {badgeText}
+      </span>
+    </div>
+
+    <div className="h-36 w-full mb-6 flex items-center justify-center">
+      <img 
+        src={imageSrc} 
+        alt={title} 
+        className="h-full w-auto object-contain drop-shadow-[0_0_15px_rgba(176,38,255,0.15)] group-hover:scale-110 transition-transform duration-500"
+        loading="lazy"
+      />
+    </div>
+    <h3 className="text-[1.35rem] font-medium text-foreground mb-4 tracking-tight leading-snug">{title}</h3>
+    <p className="text-foreground text-[0.95rem] leading-relaxed font-light">{description}</p>
+  </div>
+);
 
 const BonusSection = () => {
   return (
-    <section className="relative w-full overflow-hidden py-12 md:py-20" style={{ backgroundColor: '#000000' }}>
-      <div className="relative z-10 max-w-6xl mx-auto px-5">
-        {/* Header */}
-        <header className="text-center mb-16">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground leading-tight max-w-[700px] mx-auto">
-            + 3 Bônus exclusivos para quem adquirir o Kit{' '}
-            <span className="text-[#9D4EDD]">nessa página</span>
-          </h2>
-        </header>
-
-        {/* Cards */}
-        <div className="flex flex-col gap-10 md:gap-14 items-center">
-          {bonuses.map((bonus, i) => (
-            <article
-              key={i}
-              className={`glass-card ${i === 1 ? 'glass-card-reverse' : ''} rounded-[32px] p-6 md:p-12 flex flex-col ${bonus.reverse ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-8 md:gap-12 w-full max-w-5xl`}
-            >
-              {/* Texto */}
-              <div className="flex-1 flex flex-col items-start w-full">
-                <span className="bg-white/10 text-foreground text-[12px] md:text-[17px] font-semibold uppercase px-6 py-2 rounded-full mb-6 inline-block">
-                  {bonus.label}
-                </span>
-                <h3 className="text-[30px] md:text-[40px] font-semibold leading-tight text-foreground mb-5">
-                  {bonus.title}{' '}
-                  <span className="text-[#9D4EDD]">{bonus.highlight}</span>
-                </h3>
-                <p className="text-[16px] md:text-[20px] text-muted-foreground mb-8 leading-relaxed">
-                  {bonus.description}
-                </p>
-                <div className="bg-gradient-to-r from-[#4B0082] to-[#8A2BE2] px-7 py-3.5 rounded-xl text-[20px] md:text-[25px] font-semibold text-foreground shadow-sm">
-                  <s className="opacity-50 text-sm md:text-base font-medium align-middle mr-2">
-                    {bonus.oldPrice}
-                  </s>
-                  por R$ 0,00
-                </div>
-              </div>
-
-              {/* Imagem */}
-              <div className="flex-1 w-full relative group">
-                <div className="absolute inset-0 bg-black/20 rounded-2xl transform group-hover:scale-105 transition-transform duration-300" />
-                <img
-                  src={bonus.image}
-                  alt={bonus.highlight}
-                  className="w-full h-auto object-cover rounded-2xl shadow-xl border border-white/10 relative z-10"
-                  loading="lazy"
-                />
-              </div>
-            </article>
-          ))}
-        </div>
+    <section className="min-h-screen bg-[#07030a] text-foreground py-20 px-4 md:px-8 flex flex-col items-center overflow-hidden">
+      
+      {/* Header */}
+      <div className="text-center mb-16 relative z-10">
+        <p className="text-[#b026ff] font-mono text-xs md:text-sm uppercase tracking-[0.25em] mb-4 flex items-center justify-center gap-2">
+          <span className="opacity-50">//</span> E não para por aí viu?
+        </p>
+        <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">
+          <span className="text-[#b026ff]">4 Bônus</span> Exclusivos apenas hoje!
+        </h2>
       </div>
 
-      <style>{`
-        @property --angle {
-          syntax: '<angle>';
-          initial-value: 0deg;
-          inherits: false;
-        }
+      {/* Grid of 3 Small Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1100px] w-full mx-auto relative z-10">
+        <SmallCard 
+          badgeText="Bônus 1"
+          title="Todas as edições do Livro de Enoque" 
+          description="Retratando a Queda dos Anjos Caídos Completo."
+          imageSrc="https://i.postimg.cc/yxGkLY8g/Design-sem-nome-(5).webp"
+        />
+        <SmallCard 
+          badgeText="Bônus 2"
+          title="Prepare-se para a Nova Ordem Mundial" 
+          description="O grande livro da maçonaria retrata sobre os segredos da sociedade."
+          imageSrc="https://i.postimg.cc/jq3wxv4W/Design-sem-nome-(4).webp"
+        />
+        <SmallCard 
+          badgeText="Bônus 3"
+          title="Descalcificação da Glândula Pineal" 
+          description="Ative Seu Verdadeiro Potencial Espiritual."
+          imageSrc="https://i.postimg.cc/X7ZZpFsK/Design-sem-nome-(3).webp"
+        />
+      </div>
 
-        .glass-card {
-          position: relative;
-          background: rgba(20, 20, 20, 0.1);
-          backdrop-filter: blur(16px);
-          -webkit-backdrop-filter: blur(16px);
-          box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
-          transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-        }
-
-        .glass-card::after {
-          content: "";
-          position: absolute;
-          inset: 0;
-          border-radius: 32px;
-          padding: 2px;
-          background: conic-gradient(
-            from var(--angle),
-            rgba(138, 43, 226, 0.05) 0%,
-            rgba(138, 43, 226, 0.05) 90%,
-            #8A2BE2 95%,
-            #d8a8ff 100%
-          );
-          -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-          -webkit-mask-composite: xor;
-          mask-composite: exclude;
-          pointer-events: none;
-          animation: spin-border 8s linear infinite;
-        }
-
-        .glass-card-reverse::after {
-          animation: spin-border-reverse 8s linear infinite;
-        }
-
-        @keyframes spin-border {
-          to {
-            --angle: 360deg;
-          }
-        }
-
-        @keyframes spin-border-reverse {
-          from {
-            --angle: 360deg;
-          }
-          to {
-            --angle: 0deg;
-          }
-        }
-
-        .glass-card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 12px 40px 0 rgba(138, 43, 226, 0.15);
-          background: rgba(30, 30, 30, 0.15);
-        }
-
-        .glass-card:hover::after {
-          animation-duration: 8s;
-        }
-      `}</style>
-
-      <style>{`
-        @property --bonus-gradient-angle {
-          syntax: "<angle>";
-          initial-value: 0deg;
-          inherits: false;
-        }
-
-        .shiny-cta-bonus {
-          --bonus-gradient-angle: 0deg;
-          position: relative;
-          overflow: hidden;
-          border-radius: 9999px;
-          padding: 0.875rem 2rem;
-          font-size: 0.95rem;
-          line-height: 1.2;
-          font-weight: 600;
-          color: #ffffff;
-          background: linear-gradient(#000000, #000000) padding-box,
-            conic-gradient(
-              from var(--bonus-gradient-angle),
-              transparent 0%, #a855f7 5%, #d8b4fe 15%, #a855f7 30%, transparent 40%, transparent 100%
-            ) border-box;
-          border: 2px solid transparent;
-          box-shadow: inset 0 0 0 1px #1a1818;
-          cursor: pointer;
-          isolation: isolate;
-          font-family: 'Inter', 'Helvetica Neue', sans-serif;
-          z-index: 0;
-          animation: bonus-border-spin 2.5s linear infinite;
-          text-decoration: none;
-          display: inline-block;
-          transition: transform 0.15s;
-        }
-
-        @keyframes bonus-border-spin {
-          to { --bonus-gradient-angle: 360deg; }
-        }
-
-        .shiny-cta-bonus:active {
-          transform: translateY(1px);
-        }
-
-        .shiny-cta-bonus::before {
-          content: '';
-          pointer-events: none;
-          position: absolute;
-          left: 50%; top: 50%;
-          transform: translate(-50%, -50%);
-          z-index: 0;
-          --size: calc(100% - 6px);
-          --position: 2px;
-          --space: 4px;
-          width: var(--size); height: var(--size);
-          background: radial-gradient(circle at var(--position) var(--position), white 0.5px, transparent 0) padding-box;
-          background-size: var(--space) var(--space);
-          background-repeat: space;
-          mask-image: conic-gradient(from calc(var(--bonus-gradient-angle) + 45deg), black, transparent 10% 90%, black);
-          border-radius: inherit;
-          opacity: 0.4;
-        }
-
-        .shiny-cta-bonus::after {
-          content: '';
-          pointer-events: none;
-          position: absolute;
-          left: 50%; top: 50%;
-          transform: translate(-50%, -50%);
-          z-index: 1;
-          width: 100%; aspect-ratio: 1;
-          background: linear-gradient(-50deg, transparent, #a855f7, transparent);
-          mask-image: radial-gradient(circle at bottom, transparent 40%, black);
-          opacity: 0.6;
-          animation: bonus-shimmer 4s linear infinite;
-        }
-
-        @keyframes bonus-shimmer {
-          to { transform: translate(-50%, -50%) rotate(360deg); }
-        }
-
-        .shiny-cta-bonus span {
-          position: relative;
-          z-index: 2;
-          display: inline-block;
-        }
-
-        .shiny-cta-bonus span::before {
-          content: '';
-          pointer-events: none;
-          position: absolute;
-          left: 50%; top: 50%;
-          transform: translate(-50%, -50%);
-          z-index: -1;
-          --size: calc(100% + 1rem);
-          width: var(--size); height: var(--size);
-          box-shadow: inset 0 -1ex 2rem 4px #a855f7;
-          opacity: 0;
-          border-radius: inherit;
-          animation: bonus-breathe 4.5s linear infinite;
-        }
-
-        @keyframes bonus-breathe {
-          0%, 100% { transform: translate(-50%, -50%) scale(1); }
-          50% { transform: translate(-50%, -50%) scale(1.20); }
-        }
-      `}</style>
+      {/* Large Featured Card */}
+      <div className="mt-6 max-w-[1100px] w-full mx-auto rounded-2xl border border-white/[0.04] overflow-hidden relative shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-10 group cursor-pointer">
+        <img 
+          src="https://i.postimg.cc/vBQgBNKG/Design-sem-nome-(8).webp" 
+          alt="Membros e Bónus" 
+          className="w-full h-auto block object-cover transform group-hover:scale-[1.03] transition-transform duration-700"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-purple-500/0 group-hover:bg-purple-500/10 transition-colors duration-700 pointer-events-none" />
+      </div>
     </section>
   );
 };
