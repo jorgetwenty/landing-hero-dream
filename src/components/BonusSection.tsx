@@ -114,7 +114,7 @@ const MacbookReveal: FC = () => {
           width: 100%;
           max-width: 1000px;
           aspect-ratio: 16/9;
-          --macbook-group-top: 42%;
+          --macbook-group-top: 50%;
         }
 
         .base, .tela, .carrosseltela {
