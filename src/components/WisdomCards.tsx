@@ -38,7 +38,7 @@ const cards = [
     imagePosition: "object-center",
   },
   {
-    nome: "Libere os 7 Chakras",
+    nome: "Os segredos do Vaticano",
     descricao: "Entenda e ative os 7 chakras para equilibrar corpo e alma, desvendando os segredos do seu corpo energético.",
     foto: "/images/card-chakras.webp",
     imagePosition: "object-top",
