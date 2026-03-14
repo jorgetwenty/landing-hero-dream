@@ -184,6 +184,22 @@ const HeroSection = () => {
             0%, 100% { transform: translate(-50%, -50%) scale(1); }
             50% { transform: translate(-50%, -50%) scale(1.20); }
           }
+
+          .imgg {
+            margin-right: -15px;
+            transition: 0.5s ease all;
+          }
+
+          .imgg:hover {
+            margin-left: 10px;
+            filter: grayscale(100%);
+          }
+
+          .imgg img {
+            border-radius: 200px;
+            border: solid 1px rgba(255, 255, 255, 0.38);
+            transition: 0.5s ease all;
+          }
         `}</style>
       </div>
     </section>
