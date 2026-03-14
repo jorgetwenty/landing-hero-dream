@@ -148,8 +148,11 @@ const WisdomCard = ({ nome, descricao, foto, imagePosition = "object-top" }: Car
 
 const WisdomCards = () => {
   return (
-    <section className="bg-black py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative bg-black py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      {/* Grid Background */}
+      <div className="absolute inset-0 grid-background pointer-events-none" />
+      
+      <div className="max-w-7xl mx-auto relative z-10">
         <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-12 sm:mb-20 max-w-3xl mx-auto leading-tight">
           Veja o que você vai aprender com o livro da{" "}
           <span className="text-[#9D4EDD]">Sabedoria Oculta</span>
@@ -167,6 +170,34 @@ const WisdomCards = () => {
       <style>{`
         .group:hover rect {
           stroke-dashoffset: 0;
+        }
+        
+        .grid-background::before {
+          content: "";
+          opacity: 0.3;
+          background-color: transparent;
+          background-image: linear-gradient(90deg, #d9d9d9, #d9d9d9 1px, transparent 1px, transparent 11px), 
+                            linear-gradient(0deg, #d9d9d9, #d9d9d9 1px, transparent 1px, transparent 11px);
+          background-size: 50px 50px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          pointer-events: none;
+        }
+        
+        .grid-background::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-image: radial-gradient(transparent 0%, #000 70%);
+          width: 100%;
+          height: 100%;
+          z-index: 2;
+          pointer-events: none;
         }
       `}</style>
     </section>
