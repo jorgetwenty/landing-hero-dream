@@ -8,25 +8,37 @@ interface SmallCardProps {
 }
 
 const SmallCard: FC<SmallCardProps> = ({ title, description, imageSrc, badgeText }) => (
-  <div className="bg-[#110a1a] rounded-xl p-8 border border-white/5 relative overflow-hidden group hover:border-purple-500/20 transition-all duration-500 flex flex-col h-full shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
-    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-1 bg-purple-500/10 blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+  <div className="bonus-card-wrapper relative group">
+    {/* Animated border */}
+    <div className="bonus-animated-border" />
     
-    <div className="flex justify-start mb-4">
-      <span className="bg-[#b026ff] text-black px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-[0_0_15px_rgba(176,38,255,0.4)]">
-        {badgeText}
-      </span>
-    </div>
+    <div className="relative rounded-xl p-8 flex flex-col h-full overflow-hidden z-10"
+      style={{
+        background: 'rgba(17, 10, 26, 0.4)',
+        backdropFilter: 'blur(20px)',
+        WebkitBackdropFilter: 'blur(20px)',
+        border: '1px solid rgba(255,255,255,0.08)',
+      }}
+    >
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-1 bg-purple-500/10 blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      
+      <div className="flex justify-start mb-4">
+        <span className="bg-[#b026ff] text-black px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-[0_0_15px_rgba(176,38,255,0.4)]">
+          {badgeText}
+        </span>
+      </div>
 
-    <div className="h-36 w-full mb-6 flex items-center justify-center">
-      <img 
-        src={imageSrc} 
-        alt={title} 
-        className="h-full w-auto object-contain drop-shadow-[0_0_15px_rgba(176,38,255,0.15)] group-hover:scale-110 transition-transform duration-500"
-        loading="lazy"
-      />
+      <div className="h-36 w-full mb-6 flex items-center justify-center">
+        <img 
+          src={imageSrc} 
+          alt={title} 
+          className="h-full w-auto object-contain drop-shadow-[0_0_15px_rgba(176,38,255,0.15)] group-hover:scale-110 transition-transform duration-500"
+          loading="lazy"
+        />
+      </div>
+      <h3 className="text-[1.35rem] font-medium text-foreground mb-4 tracking-tight leading-snug">{title}</h3>
+      <p className="text-foreground text-[0.95rem] leading-relaxed font-light">{description}</p>
     </div>
-    <h3 className="text-[1.35rem] font-medium text-foreground mb-4 tracking-tight leading-snug">{title}</h3>
-    <p className="text-foreground text-[0.95rem] leading-relaxed font-light">{description}</p>
   </div>
 );
 
@@ -76,6 +88,50 @@ const BonusSection = () => {
         />
         <div className="absolute inset-0 bg-purple-500/0 group-hover:bg-purple-500/10 transition-colors duration-700 pointer-events-none" />
       </div>
+
+      <style>{`
+        @property --bonus-angle {
+          syntax: "<angle>";
+          initial-value: 0deg;
+          inherits: false;
+        }
+
+        .bonus-card-wrapper {
+          position: relative;
+          border-radius: 12px;
+          overflow: hidden;
+        }
+
+        .bonus-animated-border {
+          position: absolute;
+          inset: 0;
+          border-radius: 12px;
+          padding: 1.5px;
+          background: conic-gradient(
+            from var(--bonus-angle),
+            transparent 0%,
+            #b026ff 10%,
+            #d8b4fe 20%,
+            #b026ff 35%,
+            transparent 50%,
+            transparent 100%
+          );
+          -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          -webkit-mask-composite: xor;
+          mask-composite: exclude;
+          animation: bonus-border-spin 3s linear infinite;
+          z-index: 5;
+        }
+
+        .bonus-card-wrapper:nth-child(2) .bonus-animated-border {
+          animation-direction: reverse;
+        }
+
+        @keyframes bonus-border-spin {
+          to { --bonus-angle: 360deg; }
+        }
+      `}</style>
     </section>
   );
 };
