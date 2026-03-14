@@ -112,4 +112,45 @@ All colors MUST be HSL.
   .wisdom-headline {
     @apply text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-12 sm:mb-20 max-w-3xl mx-auto leading-tight;
   }
+
+  .caixa-destaque {
+    background: rgba(156, 78, 255, 0.20);
+    padding: 2px 10px;
+    position: relative;
+    border-left: 1px solid #8B3DFF;
+    border-right: 1px solid #8B3DFF;
+    display: inline-block;
+    border-radius: 3px;
+  }
+
+  .texto-gradiente {
+    background: linear-gradient(90deg, #9C4EFF 0%, #B366FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    font-weight: bold;
+  }
+
+  .caixa-destaque::before,
+  .caixa-destaque::after {
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: #7A29CC;
+    pointer-events: none;
+  }
+
+  .caixa-destaque::before {
+    top: -5px;
+    left: -5px;
+  }
+
+  .caixa-destaque::after {
+    bottom: -5px;
+    right: -5px;
+  }
 }
