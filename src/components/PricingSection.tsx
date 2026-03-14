@@ -58,8 +58,11 @@ const PricingSection = () => {
   const seconds = (timeLeft % 60).toString().padStart(2, "0");
 
   return (
-    <section className="w-full bg-black flex items-center justify-center py-12 sm:py-16 md:py-20 px-4 font-sans selection:bg-[#c084fc] selection:text-white">
-      <div className="max-w-[1000px] w-full flex flex-col md:flex-row gap-8 justify-center items-center md:items-stretch">
+    <section className="relative w-full bg-black flex items-center justify-center py-12 sm:py-16 md:py-20 px-4 font-sans selection:bg-[#c084fc] selection:text-white overflow-hidden">
+      {/* Grid Background */}
+      <div className="absolute inset-0 pricing-grid-bg pointer-events-none" />
+
+      <div className="max-w-[1000px] w-full flex flex-col md:flex-row gap-8 justify-center items-center md:items-stretch relative z-10">
 
         {/* CARTÃO ESQUERDO */}
         <div className="w-full md:w-[460px] rounded-[32px] p-8 md:p-10 bg-gradient-to-bl from-[#f3e8ff] via-[#e9d5ff] to-[#d8b4fe] shadow-xl relative shrink-0">
@@ -252,6 +255,35 @@ const PricingSection = () => {
           </div>
         </div>
       </div>
+
+      <style>{`
+        .pricing-grid-bg::before {
+          content: "";
+          opacity: 0.3;
+          background-color: transparent;
+          background-image: linear-gradient(90deg, #d9d9d9, #d9d9d9 1px, transparent 1px, transparent 11px), 
+                            linear-gradient(0deg, #d9d9d9, #d9d9d9 1px, transparent 1px, transparent 11px);
+          background-size: 50px 50px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          pointer-events: none;
+        }
+        .pricing-grid-bg::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-image: radial-gradient(transparent 0%, #000 70%);
+          width: 100%;
+          height: 100%;
+          z-index: 2;
+          pointer-events: none;
+        }
+      `}</style>
     </section>
   );
 };
