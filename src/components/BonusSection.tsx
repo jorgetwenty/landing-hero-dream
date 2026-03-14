@@ -28,7 +28,7 @@ const SmallCard: FC<SmallCardProps> = ({ title, description, imageSrc, badgeText
         </span>
       </div>
 
-      <div className="h-72 w-full mb-6 flex items-center justify-center">
+      <div className="h-36 w-full mb-6 flex items-center justify-center">
         <img 
           src={imageSrc} 
           alt={title} 
