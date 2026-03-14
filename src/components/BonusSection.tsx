@@ -40,7 +40,7 @@ const BonusSection = () => {
           <span className="opacity-50">//</span> E não para por aí viu?
         </p>
         <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">
-          <span className="text-[#b026ff]">4 Bônus</span> Exclusivos apenas hoje!
+          <span className="text-[#b026ff]">3 Bônus</span> Exclusivos + Área de membros!
         </h2>
       </div>
 
