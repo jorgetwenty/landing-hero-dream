@@ -202,7 +202,27 @@ const WisdomCards = () => {
           z-index: 2;
           pointer-events: none;
         }
-      `}</style>
+        
+        .purple-glow-orb {
+          position: absolute;
+          top: 50%;
+          left: 60%;
+          transform: translate(-50%, -50%);
+          width: 1154px;
+          height: 600px;
+          background: conic-gradient(from 0deg, #9D4EDD, #4B0082, #7B2FBE, #9D4EDD);
+          border-radius: 50%;
+          filter: blur(180px);
+          z-index: 0;
+          animation: purple-turn 10s linear infinite;
+          transform-origin: center;
+          opacity: 0.4;
+        }
+        
+        @keyframes purple-turn {
+          0% { transform: translate(-50%, -50%) rotate(0deg); }
+          100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
     </section>
   );
 };
