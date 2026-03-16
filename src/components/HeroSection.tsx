@@ -1,10 +1,5 @@
 import { useRef, useEffect } from "react";
 import logo from "@/assets/logo.png";
-import testimonialAdriano from "@/assets/testimonial-adriano.png";
-import testimonialDebora from "@/assets/testimonial-debora.png";
-import testimonialDoglas from "@/assets/testimonial-doglas.png";
-import testimonialMikael from "@/assets/testimonial-mikael.png";
-import testimonialRayssa from "@/assets/testimonial-rayssa.png";
 
 const avatars = [
   { src: "https://i.postimg.cc/sXRBYx6r/attractive-young-man-is-relaxing-home.jpg", alt: "Aluno 1" },
