@@ -72,7 +72,7 @@ const HeroSection = () => {
         </h1>
 
         <a
-          href="https://pay.cakto.com.br/i82pi7k"
+          href="https://pay.cakto.com.br/7exfjyy_807964"
           target="_blank"
           rel="noopener noreferrer"
           className="shiny-cta-hero"
