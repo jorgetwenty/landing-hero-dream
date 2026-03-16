@@ -61,7 +61,7 @@ const HeroSection = () => {
               <img src={avatar.src} alt={avatar.alt} className="w-10 h-10 md:w-12 md:h-12 object-cover" />
             </div>
           ))}
-          <span className="ml-3 text-white/70 text-sm font-medium">+2.400 alunos</span>
+          <span className="ml-3 text-white/70 text-sm font-medium"><span className="ml-3 text-white/70 text-sm font-medium">+500 alunos</span></span>
         </div>
 
         <h1
