@@ -1,17 +1,12 @@
 import { useRef, useEffect } from "react";
 import logo from "@/assets/logo.png";
-import testimonialAdriano from "@/assets/testimonial-adriano.png";
-import testimonialDebora from "@/assets/testimonial-debora.png";
-import testimonialDoglas from "@/assets/testimonial-doglas.png";
-import testimonialMikael from "@/assets/testimonial-mikael.png";
-import testimonialRayssa from "@/assets/testimonial-rayssa.png";
 
 const avatars = [
-  { src: testimonialAdriano, alt: "Adriano" },
-  { src: testimonialDebora, alt: "Débora" },
-  { src: testimonialDoglas, alt: "Doglas" },
-  { src: testimonialMikael, alt: "Mikael" },
-  { src: testimonialRayssa, alt: "Rayssa" },
+  { src: "https://i.postimg.cc/sXRBYx6r/attractive-young-man-is-relaxing-home.jpg", alt: "Aluno 1" },
+  { src: "https://i.postimg.cc/k4dVQGj0/happy-successful-woman-posing-with-folded-arms.jpg", alt: "Aluna 2" },
+  { src: "https://i.postimg.cc/fLh3cyH7/middle-aged-man-wearing-smiling-rusty-colored-background.jpg", alt: "Aluno 3" },
+  { src: "https://i.postimg.cc/B6G8Tbhd/portrait-beautiful-woman.jpg", alt: "Aluna 4" },
+  { src: "https://i.postimg.cc/Y9w460nM/vertical-view-handsome-man-sitting-chair-leaned-table-smiling-looking-camera-image-cozy-kitchen.jpg", alt: "Aluno 5" },
 ];
 
 const HeroSection = () => {
@@ -61,7 +56,7 @@ const HeroSection = () => {
               <img src={avatar.src} alt={avatar.alt} className="w-10 h-10 md:w-12 md:h-12 object-cover" />
             </div>
           ))}
-          <span className="ml-3 text-white/70 text-sm font-medium">+2.400 alunos</span>
+          <span className="ml-3 text-white/70 text-sm font-medium"><span className="ml-3 text-white/70 text-sm font-medium">+500 alunos</span></span>
         </div>
 
         <h1
@@ -72,7 +67,7 @@ const HeroSection = () => {
         </h1>
 
         <a
-          href="https://pay.cakto.com.br/i82pi7k"
+          href="https://pay.cakto.com.br/7exfjyy_807964"
           target="_blank"
           rel="noopener noreferrer"
           className="shiny-cta-hero"
