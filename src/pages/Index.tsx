@@ -20,6 +20,7 @@ const Index = () => {
       <BonusSection />
       <PricingSection />
       <TestimonialsTicker />
+      <MacbookReveal />
       <GuaranteeSection />
       <FAQSection />
       <Footer />
