@@ -7,6 +7,7 @@ import ForWhoSection from "@/components/ForWhoSection";
 import FAQSection from "@/components/FAQSection";
 import BonusSection from "@/components/BonusSection";
 import BookPartsCarousel from "@/components/BookPartsCarousel";
+import MacbookReveal from "@/components/MacbookReveal";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -19,6 +20,7 @@ const Index = () => {
       <BonusSection />
       <PricingSection />
       <TestimonialsTicker />
+      <MacbookReveal />
       <GuaranteeSection />
       <FAQSection />
       <Footer />
