@@ -18,9 +18,9 @@ const Index = () => {
       <ForWhoSection />
       <BookPartsCarousel />
       <BonusSection />
+      <MacbookReveal />
       <PricingSection />
       <TestimonialsTicker />
-      <MacbookReveal />
       <GuaranteeSection />
       <FAQSection />
       <Footer />
