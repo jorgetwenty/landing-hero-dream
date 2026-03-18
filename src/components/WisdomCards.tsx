@@ -17,7 +17,7 @@ const cards = [
   },
   {
     nome: "Mistérios da Maçonaria Revelados",
-    descricao: "Desvende os mistérios, símbolos e o real funcionamento da Maçonaria, uma das sociedades mais enigmáticas da história.",
+    descricao: "Aprenda a calcular seu número de destino e entender como os números influenciam sua vida, decisões e propósito.",
     foto: "/images/card-maconaria.png",
     imagePosition: "object-center",
   },
