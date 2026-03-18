@@ -1,44 +1,53 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Crie Algo Extraordinário</title>
     <meta name="description" content="Transforme suas ideias em experiências digitais que inspiram e conectam.">
+
+    <!-- Preconnect to critical origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://i.postimg.cc" />
+
+    <!-- Preload critical font -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" /></noscript>
+
+    <!-- Preload hero video -->
+    <link rel="preload" href="/hero-video.webm" as="video" type="video/webm" />
+
     <meta name="author" content="Lovable" />
 
-    <!-- Meta Pixel Code -->
+    <!-- Meta Pixel Code — deferred to not block rendering -->
     <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '1894089944397345');
-      fbq('track', 'PageView');
+      // Defer FB pixel to after page load
+      window.addEventListener('load', function() {
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1894089944397345');
+        fbq('track', 'PageView');
+      });
     </script>
     <!-- End Meta Pixel Code -->
 
-    <!-- TODO: Update og:title to match your application name -->
-    
-    
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/634c91b0-8f3e-4195-9a63-258c161bce7f/id-preview-7455c6b0--6d8f8610-2d7d-456a-a65a-188b5c82d322.lovable.app-1773199817181.png">
-
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@Lovable" />
     <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/634c91b0-8f3e-4195-9a63-258c161bce7f/id-preview-7455c6b0--6d8f8610-2d7d-456a-a65a-188b5c82d322.lovable.app-1773199817181.png">
     <meta property="og:title" content="Crie Algo Extraordinário">
-  <meta name="twitter:title" content="Crie Algo Extraordinário">
-  <meta property="og:description" content="Transforme suas ideias em experiências digitais que inspiram e conectam.">
-  <meta name="twitter:description" content="Transforme suas ideias em experiências digitais que inspiram e conectam.">
-</head>
+    <meta name="twitter:title" content="Crie Algo Extraordinário">
+    <meta property="og:description" content="Transforme suas ideias em experiências digitais que inspiram e conectam.">
+    <meta name="twitter:description" content="Transforme suas ideias em experiências digitais que inspiram e conectam.">
+  </head>
 
   <body>
     <noscript>

@@ -81,11 +81,13 @@ const BookPartsCarousel = () => {
             <button
               key={i}
               onClick={() => emblaApi?.scrollTo(i)}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                selectedIndex === i ? "bg-purple-500 w-6" : "bg-white/30"
+              className={`h-8 min-w-[2rem] rounded-full transition-all duration-300 flex items-center justify-center ${
+                selectedIndex === i ? "bg-purple-500 w-8" : "bg-white/30 w-8"
               }`}
               aria-label={`Ir para slide ${i + 1}`}
-            />
+            >
+              <span className={`block rounded-full ${selectedIndex === i ? "bg-purple-500 w-6 h-2" : "bg-white/30 w-2 h-2"}`} />
+            </button>
           ))}
         </div>
       </div>

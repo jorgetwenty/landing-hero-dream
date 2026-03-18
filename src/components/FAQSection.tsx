@@ -70,7 +70,7 @@ const FAQSection = () => {
               >
                 <button
                   onClick={() => toggle(i)}
-                  className="w-full flex items-center justify-between px-6 py-5 text-left group cursor-pointer"
+                  className="w-full flex items-center justify-between px-6 py-5 min-h-[48px] text-left group cursor-pointer"
                 >
                   <span
                     className="text-base md:text-lg font-semibold transition-colors duration-300"
