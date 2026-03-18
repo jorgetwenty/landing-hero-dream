@@ -33,7 +33,11 @@ const Preloader = ({ onComplete }: { onComplete: () => void }) => {
         exiting ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
-      <div className="w-[280px] sm:w-[360px] flex items-center gap-5">
+      <div className="w-[280px] sm:w-[360px] flex flex-col items-center gap-6">
+        {/* Logo */}
+        <img src={logo} alt="Logo" className="h-8 md:h-10 w-auto" />
+
+        <div className="w-full flex items-center gap-5">
         {/* Bar container */}
         <div className="flex-1 h-[3px] bg-white/10 rounded-full overflow-hidden relative">
           {/* Glow under bar */}
