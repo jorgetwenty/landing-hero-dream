@@ -4,15 +4,29 @@ import logo from "@/assets/logo-branca-2.webp";
 const Preloader = ({ onComplete }: { onComplete: () => void }) => {
   const [progress, setProgress] = useState(0);
   const [exiting, setExiting] = useState(false);
+  const [logoReady, setLogoReady] = useState(false);
+
+  // Wait for logo to load before starting animation
+  useEffect(() => {
+    const img = new Image();
+    img.src = logo;
+    if (img.complete) {
+      setLogoReady(true);
+    } else {
+      img.onload = () => setLogoReady(true);
+      img.onerror = () => setLogoReady(true); // proceed anyway
+    }
+  }, []);
 
   useEffect(() => {
+    if (!logoReady) return;
+
     const duration = 2600;
     const start = performance.now();
 
     const tick = (now: number) => {
       const elapsed = now - start;
       const t = Math.min(elapsed / duration, 1);
-      // Ease-out cubic for natural feel
       const eased = 1 - Math.pow(1 - t, 3);
       setProgress(Math.round(eased * 100));
 
@@ -25,7 +39,7 @@ const Preloader = ({ onComplete }: { onComplete: () => void }) => {
     };
 
     requestAnimationFrame(tick);
-  }, [onComplete]);
+  }, [onComplete, logoReady]);
 
   return (
     <div
@@ -35,7 +49,7 @@ const Preloader = ({ onComplete }: { onComplete: () => void }) => {
     >
       <div className="w-[280px] sm:w-[360px] flex flex-col items-center gap-6">
         {/* Logo */}
-        <img src={logo} alt="Logo" className="h-8 md:h-10 w-auto" />
+        <img src={logo} alt="Logo" className="h-8 md:h-10 w-auto" fetchPriority="high" />
 
         <div className="w-full flex items-center gap-5">
         {/* Bar container */}
