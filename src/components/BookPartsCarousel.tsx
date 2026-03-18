@@ -88,7 +88,6 @@ const BookPartsCarousel = () => {
             >
               <span className={`block rounded-full ${selectedIndex === i ? "bg-purple-500 w-6 h-2" : "bg-white/30 w-2 h-2"}`} />
             </button>
-            />
           ))}
         </div>
       </div>
