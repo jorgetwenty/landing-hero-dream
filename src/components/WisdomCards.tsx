@@ -125,6 +125,8 @@ const WisdomCard = ({ nome, descricao, foto, imagePosition = "sm:object-top", mo
           <img
             src={foto}
             alt={nome}
+            width="400"
+            height="300"
             className={`w-full h-full object-cover ${mobileImagePosition} ${imagePosition} transition-all duration-700 group-hover:scale-110`}
             loading="lazy"
           />

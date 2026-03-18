@@ -53,7 +53,7 @@ const HeroSection = () => {
         <div className="flex items-center mb-5">
           {avatars.map((avatar, i) => (
             <div key={i} className="imgg">
-              <img src={avatar.src} alt={avatar.alt} className="w-10 h-10 md:w-12 md:h-12 object-cover" />
+              <img src={avatar.src} alt={avatar.alt} className="w-10 h-10 md:w-12 md:h-12 object-cover" width="48" height="48" loading="lazy" />
             </div>
           ))}
           <span className="ml-3 text-white/70 text-sm font-medium"><span className="ml-3 text-white/70 text-sm font-medium">+500 alunos</span></span>
