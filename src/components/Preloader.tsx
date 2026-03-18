@@ -4,6 +4,19 @@ import logo from "@/assets/logo-branca-2.webp";
 const Preloader = ({ onComplete }: { onComplete: () => void }) => {
   const [progress, setProgress] = useState(0);
   const [exiting, setExiting] = useState(false);
+  const [logoReady, setLogoReady] = useState(false);
+
+  // Wait for logo to load before starting animation
+  useEffect(() => {
+    const img = new Image();
+    img.src = logo;
+    if (img.complete) {
+      setLogoReady(true);
+    } else {
+      img.onload = () => setLogoReady(true);
+      img.onerror = () => setLogoReady(true); // proceed anyway
+    }
+  }, []);
 
   useEffect(() => {
     const duration = 2600;
