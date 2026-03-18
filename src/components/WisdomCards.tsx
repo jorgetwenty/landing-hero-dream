@@ -16,7 +16,7 @@ const cards = [
     mobileImagePosition: "object-[50%_30%]",
   },
   {
-    nome: "Mistérios da Maçonaria Revelados",
+    nome: "A Ciência Oculta da Numerologia",
     descricao: "Aprenda a calcular seu número de destino e entender como os números influenciam sua vida, decisões e propósito.",
     foto: "/images/card-maconaria.png",
     imagePosition: "object-center",
