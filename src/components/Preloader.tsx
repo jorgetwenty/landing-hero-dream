@@ -19,13 +19,14 @@ const Preloader = ({ onComplete }: { onComplete: () => void }) => {
   }, []);
 
   useEffect(() => {
+    if (!logoReady) return;
+
     const duration = 2600;
     const start = performance.now();
 
     const tick = (now: number) => {
       const elapsed = now - start;
       const t = Math.min(elapsed / duration, 1);
-      // Ease-out cubic for natural feel
       const eased = 1 - Math.pow(1 - t, 3);
       setProgress(Math.round(eased * 100));
 
@@ -38,7 +39,7 @@ const Preloader = ({ onComplete }: { onComplete: () => void }) => {
     };
 
     requestAnimationFrame(tick);
-  }, [onComplete]);
+  }, [onComplete, logoReady]);
 
   return (
     <div
