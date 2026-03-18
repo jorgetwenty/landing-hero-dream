@@ -68,6 +68,7 @@ const Preloader = ({ onComplete }: { onComplete: () => void }) => {
           {progress}
         </span>
         <span className="text-white/40 text-sm font-mono -ml-4">%</span>
+        </div>
       </div>
     </div>
   );
