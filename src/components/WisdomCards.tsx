@@ -9,7 +9,7 @@ const cards = [
     mobileImagePosition: "object-[50%_20%]",
   },
   {
-    nome: "A Ciência Oculta da Numerologia",
+    nome: "Mistérios da Maçonaria Revelados",
     descricao: "Desvende os mistérios, símbolos e o real funcionamento da Maçonaria, uma das sociedades mais enigmáticas da história.",
     foto: "/images/card-numerologia.png",
     imagePosition: "sm:object-top",
