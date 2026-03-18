@@ -35,7 +35,7 @@ const Preloader = ({ onComplete }: { onComplete: () => void }) => {
     >
       <div className="w-[280px] sm:w-[360px] flex flex-col items-center gap-6">
         {/* Logo */}
-        <img src={logo} alt="Logo" className="h-8 md:h-10 w-auto" />
+        <img src={logo} alt="Logo" className="h-8 md:h-10 w-auto" fetchPriority="high" />
 
         <div className="w-full flex items-center gap-5">
         {/* Bar container */}
