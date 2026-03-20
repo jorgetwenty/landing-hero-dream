@@ -154,7 +154,7 @@ const PricingSection = () => {
               </div>
               <div className="flex items-baseline justify-center mt-1">
                 <span className="text-[#9333ea] text-[32px] sm:text-[40px] font-bold mr-1">R$</span>
-                <span className="text-[#9333ea] text-[60px] sm:text-[78px] font-black tracking-tighter leading-none">37,00</span>
+                <span className="text-white text-[60px] sm:text-[78px] font-black tracking-tighter leading-none">37,00</span>
               </div>
             </div>
 
