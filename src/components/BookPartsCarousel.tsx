@@ -34,7 +34,7 @@ const BookPartsCarousel = () => {
   return (
     <section className="w-full py-16 md:py-24 px-4" style={{ backgroundColor: "#000000" }}>
       <h2 className="wisdom-headline">
-        Veja Algumas Das Partes do Livro da Sabedoria Oculta
+        Veja Algumas Das Partes do Livro da <span className="text-[#9D4EDD]">Sabedoria Oculta</span>
       </h2>
 
       <div className="relative max-w-4xl mx-auto">
