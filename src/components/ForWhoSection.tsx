@@ -145,7 +145,99 @@ const ForWhoSection = () => {
             </div>
           ))}
         </div>
+
+        {/* CTA Button */}
+        <div className="flex justify-center mt-12 sm:mt-16">
+          <a
+            href="#pricing"
+            className="shiny-cta-forwho"
+          >
+            <span>Quero começar agora</span>
+          </a>
+        </div>
       </div>
+
+      <style>{`
+        @property --forwho-gradient-angle {
+          syntax: "<angle>";
+          initial-value: 0deg;
+          inherits: false;
+        }
+        .shiny-cta-forwho {
+          --forwho-gradient-angle: 0deg;
+          position: relative;
+          overflow: hidden;
+          border-radius: 9999px;
+          padding: 1rem 2.5rem;
+          font-size: 1.125rem;
+          line-height: 1.2;
+          font-weight: 600;
+          color: #ffffff;
+          background: linear-gradient(#000000, #000000) padding-box,
+            conic-gradient(from var(--forwho-gradient-angle), transparent 0%, #a855f7 5%, #d8b4fe 15%, #a855f7 30%, transparent 40%, transparent 100%) border-box;
+          border: 2px solid transparent;
+          box-shadow: inset 0 0 0 1px #1a1818;
+          cursor: pointer;
+          isolation: isolate;
+          font-family: 'Inter', 'Helvetica Neue', sans-serif;
+          z-index: 10;
+          animation: forwho-border-spin 2.5s linear infinite;
+          text-decoration: none;
+          display: inline-block;
+          transition: transform 0.15s;
+        }
+        @keyframes forwho-border-spin { to { --forwho-gradient-angle: 360deg; } }
+        .shiny-cta-forwho:active { transform: translateY(1px); }
+        .shiny-cta-forwho::before {
+          content: '';
+          pointer-events: none;
+          position: absolute;
+          left: 50%; top: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 0;
+          --size: calc(100% - 6px);
+          width: var(--size); height: var(--size);
+          background: radial-gradient(circle at 2px 2px, white 0.5px, transparent 0) padding-box;
+          background-size: 4px 4px;
+          background-repeat: space;
+          mask-image: conic-gradient(from calc(var(--forwho-gradient-angle) + 45deg), black, transparent 10% 90%, black);
+          border-radius: inherit;
+          opacity: 0.4;
+        }
+        .shiny-cta-forwho::after {
+          content: '';
+          pointer-events: none;
+          position: absolute;
+          left: 50%; top: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 1;
+          width: 100%; aspect-ratio: 1;
+          background: linear-gradient(-50deg, transparent, #a855f7, transparent);
+          mask-image: radial-gradient(circle at bottom, transparent 40%, black);
+          opacity: 0.6;
+          animation: forwho-shimmer 4s linear infinite;
+        }
+        @keyframes forwho-shimmer { to { transform: translate(-50%, -50%) rotate(360deg); } }
+        .shiny-cta-forwho span { position: relative; z-index: 2; display: inline-block; }
+        .shiny-cta-forwho span::before {
+          content: '';
+          pointer-events: none;
+          position: absolute;
+          left: 50%; top: 50%;
+          transform: translate(-50%, -50%);
+          z-index: -1;
+          --size: calc(100% + 1rem);
+          width: var(--size); height: var(--size);
+          box-shadow: inset 0 -1ex 2rem 4px #a855f7;
+          opacity: 0;
+          border-radius: inherit;
+          animation: forwho-breathe 4.5s linear infinite;
+        }
+        @keyframes forwho-breathe {
+          0%, 100% { transform: translate(-50%, -50%) scale(1); }
+          50% { transform: translate(-50%, -50%) scale(1.20); }
+        }
+      `}</style>
     </section>
   );
 };
