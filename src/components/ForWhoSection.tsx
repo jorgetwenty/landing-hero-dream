@@ -34,7 +34,7 @@ const ForWhoSection = () => {
         scrollTrigger: {
           trigger: list,
           start: "top 70%",
-          end: `+=${checkItems.length * 150}`,
+          end: `+=${checkItems.length * 60}`,
           scrub: 0.5,
         },
       });
@@ -51,7 +51,7 @@ const ForWhoSection = () => {
             duration: 1,
             ease: "power2.out",
           },
-          index * 1.2
+          index * 0.6
         );
 
         if (checkIcon) {
@@ -64,7 +64,7 @@ const ForWhoSection = () => {
               duration: 0.6,
               ease: "back.out(2)",
             },
-            index * 1.2 + 0.3
+            index * 0.6 + 0.15
           );
         }
       });
