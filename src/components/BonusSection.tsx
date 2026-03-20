@@ -20,7 +20,7 @@ const BonusSection = () => {
       <div className="min-h-[734px] flex flex-col md:flex-row justify-center lg:justify-between items-center max-w-[1400px] mx-auto px-6 py-16 md:py-10 md:pl-[5vw] xl:pr-12 gap-12 md:gap-8">
         {/* Text Column */}
         <div className="w-full md:max-w-[517px] text-left z-10 flex-shrink-0">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-[30px] md:mb-[45px] leading-tight">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-4 md:mb-5 leading-tight">
             Bônus <span className="text-[#9D4EDD]">Exclusivos</span>
           </h2>
           <p className="text-foreground text-lg md:text-[19px] leading-relaxed">
