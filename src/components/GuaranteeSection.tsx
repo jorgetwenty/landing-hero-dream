@@ -72,7 +72,7 @@ const GuaranteeSection = () => {
               WebkitTextFillColor: "transparent",
             }}
           >
-            Teste 30 Dias Sem Riscos
+            ESSE PRODUTO TEM GARANTIA INCONDICIONAL DE 30 DIAS!
           </h2>
           <p className="text-foreground text-base md:text-lg leading-relaxed">
             Você está sob proteção do Código de Defesa do Consumidor – LEI Nº 8.078, de 11 de setembro de 1990.
