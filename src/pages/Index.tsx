@@ -27,8 +27,8 @@ const Index = () => {
     <main className="bg-background">
       {loading && <Preloader onComplete={handleComplete} />}
       <HeroSection />
-      <LazySection><WisdomCards /></LazySection>
       <LazySection><ForWhoSection /></LazySection>
+      <LazySection><WisdomCards /></LazySection>
       <LazySection><BookPartsCarousel /></LazySection>
       <LazySection><BonusSection /></LazySection>
       <LazySection><MacbookReveal /></LazySection>
