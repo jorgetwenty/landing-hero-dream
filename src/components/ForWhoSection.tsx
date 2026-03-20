@@ -34,7 +34,7 @@ const ForWhoSection = () => {
         scrollTrigger: {
           trigger: list,
           start: "top 70%",
-          end: `+=${checkItems.length * 150}`,
+          end: `+=${checkItems.length * 60}`,
           scrub: 0.5,
         },
       });
