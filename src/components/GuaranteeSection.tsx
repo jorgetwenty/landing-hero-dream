@@ -75,7 +75,9 @@ const GuaranteeSection = () => {
             Teste 30 Dias Sem Riscos
           </h2>
           <p className="text-foreground text-base md:text-lg leading-relaxed">
-            Nós confiamos tanto no conteúdo do livro Sabedoria Oculta que oferecemos uma garantia incondicional de 30 dias. Se por qualquer motivo você não ficar satisfeito, devolvemos 100% do seu investimento — sem perguntas, sem burocracia. O risco é zero.
+            Você está sob proteção do Código de Defesa do Consumidor – LEI Nº 8.078, de 11 de setembro de 1990.
+            <br /><br />
+            Entendemos a importância de escolher o método certo para seu desenvolvimento pessoal e saúde. Nosso ebook digital o Livro da Sabedoria é cuidadosamente elaborado por especialistas, com conteúdo atualizado e prático.
           </p>
         </div>
       </div>
