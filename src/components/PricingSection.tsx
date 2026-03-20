@@ -58,7 +58,7 @@ const PricingSection = () => {
   const seconds = (timeLeft % 60).toString().padStart(2, "0");
 
   return (
-    <section className="relative w-full bg-black flex items-center justify-center py-12 sm:py-16 md:py-20 px-4 font-sans selection:bg-[#c084fc] selection:text-white overflow-hidden">
+    <section id="pricing" className="relative w-full bg-black flex items-center justify-center py-12 sm:py-16 md:py-20 px-4 font-sans selection:bg-[#c084fc] selection:text-white overflow-hidden">
       {/* Grid Background */}
       <div className="absolute inset-0 pricing-grid-bg pointer-events-none" />
 
