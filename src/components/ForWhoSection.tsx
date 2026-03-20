@@ -51,7 +51,7 @@ const ForWhoSection = () => {
             duration: 1,
             ease: "power2.out",
           },
-          index * 1.2
+          index * 0.6
         );
 
         if (checkIcon) {
