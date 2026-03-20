@@ -49,20 +49,12 @@ const HeroSection = () => {
 
       {/* Preço inferior direito */}
       <div className="absolute bottom-12 md:bottom-16 right-6 md:right-16 z-10 text-right">
-        <span className="text-white/50 text-sm md:text-base font-medium line-through decoration-white/40 decoration-2">DE R$97</span>
-        <p className="text-white/60 text-xs md:text-sm font-medium mt-1 tracking-widest uppercase">Por Apenas</p>
+        <span className="text-white text-lg md:text-xl font-semibold line-through decoration-red-500 decoration-[3px]">DE R$97</span>
+        <p className="text-white text-sm md:text-base font-semibold mt-2 tracking-widest uppercase">Por Apenas</p>
         <div className="flex items-baseline justify-end gap-1 mt-1">
-          <span className="text-white text-2xl md:text-3xl font-light">R$</span>
-          <span className="text-white text-5xl md:text-7xl font-black tracking-tighter leading-none" style={{ fontFamily: "'SF Pro Display', 'Inter', sans-serif" }}>27</span>
+          <span className="text-white text-3xl md:text-5xl font-bold">R$</span>
+          <span className="text-white text-7xl md:text-9xl font-black tracking-tighter leading-none" style={{ fontFamily: "'SF Pro Display', 'Inter', sans-serif", textShadow: '0 0 40px rgba(168, 85, 247, 0.4)' }}>27</span>
         </div>
-        <a
-          href="https://pay.cakto.com.br/7exfjyy_807964"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block mt-4 px-6 py-2.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-semibold tracking-wide hover:bg-white/20 transition-all duration-300"
-        >
-          Garantir agora →
-        </a>
       </div>
 
       {/* Texto + Botão inferior esquerdo */}
