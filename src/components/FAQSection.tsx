@@ -3,34 +3,29 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    question: "O que é o kit Sabedoria Oculta?",
+    question: "O Livro é digital ou físico?",
     answer:
-      "É um conjunto completo de livros que reúne conhecimentos ancestrais, técnicas de desenvolvimento pessoal e sabedoria oculta para transformar sua vida em todas as áreas — mental, espiritual e financeira.",
+      "O guia e todos os bônus são 100% digitais, e você recebe o acesso imediatamente por email após a compra.",
   },
   {
-    question: "O conteúdo é digital ou físico?",
+    question: "Este livro é indicado pra quem ainda não conhece nada sobre sabedoria oculta?",
     answer:
-      "O kit é 100% digital. Você recebe acesso imediato após a compra e pode ler em qualquer dispositivo — celular, tablet ou computador.",
-  },
-  {
-    question: "Quanto tempo tenho para acessar o material?",
-    answer:
-      "O acesso é vitalício. Uma vez adquirido, o conteúdo é seu para sempre, sem mensalidades ou cobranças extras.",
-  },
-  {
-    question: "Preciso ter conhecimento prévio sobre o assunto?",
-    answer:
-      "Não. O material foi desenvolvido para ser acessível tanto para iniciantes quanto para quem já possui conhecimento na área. A linguagem é clara e os conceitos são apresentados de forma progressiva.",
-  },
-  {
-    question: "Como funciona a garantia de 30 dias?",
-    answer:
-      "Se por qualquer motivo você não ficar satisfeito, basta entrar em contato dentro de 30 dias após a compra e devolvemos 100% do seu investimento — sem perguntas, sem burocracia.",
+      "Sim! Todos os ensinamentos foram colocados em prática e validados por buscadores como você. A transformação é real, muitos relatam que, depois de aplicar, é como se uma nova percepção tivesse se aberto... e o melhor: sem os velhos padrões limitantes que você quer deixar pra trás.",
   },
   {
     question: "O pagamento é seguro?",
     answer:
-      "Sim! Utilizamos uma plataforma de pagamento com criptografia de ponta, garantindo total segurança dos seus dados. Aceitamos cartão de crédito, PIX e boleto bancário.",
+      "Sim! O pagamento é 100% seguro, processado com criptografia 128bits. Seguimos a Lei Geral de Proteção de Dados Pessoais (LGPD) Lei nº 13.709, de 2018.",
+  },
+  {
+    question: "Como funciona a garantia de 30 dias?",
+    answer:
+      "Oferecemos uma garantia de satisfação de 7 dias. Se, por qualquer motivo, você sentir que o Ebook não atende às suas expectativas, pode solicitar um reembolso completo dentro desse período ou seja, você não corre nenhum risco.",
+  },
+  {
+    question: "Como posso entrar em contato com o suporte?",
+    answer:
+      "Você pode entrar em contato com o nosso suporte pelo e-mail (24 horas 7 dias por semana) suporte@sabedoriasocultas.com.br. Estamos à disposição para te ajudar! 😄🙋",
   },
 ];
 
