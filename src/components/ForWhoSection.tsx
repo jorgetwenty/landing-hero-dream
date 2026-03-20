@@ -64,7 +64,7 @@ const ForWhoSection = () => {
               duration: 0.6,
               ease: "back.out(2)",
             },
-            index * 1.2 + 0.3
+            index * 0.6 + 0.15
           );
         }
       });
