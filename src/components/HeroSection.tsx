@@ -49,19 +49,22 @@ const HeroSection = () => {
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
+      {/* Black background always visible behind video */}
+      <div className="absolute inset-0 bg-black" />
       <video
         ref={videoRef}
-        className="absolute inset-0 h-full w-full object-cover"
+        className={`absolute inset-0 h-full w-full object-cover z-[0] transition-opacity duration-300 ${videoReady ? 'opacity-100' : 'opacity-0'}`}
         autoPlay
         muted
         loop
         playsInline
         preload="auto"
         poster=""
+        // @ts-ignore
+        fetchpriority="high"
       >
         <source src="/hero-video.webm" type="video/webm" />
       </video>
-      <div className="absolute inset-0 bg-black -z-10" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-[1]" />
       <div
         className="absolute bottom-0 left-0 w-full z-[2] pointer-events-none"
