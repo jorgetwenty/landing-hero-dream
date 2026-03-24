@@ -1,6 +1,5 @@
-import { lazy, Suspense, useState, useCallback } from "react";
+import { lazy, Suspense } from "react";
 import HeroSection from "@/components/HeroSection";
-import Preloader from "@/components/Preloader";
 
 const WisdomCards = lazy(() => import("@/components/WisdomCards"));
 const ForWhoSection = lazy(() => import("@/components/ForWhoSection"));
@@ -20,12 +19,8 @@ const LazySection = ({ children }: { children: React.ReactNode }) => (
 );
 
 const Index = () => {
-  const [loading, setLoading] = useState(true);
-  const handleComplete = useCallback(() => setLoading(false), []);
-
   return (
     <main className="bg-background">
-      {loading && <Preloader onComplete={handleComplete} />}
       <HeroSection />
       <LazySection><ForWhoSection /></LazySection>
       <LazySection><WisdomCards /></LazySection>
