@@ -70,21 +70,16 @@ const HeroSection = () => {
         </div>
 
         <h1
-          className="text-white text-2xl md:text-4xl lg:text-[42px] leading-tight md:leading-[1.15] mb-4"
-          style={{ fontFamily: "'SF Pro Display', 'Inter', sans-serif", fontWeight: 600 }}
+          className="text-white text-3xl md:text-5xl lg:text-[56px] leading-[1.1] md:leading-[1.08] mb-5 font-bold"
+          style={{ fontFamily: "'SF Pro Display', 'Inter', sans-serif" }}
         >
-          Eles esconderam o maior poder da sua vida.<br />
-          Agora é sua chance de desbloquear.
+          Eles esconderam o maior poder da sua vida. Agora é sua chance de desbloquear.
         </h1>
         <p
-          className="text-white/80 text-sm md:text-base lg:text-lg leading-relaxed mb-8 max-w-md"
-          style={{ fontFamily: "'SF Pro Display', 'Inter', sans-serif", fontWeight: 300 }}
+          className="text-white/70 text-sm md:text-[15px] lg:text-base leading-relaxed mb-8 max-w-lg font-normal"
+          style={{ fontFamily: "'SF Pro Display', 'Inter', sans-serif" }}
         >
-          Durante anos, te ensinaram a aceitar pouco…<br />
-          a viver limitado… a ser fraco.<br /><br />
-          Mentiram.<br /><br />
-          Existe uma energia dentro de você capaz de mudar seu corpo, sua mente e seu destino.<br /><br />
-          E agora, você vai reativá-la.
+          Durante anos, te ensinaram a aceitar pouco… a viver limitado… a ser fraco. Mentiram. Existe uma energia dentro de você capaz de mudar seu corpo, sua mente e seu destino. E agora, você vai reativá-la.
         </p>
 
         <a
