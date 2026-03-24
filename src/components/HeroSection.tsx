@@ -47,15 +47,40 @@ const HeroSection = () => {
         <img src={logo} alt="Logo" className="h-10 md:h-14 w-auto" />
       </div>
 
-      {/* Preço inferior direito */}
+      {/* Preço inferior direito com card glassmorphism */}
       <div className="absolute bottom-12 md:bottom-16 right-6 md:right-16 z-10 text-right">
-        <span className="text-white text-lg md:text-xl font-semibold line-through decoration-red-500 decoration-[3px]">DE R$97</span>
-        <p className="text-white text-sm md:text-base font-semibold mt-2 tracking-widest uppercase">Por Apenas</p>
-        <div className="flex items-baseline justify-end gap-1 mt-1">
-          <span className="text-white text-3xl md:text-5xl font-bold">R$</span>
-          <span className="text-white text-7xl md:text-9xl font-black tracking-tighter leading-none" style={{ fontFamily: "'SF Pro Display', 'Inter', sans-serif", textShadow: '0 0 40px rgba(168, 85, 247, 0.4)' }}>27</span>
+        <div className="relative overflow-hidden rounded-2xl border border-white/10 px-6 py-5 md:px-8 md:py-6" style={{ background: 'rgba(0,0,0,0.45)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)' }}>
+          {/* Animated gradient shimmer */}
+          <div className="absolute inset-0 opacity-30 pointer-events-none price-shimmer" />
+          {/* Subtle purple glow border */}
+          <div className="absolute inset-0 rounded-2xl pointer-events-none" style={{ boxShadow: 'inset 0 0 30px rgba(168,85,247,0.08), 0 0 40px rgba(168,85,247,0.1)' }} />
+          <span className="relative text-white text-lg md:text-xl font-semibold line-through decoration-red-500 decoration-[3px]">DE R$97</span>
+          <p className="relative text-white text-sm md:text-base font-semibold mt-2 tracking-widest uppercase">Por Apenas</p>
+          <div className="relative flex items-baseline justify-end gap-1 mt-1">
+            <span className="text-white text-3xl md:text-5xl font-bold">R$</span>
+            <span className="text-white text-7xl md:text-9xl font-black tracking-tighter leading-none" style={{ fontFamily: "'SF Pro Display', 'Inter', sans-serif", textShadow: '0 0 40px rgba(168, 85, 247, 0.4)' }}>27</span>
+          </div>
         </div>
       </div>
+
+      <style>{`
+        .price-shimmer {
+          background: linear-gradient(
+            105deg,
+            transparent 20%,
+            rgba(168, 85, 247, 0.15) 35%,
+            rgba(216, 180, 254, 0.1) 50%,
+            rgba(168, 85, 247, 0.15) 65%,
+            transparent 80%
+          );
+          background-size: 200% 100%;
+          animation: price-shimmer-move 3s ease-in-out infinite;
+        }
+        @keyframes price-shimmer-move {
+          0% { background-position: 200% 0; }
+          100% { background-position: -200% 0; }
+        }
+      `}</style>
 
       {/* Texto + Botão inferior esquerdo */}
       <div className="absolute bottom-12 md:bottom-16 left-6 md:left-16 z-10 max-w-xl">
