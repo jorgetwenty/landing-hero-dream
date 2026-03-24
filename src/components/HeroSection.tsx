@@ -70,11 +70,22 @@ const HeroSection = () => {
         </div>
 
         <h1
-          className="text-white text-2xl md:text-4xl lg:text-[42px] leading-tight md:leading-[1.2] mb-8"
-          style={{ fontFamily: "'SF Pro Display', 'Inter', sans-serif", fontWeight: 400 }}
+          className="text-white text-2xl md:text-4xl lg:text-[42px] leading-tight md:leading-[1.15] mb-4"
+          style={{ fontFamily: "'SF Pro Display', 'Inter', sans-serif", fontWeight: 600 }}
         >
-          Descubra os Códigos proibidos que despertam uma energia brutal dentro de você.
+          Eles esconderam o maior poder da sua vida.<br />
+          Agora é sua chance de desbloquear.
         </h1>
+        <p
+          className="text-white/80 text-sm md:text-base lg:text-lg leading-relaxed mb-8 max-w-md"
+          style={{ fontFamily: "'SF Pro Display', 'Inter', sans-serif", fontWeight: 300 }}
+        >
+          Durante anos, te ensinaram a aceitar pouco…<br />
+          a viver limitado… a ser fraco.<br /><br />
+          Mentiram.<br /><br />
+          Existe uma energia dentro de você capaz de mudar seu corpo, sua mente e seu destino.<br /><br />
+          E agora, você vai reativá-la.
+        </p>
 
         <a
           href="https://pay.cakto.com.br/7exfjyy_807964"
