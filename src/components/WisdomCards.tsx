@@ -37,8 +37,8 @@ const cards = [
     nome: "A Verdade Sobre as Pirâmides",
     descricao: "Descubra o verdadeiro segredo que as pirâmides escondem e o conhecimento ancestral por trás delas.",
     foto: "/images/card-piramides.webp",
-    imagePosition: "sm:object-[50%_40%]",
-    mobileImagePosition: "object-[50%_40%]",
+    imagePosition: "sm:object-[50%_60%]",
+    mobileImagePosition: "object-[50%_60%]",
   },
   {
     nome: "Os segredos do Vaticano",
