@@ -37,13 +37,15 @@ const cards = [
     nome: "A Verdade Sobre as Pirâmides",
     descricao: "Descubra o verdadeiro segredo que as pirâmides escondem e o conhecimento ancestral por trás delas.",
     foto: "/images/card-piramides.webp",
-    imagePosition: "object-center",
+    imagePosition: "sm:object-[50%_25%]",
+    mobileImagePosition: "object-[50%_25%]",
   },
   {
     nome: "Os segredos do Vaticano",
     descricao: "Entenda e ative os 7 chakras para equilibrar corpo e alma, desvendando os segredos do seu corpo energético.",
     foto: "/images/card-chakras.webp",
-    imagePosition: "object-top",
+    imagePosition: "sm:object-[50%_20%]",
+    mobileImagePosition: "object-[50%_20%]",
   },
 ];
 
