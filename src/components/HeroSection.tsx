@@ -20,15 +20,20 @@ const HeroSection = () => {
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
-<video
+      <video
         ref={videoRef}
         className="absolute inset-0 h-full w-full object-cover"
-        src="/hero-video.webm"
         autoPlay
         muted
         loop
         playsInline
-      />
+        preload="auto"
+        poster=""
+      >
+        <source src="/hero-video.webm" type="video/webm" />
+      </video>
+      {/* Fallback black background if video fails */}
+      <div className="absolute inset-0 bg-black -z-10" />
 
       {/* Overlay escuro para legibilidade */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-[1]" />
