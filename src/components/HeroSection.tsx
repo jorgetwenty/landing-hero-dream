@@ -49,10 +49,14 @@ const HeroSection = () => {
 
       {/* Preço inferior direito - liquid glass */}
       <div className="absolute bottom-12 md:bottom-16 right-6 md:right-16 z-10 text-right">
-        <div className="liquid-glass relative overflow-hidden rounded-2xl px-5 py-4 md:px-6 md:py-5">
-          <span className="relative text-white text-sm md:text-base font-semibold line-through decoration-red-500 decoration-[2px]">DE R$97</span>
-          <p className="relative text-white text-xs md:text-sm font-semibold mt-1 tracking-widest uppercase">Por Apenas</p>
-          <div className="relative flex items-baseline justify-end gap-1 mt-1">
+        <div className="liquid-glass relative overflow-hidden rounded-2xl px-5 py-4 md:px-6 md:py-5 isolation-auto" style={{ isolation: 'isolate' }}>
+          {/* Dot grid animation like shiny CTA */}
+          <div className="absolute inset-0 pointer-events-none price-dots" />
+          {/* Shimmer sweep */}
+          <div className="absolute inset-0 pointer-events-none price-sweep" />
+          <span className="relative z-[2] text-white text-sm md:text-base font-semibold line-through decoration-red-500 decoration-[2px]">DE R$97</span>
+          <p className="relative z-[2] text-white text-xs md:text-sm font-semibold mt-1 tracking-widest uppercase">Por Apenas</p>
+          <div className="relative z-[2] flex items-baseline justify-end gap-1 mt-1">
             <span className="text-white text-2xl md:text-3xl font-bold">R$</span>
             <span className="text-white text-5xl md:text-7xl font-black tracking-tighter leading-none" style={{ fontFamily: "'SF Pro Display', 'Inter', sans-serif" }}>27</span>
           </div>
@@ -67,6 +71,38 @@ const HeroSection = () => {
           -webkit-backdrop-filter: blur(4px);
           border: none;
           box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+        }
+        .price-dots {
+          --space: 4px;
+          --position: 2px;
+          background: radial-gradient(circle at var(--position) var(--position), white 0.5px, transparent 0) padding-box;
+          background-size: var(--space) var(--space);
+          background-repeat: space;
+          mask-image: conic-gradient(from var(--price-dot-angle, 0deg), black, transparent 10% 90%, black);
+          opacity: 0.4;
+          animation: price-dot-spin 2.5s linear infinite;
+        }
+        @property --price-dot-angle {
+          syntax: "<angle>";
+          initial-value: 0deg;
+          inherits: false;
+        }
+        @keyframes price-dot-spin {
+          to { --price-dot-angle: 360deg; }
+        }
+        .price-sweep {
+          width: 100%;
+          aspect-ratio: 1;
+          background: linear-gradient(-50deg, transparent, rgba(168, 85, 247, 0.15), transparent);
+          mask-image: radial-gradient(circle at bottom, transparent 40%, black);
+          opacity: 0.6;
+          animation: price-sweep-spin 4s linear infinite;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+        @keyframes price-sweep-spin {
+          to { transform: translate(-50%, -50%) rotate(360deg); }
         }
       `}</style>
 
