@@ -70,7 +70,7 @@ const HeroSection = () => {
         @property --price-border-angle {
           syntax: "<angle>";
           initial-value: 0deg;
-          inherits: false;
+          inherits: true;
         }
         .price-card-wrapper {
           --price-border-angle: 0deg;
