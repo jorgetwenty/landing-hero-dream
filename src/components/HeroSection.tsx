@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import logo from "@/assets/logo.png";
 
 const avatars = [
@@ -26,11 +26,25 @@ const PriceCard = ({ mobile }: { mobile?: boolean }) => (
 
 const HeroSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [videoReady, setVideoReady] = useState(false);
 
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.play().catch(() => {});
+    const video = videoRef.current;
+    if (!video) return;
+
+    const handleCanPlay = () => {
+      setVideoReady(true);
+      video.play().catch(() => {});
+    };
+
+    // If already ready (cached)
+    if (video.readyState >= 3) {
+      handleCanPlay();
+      return;
     }
+
+    video.addEventListener("canplay", handleCanPlay, { once: true });
+    return () => video.removeEventListener("canplay", handleCanPlay);
   }, []);
 
   return (
