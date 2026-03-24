@@ -70,7 +70,7 @@ const HeroSection = () => {
         </div>
 
         <h1
-          className="text-white text-3xl md:text-5xl lg:text-[56px] leading-[1.1] md:leading-[1.08] mb-5 font-bold"
+          className="text-white text-lg md:text-2xl lg:text-[28px] leading-snug md:leading-[1.2] mb-3 font-semibold"
           style={{ fontFamily: "'SF Pro Display', 'Inter', sans-serif" }}
         >
           Eles esconderam o maior poder da sua vida. Agora é sua chance de desbloquear.
