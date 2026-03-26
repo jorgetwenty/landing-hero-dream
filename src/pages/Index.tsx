@@ -22,6 +22,7 @@ const Index = () => {
   return (
     <main className="bg-background">
       <HeroSection />
+      <div className="h-32 bg-gradient-to-b from-black to-white" />
       <LazySection><ForWhoSection /></LazySection>
       <LazySection><WisdomCards /></LazySection>
       <LazySection><BookPartsCarousel /></LazySection>
