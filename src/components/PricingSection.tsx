@@ -77,33 +77,33 @@ const PricingSection = () => {
 
           <ul className="flex flex-col gap-6 text-[#3b0764] text-[15px] sm:text-[16px] md:text-[17px]">
             <ListItem>
-              <span className="block font-extrabold mb-1">Áudio de Reprogramação da Consciência</span>
+              <span className="block font-extrabold mb-1">O Livro da Sabedoria em português VOL. 1</span>
               <span className="block font-medium text-[13px] sm:text-[14px] md:text-[15px] leading-snug opacity-80">
-                Um áudio guiado criado para ajudar você a reprogramar padrões mentais, elevar sua frequência e fortalecer seu foco mental.
+                O volume completo traduzido com ensinamentos profundos sobre consciência, espiritualidade e o conhecimento oculto das civilizações antigas.
               </span>
             </ListItem>
             <ListItem>
-              <span className="block font-extrabold mb-1">Manual de Ativação da Consciência</span>
+              <span className="block font-extrabold mb-1">Acesso Vitalício</span>
               <span className="block font-medium text-[13px] sm:text-[14px] md:text-[15px] leading-snug opacity-80">
-                Um guia prático com técnicas simples para despertar sua percepção espiritual e acessar estados mais elevados de consciência.
+                Comprou uma vez, é seu para sempre. Acesse quantas vezes quiser, de qualquer dispositivo, sem mensalidades ou taxas extras.
               </span>
             </ListItem>
             <ListItem>
-              <span className="block font-extrabold mb-1">Teste dos Arquétipos Espirituais</span>
+              <span className="block font-extrabold mb-1">Bônus Platinum #1 — O Livro de Enoque</span>
               <span className="block font-medium text-[13px] sm:text-[14px] md:text-[15px] leading-snug opacity-80">
-                Descubra qual arquétipo governa sua energia e como ele influencia sua forma de pensar, agir e manifestar sua realidade.
+                Um dos textos mais misteriosos da história, revelando segredos sobre anjos, dimensões superiores e o destino da humanidade.
               </span>
             </ListItem>
             <ListItem>
-              <span className="block font-extrabold mb-1">Escudo Energético</span>
+              <span className="block font-extrabold mb-1">Bônus Especial #2 — A Nova Ordem Mundial</span>
               <span className="block font-medium text-[13px] sm:text-[14px] md:text-[15px] leading-snug opacity-80">
-                Aprenda práticas simples para proteger sua energia e evitar influências negativas que drenam sua força mental e emocional.
+                Entenda os bastidores do poder global, as forças ocultas que moldam sociedades e o que isso significa para o seu despertar.
               </span>
             </ListItem>
             <ListItem>
-              <span className="block font-extrabold mb-1">Guia dos Símbolos de Poder</span>
+              <span className="block font-extrabold mb-1">Bônus Premium #3 — Glândula Pineal</span>
               <span className="block font-medium text-[13px] sm:text-[14px] md:text-[15px] leading-snug opacity-80">
-                Descubra o significado de símbolos antigos ligados à consciência, espiritualidade e conhecimento oculto.
+                Descubra como ativar e descalcificar sua glândula pineal, o portal para a intuição, visão espiritual e conexão com o divino.
               </span>
             </ListItem>
           </ul>
