@@ -9,6 +9,7 @@ const MacbookReveal = lazy(() => import("@/components/MacbookReveal"));
 const PricingSection = lazy(() => import("@/components/PricingSection"));
 const TestimonialsTicker = lazy(() => import("@/components/TestimonialsTicker"));
 const GuaranteeSection = lazy(() => import("@/components/GuaranteeSection"));
+const CosmicSection = lazy(() => import("@/components/CosmicSection"));
 const FAQSection = lazy(() => import("@/components/FAQSection"));
 const Footer = lazy(() => import("@/components/Footer"));
 
@@ -26,6 +27,7 @@ const Index = () => {
       <LazySection><ForWhoSection /></LazySection>
       <LazySection><WisdomCards /></LazySection>
       <LazySection><BookPartsCarousel /></LazySection>
+      <LazySection><CosmicSection /></LazySection>
       <LazySection><BonusSection /></LazySection>
       <LazySection><MacbookReveal /></LazySection>
       <LazySection><PricingSection /></LazySection>
