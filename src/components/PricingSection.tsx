@@ -219,9 +219,9 @@ const PricingSection = () => {
               href="https://pay.cakto.com.br/7exfjyy_807964"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-[95%] mt-7 group cursor-pointer border bg-[#120f16] border-[#2e144a] gap-3 h-[68px] flex items-center p-[10px] rounded-full transition-all duration-500 hover:shadow-2xl hover:shadow-[#9333ea]/20 no-underline"
+              className="w-[95%] mt-7 group cursor-pointer border bg-[#120f16] border-[#2e144a] gap-3 h-[72px] flex items-center p-[10px] rounded-full transition-all duration-500 hover:shadow-2xl hover:shadow-[#9333ea]/20 no-underline"
             >
-              <span className="inner-button shimmer-effect flex-1 text-[#0b0510] cursor-pointer h-full rounded-full flex items-center justify-center text-[15px] sm:text-[16px] md:text-[18px] font-black tracking-tight transition-all duration-300 active:scale-95 active:translate-y-[1px]">
+              <span className="inner-button shimmer-effect flex-1 text-[#0b0510] cursor-pointer h-full rounded-full flex items-center justify-center text-[13px] sm:text-[15px] md:text-[16px] font-black tracking-tight transition-all duration-300 active:scale-95 active:translate-y-[1px] px-3">
                 COMPRAR AGORA COM DESCONTO
               </span>
               <span className="arrow-container group-hover:ml-2 w-[48px] h-[48px] flex shrink-0 items-center justify-center rounded-full border border-zinc-700 bg-[#1c1823] text-zinc-300 shadow-sm overflow-hidden">
