@@ -78,6 +78,19 @@ const ForWhoSection = () => {
       ref={sectionRef}
       className="relative w-full min-h-screen py-16 md:py-24 flex flex-col justify-center items-center px-4 overflow-hidden bg-white"
     >
+      {/* Spline 3D Background */}
+      <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none opacity-40" style={{ mixBlendMode: 'multiply' }}>
+        <iframe
+          src="https://my.spline.design/glowingplanetparticles-HmCVKutonlFn3Oqqe6DI9nWi/"
+          frameBorder="0"
+          width="100%"
+          height="100%"
+          className="w-full h-full"
+          title="Spline 3D Background"
+          loading="lazy"
+        />
+      </div>
+
       {/* Subtle purple ambient */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] md:w-[800px] h-[500px] md:h-[800px] rounded-full blur-[100px] md:blur-[150px] pointer-events-none z-0 bg-purple-200/30" />
 
