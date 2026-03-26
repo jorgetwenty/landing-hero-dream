@@ -32,8 +32,8 @@ const BookPartsCarousel = () => {
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
   return (
-    <section className="w-full py-16 md:py-24 px-4" style={{ backgroundColor: "#000000" }}>
-      <h2 className="wisdom-headline">
+    <section className="w-full py-16 md:py-24 px-4 bg-white">
+      <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-12 sm:mb-20 max-w-3xl mx-auto leading-tight">
         Veja Algumas Das Partes do Livro da <span className="text-[#9D4EDD]">Sabedoria Oculta</span>
       </h2>
 
@@ -84,11 +84,11 @@ const BookPartsCarousel = () => {
               key={i}
               onClick={() => emblaApi?.scrollTo(i)}
               className={`h-8 min-w-[2rem] rounded-full transition-all duration-300 flex items-center justify-center ${
-                selectedIndex === i ? "bg-purple-500 w-8" : "bg-white/30 w-8"
+                selectedIndex === i ? "bg-purple-500 w-8" : "bg-gray-300 w-8"
               }`}
               aria-label={`Ir para slide ${i + 1}`}
             >
-              <span className={`block rounded-full ${selectedIndex === i ? "bg-purple-500 w-6 h-2" : "bg-white/30 w-2 h-2"}`} />
+              <span className={`block rounded-full ${selectedIndex === i ? "bg-purple-500 w-6 h-2" : "bg-gray-300 w-2 h-2"}`} />
             </button>
           ))}
         </div>

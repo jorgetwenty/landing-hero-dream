@@ -65,28 +65,28 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="w-full bg-black border-t border-white/10 py-10 px-6">
+      <footer className="w-full bg-white border-t border-gray-200 py-10 px-6">
         <div className="max-w-4xl mx-auto text-center space-y-4">
-          <p className="text-foreground text-xs md:text-sm leading-relaxed">
+          <p className="text-gray-600 text-xs md:text-sm leading-relaxed">
             Este site não é afiliado ao Facebook ou qualquer entidade do Facebook. Ao sair do Facebook ou Instagram, a responsabilidade não é deles e sim do nosso site.
           </p>
-          <p className="text-foreground text-xs md:text-sm">
+          <p className="text-gray-600 text-xs md:text-sm">
             Copyright © 2026 - Sabedorias Ocultas
           </p>
-          <p className="text-foreground text-xs md:text-sm">
+          <p className="text-gray-600 text-xs md:text-sm">
             Todos os direitos reservados.
           </p>
           <div className="flex items-center justify-center gap-2 pt-2">
             <button
               onClick={() => setPrivacyOpen(true)}
-              className="text-muted-foreground text-xs md:text-sm underline underline-offset-4 hover:text-foreground transition-colors"
+              className="text-gray-500 text-xs md:text-sm underline underline-offset-4 hover:text-gray-900 transition-colors"
             >
               Política de privacidade
             </button>
-            <span className="text-muted-foreground text-xs md:text-sm">|</span>
+            <span className="text-gray-400 text-xs md:text-sm">|</span>
             <button
               onClick={() => setTermsOpen(true)}
-              className="text-muted-foreground text-xs md:text-sm underline underline-offset-4 hover:text-foreground transition-colors"
+              className="text-gray-500 text-xs md:text-sm underline underline-offset-4 hover:text-gray-900 transition-colors"
             >
               Termos de uso
             </button>

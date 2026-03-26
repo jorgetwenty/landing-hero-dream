@@ -16,15 +16,15 @@ const TestimonialsTicker = () => {
   const doubled = [...testimonials, ...testimonials];
 
   return (
-    <section className="w-full bg-black py-20 overflow-hidden">
-      <h2 className="wisdom-headline">
+    <section className="w-full bg-white py-20 overflow-hidden">
+      <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-12 sm:mb-20 max-w-3xl mx-auto leading-tight">
         Veja o que <span className="text-[#9D4EDD]">nossos alunos</span> estão dizendo
       </h2>
 
       <div className="relative">
         {/* Fade edges */}
-        <div className="absolute left-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
         <div className="flex animate-ticker gap-6">
           {doubled.map((img, i) => (

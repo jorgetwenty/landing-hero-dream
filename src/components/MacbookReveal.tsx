@@ -26,7 +26,7 @@ const MacbookReveal: FC = () => {
   }, []);
 
   return (
-    <section ref={macbookRef} className="bg-black macbook-section w-full relative z-10">
+    <section ref={macbookRef} className="bg-white macbook-section w-full relative z-10">
       <div className="macbook-wrapper">
         <div className="carrosseltela">
           <img src="https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=1000&auto=format&fit=crop" alt="Conteúdo da Tela" loading="lazy" />
