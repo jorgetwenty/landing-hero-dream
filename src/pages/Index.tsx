@@ -27,6 +27,7 @@ const Index = () => {
       <LazySection><ForWhoSection /></LazySection>
       <LazySection><WisdomCards /></LazySection>
       <LazySection><BookPartsCarousel /></LazySection>
+      <LazySection><CosmicSection /></LazySection>
       <LazySection><BonusSection /></LazySection>
       <LazySection><MacbookReveal /></LazySection>
       <LazySection><PricingSection /></LazySection>
