@@ -76,11 +76,10 @@ const ForWhoSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full min-h-screen py-16 md:py-24 flex flex-col justify-center items-center px-4 overflow-hidden"
-      style={{ backgroundColor: '#111111' }}
+      className="relative w-full min-h-screen py-16 md:py-24 flex flex-col justify-center items-center px-4 overflow-hidden bg-white"
     >
-      {/* Spline 3D Background - full visibility */}
-      <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none">
+      {/* Spline 3D Background - screen blend makes black transparent on white */}
+      <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none" style={{ mixBlendMode: 'screen' }}>
         <iframe
           src="https://my.spline.design/glowingplanetparticles-HmCVKutonlFn3Oqqe6DI9nWi/"
           frameBorder="0"
@@ -93,11 +92,11 @@ const ForWhoSection = () => {
       </div>
 
       {/* Subtle purple ambient */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] md:w-[800px] h-[500px] md:h-[800px] rounded-full blur-[100px] md:blur-[150px] pointer-events-none z-0 bg-purple-900/10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] md:w-[800px] h-[500px] md:h-[800px] rounded-full blur-[100px] md:blur-[150px] pointer-events-none z-0 bg-purple-200/20" />
 
       <div className="w-full max-w-4xl mx-auto relative z-10">
         {/* Headline */}
-        <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-12 sm:mb-20 max-w-3xl mx-auto leading-tight">
+        <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-12 sm:mb-20 max-w-3xl mx-auto leading-tight">
           Para quem é esse kit de livros da
           <br />
           <span className="caixa-destaque">
@@ -115,14 +114,15 @@ const ForWhoSection = () => {
                 opacity: 0,
                 visibility: "hidden",
                 transform: "translateY(30px)",
-                backgroundColor: "rgba(20, 20, 20, 0.8)",
+                backgroundColor: "rgba(255, 255, 255, 0.85)",
+                backdropFilter: "blur(8px)",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = "rgba(30, 30, 30, 0.9)";
-                e.currentTarget.style.borderColor = "rgba(168, 85, 247, 0.4)";
+                e.currentTarget.style.backgroundColor = "rgba(243, 240, 255, 0.9)";
+                e.currentTarget.style.borderColor = "rgba(168, 85, 247, 0.3)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = "rgba(20, 20, 20, 0.8)";
+                e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.85)";
                 e.currentTarget.style.borderColor = "transparent";
               }}
             >
@@ -140,7 +140,7 @@ const ForWhoSection = () => {
               </div>
 
               {/* Text */}
-              <p className="text-gray-200 text-sm md:text-base font-medium">
+              <p className="text-gray-700 text-sm md:text-base font-medium">
                 {item}
               </p>
             </div>
