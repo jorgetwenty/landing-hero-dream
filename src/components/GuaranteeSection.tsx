@@ -1,6 +1,6 @@
 const GuaranteeSection = () => {
   return (
-    <section className="w-full bg-black py-20 px-6 md:px-12">
+    <section className="w-full bg-white py-20 px-6 md:px-12">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16">
         {/* Selo animado */}
         <div className="flex-shrink-0">
@@ -27,7 +27,7 @@ const GuaranteeSection = () => {
                 <path id="circlePath" d="M153.5,10 a143.5,143.5 0 1,1 0,287 a143.5,143.5 0 1,1 0,-287" fill="none"/>
               </defs>
               <g id="texto">
-                <text fill="white" fontSize="13.5" fontFamily="'Poppins', sans-serif" fontWeight="600" letterSpacing="2.5">
+                <text fill="#1a1a2e" fontSize="13.5" fontFamily="'Poppins', sans-serif" fontWeight="600" letterSpacing="2.5">
                   <textPath href="#circlePath" startOffset="0%">
                     GARANTIA DE 30 DIAS SEM RISCOS • GARANTIA DE 30 DIAS SEM RISCOS • GARANTIA DE 30 DIAS SEM RISCOS •
                   </textPath>
@@ -66,7 +66,7 @@ const GuaranteeSection = () => {
             className="text-4xl md:text-[62px] font-semibold leading-tight mb-6"
             style={{
               fontFamily: "'Poppins', sans-serif",
-              background: "linear-gradient(81deg, #FFF 25.49%, #939DB8 100%)",
+              background: "linear-gradient(81deg, #1a1a2e 25.49%, #4a4a6a 100%)",
               backgroundClip: "text",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
@@ -74,7 +74,7 @@ const GuaranteeSection = () => {
           >
             ESSE PRODUTO TEM GARANTIA INCONDICIONAL DE 30 DIAS!
           </h2>
-          <p className="text-foreground text-base md:text-lg leading-relaxed">
+          <p className="text-gray-700 text-base md:text-lg leading-relaxed">
             Você está sob proteção do Código de Defesa do Consumidor – LEI Nº 8.078, de 11 de setembro de 1990.
             <br /><br />
             Entendemos a importância de escolher o método certo para seu desenvolvimento pessoal e saúde. Nosso ebook digital o Livro da Sabedoria é cuidadosamente elaborado por especialistas, com conteúdo atualizado e prático.

@@ -35,13 +35,13 @@ const FAQSection = () => {
   const toggle = (i: number) => setOpenIndex(openIndex === i ? null : i);
 
   return (
-    <section className="w-full bg-black py-24 px-6 md:px-12">
+    <section className="w-full bg-white py-24 px-6 md:px-12">
       <div className="max-w-3xl mx-auto">
         {/* Heading */}
-        <h2 className="wisdom-headline">
+        <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-12 sm:mb-20 max-w-3xl mx-auto leading-tight">
           Perguntas Frequentes
         </h2>
-        <p className="text-center text-[#8a7ca8] text-base md:text-lg mb-14">
+        <p className="text-center text-gray-500 text-base md:text-lg mb-14">
           Tire suas dúvidas sobre o kit Sabedoria Oculta
         </p>
 
@@ -55,11 +55,11 @@ const FAQSection = () => {
                 className="rounded-2xl overflow-hidden transition-all duration-500"
                 style={{
                   background: isOpen
-                    ? "linear-gradient(135deg, rgba(58, 16, 120, 0.4), rgba(91, 63, 136, 0.15))"
-                    : "rgba(255,255,255,0.03)",
-                  border: `1px solid ${isOpen ? "rgba(189, 149, 255, 0.3)" : "rgba(189, 149, 255, 0.08)"}`,
+                    ? "linear-gradient(135deg, rgba(147, 51, 234, 0.08), rgba(192, 132, 252, 0.05))"
+                    : "rgba(0,0,0,0.02)",
+                  border: `1px solid ${isOpen ? "rgba(147, 51, 234, 0.3)" : "rgba(0, 0, 0, 0.08)"}`,
                   boxShadow: isOpen
-                    ? "0 0 30px rgba(138, 43, 226, 0.15), inset 0 1px 0 rgba(205, 174, 255, 0.1)"
+                    ? "0 0 30px rgba(147, 51, 234, 0.08), inset 0 1px 0 rgba(147, 51, 234, 0.05)"
                     : "none",
                 }}
               >
@@ -70,7 +70,7 @@ const FAQSection = () => {
                   <span
                     className="text-base md:text-lg font-semibold transition-colors duration-300"
                     style={{
-                      color: isOpen ? "#CDAEFF" : "#c8c0d8",
+                      color: isOpen ? "#7c3aed" : "#374151",
                     }}
                   >
                     {faq.question}
@@ -80,14 +80,14 @@ const FAQSection = () => {
                     style={{
                       background: isOpen
                         ? "linear-gradient(135deg, #8a2be2, #BD95FF)"
-                        : "rgba(189, 149, 255, 0.1)",
+                        : "rgba(147, 51, 234, 0.1)",
                       boxShadow: isOpen
                         ? "0 0 15px rgba(189, 149, 255, 0.3)"
                         : "none",
                       transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
                     }}
                   >
-                    <ChevronDown className="w-4 h-4 text-white" />
+                    <ChevronDown className="w-4 h-4 text-white" style={{ color: isOpen ? "white" : "#6b7280" }} />
                   </div>
                 </button>
 
@@ -106,7 +106,7 @@ const FAQSection = () => {
                           "linear-gradient(90deg, transparent, rgba(189, 149, 255, 0.3), transparent)",
                       }}
                     />
-                    <p className="text-[#9a90ab] text-sm md:text-base leading-relaxed">
+                    <p className="text-gray-600 text-sm md:text-base leading-relaxed">
                       {faq.answer}
                     </p>
                   </div>
