@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import pricingBooksImg from "@/assets/pricing-books.jpg";
 
 const ListItem = ({ children }: { children: React.ReactNode }) => (
   <li className="flex items-start gap-[10px]">
@@ -147,8 +148,18 @@ const PricingSection = () => {
               />
             </div>
 
+            {/* Imagem dos livros/bônus */}
+            <div className="w-full flex justify-center mb-4 -mt-2">
+              <img
+                src={pricingBooksImg}
+                alt="Kit Sabedoria Oculta - Livros e Bônus"
+                className="w-[95%] max-w-[380px] object-contain"
+                loading="lazy"
+              />
+            </div>
+
             {/* Preço */}
-            <div className="text-center w-full mt-2">
+            <div className="text-center w-full">
               <div className="text-white font-bold text-[20px] sm:text-[22px]">
                 De: <span className="text-[#ff0000] line-through decoration-[3px]">R$ 197,00</span>
               </div>
