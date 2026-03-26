@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import pricingBooksImg from "@/assets/pricing-books.jpg";
+import pricingBooksImg from "@/assets/pricing-books.png";
 
 const ListItem = ({ children }: { children: React.ReactNode }) => (
   <li className="flex items-start gap-[10px]">
