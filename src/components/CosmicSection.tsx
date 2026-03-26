@@ -34,7 +34,7 @@ const CosmicSection = () => {
         <img
           src={cosmicBg}
           alt="Cosmic background"
-          className="w-full h-full object-cover opacity-60"
+          className="w-full h-full object-cover opacity-40"
         />
       </div>
       <div className="relative z-10 container mx-auto px-4 py-20 flex flex-col items-center text-center">
