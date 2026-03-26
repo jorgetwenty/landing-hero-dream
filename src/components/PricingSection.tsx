@@ -177,24 +177,24 @@ const PricingSection = () => {
               .shimmer-effect::before {
                 content: "";
                 height: 100%;
-                width: 100px;
+                width: 72px;
                 position: absolute;
                 top: 0;
-                left: -150px;
+                left: -120px;
                 opacity: 0;
-                background: #ffffff;
-                box-shadow: 0 0 15px 8px #ffffff55;
+                background: rgba(255, 255, 255, 0.55);
+                box-shadow: 0 0 8px 2px #ffffff22;
                 transform: skewX(-20deg);
-                mix-blend-mode: plus-lighter;
+                mix-blend-mode: screen;
                 pointer-events: none;
-                animation: brilho 3s linear infinite;
+                animation: brilho 3.6s linear infinite;
               }
               @keyframes brilho {
-                0% { opacity: 0; left: -150px; }
-                20% { opacity: 0.1; }
-                50% { opacity: 0.15; left: 50%; }
-                80% { opacity: 0.1; }
-                100% { opacity: 0; left: 150%; }
+                0% { opacity: 0; left: -120px; }
+                20% { opacity: 0.03; }
+                50% { opacity: 0.06; left: 50%; }
+                80% { opacity: 0.03; }
+                100% { opacity: 0; left: 140%; }
               }
               @keyframes container-pointing {
                 0% { transform: translateX(0px); }
