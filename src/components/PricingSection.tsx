@@ -208,9 +208,16 @@ const PricingSection = () => {
                 animation-delay: 0.4s;
               }
               .inner-button {
-                background: radial-gradient(67.54% 100.03% at 50% 0%, #faf5ff 0%, #e9d5ff 25.48%, #c084fc 62.5%, #9333ea 100%);
-                box-shadow: 0 5.98px 23.203px 0 rgba(147, 51, 234, 0.15), 0 14.352px 53.701px 0 rgba(147, 51, 234, 0.35);
+                background: radial-gradient(67.54% 100.03% at 50% 0%, #d4fcd4 0%, #6ee76e 25.48%, #22c55e 62.5%, #16a34a 100%);
+                box-shadow: 0 5.98px 23.203px 0 rgba(34, 197, 94, 0.15), 0 14.352px 53.701px 0 rgba(34, 197, 94, 0.35);
                 border: 1.196px solid rgba(255, 255, 255, 0.5);
+              }
+              @keyframes cta-pulse {
+                0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
+                50% { transform: scale(1.03); box-shadow: 0 0 20px 8px rgba(34, 197, 94, 0.25); }
+              }
+              .cta-pulse {
+                animation: cta-pulse 2s ease-in-out infinite;
               }
             `}</style>
 
@@ -219,12 +226,12 @@ const PricingSection = () => {
               href="https://pay.cakto.com.br/7exfjyy_807964"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-[95%] mt-7 group cursor-pointer border bg-[#120f16] border-[#2e144a] gap-3 h-[72px] flex items-center p-[10px] rounded-full transition-all duration-500 hover:shadow-2xl hover:shadow-[#9333ea]/20 no-underline"
+              className="w-[95%] mt-7 group cursor-pointer border bg-[#0a1f0a] border-[#16a34a]/30 gap-3 h-[72px] flex items-center p-[10px] rounded-xl transition-all duration-500 hover:shadow-2xl hover:shadow-[#22c55e]/20 no-underline cta-pulse"
             >
-              <span className="inner-button shimmer-effect flex-1 text-[#0b0510] cursor-pointer h-full rounded-full flex items-center justify-center text-[13px] sm:text-[15px] md:text-[16px] font-black tracking-tight transition-all duration-300 active:scale-95 active:translate-y-[1px] px-3">
+              <span className="inner-button shimmer-effect flex-1 text-white cursor-pointer h-full rounded-lg flex items-center justify-center text-[13px] sm:text-[15px] md:text-[16px] font-black tracking-tight transition-all duration-300 active:scale-95 active:translate-y-[1px] px-3">
                 COMPRAR AGORA COM DESCONTO
               </span>
-              <span className="arrow-container group-hover:ml-2 w-[48px] h-[48px] flex shrink-0 items-center justify-center rounded-full border border-zinc-700 bg-[#1c1823] text-zinc-300 shadow-sm overflow-hidden">
+              <span className="arrow-container group-hover:ml-2 w-[48px] h-[48px] flex shrink-0 items-center justify-center rounded-lg border border-green-800 bg-[#0a1f0a] text-green-300 shadow-sm overflow-hidden">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
