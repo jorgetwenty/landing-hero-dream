@@ -208,7 +208,7 @@ const PricingSection = () => {
                 animation-delay: 0.4s;
               }
               .inner-button {
-                background: radial-gradient(67.54% 100.03% at 50% 0%, #d4fcd4 0%, #6ee76e 25.48%, #22c55e 62.5%, #16a34a 100%);
+                background: radial-gradient(67.54% 100.03% at 50% 0%, #86efac 0%, #4ade80 25.48%, #22c55e 62.5%, #16a34a 100%);
                 box-shadow: 0 5.98px 23.203px 0 rgba(34, 197, 94, 0.15), 0 14.352px 53.701px 0 rgba(34, 197, 94, 0.35);
                 border: 1.196px solid rgba(255, 255, 255, 0.5);
               }
