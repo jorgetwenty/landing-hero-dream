@@ -1,4 +1,4 @@
-import cosmicBg from "@/assets/cosmic-bg.jpeg";
+import cosmicBg from "@/assets/cosmic-bg.webp";
 
 const CosmicSection = () => {
   return (
