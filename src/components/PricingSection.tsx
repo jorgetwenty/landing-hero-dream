@@ -213,11 +213,13 @@ const PricingSection = () => {
                 border: 1.196px solid rgba(255, 255, 255, 0.5);
               }
               @keyframes cta-pulse {
-                0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
-                50% { transform: scale(1.03); box-shadow: 0 0 20px 8px rgba(34, 197, 94, 0.25); }
+                0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5); }
+                30% { transform: scale(1.06); box-shadow: 0 0 30px 12px rgba(34, 197, 94, 0.4); }
+                60% { transform: scale(0.98); box-shadow: 0 0 10px 4px rgba(34, 197, 94, 0.2); }
+                80% { transform: scale(1.04); box-shadow: 0 0 22px 8px rgba(34, 197, 94, 0.35); }
               }
               .cta-pulse {
-                animation: cta-pulse 2s ease-in-out infinite;
+                animation: cta-pulse 1.4s ease-in-out infinite;
               }
             `}</style>
 
