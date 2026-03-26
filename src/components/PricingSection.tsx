@@ -183,7 +183,7 @@ const PricingSection = () => {
                 left: -150px;
                 opacity: 0;
                 background: #ffffff;
-                box-shadow: 0 0 30px 20px #ffffffaa;
+                box-shadow: 0 0 15px 8px #ffffff55;
                 transform: skewX(-20deg);
                 mix-blend-mode: plus-lighter;
                 pointer-events: none;
