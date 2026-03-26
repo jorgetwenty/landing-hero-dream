@@ -191,9 +191,9 @@ const PricingSection = () => {
               }
               @keyframes brilho {
                 0% { opacity: 0; left: -150px; }
-                20% { opacity: 0.3; }
-                50% { opacity: 0.5; left: 50%; }
-                80% { opacity: 0.3; }
+                20% { opacity: 0.1; }
+                50% { opacity: 0.15; left: 50%; }
+                80% { opacity: 0.1; }
                 100% { opacity: 0; left: 150%; }
               }
               @keyframes container-pointing {
