@@ -127,15 +127,23 @@ const PricingSection = () => {
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-[#c084fc] text-lg">✦</span>
-                  <span className="font-bold">Bônus Platinum #1 — O Livro de Enoque</span>
+                  <span className="font-bold">Áudios de Reprogramação da Consciência</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-[#c084fc] text-lg">✦</span>
-                  <span className="font-bold">Bônus Especial #2 — A Nova Ordem Mundial</span>
+                  <span className="font-bold">Guia dos Símbolos do Poder</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-[#c084fc] text-lg">✦</span>
-                  <span className="font-bold">Bônus Premium #3 — Glândula Pineal</span>
+                  <span className="font-bold">Manual de Ativação da Consciência</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-[#c084fc] text-lg">✦</span>
+                  <span className="font-bold">Escudo Energético</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-[#c084fc] text-lg">✦</span>
+                  <span className="font-bold">Teste dos Arquétipos Espirituais</span>
                 </li>
               </ul>
             </div>
