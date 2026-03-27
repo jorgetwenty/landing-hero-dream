@@ -114,6 +114,32 @@ const PricingSection = () => {
               />
             </div>
 
+            {/* Lista de Bônus */}
+            <div className="w-[90%] mb-5">
+              <ul className="flex flex-col gap-[10px] text-white text-[13px] sm:text-[14px]">
+                <li className="flex items-center gap-2">
+                  <span className="text-[#c084fc] text-lg">✦</span>
+                  <span className="font-bold">O Livro da Sabedoria em português VOL. 1</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-[#c084fc] text-lg">✦</span>
+                  <span className="font-bold">Acesso Vitalício</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-[#c084fc] text-lg">✦</span>
+                  <span className="font-bold">Bônus Platinum #1 — O Livro de Enoque</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-[#c084fc] text-lg">✦</span>
+                  <span className="font-bold">Bônus Especial #2 — A Nova Ordem Mundial</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-[#c084fc] text-lg">✦</span>
+                  <span className="font-bold">Bônus Premium #3 — Glândula Pineal</span>
+                </li>
+              </ul>
+            </div>
+
             {/* Preço */}
             <div className="text-center w-full">
               <div className="text-white font-bold text-[20px] sm:text-[22px]">
