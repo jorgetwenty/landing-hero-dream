@@ -63,54 +63,10 @@ const PricingSection = () => {
       {/* Grid Background */}
       <div className="absolute inset-0 pricing-grid-bg-light pointer-events-none" />
 
-      <div className="max-w-[1000px] w-full flex flex-col md:flex-row gap-8 justify-center items-center md:items-stretch relative z-10">
+      <div className="max-w-[480px] w-full flex flex-col justify-center items-center relative z-10">
 
-        {/* CARTÃO ESQUERDO */}
-        <div className="w-full md:w-[460px] rounded-[32px] p-8 md:p-10 bg-gradient-to-bl from-[#f3e8ff] via-[#e9d5ff] to-[#d8b4fe] shadow-xl relative shrink-0">
-          <h2 className="text-[28px] sm:text-[32px] md:text-[36px] leading-[1.1] font-bold text-[#3b0764] mb-6 tracking-tight pr-4">
-            O que você vai receber hoje:
-          </h2>
-
-          <p className="text-[#3b0764] text-[15px] sm:text-[16px] md:text-[17px] font-medium mb-6 leading-snug opacity-90">
-            Ao acessar o Livro da Sabedoria Oculta, você também recebe gratuitamente:
-          </p>
-
-          <ul className="flex flex-col gap-6 text-[#3b0764] text-[15px] sm:text-[16px] md:text-[17px]">
-            <ListItem>
-              <span className="block font-extrabold mb-1">O Livro da Sabedoria em português VOL. 1</span>
-              <span className="block font-medium text-[13px] sm:text-[14px] md:text-[15px] leading-snug opacity-80">
-                O volume completo traduzido com ensinamentos profundos sobre consciência, espiritualidade e o conhecimento oculto das civilizações antigas.
-              </span>
-            </ListItem>
-            <ListItem>
-              <span className="block font-extrabold mb-1">Acesso Vitalício</span>
-              <span className="block font-medium text-[13px] sm:text-[14px] md:text-[15px] leading-snug opacity-80">
-                Comprou uma vez, é seu para sempre. Acesse quantas vezes quiser, de qualquer dispositivo, sem mensalidades ou taxas extras.
-              </span>
-            </ListItem>
-            <ListItem>
-              <span className="block font-extrabold mb-1">Bônus Platinum #1 — O Livro de Enoque</span>
-              <span className="block font-medium text-[13px] sm:text-[14px] md:text-[15px] leading-snug opacity-80">
-                Um dos textos mais misteriosos da história, revelando segredos sobre anjos, dimensões superiores e o destino da humanidade.
-              </span>
-            </ListItem>
-            <ListItem>
-              <span className="block font-extrabold mb-1">Bônus Especial #2 — A Nova Ordem Mundial</span>
-              <span className="block font-medium text-[13px] sm:text-[14px] md:text-[15px] leading-snug opacity-80">
-                Entenda os bastidores do poder global, as forças ocultas que moldam sociedades e o que isso significa para o seu despertar.
-              </span>
-            </ListItem>
-            <ListItem>
-              <span className="block font-extrabold mb-1">Bônus Premium #3 — Glândula Pineal</span>
-              <span className="block font-medium text-[13px] sm:text-[14px] md:text-[15px] leading-snug opacity-80">
-                Descubra como ativar e descalcificar sua glândula pineal, o portal para a intuição, visão espiritual e conexão com o divino.
-              </span>
-            </ListItem>
-          </ul>
-        </div>
-
-        {/* CARTÃO DIREITO */}
-        <div className="w-full md:w-[420px] rounded-[40px] bg-[#0b0510] overflow-hidden shadow-2xl relative shrink-0 border border-[#2e144a] flex flex-col">
+        {/* CARTÃO ÚNICO */}
+        <div className="w-full rounded-[40px] bg-[#0b0510] overflow-hidden shadow-2xl relative shrink-0 border border-[#2e144a] flex flex-col">
 
           {/* Ambient Glow */}
           <div className="absolute bottom-[-10%] left-0 right-0 h-[40%] bg-[#c084fc] opacity-[0.15] blur-[80px] pointer-events-none" />
