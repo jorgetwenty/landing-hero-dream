@@ -116,14 +116,14 @@ const WisdomCard = ({ nome, descricao, foto, imagePosition = "sm:object-top", mo
       <div
         ref={ref}
         style={style}
-        className="relative w-full h-[480px] sm:h-[520px] lg:h-[560px] bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-xl flex flex-col"
+        className="relative w-full h-[480px] sm:h-[520px] lg:h-[560px] bg-gray-950 border border-gray-800 rounded-2xl overflow-hidden shadow-xl flex flex-col"
       >
         {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-50/50 to-white pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-900/50 to-gray-950 pointer-events-none" />
 
         {/* Image */}
-        <div className="relative h-[55%] w-full overflow-hidden bg-gray-100">
-          <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent z-10" />
+        <div className="relative h-[55%] w-full overflow-hidden bg-gray-900">
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent z-10" />
           <img
             src={foto}
             alt={nome}
@@ -137,17 +137,17 @@ const WisdomCard = ({ nome, descricao, foto, imagePosition = "sm:object-top", mo
 
         {/* Content */}
         <div className="relative p-6 sm:p-8 flex flex-col flex-grow z-20">
-          <h3 className="font-sans text-xl sm:text-2xl font-bold text-gray-900 leading-tight mb-3 mt-1">
+          <h3 className="font-sans text-xl sm:text-2xl font-bold text-white leading-tight mb-3 mt-1">
             {nome}
           </h3>
           <div className="w-12 h-1 bg-[#9D4EDD] mb-4 group-hover:w-full transition-all duration-1000" />
-          <p className="text-gray-600 text-sm leading-relaxed">
+          <p className="text-gray-400 text-sm leading-relaxed">
             {descricao}
           </p>
         </div>
 
         {/* Glass sweep effect */}
-        <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-black/5 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/5 to-transparent pointer-events-none" />
       </div>
     </div>
   );
@@ -155,15 +155,15 @@ const WisdomCard = ({ nome, descricao, foto, imagePosition = "sm:object-top", mo
 
 const WisdomCards = () => {
   return (
-    <section className="relative bg-white py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative bg-black py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Grid Background */}
-      <div className="absolute inset-0 grid-background-light pointer-events-none" />
+      <div className="absolute inset-0 grid-background pointer-events-none" />
       
       {/* Rotating purple blur */}
-      <div className="purple-glow-orb-light pointer-events-none" />
+      <div className="purple-glow-orb pointer-events-none" />
       
       <div className="max-w-7xl mx-auto relative z-10">
-        <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-12 sm:mb-20 max-w-3xl mx-auto leading-tight">
+        <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-12 sm:mb-20 max-w-3xl mx-auto leading-tight">
           Veja o que você vai aprender com o livro da{" "}
           <span className="text-[#9D4EDD]">Sabedoria Oculta</span>
         </h2>
