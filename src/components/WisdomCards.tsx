@@ -160,7 +160,7 @@ const WisdomCards = () => {
       <div className="absolute inset-0 grid-background pointer-events-none" />
       
       {/* Rotating purple blur */}
-      <div className="purple-glow-orb-light pointer-events-none" />
+      <div className="purple-glow-orb pointer-events-none" />
       
       <div className="max-w-7xl mx-auto relative z-10">
         <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-12 sm:mb-20 max-w-3xl mx-auto leading-tight">
