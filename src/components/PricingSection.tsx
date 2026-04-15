@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import pricingBooksImg from "@/assets/pricing-books.png";
 
 const ListItem = ({ children }: { children: React.ReactNode }) => (
   <li className="flex items-start gap-[10px]">
@@ -59,14 +58,58 @@ const PricingSection = () => {
   const seconds = (timeLeft % 60).toString().padStart(2, "0");
 
   return (
-    <section id="pricing" className="relative w-full bg-white flex items-center justify-center py-12 sm:py-16 md:py-20 px-4 font-sans selection:bg-[#c084fc] selection:text-white overflow-hidden">
+    <section id="pricing" className="relative w-full bg-black flex items-center justify-center py-12 sm:py-16 md:py-20 px-4 font-sans selection:bg-[#c084fc] selection:text-white overflow-hidden">
       {/* Grid Background */}
-      <div className="absolute inset-0 pricing-grid-bg-light pointer-events-none" />
+      <div className="absolute inset-0 pricing-grid-bg pointer-events-none" />
 
-      <div className="max-w-[480px] w-full flex flex-col justify-center items-center relative z-10">
+      <div className="max-w-[1000px] w-full flex flex-col md:flex-row gap-8 justify-center items-center md:items-stretch relative z-10">
 
-        {/* CARTÃO ÚNICO */}
-        <div className="w-full rounded-[40px] bg-[#0b0510] overflow-hidden shadow-2xl relative shrink-0 border border-[#2e144a] flex flex-col">
+        {/* CARTÃO ESQUERDO */}
+        <div className="w-full md:w-[460px] rounded-[32px] p-8 md:p-10 bg-gradient-to-bl from-[#f3e8ff] via-[#e9d5ff] to-[#d8b4fe] shadow-xl relative shrink-0">
+          <h2 className="text-[28px] sm:text-[32px] md:text-[36px] leading-[1.1] font-bold text-[#3b0764] mb-6 tracking-tight pr-4">
+            O que você vai receber hoje:
+          </h2>
+
+          <p className="text-[#3b0764] text-[15px] sm:text-[16px] md:text-[17px] font-medium mb-6 leading-snug opacity-90">
+            Ao acessar o Livro da Sabedoria Oculta, você também recebe gratuitamente:
+          </p>
+
+          <ul className="flex flex-col gap-6 text-[#3b0764] text-[15px] sm:text-[16px] md:text-[17px]">
+            <ListItem>
+              <span className="block font-extrabold mb-1">Áudio de Reprogramação da Consciência</span>
+              <span className="block font-medium text-[13px] sm:text-[14px] md:text-[15px] leading-snug opacity-80">
+                Um áudio guiado criado para ajudar você a reprogramar padrões mentais, elevar sua frequência e fortalecer seu foco mental.
+              </span>
+            </ListItem>
+            <ListItem>
+              <span className="block font-extrabold mb-1">Manual de Ativação da Consciência</span>
+              <span className="block font-medium text-[13px] sm:text-[14px] md:text-[15px] leading-snug opacity-80">
+                Um guia prático com técnicas simples para despertar sua percepção espiritual e acessar estados mais elevados de consciência.
+              </span>
+            </ListItem>
+            <ListItem>
+              <span className="block font-extrabold mb-1">Teste dos Arquétipos Espirituais</span>
+              <span className="block font-medium text-[13px] sm:text-[14px] md:text-[15px] leading-snug opacity-80">
+                Descubra qual arquétipo governa sua energia e como ele influencia sua forma de pensar, agir e manifestar sua realidade.
+              </span>
+            </ListItem>
+            <ListItem>
+              <span className="block font-extrabold mb-1">Escudo Energético</span>
+              <span className="block font-medium text-[13px] sm:text-[14px] md:text-[15px] leading-snug opacity-80">
+                Aprenda práticas simples para proteger sua energia e evitar influências negativas que drenam sua força mental e emocional.
+              </span>
+            </ListItem>
+            <ListItem>
+              <span className="block font-extrabold mb-1">Guia dos Símbolos de Poder</span>
+              <span className="block font-medium text-[13px] sm:text-[14px] md:text-[15px] leading-snug opacity-80">
+                Descubra o significado de símbolos antigos ligados à consciência, espiritualidade e conhecimento oculto.
+              </span>
+            </ListItem>
+          </ul>
+        </div>
+
+        {/* CARTÃO DIREITO */}
+        <div className="w-full md:w-[420px] rounded-[40px] bg-[#0b0510] overflow-hidden shadow-2xl relative shrink-0 border border-[#2e144a] flex flex-col">
 
           {/* Ambient Glow */}
           <div className="absolute bottom-[-10%] left-0 right-0 h-[40%] bg-[#c084fc] opacity-[0.15] blur-[80px] pointer-events-none" />
@@ -104,52 +147,8 @@ const PricingSection = () => {
               />
             </div>
 
-            {/* Imagem dos livros/bônus */}
-            <div className="w-full flex justify-center mb-4 -mt-2">
-              <img
-                src={pricingBooksImg}
-                alt="Kit Sabedoria Oculta - Livros e Bônus"
-                className="w-[95%] max-w-[380px] object-contain"
-                loading="lazy"
-              />
-            </div>
-
-            {/* Lista de Bônus */}
-            <div className="w-[90%] mb-5">
-              <ul className="flex flex-col gap-[10px] text-white text-[13px] sm:text-[14px]">
-                <li className="flex items-center gap-2">
-                  <span className="text-[#c084fc] text-lg">✦</span>
-                  <span className="font-bold">O Livro da Sabedoria em português VOL. 1</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-[#c084fc] text-lg">✦</span>
-                  <span className="font-bold">Acesso Vitalício</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-[#c084fc] text-lg">✦</span>
-                  <span className="font-bold">Áudios de Reprogramação da Consciência</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-[#c084fc] text-lg">✦</span>
-                  <span className="font-bold">Guia dos Símbolos do Poder</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-[#c084fc] text-lg">✦</span>
-                  <span className="font-bold">Manual de Ativação da Consciência</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-[#c084fc] text-lg">✦</span>
-                  <span className="font-bold">Escudo Energético</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-[#c084fc] text-lg">✦</span>
-                  <span className="font-bold">Teste dos Arquétipos Espirituais</span>
-                </li>
-              </ul>
-            </div>
-
             {/* Preço */}
-            <div className="text-center w-full">
+            <div className="text-center w-full mt-2">
               <div className="text-white font-bold text-[20px] sm:text-[22px]">
                 De: <span className="text-[#ff0000] line-through decoration-[3px]">R$ 197,00</span>
               </div>
@@ -167,24 +166,24 @@ const PricingSection = () => {
               .shimmer-effect::before {
                 content: "";
                 height: 100%;
-                width: 72px;
+                width: 100px;
                 position: absolute;
                 top: 0;
-                left: -120px;
+                left: -150px;
                 opacity: 0;
-                background: rgba(255, 255, 255, 0.55);
-                box-shadow: 0 0 8px 2px #ffffff22;
+                background: #ffffff;
+                box-shadow: 0 0 30px 20px #ffffffaa;
                 transform: skewX(-20deg);
-                mix-blend-mode: screen;
+                mix-blend-mode: plus-lighter;
                 pointer-events: none;
-                animation: brilho 3.6s linear infinite;
+                animation: brilho 3s linear infinite;
               }
               @keyframes brilho {
-                0% { opacity: 0; left: -120px; }
-                20% { opacity: 0.03; }
-                50% { opacity: 0.06; left: 50%; }
-                80% { opacity: 0.03; }
-                100% { opacity: 0; left: 140%; }
+                0% { opacity: 0; left: -150px; }
+                20% { opacity: 0.3; }
+                50% { opacity: 0.5; left: 50%; }
+                80% { opacity: 0.3; }
+                100% { opacity: 0; left: 150%; }
               }
               @keyframes container-pointing {
                 0% { transform: translateX(0px); }
@@ -198,18 +197,9 @@ const PricingSection = () => {
                 animation-delay: 0.4s;
               }
               .inner-button {
-                background: radial-gradient(67.54% 100.03% at 50% 0%, #86efac 0%, #4ade80 25.48%, #22c55e 62.5%, #16a34a 100%);
-                box-shadow: 0 5.98px 23.203px 0 rgba(34, 197, 94, 0.15), 0 14.352px 53.701px 0 rgba(34, 197, 94, 0.35);
+                background: radial-gradient(67.54% 100.03% at 50% 0%, #faf5ff 0%, #e9d5ff 25.48%, #c084fc 62.5%, #9333ea 100%);
+                box-shadow: 0 5.98px 23.203px 0 rgba(147, 51, 234, 0.15), 0 14.352px 53.701px 0 rgba(147, 51, 234, 0.35);
                 border: 1.196px solid rgba(255, 255, 255, 0.5);
-              }
-              @keyframes cta-pulse {
-                0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5); }
-                30% { transform: scale(1.06); box-shadow: 0 0 30px 12px rgba(34, 197, 94, 0.4); }
-                60% { transform: scale(0.98); box-shadow: 0 0 10px 4px rgba(34, 197, 94, 0.2); }
-                80% { transform: scale(1.04); box-shadow: 0 0 22px 8px rgba(34, 197, 94, 0.35); }
-              }
-              .cta-pulse {
-                animation: cta-pulse 1.4s ease-in-out infinite;
               }
             `}</style>
 
@@ -218,12 +208,12 @@ const PricingSection = () => {
               href="https://pay.cakto.com.br/7exfjyy_807964"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-[95%] mt-7 group cursor-pointer border bg-[#0a1f0a] border-[#16a34a]/30 gap-3 h-[72px] flex items-center p-[10px] rounded-xl transition-all duration-500 hover:shadow-2xl hover:shadow-[#22c55e]/20 no-underline cta-pulse"
+              className="w-[95%] mt-7 group cursor-pointer border bg-[#120f16] border-[#2e144a] gap-3 h-[68px] flex items-center p-[10px] rounded-full transition-all duration-500 hover:shadow-2xl hover:shadow-[#9333ea]/20 no-underline"
             >
-              <span className="inner-button shimmer-effect flex-1 text-white cursor-pointer h-full rounded-lg flex items-center justify-center text-[13px] sm:text-[15px] md:text-[16px] font-black tracking-tight transition-all duration-300 active:scale-95 active:translate-y-[1px] px-3">
-                COMPRAR AGORA COM DESCONTO
+              <span className="inner-button shimmer-effect flex-1 text-[#0b0510] cursor-pointer h-full rounded-full flex items-center justify-center text-[15px] sm:text-[16px] md:text-[18px] font-black tracking-tight transition-all duration-300 active:scale-95 active:translate-y-[1px]">
+                COMPRAR AGORA!
               </span>
-              <span className="arrow-container group-hover:ml-2 w-[48px] h-[48px] flex shrink-0 items-center justify-center rounded-lg border border-green-800 bg-[#0a1f0a] text-green-300 shadow-sm overflow-hidden">
+              <span className="arrow-container group-hover:ml-2 w-[48px] h-[48px] flex shrink-0 items-center justify-center rounded-full border border-zinc-700 bg-[#1c1823] text-zinc-300 shadow-sm overflow-hidden">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -267,12 +257,12 @@ const PricingSection = () => {
       </div>
 
       <style>{`
-        .pricing-grid-bg-light::before {
+        .pricing-grid-bg::before {
           content: "";
-          opacity: 0.15;
+          opacity: 0.3;
           background-color: transparent;
-          background-image: linear-gradient(90deg, #c4b5fd, #c4b5fd 1px, transparent 1px, transparent 11px), 
-                            linear-gradient(0deg, #c4b5fd, #c4b5fd 1px, transparent 1px, transparent 11px);
+          background-image: linear-gradient(90deg, #d9d9d9, #d9d9d9 1px, transparent 1px, transparent 11px), 
+                            linear-gradient(0deg, #d9d9d9, #d9d9d9 1px, transparent 1px, transparent 11px);
           background-size: 50px 50px;
           position: absolute;
           top: 0;
@@ -282,12 +272,12 @@ const PricingSection = () => {
           z-index: 1;
           pointer-events: none;
         }
-        .pricing-grid-bg-light::after {
+        .pricing-grid-bg::after {
           content: '';
           position: absolute;
           top: 0;
           left: 0;
-          background-image: radial-gradient(transparent 0%, #ffffff 70%);
+          background-image: radial-gradient(transparent 0%, #000 70%);
           width: 100%;
           height: 100%;
           z-index: 2;

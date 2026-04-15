@@ -1,5 +1,6 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useState, useCallback } from "react";
 import HeroSection from "@/components/HeroSection";
+import Preloader from "@/components/Preloader";
 
 const WisdomCards = lazy(() => import("@/components/WisdomCards"));
 const ForWhoSection = lazy(() => import("@/components/ForWhoSection"));
@@ -9,7 +10,6 @@ const MacbookReveal = lazy(() => import("@/components/MacbookReveal"));
 const PricingSection = lazy(() => import("@/components/PricingSection"));
 const TestimonialsTicker = lazy(() => import("@/components/TestimonialsTicker"));
 const GuaranteeSection = lazy(() => import("@/components/GuaranteeSection"));
-const CosmicSection = lazy(() => import("@/components/CosmicSection"));
 const FAQSection = lazy(() => import("@/components/FAQSection"));
 const Footer = lazy(() => import("@/components/Footer"));
 
@@ -20,14 +20,16 @@ const LazySection = ({ children }: { children: React.ReactNode }) => (
 );
 
 const Index = () => {
+  const [loading, setLoading] = useState(true);
+  const handleComplete = useCallback(() => setLoading(false), []);
+
   return (
     <main className="bg-background">
+      {loading && <Preloader onComplete={handleComplete} />}
       <HeroSection />
-      <div className="h-32 bg-gradient-to-b from-black to-white" />
       <LazySection><ForWhoSection /></LazySection>
       <LazySection><WisdomCards /></LazySection>
       <LazySection><BookPartsCarousel /></LazySection>
-      <LazySection><CosmicSection /></LazySection>
       <LazySection><BonusSection /></LazySection>
       <LazySection><MacbookReveal /></LazySection>
       <LazySection><PricingSection /></LazySection>

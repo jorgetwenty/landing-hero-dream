@@ -37,8 +37,8 @@ const cards = [
     nome: "A Verdade Sobre as Pirâmides",
     descricao: "Descubra o verdadeiro segredo que as pirâmides escondem e o conhecimento ancestral por trás delas.",
     foto: "/images/card-piramides.webp",
-    imagePosition: "sm:object-[50%_60%]",
-    mobileImagePosition: "object-[50%_60%]",
+    imagePosition: "sm:object-[50%_25%]",
+    mobileImagePosition: "object-[50%_25%]",
   },
   {
     nome: "Os segredos do Vaticano",
@@ -93,7 +93,7 @@ const WisdomCard = ({ nome, descricao, foto, imagePosition = "sm:object-top", mo
           <linearGradient id={`stroke-grad-${foto}`} x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor="#9D4EDD" />
             <stop offset="50%" stopColor="#4B0082" />
-            <stop offset="100%" stopColor="#e5e7eb" />
+            <stop offset="100%" stopColor="#000000" />
           </linearGradient>
         </defs>
         <rect
@@ -116,14 +116,14 @@ const WisdomCard = ({ nome, descricao, foto, imagePosition = "sm:object-top", mo
       <div
         ref={ref}
         style={style}
-        className="relative w-full h-[480px] sm:h-[520px] lg:h-[560px] bg-gray-950 border border-gray-800 rounded-2xl overflow-hidden shadow-xl flex flex-col"
+        className="relative w-full h-[480px] sm:h-[520px] lg:h-[560px] bg-card border border-[#4B0082]/50 rounded-2xl overflow-hidden shadow-2xl flex flex-col"
       >
         {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-900/50 to-gray-950 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-muted/50 to-background pointer-events-none" />
 
         {/* Image */}
-        <div className="relative h-[55%] w-full overflow-hidden bg-gray-900">
-          <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent z-10" />
+        <div className="relative h-[55%] w-full overflow-hidden bg-muted">
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10" />
           <img
             src={foto}
             alt={nome}
@@ -137,11 +137,11 @@ const WisdomCard = ({ nome, descricao, foto, imagePosition = "sm:object-top", mo
 
         {/* Content */}
         <div className="relative p-6 sm:p-8 flex flex-col flex-grow z-20">
-          <h3 className="font-sans text-xl sm:text-2xl font-bold text-white leading-tight mb-3 mt-1">
+          <h3 className="font-sans text-xl sm:text-2xl font-bold text-foreground leading-tight mb-3 mt-1">
             {nome}
           </h3>
           <div className="w-12 h-1 bg-[#9D4EDD] mb-4 group-hover:w-full transition-all duration-1000" />
-          <p className="text-gray-400 text-sm leading-relaxed">
+          <p className="text-muted-foreground text-sm leading-relaxed">
             {descricao}
           </p>
         </div>
@@ -163,7 +163,7 @@ const WisdomCards = () => {
       <div className="purple-glow-orb pointer-events-none" />
       
       <div className="max-w-7xl mx-auto relative z-10">
-        <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-12 sm:mb-20 max-w-3xl mx-auto leading-tight">
+        <h2 className="text-center text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-12 sm:mb-20 max-w-3xl mx-auto leading-tight">
           Veja o que você vai aprender com o livro da{" "}
           <span className="text-[#9D4EDD]">Sabedoria Oculta</span>
         </h2>
@@ -296,12 +296,12 @@ const WisdomCards = () => {
           stroke-dashoffset: 0;
         }
         
-        .grid-background-light::before {
+        .grid-background::before {
           content: "";
-          opacity: 0.15;
+          opacity: 0.3;
           background-color: transparent;
-          background-image: linear-gradient(90deg, #c4b5fd, #c4b5fd 1px, transparent 1px, transparent 11px), 
-                            linear-gradient(0deg, #c4b5fd, #c4b5fd 1px, transparent 1px, transparent 11px);
+          background-image: linear-gradient(90deg, #d9d9d9, #d9d9d9 1px, transparent 1px, transparent 11px), 
+                            linear-gradient(0deg, #d9d9d9, #d9d9d9 1px, transparent 1px, transparent 11px);
           background-size: 50px 50px;
           position: absolute;
           top: 0;
@@ -312,32 +312,32 @@ const WisdomCards = () => {
           pointer-events: none;
         }
         
-        .grid-background-light::after {
+        .grid-background::after {
           content: '';
           position: absolute;
           top: 0;
           left: 0;
-          background-image: radial-gradient(transparent 0%, #ffffff 70%);
+          background-image: radial-gradient(transparent 0%, #000 70%);
           width: 100%;
           height: 100%;
           z-index: 2;
           pointer-events: none;
         }
         
-        .purple-glow-orb-light {
+        .purple-glow-orb {
           position: absolute;
           top: 50%;
           left: 60%;
           transform: translate(-50%, -50%);
           width: 1154px;
           height: 600px;
-          background: conic-gradient(from 0deg, #e9d5ff, #c4b5fd, #ddd6fe, #e9d5ff);
+          background: conic-gradient(from 0deg, #9D4EDD, #4B0082, #7B2FBE, #9D4EDD);
           border-radius: 50%;
           filter: blur(180px);
           z-index: 0;
           animation: purple-turn 10s linear infinite;
           transform-origin: center;
-          opacity: 0.3;
+          opacity: 0.4;
         }
         
         @keyframes purple-turn {
