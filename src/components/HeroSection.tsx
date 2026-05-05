@@ -63,9 +63,6 @@ const HeroSection = () => {
       </div>
 
       {/* Desktop layout */}
-      <div className="hidden md:block absolute bottom-16 right-16 z-10 text-right">
-        <PriceCard />
-      </div>
       <div className="hidden md:block absolute bottom-16 left-16 z-10 max-w-xl">
         <div className="flex items-center mb-5">
           {avatars.map((avatar, i) => (
@@ -102,12 +99,9 @@ const HeroSection = () => {
         <p className="text-white/80 text-[12.5px] leading-relaxed mb-3.5 font-normal" style={{ fontFamily: "'SF Pro Display', 'Inter', sans-serif" }}>
           Durante anos, te ensinaram a aceitar pouco… a viver limitado… a ser fraco. Mentiram. Existe uma energia dentro de você capaz de mudar seu corpo, sua mente e seu destino. E agora, você vai reativá-la.
         </p>
-        <div className="flex items-end justify-between gap-3">
-          <a href="https://pay.cakto.com.br/7exfjyy_807964" target="_blank" rel="noopener noreferrer" className="shiny-cta-hero shiny-cta-hero--mobile">
-            <span>Quero começar</span>
-          </a>
-          <PriceCard mobile />
-        </div>
+        <a href="https://pay.cakto.com.br/7exfjyy_807964" target="_blank" rel="noopener noreferrer" className="shiny-cta-hero shiny-cta-hero--mobile">
+          <span>Quero começar</span>
+        </a>
       </div>
 
       <style>{`
