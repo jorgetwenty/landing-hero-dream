@@ -9,7 +9,7 @@ const highlights = [
 
 const AboutSection = () => {
   return (
-<section id="sobre" className="bg-background pt-16 pb-10 md:pt-24 md:pb-20">
+<section id="sobre" className="bg-background pt-16 pb-10 md:pt-24 md:pb-12">
       <div className="mx-auto max-w-6xl px-5 md:px-10">
         <div className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
           {/* Video — primeiro no mobile, esquerda no desktop */}
@@ -34,7 +34,7 @@ const AboutSection = () => {
             <h2 className="font-hero text-4xl font-bold uppercase leading-[1.02] text-neutral-900 md:text-5xl">
               Prazer e <span className="text-[#16A34A]">saúde</span> na sua rotina
             </h2>
-<p className="mt-4 max-w-md font-sans text-sm leading-relaxed text-neutral-600 md:text-base">
+<p className="mt-4 max-w-md font-sans text-base leading-relaxed text-neutral-600 md:text-lg">
               Somos uma loja que está no mercado há mais de [XX] anos, vendendo para
               quem quer unir prazer e saúde no dia a dia.
             </p>
