@@ -13,7 +13,7 @@ const products = [
 const ProductsSection = () => {
   return (
 <section id="produtos" className="bg-background pt-10 pb-8 md:pt-12 md:pb-10">
-      <div className="mx-auto max-w-7xl px-5 md:px-10">
+      <div className="mx-auto max-w-[96rem] px-3 md:px-6">
         <p className="mb-3 font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-[#16A34A] md:text-xs">
           Nossos produtos
         </p>
@@ -21,11 +21,11 @@ const ProductsSection = () => {
           Escolhidos a <span className="text-[#16A34A]">dedo</span> pra você
         </h2>
 
-<div className="mt-8 grid grid-cols-2 gap-1 md:mt-10 md:gap-1.5 lg:grid-cols-4 lg:gap-2">
+<div className="mt-8 grid grid-cols-2 gap-1 md:mt-10 md:gap-2 lg:grid-cols-4 lg:gap-2.5">
           {products.map((p) => (
             <article
               key={p.title}
-              className="group flex aspect-[1/1.12] flex-col overflow-hidden rounded-xl border-2 border-neutral-900 bg-white shadow-[3px_3px_0_0_#1c1917] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[4px_4px_0_0_#1c1917]"
+              className="group flex aspect-[1/1.12] flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-[2px_2px_0_0_rgba(28,25,23,0.06)] transition-shadow duration-200 hover:shadow-[3px_3px_0_0_rgba(28,25,23,0.1)]"
             >
               {/* Imagem — preenche o card, catálogo uniforme */}
               <div className="flex min-h-0 flex-1 items-center justify-center overflow-hidden bg-white p-2 md:p-3">
