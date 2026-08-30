@@ -1,4 +1,5 @@
 import heroVideo from "@/assets/video-hero.mp4.asset.json";
+import heroVideoWebm from "@/assets/video-hero.webm.asset.json";
 import heroBg from "@/assets/hero-proteina.png.asset.json";
 
 const HeroSection = () => {
