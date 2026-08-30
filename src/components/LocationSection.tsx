@@ -66,7 +66,7 @@ const LocationSection = () => {
           {/* Informações */}
           <div className="flex flex-col justify-center gap-7 p-7 md:p-10">
 <div>
-              <div className="flex items-start gap-2">
+              <div className="flex items-start gap-1.5">
                 <h3 className="font-hero text-2xl font-bold uppercase leading-[1.08] text-neutral-900 md:text-3xl">
                   {STORE.name.split(" ")[0]}
                   <br />
@@ -163,8 +163,8 @@ const LocationSection = () => {
 /* ===== Pin animado (teardrop + pulso) ===== */
         .map-pin-wrap {
           position: relative;
-          width: 46px;
-          height: 46px;
+          width: 36px;
+          height: 36px;
           flex-shrink: 0;
           pointer-events: none;
         }
@@ -172,9 +172,9 @@ const LocationSection = () => {
           position: absolute;
           left: 50%;
           top: 50%;
-          width: 24px;
-          height: 24px;
-          margin: -12px 0 0 -12px;
+          width: 22px;
+          height: 22px;
+          margin: -11px 0 0 -11px;
           border-radius: 50% 50% 50% 0;
           background: #16A34A;
           border: 2px solid #1c1917;
@@ -185,10 +185,10 @@ const LocationSection = () => {
         .map-pin::after {
           content: "";
           position: absolute;
-          left: 7px;
-          top: 7px;
-          width: 10px;
-          height: 10px;
+          left: 6.5px;
+          top: 6.5px;
+          width: 9px;
+          height: 9px;
           border-radius: 50%;
           background: #ffffff;
           box-shadow: inset 0 -1px 2px rgba(0, 0, 0, 0.15);
@@ -200,9 +200,9 @@ const LocationSection = () => {
           position: absolute;
           left: 50%;
           top: 50%;
-          width: 9px;
-          height: 9px;
-          margin: 15px 0 0 -4.5px;
+          width: 8px;
+          height: 8px;
+          margin: 12px 0 0 -4px;
           border-radius: 50%;
           background: rgba(22, 163, 74, 0.35);
           transform: rotateX(55deg);
@@ -214,10 +214,10 @@ const LocationSection = () => {
         .map-pulse::after {
           content: "";
           position: absolute;
-          left: -17px;
-          top: -17px;
-          width: 43px;
-          height: 43px;
+          left: -16px;
+          top: -16px;
+          width: 40px;
+          height: 40px;
           border-radius: 50%;
           box-shadow: 0 0 1px 2px #16A34A;
           animation: map-ping 1.8s cubic-bezier(0, 0, 0.2, 1) 0.9s infinite;
