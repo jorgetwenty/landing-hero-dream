@@ -3,20 +3,20 @@ import { Clock, MapPin, Phone } from "lucide-react";
 
 /* ====== Troque pelos dados reais da loja ====== */
 const STORE = {
-  name: "Biomundo",
+  name: "Biomundo Parkshopping",
   tagline: "Loja física • Suplementos e alimentação natural",
-  address: "Av. Santos Dumont, 1500 — Aldeota",
-  city: "Fortaleza / CE",
+  address: "ParkShopping Brasília — SAI/SO Trecho 1, Guará",
+  city: "Brasília / DF",
   hours: [
     { days: "Segunda a sexta", time: "08h às 19h" },
     { days: "Sábado", time: "08h às 17h" },
     { days: "Domingo", time: "Fechado" },
   ],
-  phone: "(85) 99999-0000",
+  phone: "(61) 99999-0000",
   mapsEmbed:
-    "https://maps.google.com/maps?q=Aldeota%2C%20Fortaleza%20-%20CE&z=15&output=embed",
+    "https://maps.google.com/maps?q=ParkShopping%20Bras%C3%ADlia%2C%20Guar%C3%A1%2C%20Bras%C3%ADlia%20-%20DF&z=16&output=embed",
   mapsDir:
-    "https://www.google.com/maps/dir/?api=1&destination=Aldeota%2C%20Fortaleza%20-%20CE",
+    "https://www.google.com/maps/dir//ParkShopping+Bras%C3%ADlia,+SIN+Trecho+1,+SAI%2FSO+%C3%81rea+6580+-+Guar%C3%A1,+Bras%C3%ADlia+-+DF,+71219-900/@-15.8618698,-48.0307621,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x935a3029eaad68b7:0xc4985755bc8593cc!2m2!1d-47.954869!2d-15.8333955?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D",
 };
 
 const LocationSection = () => {
@@ -65,24 +65,24 @@ const LocationSection = () => {
 
           {/* Informações */}
           <div className="flex flex-col justify-center gap-7 p-7 md:p-10">
-<div className="flex items-start justify-between gap-4">
-              <div>
+<div>
+              <div className="flex items-center gap-3">
                 <h3 className="font-hero text-2xl font-bold uppercase leading-tight text-neutral-900 md:text-3xl">
                   {STORE.name}
                 </h3>
-                <p className="mt-1 font-sans text-sm font-medium text-neutral-500">
-                  {STORE.tagline}
-                </p>
-              </div>
 
-              {/* Pin + pulso — anima ao lado do nome da loja */}
-              <div
-                className={`map-pin-wrap ${visible ? "is-visible" : ""}`}
-                aria-hidden
-              >
-                <div className="map-pulse" />
-                <div className="map-pin" />
+                {/* Pin + pulso — do lado do nome da loja */}
+                <div
+                  className={`map-pin-wrap ${visible ? "is-visible" : ""}`}
+                  aria-hidden
+                >
+                  <div className="map-pulse" />
+                  <div className="map-pin" />
+                </div>
               </div>
+              <p className="mt-1 font-sans text-sm font-medium text-neutral-500">
+                {STORE.tagline}
+              </p>
             </div>
 
 <ul className="space-y-5">
