@@ -1,5 +1,4 @@
-import heroVideo from "@/assets/video-hero.mp4.asset.json";
-import heroVideoWebm from "@/assets/video-hero.webm.asset.json";
+import heroVideo from "@/assets/biomundo.mp4.asset.json";
 import heroBg from "@/assets/hero-proteina.png.asset.json";
 
 const HeroSection = () => {
@@ -15,8 +14,7 @@ const HeroSection = () => {
         poster={heroBg.url}
         className="absolute inset-0 h-full w-full object-cover object-center"
       >
-<source src={heroVideoWebm.url} type="video/webm" />
-        <source src={heroVideo.url} type="video/mp4" />
+<source src={heroVideo.url} type="video/mp4" />
       </video>
 
       {/* Content */}
