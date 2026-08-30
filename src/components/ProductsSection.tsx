@@ -1,7 +1,7 @@
-import beefProtein from "@/assets/beef-protein.png.asset.json";
-import vanillaWhey from "@/assets/vanilla-whey.png.asset.json";
-import cacaoWhey from "@/assets/cacao-whey.png.asset.json";
-import creatina from "@/assets/creatina-creapure.png.asset.json";
+import beefProtein from "@/assets/beef-protein-cut.png";
+import vanillaWhey from "@/assets/vanilla-whey-cut.png";
+import cacaoWhey from "@/assets/cacao-whey-cut.png";
+import creatina from "@/assets/creatina-creapure-cut.png";
 
 const products = [
   { brand: "Essential", title: "Beef Protein Pure Cacao", oldPrice: "R$ 490,00", price: "R$ 389,90", image: beefProtein.url },
