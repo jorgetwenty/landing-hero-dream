@@ -13,7 +13,7 @@ const products = [
 const ProductsSection = () => {
   return (
 <section id="produtos" className="bg-background pt-10 pb-8 md:pt-12 md:pb-10">
-      <div className="mx-auto max-w-[96rem] px-3 md:px-6">
+      <div className="mx-auto max-w-[100rem] px-3 md:px-4">
         <p className="mb-3 font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-[#16A34A] md:text-xs">
           Nossos produtos
         </p>
