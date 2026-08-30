@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import heroVideo from "@/assets/biomundo.mp4.asset.json";
 import heroBg from "@/assets/hero-proteina.png.asset.json";
 
@@ -14,8 +15,9 @@ const HeroSection = () => {
         poster={heroBg.url}
         className="absolute inset-0 h-full w-full object-cover object-center"
       >
-<source src={heroVideo.url} type="video/mp4" />
+        <source src={heroVideo.url} type="video/mp4" />
       </video>
+      <Navbar />
     </section>
   );
 };
