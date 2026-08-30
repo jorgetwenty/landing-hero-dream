@@ -23,38 +23,38 @@ const ProductsSection = () => {
 
         <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {products.map((p) => (
-            <article
+<article
               key={p.title}
-              className="group flex flex-col overflow-hidden rounded-2xl border-2 border-neutral-900 bg-white shadow-[3px_3px_0_0_#1c1917] transition-transform duration-200 hover:-translate-x-[1px] hover:-translate-y-[1px] hover:shadow-[4px_4px_0_0_#1c1917]"
+              className="group flex flex-col overflow-hidden rounded-3xl border border-neutral-900/10 bg-white shadow-[0_10px_30px_-14px_rgba(28,25,23,0.18)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_-14px_rgba(28,25,23,0.25)]"
             >
               {/* Imagem */}
-              <div className="relative flex items-center justify-center bg-white p-5">
-                <span className="absolute right-3 top-3 rotate-3 rounded-md border-2 border-neutral-900 bg-[#4ADE80] px-2 py-1 font-hero text-[11px] font-bold uppercase leading-none text-neutral-900">
+              <div className="relative flex items-center justify-center overflow-hidden bg-gradient-to-b from-white to-[#F6F1E7] p-6">
+                <span className="absolute right-4 top-4 rounded-full bg-[#4ADE80] px-2.5 py-1 font-sans text-[10px] font-bold uppercase tracking-wide text-neutral-900">
                   Oferta
                 </span>
                 <img
                   src={p.image}
                   alt={p.title}
                   loading="lazy"
-                  className="h-44 w-auto object-contain transition-transform duration-300 group-hover:scale-105 md:h-52"
+                  className="h-40 w-auto object-contain transition-transform duration-500 group-hover:scale-105 md:h-48"
                 />
               </div>
 
               {/* Info */}
-              <div className="flex flex-1 flex-col border-t-2 border-neutral-900 bg-[#F1E9D9] p-4">
-                <p className="font-sans text-[10px] font-medium uppercase tracking-[0.2em] text-neutral-500">
+              <div className="flex flex-1 flex-col p-5 pt-4">
+                <p className="font-sans text-[10px] font-medium uppercase tracking-[0.2em] text-neutral-400">
                   {p.brand}
                 </p>
                 <h3 className="mt-1 font-hero text-lg font-bold uppercase leading-tight text-neutral-900">
                   {p.title}
                 </h3>
                 <div className="mt-3 flex items-baseline gap-2">
-                  <span className="font-sans text-xs text-neutral-500 line-through">{p.oldPrice}</span>
+                  <span className="font-sans text-xs text-neutral-400 line-through">{p.oldPrice}</span>
                   <span className="font-sans text-lg font-semibold text-neutral-900">{p.price}</span>
                 </div>
                 <button
                   type="button"
-                  className="nb-btn mt-4 w-full font-sans"
+                  className="nb-btn mt-5 w-full font-sans"
                 >
                   Comprar
                 </button>
