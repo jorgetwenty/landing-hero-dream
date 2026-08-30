@@ -21,14 +21,14 @@ const ProductsSection = () => {
           Escolhidos a <span className="text-[#16A34A]">dedo</span> pra você
         </h2>
 
-<div className="mt-8 grid grid-cols-2 gap-3 md:mt-10 md:gap-4 lg:grid-cols-4 lg:gap-5">
+<div className="mt-8 grid grid-cols-2 gap-1.5 md:mt-10 md:gap-2 lg:grid-cols-4 lg:gap-2.5">
           {products.map((p) => (
-            <article
+<article
               key={p.title}
-              className="group flex flex-col overflow-hidden rounded-xl border border-neutral-900/10 bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_-14px_rgba(28,25,23,0.25)]"
+              className="group flex aspect-[1/1.22] flex-col overflow-hidden rounded-xl border border-neutral-900/10 bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_-14px_rgba(28,25,23,0.25)]"
             >
-              {/* Imagem — quadrada, como catálogo */}
-              <div className="flex aspect-square w-full items-center justify-center overflow-hidden bg-white p-4 md:p-5">
+              {/* Imagem — preenche o card, catálogo uniforme */}
+              <div className="flex min-h-0 flex-1 items-center justify-center overflow-hidden bg-white p-2.5 md:p-3.5">
                 <img
                   src={p.image}
                   alt={p.title}
@@ -37,21 +37,28 @@ const ProductsSection = () => {
                 />
               </div>
 
-              {/* Info */}
-              <div className="flex flex-1 flex-col p-4 pt-3 md:p-5 md:pt-3">
-                <p className="font-sans text-[9px] font-medium uppercase tracking-[0.2em] text-neutral-400 md:text-[10px]">
+              {/* Info — compacta */}
+              <div className="flex flex-col p-2.5 pt-1.5 md:p-4 md:pt-2">
+                <p className="font-sans text-[8px] font-medium uppercase tracking-[0.2em] text-neutral-400 md:text-[9px]">
                   {p.brand}
                 </p>
-                <h3 className="mt-1 font-hero text-[13px] font-bold uppercase leading-tight text-neutral-900 md:text-base">
+                <h3 className="mt-0.5 font-hero text-[11px] font-bold uppercase leading-tight text-neutral-900 md:text-[13px]">
                   {p.title}
                 </h3>
-                <span className="mt-2.5 font-sans text-base font-semibold text-neutral-900 md:mt-3 md:text-lg">{p.price}</span>
-                <p className="mt-0.5 font-sans text-[10px] font-medium text-[#16A34A] md:mt-1 md:text-[11px]">
-                  10% de cashback · {p.cashback} de volta
+                <div className="mt-2 flex items-center justify-between gap-1.5 md:mt-2.5 md:gap-2">
+                  <span className="min-w-0 font-sans text-[13px] font-semibold text-neutral-900 md:text-[15px]">
+                    {p.price}
+                  </span>
+                  <button
+                    type="button"
+                    className="nb-btn w-auto shrink-0 !px-3 !py-1.5 !text-[9px] md:!px-3.5 md:!text-[10px]"
+                  >
+                    Comprar
+                  </button>
+                </div>
+                <p className="mt-1 font-sans text-[9px] font-medium text-[#16A34A] md:mt-1.5 md:text-[10px]">
+                  10% de volta · {p.cashback}
                 </p>
-                <button type="button" className="nb-btn mt-3 w-full font-sans md:mt-4">
-                  Comprar
-                </button>
               </div>
             </article>
           ))}
