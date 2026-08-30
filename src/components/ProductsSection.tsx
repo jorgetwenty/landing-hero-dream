@@ -28,7 +28,7 @@ const ProductsSection = () => {
               className="group flex aspect-[1/1.12] flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-[2px_2px_0_0_rgba(28,25,23,0.06)] transition-shadow duration-200 hover:shadow-[3px_3px_0_0_rgba(28,25,23,0.1)]"
             >
               {/* Imagem — preenche o card, catálogo uniforme */}
-              <div className="flex min-h-0 flex-1 items-center justify-center overflow-hidden bg-white p-2 md:p-3">
+              <div className="flex min-h-0 flex-1 items-center justify-center overflow-hidden bg-white p-2.5 md:p-4">
                 <img
                   src={p.image}
                   alt={p.title}
