@@ -6,7 +6,7 @@ const TextMarquee = () => {
       {phrases.map((phrase) => (
         <span key={phrase} className="flex items-center">
           <span className="whitespace-nowrap">{phrase}</span>
-          <span aria-hidden className="mx-6 text-[#16A34A]/60 md:mx-10">*</span>
+          <span aria-hidden className="mx-6 text-[0.55em] opacity-70 md:mx-10">✦</span>
         </span>
       ))}
     </span>
@@ -15,9 +15,9 @@ const TextMarquee = () => {
   return (
     <section
       aria-label="Frase da marca"
-      className="overflow-hidden bg-background pb-10 pt-1 md:pb-16 md:pt-2"
+      className="overflow-hidden bg-[#16A34A] py-5 md:py-7"
     >
-      <div className="marquee flex w-max items-baseline text-3xl font-thin tracking-tight text-[#16A34A] md:text-5xl">
+      <div className="marquee flex w-max items-baseline text-2xl font-thin uppercase tracking-tight text-white md:text-4xl">
         {items}
         {items}
       </div>
