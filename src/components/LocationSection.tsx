@@ -80,7 +80,7 @@ const LocationSection = () => {
                   <div className="map-pin" />
                 </div>
               </div>
-              <h3 className="font-hero text-2xl font-bold uppercase leading-[1.08] text-neutral-900 md:text-3xl">
+<h3 className="mt-1.5 font-hero text-2xl font-bold uppercase leading-[1.08] text-neutral-900 md:text-3xl">
                 {STORE.name.split(" ").slice(1).join(" ")}
               </h3>
               <p className="mt-1.5 font-sans text-sm font-medium text-neutral-500">
