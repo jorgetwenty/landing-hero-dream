@@ -120,7 +120,7 @@ Tab.displayName = "Tab";
 const Cursor = ({ position }: { position: CursorPosition }) => (
   <motion.li
     aria-hidden
-    animate={position}
+    animate={{ left: position.left, width: position.width, opacity: position.opacity }}
     className="absolute left-0 top-0 z-0 h-7 rounded-full bg-neutral-900 md:h-12"
   />
 );
