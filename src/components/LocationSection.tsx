@@ -66,11 +66,9 @@ const LocationSection = () => {
           {/* Informações */}
           <div className="flex flex-col justify-center gap-7 p-7 md:p-10">
 <div>
-              <div className="flex items-start gap-1.5">
+              <div className="flex items-center gap-2">
                 <h3 className="font-hero text-2xl font-bold uppercase leading-[1.08] text-neutral-900 md:text-3xl">
                   {STORE.name.split(" ")[0]}
-                  <br />
-                  {STORE.name.split(" ").slice(1).join(" ")}
                 </h3>
 
                 {/* Pin + pulso — do lado do nome da loja */}
@@ -82,6 +80,9 @@ const LocationSection = () => {
                   <div className="map-pin" />
                 </div>
               </div>
+              <h3 className="font-hero text-2xl font-bold uppercase leading-[1.08] text-neutral-900 md:text-3xl">
+                {STORE.name.split(" ").slice(1).join(" ")}
+              </h3>
               <p className="mt-1.5 font-sans text-sm font-medium text-neutral-500">
                 {STORE.tagline}
               </p>
