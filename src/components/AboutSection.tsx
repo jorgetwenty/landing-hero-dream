@@ -9,7 +9,7 @@ const highlights = [
 
 const AboutSection = () => {
   return (
-<section id="sobre" className="bg-background pt-16 pb-10 md:pt-24 md:pb-14">
+<section id="sobre" className="bg-background pt-16 pb-10 md:pt-24 md:pb-20">
       <div className="mx-auto max-w-6xl px-5 md:px-10">
         <div className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
           {/* Video — primeiro no mobile, esquerda no desktop */}
@@ -20,7 +20,7 @@ const AboutSection = () => {
               loop
               playsInline
               preload="metadata"
-              className="h-auto w-full max-w-sm rounded-3xl border-2 border-neutral-900 shadow-[6px_6px_0_0_#1c1917] md:max-h-[620px] md:w-auto md:max-w-none"
+              className="h-auto w-full max-w-sm rounded-3xl border-2 border-neutral-900 object-cover shadow-[6px_6px_0_0_#1c1917] md:aspect-[4/5] md:w-full"
             >
               <source src={aboutVideo.url} type="video/mp4" />
             </video>
