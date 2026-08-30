@@ -55,7 +55,7 @@ const Navbar = () => {
   return (
     <nav
       aria-label="Navegação principal"
-      className="fixed left-1/2 top-3 z-50 -translate-x-1/2 md:top-5"
+      className="absolute left-1/2 top-2 z-50 -translate-x-1/2 md:top-3"
     >
       <ul
         onMouseLeave={() => {
@@ -64,7 +64,7 @@ const Navbar = () => {
           const { width } = el.getBoundingClientRect();
           setPosition({ left: el.offsetLeft, width, opacity: 1 });
         }}
-        className="relative mx-auto flex w-fit rounded-full border-2 border-neutral-900 bg-white p-1 shadow-[2px_2px_0_0_#1c1917]"
+        className="relative mx-auto flex w-fit rounded-full border-2 border-neutral-900 bg-[#FAF7F0] p-1 shadow-[2px_2px_0_0_#1c1917]"
       >
         {TABS.map((tab, i) => (
           <Tab
@@ -108,7 +108,7 @@ const Tab = forwardRef<HTMLLIElement, TabProps>(
         const { width } = ref.current.getBoundingClientRect();
         setPosition({ left: ref.current.offsetLeft, width, opacity: 1 });
       }}
-      className="relative z-10 block cursor-pointer select-none px-3 py-1.5 font-sans text-xs font-medium uppercase tracking-wide text-white mix-blend-difference md:px-5 md:py-3 md:text-base"
+      className="relative z-10 block cursor-pointer select-none px-2.5 py-1 text-[11px] font-medium uppercase tracking-wide text-white mix-blend-difference md:px-4 md:py-1.5 md:text-sm"
     >
       {children}
     </li>
@@ -121,7 +121,7 @@ const Cursor = ({ position }: { position: CursorPosition }) => (
   <motion.li
     aria-hidden
     animate={{ left: position.left, width: position.width, opacity: position.opacity }}
-    className="absolute left-0 top-0 z-0 h-7 rounded-full bg-neutral-900 md:h-12"
+    className="absolute inset-y-1 left-0 z-0 rounded-full bg-neutral-900"
   />
 );
 
