@@ -17,7 +17,7 @@ const TextMarquee = () => {
       aria-label="Frase da marca"
       className="overflow-hidden bg-[#D9C9AE] py-5 md:py-7"
     >
-      <div className="marquee flex w-max items-baseline text-2xl font-thin uppercase tracking-tight text-white md:text-4xl">
+      <div className="marquee flex w-max items-baseline text-2xl font-semibold uppercase tracking-tight text-white md:text-4xl">
         {items}
         {items}
       </div>
