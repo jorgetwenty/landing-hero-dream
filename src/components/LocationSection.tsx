@@ -61,22 +61,28 @@ const LocationSection = () => {
               className="absolute inset-0 h-full w-full border-0 grayscale contrast-[1.08]"
             />
 
-            {/* Pin + pulso — anima quando a seção entra na tela */}
-            <div className={`map-pin-wrap ${visible ? "is-visible" : ""}`} aria-hidden>
-              <div className="map-pulse" />
-              <div className="map-pin" />
-            </div>
-          </div>
+</div>
 
           {/* Informações */}
           <div className="flex flex-col justify-center gap-7 p-7 md:p-10">
-            <div>
-              <h3 className="font-hero text-2xl font-bold uppercase leading-tight text-neutral-900 md:text-3xl">
-                {STORE.name}
-              </h3>
-              <p className="mt-1 font-sans text-sm font-medium text-neutral-500">
-                {STORE.tagline}
-              </p>
+<div className="flex items-start justify-between gap-4">
+              <div>
+                <h3 className="font-hero text-2xl font-bold uppercase leading-tight text-neutral-900 md:text-3xl">
+                  {STORE.name}
+                </h3>
+                <p className="mt-1 font-sans text-sm font-medium text-neutral-500">
+                  {STORE.tagline}
+                </p>
+              </div>
+
+              {/* Pin + pulso — anima ao lado do nome da loja */}
+              <div
+                className={`map-pin-wrap ${visible ? "is-visible" : ""}`}
+                aria-hidden
+              >
+                <div className="map-pulse" />
+                <div className="map-pin" />
+              </div>
             </div>
 
 <ul className="space-y-5">
@@ -152,36 +158,35 @@ const LocationSection = () => {
       </div>
 
       <style>{`
-        /* ===== Pin animado (teardrop + pulso no mapa) ===== */
+/* ===== Pin animado (teardrop + pulso) ===== */
         .map-pin-wrap {
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          width: 0;
-          height: 0;
-          z-index: 10;
+          position: relative;
+          width: 46px;
+          height: 46px;
+          flex-shrink: 0;
           pointer-events: none;
         }
         .map-pin {
           position: absolute;
-          left: -17px;
-          top: -41px;
-          width: 34px;
-          height: 34px;
+          left: 50%;
+          top: 50%;
+          width: 24px;
+          height: 24px;
+          margin: -12px 0 0 -12px;
           border-radius: 50% 50% 50% 0;
           background: #16A34A;
           border: 2px solid #1c1917;
-          box-shadow: 3px 4px 0 rgba(28, 25, 23, 0.25);
+          box-shadow: 2px 3px 0 rgba(28, 25, 23, 0.2);
           transform: rotate(-45deg);
           opacity: 0;
         }
         .map-pin::after {
           content: "";
           position: absolute;
-          left: 9px;
-          top: 9px;
-          width: 12px;
-          height: 12px;
+          left: 7px;
+          top: 7px;
+          width: 10px;
+          height: 10px;
           border-radius: 50%;
           background: #ffffff;
           box-shadow: inset 0 -1px 2px rgba(0, 0, 0, 0.15);
@@ -191,10 +196,11 @@ const LocationSection = () => {
         }
         .map-pulse {
           position: absolute;
-          left: -5px;
-          top: 2px;
-          width: 10px;
-          height: 10px;
+          left: 50%;
+          top: 50%;
+          width: 9px;
+          height: 9px;
+          margin: 15px 0 0 -4.5px;
           border-radius: 50%;
           background: rgba(22, 163, 74, 0.35);
           transform: rotateX(55deg);
@@ -206,10 +212,10 @@ const LocationSection = () => {
         .map-pulse::after {
           content: "";
           position: absolute;
-          left: -18px;
-          top: -18px;
-          width: 46px;
-          height: 46px;
+          left: -17px;
+          top: -17px;
+          width: 43px;
+          height: 43px;
           border-radius: 50%;
           box-shadow: 0 0 1px 2px #16A34A;
           animation: map-ping 1.8s cubic-bezier(0, 0, 0.2, 1) 0.9s infinite;
