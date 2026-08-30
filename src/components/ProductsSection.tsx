@@ -23,12 +23,12 @@ const ProductsSection = () => {
 
 <div className="mt-8 grid grid-cols-2 gap-1.5 md:mt-10 md:gap-2 lg:grid-cols-4 lg:gap-2.5">
           {products.map((p) => (
-            <article
+<article
               key={p.title}
-              className="group flex flex-col overflow-hidden rounded-xl border border-neutral-900/10 bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_-14px_rgba(28,25,23,0.25)]"
+              className="group flex aspect-[1/1.22] flex-col overflow-hidden rounded-xl border border-neutral-900/10 bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_-14px_rgba(28,25,23,0.25)]"
             >
-              {/* Imagem — quadrada, como catálogo */}
-<div className="flex aspect-[5/4] w-full items-center justify-center overflow-hidden bg-white p-2.5 md:p-3.5">
+              {/* Imagem — preenche o card, catálogo uniforme */}
+              <div className="flex min-h-0 flex-1 items-center justify-center overflow-hidden bg-white p-2.5 md:p-3.5">
                 <img
                   src={p.image}
                   alt={p.title}
@@ -37,8 +37,8 @@ const ProductsSection = () => {
                 />
               </div>
 
-              {/* Info — compacta, para deixar o card quadrado */}
-              <div className="flex flex-1 flex-col p-2.5 pt-1.5 md:p-4 md:pt-2">
+              {/* Info — compacta */}
+              <div className="flex flex-col p-2.5 pt-1.5 md:p-4 md:pt-2">
                 <p className="font-sans text-[8px] font-medium uppercase tracking-[0.2em] text-neutral-400 md:text-[9px]">
                   {p.brand}
                 </p>
