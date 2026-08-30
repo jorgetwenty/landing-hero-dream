@@ -56,13 +56,8 @@ const Navbar = () => {
 return (
     <nav
       aria-label="Navegação principal"
-      className="absolute left-1/2 top-2 z-50 flex -translate-x-1/2 flex-col items-center gap-1.5 md:top-3 md:flex-row md:gap-4"
+      className="absolute left-1/2 top-2 z-50 -translate-x-1/2 md:top-3"
     >
-<img
-        src={biomundoLogo.url}
-        alt="Bio Mundo"
-        className="h-10 w-auto md:h-12"
-      />
       <ul
         onMouseLeave={() => {
           const el = tabsRef.current[selected];
@@ -70,21 +65,28 @@ return (
           const { width } = el.getBoundingClientRect();
           setPosition({ left: el.offsetLeft, width, opacity: 1 });
         }}
-className="relative mx-auto flex w-full min-w-[330px] max-w-[360px] rounded-full border-2 border-neutral-900 bg-[#F1E8D6] p-2 shadow-[2px_2px_0_0_#1c1917] md:w-fit md:min-w-0 md:max-w-none md:p-1"
+        className="relative mx-auto flex w-full min-w-[330px] max-w-[360px] flex-col items-center gap-1.5 rounded-full border-2 border-neutral-900 bg-[#F1E8D6] p-2 shadow-[2px_2px_0_0_#1c1917] md:w-fit md:min-w-0 md:max-w-none md:flex-row md:gap-0 md:p-1"
       >
-        {TABS.map((tab, i) => (
-          <Tab
-            key={tab.id}
-            ref={(el) => {
-              tabsRef.current[i] = el;
-            }}
-            setPosition={setPosition}
-            onClick={() => handleSelect(i, tab.id)}
-          >
-            {tab.label}
-          </Tab>
-        ))}
-        <Cursor position={position} />
+        <img
+          src={biomundoLogo.url}
+          alt="Bio Mundo"
+          className="h-8 w-auto md:mr-2 md:h-10"
+        />
+        <div className="relative flex w-full md:w-auto">
+          {TABS.map((tab, i) => (
+            <Tab
+              key={tab.id}
+              ref={(el) => {
+                tabsRef.current[i] = el;
+              }}
+              setPosition={setPosition}
+              onClick={() => handleSelect(i, tab.id)}
+            >
+              {tab.label}
+            </Tab>
+          ))}
+          <Cursor position={position} />
+        </div>
       </ul>
     </nav>
   );
@@ -127,7 +129,7 @@ const Cursor = ({ position }: { position: CursorPosition }) => (
   <motion.li
     aria-hidden
     animate={{ left: position.left, width: position.width, opacity: position.opacity }}
-    className="absolute inset-y-2 left-0 z-0 rounded-full bg-neutral-900 md:inset-y-1"
+className="absolute inset-y-0 left-0 z-0 rounded-full bg-neutral-900"
   />
 );
 
