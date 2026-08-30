@@ -2,7 +2,7 @@ import heroBg from "@/assets/hero-proteina.png.asset.json";
 
 const HeroSection = () => {
   return (
-    <section className="relative h-screen min-h-[560px] w-full overflow-hidden">
+    <section className="relative h-screen min-h-[560px] w-full overflow-hidden rounded-b-[2.5rem] md:rounded-b-[4rem]">
       {/* Background image — sem gradiente, imagem vívida */}
       <img
         src={heroBg.url}
@@ -16,7 +16,7 @@ const HeroSection = () => {
           <p className="mb-3 font-sans text-[11px] font-semibold uppercase tracking-[0.3em] text-neutral-800 md:text-sm">
             Sua rotina merece mais
           </p>
-          <h1 className="font-hero max-w-2xl text-4xl uppercase leading-[1.05] tracking-wide text-neutral-900 md:text-7xl">
+          <h1 className="font-hero max-w-2xl text-5xl font-black uppercase leading-[1.02] text-neutral-900 md:text-7xl">
             Prazer e <span className="texto-gradiente">saúde</span> na sua rotina
           </h1>
           <p className="mt-4 max-w-xl font-sans text-sm leading-relaxed text-neutral-700 md:text-lg">

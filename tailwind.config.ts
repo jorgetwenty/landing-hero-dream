@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        hero: ['"Anton"', 'sans-serif'],
+        hero: ['"Satoshi"', 'sans-serif'],
         sans: ['"Inter"', 'sans-serif'],
       },
       colors: {
