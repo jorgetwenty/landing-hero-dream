@@ -28,7 +28,7 @@ const ProductsSection = () => {
               className="group flex flex-col overflow-hidden rounded-xl border border-neutral-900/10 bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_-14px_rgba(28,25,23,0.25)]"
             >
               {/* Imagem — quadrada, como catálogo */}
-              <div className="flex aspect-square w-full items-center justify-center overflow-hidden bg-white p-3 md:p-4">
+<div className="flex aspect-[5/4] w-full items-center justify-center overflow-hidden bg-white p-2.5 md:p-3.5">
                 <img
                   src={p.image}
                   alt={p.title}
