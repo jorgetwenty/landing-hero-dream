@@ -58,10 +58,10 @@ return (
       aria-label="Navegação principal"
       className="absolute left-1/2 top-2 z-50 flex -translate-x-1/2 flex-col items-center gap-1.5 md:top-3 md:flex-row md:gap-4"
     >
-      <img
+<img
         src={biomundoLogo.url}
         alt="Bio Mundo"
-        className="h-8 w-auto md:h-10"
+        className="h-10 w-auto md:h-12"
       />
       <ul
         onMouseLeave={() => {
