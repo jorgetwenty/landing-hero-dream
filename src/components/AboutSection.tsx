@@ -40,8 +40,8 @@ const AboutSection = () => {
             </p>
             <ul className="mt-6 space-y-2.5">
               {highlights.map((item, index) => (
-                <li key={item} className="flex items-center gap-3 font-sans font-semibold text-neutral-800">
-                  <AnimatedCheck delay={index * 350} size={26} />
+<li key={item} className="flex items-center gap-2.5 font-sans font-semibold text-neutral-800">
+                  <AnimatedCheck delay={index * 350} size={20} />
                   <span className="text-xs md:text-sm">{item}</span>
                 </li>
               ))}
