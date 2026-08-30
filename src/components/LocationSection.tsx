@@ -161,10 +161,10 @@ const LocationSection = () => {
 
       <style>{`
 /* ===== Pin animado (teardrop + pulso) ===== */
-        .map-pin-wrap {
+.map-pin-wrap {
           position: relative;
-          width: 36px;
-          height: 36px;
+          width: 24px;
+          height: 24px;
           flex-shrink: 0;
           pointer-events: none;
         }
