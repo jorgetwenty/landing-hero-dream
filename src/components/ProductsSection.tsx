@@ -47,7 +47,7 @@ const ProductsSection = () => {
 const scroll = (dir: number) => {
     const el = trackRef.current;
     if (!el) return;
-    const gap = 16; // lg:gap-4
+    const gap = 12; // lg:gap-3
     const card = (el.clientWidth - 2 * gap) / 3;
     el.scrollTo({ left: el.scrollLeft + dir * (card + gap), behavior: "smooth" });
   };
@@ -82,12 +82,12 @@ const scroll = (dir: number) => {
         <div
           ref={trackRef}
           onScroll={updateArrows}
-          className="mt-8 grid grid-cols-1 gap-2.5 md:mt-10 md:grid-cols-2 md:gap-3 lg:mt-6 lg:flex lg:snap-x lg:snap-proximity lg:gap-4 lg:overflow-x-auto lg:pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="mt-8 grid grid-cols-1 gap-1.5 md:mt-10 md:grid-cols-2 md:gap-2 lg:mt-6 lg:flex lg:snap-x lg:snap-proximity lg:gap-3 lg:overflow-x-auto lg:pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {products.map((p) => (
             <article
               key={p.title}
-              className="group flex aspect-[1/1.12] flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-[2px_2px_0_0_rgba(28,25,23,0.06)] transition-shadow duration-200 hover:shadow-[3px_3px_0_0_rgba(28,25,23,0.1)] lg:w-1/3 lg:shrink-0 lg:snap-start"
+              className="group flex aspect-[1/1.12] flex-col overflow-hidden rounded-lg border border-neutral-200 bg-white shadow-[2px_2px_0_0_rgba(28,25,23,0.06)] transition-shadow duration-200 hover:shadow-[3px_3px_0_0_rgba(28,25,23,0.1)] lg:w-1/3 lg:shrink-0 lg:snap-start"
             >
               {/* Imagem — preenche o card, catálogo uniforme */}
               <div className="flex min-h-0 flex-1 items-center justify-center overflow-hidden bg-white p-2.5 md:p-4">
