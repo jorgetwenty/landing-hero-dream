@@ -44,6 +44,7 @@ const VideoCard = ({
     }
   }, [isActive, sectionVisible]);
 
+const isBeige = index === 1;
   return (
     <article className="overflow-hidden rounded-xl border-2 border-neutral-900 bg-white shadow-[6px_6px_0_0_#1c1917] transition-transform duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5">
       <div className="relative aspect-[9/16] w-full overflow-hidden border-b-2 border-neutral-900 bg-[#F1E9D9]">
@@ -71,7 +72,7 @@ const VideoCard = ({
         )}
       </div>
 
-      <div className="p-5">
+      <div className={`p-5 ${isBeige ? "bg-[#F1E8D6]" : "bg-white"}`}>
         <p className="font-sans text-sm font-medium leading-snug text-neutral-800">“{t.quote}”</p>
         <p className="mt-3 font-hero text-sm font-bold uppercase text-neutral-900">{t.name}</p>
         <p className="font-sans text-[11px] font-medium text-neutral-500">{t.role}</p>
