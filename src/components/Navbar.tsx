@@ -129,7 +129,7 @@ const Cursor = ({ position }: { position: CursorPosition }) => (
   <motion.li
     aria-hidden
     animate={{ left: position.left, width: position.width, opacity: position.opacity }}
-    className="absolute inset-y-2 left-0 z-0 rounded-full bg-neutral-900 md:inset-y-1"
+className="absolute inset-y-0 left-0 z-0 rounded-full bg-neutral-900"
   />
 );
 
