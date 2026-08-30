@@ -1,4 +1,5 @@
 import aboutVideo from "@/assets/loja-video.mp4.asset.json";
+import AnimatedCheck from "@/components/AnimatedCheck";
 
 const highlights = [
   "Produtos selecionados por quem entende",
@@ -43,12 +44,10 @@ const AboutSection = () => {
               produtos selecionados, sabor de verdade e uma experiência pensada para
               o seu bem-estar, do primeiro clique até a sua porta. [texto mockado]
             </p>
-            <ul className="mt-7 space-y-3">
-              {highlights.map((item) => (
-                <li key={item} className="flex items-center gap-3 font-sans text-neutral-800">
-                  <span className="flex h-6 w-6 shrink-0 items-center justify-center border-2 border-neutral-900 bg-[#4ADE80] text-xs font-bold text-neutral-900">
-                    ✓
-                  </span>
+            <ul className="mt-7 space-y-4">
+              {highlights.map((item, index) => (
+                <li key={item} className="flex items-center gap-4 font-sans text-neutral-800">
+                  <AnimatedCheck delay={index * 350} size={40} />
                   <span className="text-sm md:text-base">{item}</span>
                 </li>
               ))}
