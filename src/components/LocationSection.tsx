@@ -64,7 +64,7 @@ const LocationSection = () => {
 </div>
 
           {/* Informações */}
-          <div className="flex flex-col justify-center gap-7 bg-[#F1E8D6] p-7 md:p-10">
+          <div className="flex flex-col justify-center gap-7 p-7 md:p-10">
 <div>
               <div className="flex items-center gap-2">
                 <h3 className="font-hero text-2xl font-bold uppercase leading-[1.08] text-neutral-900 md:text-3xl">
