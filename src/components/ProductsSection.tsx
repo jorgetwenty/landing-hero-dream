@@ -21,7 +21,7 @@ const ProductsSection = () => {
           Escolhidos a <span className="text-[#16A34A]">dedo</span> pra você
         </h2>
 
-<div className="mt-8 grid grid-cols-2 gap-1 md:mt-10 md:gap-2 lg:grid-cols-4 lg:gap-2.5">
+<div className="mt-8 grid grid-cols-1 gap-2.5 md:mt-10 md:grid-cols-2 md:gap-3 lg:grid-cols-3 lg:gap-4">
           {products.map((p) => (
             <article
               key={p.title}
@@ -38,25 +38,25 @@ const ProductsSection = () => {
               </div>
 
 {/* Info — compacta */}
-              <div className="flex flex-col p-2 pt-1 md:p-4 md:pt-2.5">
-                <p className="font-sans text-[8px] font-medium uppercase tracking-[0.2em] text-neutral-400 md:text-[10px]">
+              <div className="flex flex-col p-3 pt-1.5 md:p-5 md:pt-2.5">
+                <p className="font-sans text-[9px] font-medium uppercase tracking-[0.2em] text-neutral-400 md:text-[11px]">
                   {p.brand}
                 </p>
-                <h3 className="mt-0.5 font-hero text-[10px] font-bold uppercase leading-tight text-neutral-900 md:text-sm">
+                <h3 className="mt-0.5 font-hero text-sm font-bold uppercase leading-tight text-neutral-900 md:text-lg">
                   {p.title}
                 </h3>
-                <div className="mt-1.5 flex items-center justify-between gap-1.5 md:mt-2.5 md:gap-2">
-                  <span className="min-w-0 font-sans text-[12px] font-semibold text-neutral-900 md:text-base">
+                <div className="mt-1.5 flex items-center justify-between gap-2 md:mt-2.5 md:gap-2.5">
+                  <span className="min-w-0 font-sans text-base font-semibold text-neutral-900 md:text-xl">
                     {p.price}
                   </span>
                   <button
                     type="button"
-                    className="nb-btn w-auto shrink-0 !px-2.5 !py-1 !text-[8px] md:!px-3.5 md:!py-1.5 md:!text-[11px]"
+                    className="nb-btn w-auto shrink-0 !px-3 !py-1.5 !text-[10px] md:!px-4 md:!py-2 md:!text-xs"
                   >
                     Comprar
                   </button>
                 </div>
-                <p className="mt-0.5 font-sans text-[8px] font-medium text-[#16A34A] md:mt-1.5 md:text-[11px]">
+                <p className="mt-1 font-sans text-[10px] font-medium text-[#16A34A] md:mt-2 md:text-sm">
                   10% de volta · {p.cashback}
                 </p>
               </div>
