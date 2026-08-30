@@ -12,41 +12,43 @@ const BenefitsSection = () => {
         <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2">
           {/* Card 1 — Cashback */}
           <article className="flex flex-col items-center overflow-hidden rounded-2xl border-2 border-neutral-900 bg-white p-7 text-center shadow-[3px_3px_0_0_#1c1917] md:p-9">
-            <div className="pl" aria-hidden>
-              <div className="pl__coin">
-                <div className="pl__coin-flare" />
-                <div className="pl__coin-flare" />
-                <div className="pl__coin-flare" />
-                <div className="pl__coin-flare" />
-                <div className="pl__coin-layers">
-                  <div className="pl__coin-layer">
-                    <div className="pl__coin-inscription" />
-                  </div>
-                  <div className="pl__coin-layer" />
-                  <div className="pl__coin-layer" />
-                  <div className="pl__coin-layer" />
-                  <div className="pl__coin-layer">
-                    <div className="pl__coin-inscription" />
+<div className="flex h-44 items-center justify-center md:h-[190px]" aria-hidden>
+              <div className="pl">
+                <div className="pl__coin">
+                  <div className="pl__coin-flare" />
+                  <div className="pl__coin-flare" />
+                  <div className="pl__coin-flare" />
+                  <div className="pl__coin-flare" />
+                  <div className="pl__coin-layers">
+                    <div className="pl__coin-layer">
+                      <div className="pl__coin-inscription" />
+                    </div>
+                    <div className="pl__coin-layer" />
+                    <div className="pl__coin-layer" />
+                    <div className="pl__coin-layer" />
+                    <div className="pl__coin-layer">
+                      <div className="pl__coin-inscription" />
+                    </div>
                   </div>
                 </div>
+                <div className="pl__shadow" />
               </div>
-              <div className="pl__shadow" />
             </div>
 
             <h3 className="mt-6 font-hero text-2xl font-bold uppercase leading-tight text-neutral-900 md:text-3xl">
               10% de cashback
             </h3>
-            <p className="mt-3 max-w-sm font-sans text-sm font-medium leading-relaxed text-neutral-600">
+<p className="mb-6 mt-3 max-w-sm font-sans text-sm font-medium leading-relaxed text-neutral-600">
               A cada compra, 10% do valor volta pra sua carteira e pode ser usado no
               próximo pedido. Simples assim.
             </p>
-            <button type="button" className="nb-btn mt-6 font-sans">
+            <button type="button" className="nb-btn mt-auto font-sans">
               Quero meu cashback
             </button>
           </article>
 
           {/* Card 2 — Cupom */}
-          <article className="flex flex-col items-center justify-center overflow-hidden rounded-2xl border-2 border-neutral-900 bg-[#F1E9D9] p-7 text-center shadow-[3px_3px_0_0_#1c1917] md:p-9">
+          <article className="flex flex-col items-center overflow-hidden rounded-2xl border-2 border-neutral-900 bg-[#F1E9D9] p-7 text-center shadow-[3px_3px_0_0_#1c1917] md:p-9">
             <div className="coupon">
               <div className="left">
                 <div>Primeira compra</div>
@@ -66,11 +68,11 @@ const BenefitsSection = () => {
             <h3 className="mt-6 font-hero text-2xl font-bold uppercase leading-tight text-neutral-900 md:text-3xl">
               Cupom de 10%
             </h3>
-            <p className="mt-3 max-w-sm font-sans text-sm font-medium leading-relaxed text-neutral-600">
+<p className="mb-6 mt-3 max-w-sm font-sans text-sm font-medium leading-relaxed text-neutral-600">
               Use o cupom <strong className="font-semibold text-neutral-900">BEMVINDO10</strong> na
               sua primeira compra e economize na hora.
             </p>
-            <button type="button" className="nb-btn mt-6 font-sans">
+            <button type="button" className="nb-btn mt-auto font-sans">
               Usar cupom
             </button>
           </article>
@@ -81,7 +83,7 @@ const BenefitsSection = () => {
         /* ===== Coin loader ===== */
         .pl {
           --hue2: 140;
-          font-size: 13px;
+          font-size: 19px;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
