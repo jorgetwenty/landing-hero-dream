@@ -1,14 +1,19 @@
-import heroBg from "@/assets/hero-proteina.png.asset.json";
+import heroVideo from "@/assets/video-hero.mp4.asset.json";
 
 const HeroSection = () => {
   return (
     <section className="relative h-screen min-h-[560px] w-full overflow-hidden rounded-b-xl md:rounded-b-2xl">
-      {/* Background image — sem gradiente, imagem vívida */}
-      <img
-        src={heroBg.url}
-        alt="Suplementos proteicos da nossa loja"
+      {/* Background video — sem gradiente, imagem vívida */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
         className="absolute inset-0 h-full w-full object-cover object-center"
-      />
+      >
+        <source src={heroVideo.url} type="video/mp4" />
+      </video>
 
       {/* Content */}
       <div className="relative z-10 flex h-full items-end pb-14 md:pb-24">
