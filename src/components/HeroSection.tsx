@@ -34,7 +34,7 @@ const HeroSection = () => {
           </p>
           <a
             href="#sobre"
-            className="mt-5 inline-block border-2 border-neutral-900 bg-[#4ADE80] px-5 py-2.5 font-sans text-xs font-medium uppercase tracking-wide text-neutral-900 shadow-[3px_3px_0_0_#1c1917] transition-transform duration-150 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0_0_#1c1917] active:translate-x-0 active:translate-y-0 active:shadow-[1px_1px_0_0_#1c1917] md:text-sm"
+            className="nb-btn mt-5 font-sans"
           >
             Quero começar
           </a>

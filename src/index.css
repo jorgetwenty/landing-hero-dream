@@ -157,3 +157,63 @@ body {
     right: -5px;
   }
 }
+
+/* ===== Neobrutalist pill button (hover lift) ===== */
+:root {
+  --nb-btn-bg: #4ADE80;
+  --nb-btn-ink: #1c1917;
+  --nb-btn-radius: 30px;
+  --nb-btn-lift: 6px;
+  --nb-btn-shadow-dist: 5px;
+}
+
+.nb-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 26px;
+  border: 1.5px solid var(--nb-btn-ink);
+  border-radius: var(--nb-btn-radius);
+  background-color: var(--nb-btn-bg);
+  color: var(--nb-btn-ink);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  transform: translateY(0px);
+  box-shadow: 0px 0px 0px var(--nb-btn-ink);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.nb-btn:hover {
+  transform: translateY(calc(var(--nb-btn-lift) * -1));
+  box-shadow: 0px var(--nb-btn-shadow-dist) 0px var(--nb-btn-ink);
+}
+.nb-btn:active {
+  transform: translateY(0px);
+  box-shadow: 0px 0px 0px var(--nb-btn-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nb-btn {
+    transition: box-shadow 0.2s ease !important;
+  }
+  .nb-btn:hover,
+  .nb-btn:active {
+    transform: none !important;
+  }
+}
+
+/* ===== Logo marquee ===== */
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee {
+  animation: marquee-scroll 28s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee { animation: none; }
+}

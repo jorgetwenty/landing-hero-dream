@@ -54,7 +54,7 @@ const ProductsSection = () => {
                 </div>
                 <button
                   type="button"
-                  className="mt-4 w-full rounded-xl border-2 border-neutral-900 bg-[#4ADE80] py-2.5 font-sans text-sm font-semibold uppercase tracking-wide text-neutral-900 shadow-[2px_2px_0_0_#1c1917] transition-all duration-150 hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0_0_#1c1917] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
+                  className="nb-btn mt-4 w-full font-sans"
                 >
                   Comprar
                 </button>
