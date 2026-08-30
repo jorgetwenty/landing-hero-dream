@@ -4,10 +4,10 @@ import cacaoWhey from "@/assets/cacao-whey-cut.png";
 import creatina from "@/assets/creatina-creapure-cut.png";
 
 const products = [
-  { brand: "Essential", title: "Beef Protein Pure Cacao", oldPrice: "R$ 490,00", price: "R$ 389,90", image: beefProtein.url },
-  { brand: "Essential", title: "Vanilla Whey", oldPrice: "R$ 570,00", price: "R$ 454,00", image: vanillaWhey.url },
-  { brand: "Essential", title: "Cacao Whey", oldPrice: "R$ 570,00", price: "R$ 454,00", image: cacaoWhey.url },
-  { brand: "Nutrify", title: "Creatina Creapure", oldPrice: "R$ 269,90", price: "R$ 209,99", image: creatina.url },
+{ brand: "Essential", title: "Beef Protein Pure Cacao", oldPrice: "R$ 490,00", price: "R$ 389,90", image: beefProtein },
+  { brand: "Essential", title: "Vanilla Whey", oldPrice: "R$ 570,00", price: "R$ 454,00", image: vanillaWhey },
+  { brand: "Essential", title: "Cacao Whey", oldPrice: "R$ 570,00", price: "R$ 454,00", image: cacaoWhey },
+  { brand: "Nutrify", title: "Creatina Creapure", oldPrice: "R$ 269,90", price: "R$ 209,99", image: creatina },
 ];
 
 const ProductsSection = () => {
