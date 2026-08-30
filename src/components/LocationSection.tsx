@@ -79,11 +79,12 @@ const LocationSection = () => {
               </p>
             </div>
 
-            <ul className="space-y-4">
-              <li className="flex items-start gap-4">
-                <span className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border-2 border-neutral-900 bg-[#4ADE80]">
-                  <MapPin className="h-5 w-5 text-neutral-900" strokeWidth={2.2} />
-                </span>
+<ul className="space-y-5">
+              <li className="flex items-start gap-3.5">
+                <MapPin
+                  className="mt-0.5 h-[18px] w-[18px] shrink-0 text-[#16A34A]"
+                  strokeWidth={2}
+                />
                 <div>
                   <p className="font-sans text-[11px] font-bold uppercase tracking-[0.18em] text-neutral-400">
                     Endereço
@@ -96,10 +97,11 @@ const LocationSection = () => {
                 </div>
               </li>
 
-              <li className="flex items-start gap-4">
-                <span className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border-2 border-neutral-900 bg-[#4ADE80]">
-                  <Clock className="h-5 w-5 text-neutral-900" strokeWidth={2.2} />
-                </span>
+              <li className="flex items-start gap-3.5">
+                <Clock
+                  className="mt-0.5 h-[18px] w-[18px] shrink-0 text-[#16A34A]"
+                  strokeWidth={2}
+                />
                 <div>
                   <p className="font-sans text-[11px] font-bold uppercase tracking-[0.18em] text-neutral-400">
                     Horário de funcionamento
@@ -118,15 +120,16 @@ const LocationSection = () => {
                 </div>
               </li>
 
-              <li className="flex items-start gap-4">
-                <span className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border-2 border-neutral-900 bg-[#4ADE80]">
-                  <Phone className="h-5 w-5 text-neutral-900" strokeWidth={2.2} />
-                </span>
+              <li className="flex items-start gap-3.5">
+                <Phone
+                  className="mt-0.5 h-[18px] w-[18px] shrink-0 text-[#16A34A]"
+                  strokeWidth={2}
+                />
                 <div>
                   <p className="font-sans text-[11px] font-bold uppercase tracking-[0.18em] text-neutral-400">
                     Telefone / WhatsApp
                   </p>
-<a
+                  <a
                     href={`tel:${STORE.phone.replace(/[^\d]/g, "")}`}
                     className="mt-0.5 inline-block font-sans text-sm font-medium text-neutral-800 hover:text-[#16A34A]"
                   >
