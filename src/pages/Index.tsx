@@ -4,6 +4,7 @@ import AboutSection from "@/components/AboutSection";
 import ProductsSection from "@/components/ProductsSection";
 import TextMarquee from "@/components/TextMarquee";
 import BenefitsSection from "@/components/BenefitsSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 
 const Index = () => (
   <main>
@@ -13,6 +14,7 @@ const Index = () => (
     <ProductsSection />
     <TextMarquee />
     <BenefitsSection />
+    <TestimonialsSection />
   </main>
 );
 
