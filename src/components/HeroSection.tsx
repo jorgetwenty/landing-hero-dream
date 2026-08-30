@@ -3,7 +3,7 @@ import heroBg from "@/assets/hero-proteina.png.asset.json";
 
 const HeroSection = () => {
   return (
-    <section className="relative h-screen min-h-[560px] w-full overflow-hidden rounded-b-xl md:rounded-b-2xl">
+    <section id="inicio" className="relative h-screen min-h-[560px] w-full overflow-hidden rounded-b-xl md:rounded-b-2xl">
       {/* Background video — sem gradiente, imagem vívida */}
       <video
         autoPlay
