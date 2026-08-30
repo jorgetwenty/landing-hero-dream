@@ -12,7 +12,7 @@ const products = [
 
 const ProductsSection = () => {
   return (
-<section id="produtos" className="bg-background pt-10 pb-16 md:pt-12 md:pb-24">
+<section id="produtos" className="bg-background pt-10 pb-8 md:pt-12 md:pb-10">
       <div className="mx-auto max-w-6xl px-5 md:px-10">
         <p className="mb-3 font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-[#16A34A] md:text-xs">
           Nossos produtos
