@@ -197,13 +197,13 @@ const LocationSection = () => {
         .is-visible .map-pin {
           animation: pin-drop 0.7s cubic-bezier(0.25, 1, 0.4, 1) 0.2s both;
         }
-        .map-pulse {
+.map-pulse {
           position: absolute;
           left: 50%;
           top: 50%;
           width: 8px;
           height: 8px;
-          margin: 12px 0 0 -4px;
+          margin: -4px 0 0 -4px;
           border-radius: 50%;
           background: rgba(22, 163, 74, 0.35);
           transform: rotateX(55deg);
@@ -215,10 +215,10 @@ const LocationSection = () => {
         .map-pulse::after {
           content: "";
           position: absolute;
-          left: -16px;
-          top: -16px;
-          width: 40px;
-          height: 40px;
+          left: -12px;
+          top: -12px;
+          width: 32px;
+          height: 32px;
           border-radius: 50%;
           box-shadow: 0 0 1px 2px #16A34A;
           animation: map-ping 1.8s cubic-bezier(0, 0, 0.2, 1) 0.9s infinite;
