@@ -21,14 +21,14 @@ const ProductsSection = () => {
           Escolhidos a <span className="text-[#16A34A]">dedo</span> pra você
         </h2>
 
-<div className="mt-8 grid grid-cols-2 gap-1.5 md:mt-10 md:gap-2 lg:grid-cols-4 lg:gap-2.5">
+<div className="mt-8 grid grid-cols-2 gap-1 md:mt-10 md:gap-1.5 lg:grid-cols-4 lg:gap-2">
           {products.map((p) => (
-<article
+            <article
               key={p.title}
-              className="group flex aspect-[1/1.22] flex-col overflow-hidden rounded-xl border border-neutral-900/10 bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_-14px_rgba(28,25,23,0.25)]"
+              className="group flex aspect-[1/1.12] flex-col overflow-hidden rounded-xl border-2 border-neutral-900 bg-white shadow-[3px_3px_0_0_#1c1917] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[4px_4px_0_0_#1c1917]"
             >
               {/* Imagem — preenche o card, catálogo uniforme */}
-              <div className="flex min-h-0 flex-1 items-center justify-center overflow-hidden bg-white p-2.5 md:p-3.5">
+              <div className="flex min-h-0 flex-1 items-center justify-center overflow-hidden bg-white p-2 md:p-3">
                 <img
                   src={p.image}
                   alt={p.title}
@@ -38,25 +38,25 @@ const ProductsSection = () => {
               </div>
 
               {/* Info — compacta */}
-              <div className="flex flex-col p-2.5 pt-1.5 md:p-4 md:pt-2">
+              <div className="flex flex-col p-2 pt-1 md:p-4 md:pt-2">
                 <p className="font-sans text-[8px] font-medium uppercase tracking-[0.2em] text-neutral-400 md:text-[9px]">
                   {p.brand}
                 </p>
-                <h3 className="mt-0.5 font-hero text-[11px] font-bold uppercase leading-tight text-neutral-900 md:text-[13px]">
+                <h3 className="mt-0.5 font-hero text-[10px] font-bold uppercase leading-tight text-neutral-900 md:text-[13px]">
                   {p.title}
                 </h3>
-                <div className="mt-2 flex items-center justify-between gap-1.5 md:mt-2.5 md:gap-2">
-                  <span className="min-w-0 font-sans text-[13px] font-semibold text-neutral-900 md:text-[15px]">
+                <div className="mt-1.5 flex items-center justify-between gap-1.5 md:mt-2.5 md:gap-2">
+                  <span className="min-w-0 font-sans text-[12px] font-semibold text-neutral-900 md:text-[15px]">
                     {p.price}
                   </span>
                   <button
                     type="button"
-                    className="nb-btn w-auto shrink-0 !px-3 !py-1.5 !text-[9px] md:!px-3.5 md:!text-[10px]"
+                    className="nb-btn w-auto shrink-0 !px-2.5 !py-1 !text-[8px] md:!px-3.5 md:!py-1.5 md:!text-[10px]"
                   >
                     Comprar
                   </button>
                 </div>
-                <p className="mt-1 font-sans text-[9px] font-medium text-[#16A34A] md:mt-1.5 md:text-[10px]">
+                <p className="mt-0.5 font-sans text-[8px] font-medium text-[#16A34A] md:mt-1.5 md:text-[10px]">
                   10% de volta · {p.cashback}
                 </p>
               </div>
