@@ -33,14 +33,14 @@ const HeroSection = () => {
       </video>
 
       {/* Conteúdo — headline, subheadline e CTA */}
-      <div className="absolute inset-x-0 bottom-0 z-10 px-6 pb-10 md:px-14 md:pb-16">
-        <div className="max-w-2xl">
+<div className="absolute inset-x-0 bottom-0 z-10 px-6 pb-10 text-center md:px-14 md:pb-16 md:text-left">
+        <div className="mx-auto max-w-2xl md:mx-0">
           <motion.h1
             custom={0}
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-className="font-hero text-2xl font-bold uppercase leading-[1.05] text-white [text-shadow:0_1px_3px_rgba(0,0,0,0.85),0_2px_12px_rgba(0,0,0,0.6),0_4px_28px_rgba(0,0,0,0.45)] sm:text-3xl md:text-5xl"
+className="font-hero text-3xl font-bold uppercase leading-[1.05] text-white [text-shadow:0_1px_3px_rgba(0,0,0,0.85),0_2px_12px_rgba(0,0,0,0.6),0_4px_28px_rgba(0,0,0,0.45)] sm:text-4xl md:text-5xl"
           >
             Tem coisa <span className="text-[#4ADE80] [text-shadow:0_1px_3px_rgba(0,0,0,0.85),0_2px_12px_rgba(0,0,0,0.6)]">gostosa</span> que você ainda não descobriu.
           </motion.h1>
@@ -53,8 +53,8 @@ className="font-hero text-2xl font-bold uppercase leading-[1.05] text-white [tex
           >
             Dos snacks aos suplementos, encontre novas opções para colocar na sua rotina.
           </motion.p>
-          <motion.div custom={2} initial="hidden" animate="visible" variants={fadeUp} className="mt-5 md:mt-7">
-            <button onClick={scrollToProducts} className="nb-btn">
+<motion.div custom={2} initial="hidden" animate="visible" variants={fadeUp} className="mt-5 flex justify-center md:mt-7 md:justify-start">
+            <button onClick={scrollToProducts} className="nb-btn !px-8 !py-3 !text-sm">
               Quero descobrir
             </button>
           </motion.div>

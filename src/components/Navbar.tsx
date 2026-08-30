@@ -1,5 +1,6 @@
 import { forwardRef, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import biomundoLogo from "@/assets/biomundo-logo.png.asset.json";
 
 const TABS = [
   { label: "Início", id: "inicio" },
@@ -52,11 +53,16 @@ const Navbar = () => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
-  return (
+return (
     <nav
       aria-label="Navegação principal"
-      className="absolute left-1/2 top-2 z-50 -translate-x-1/2 md:top-3"
+      className="absolute left-1/2 top-2 z-50 flex -translate-x-1/2 flex-col items-center gap-1.5 md:top-3 md:flex-row md:gap-4"
     >
+<img
+        src={biomundoLogo.url}
+        alt="Bio Mundo"
+        className="h-10 w-auto md:h-12"
+      />
       <ul
         onMouseLeave={() => {
           const el = tabsRef.current[selected];
