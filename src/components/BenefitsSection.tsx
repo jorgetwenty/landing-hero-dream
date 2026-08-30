@@ -2,10 +2,10 @@ const BenefitsSection = () => {
   return (
     <section id="vantagens" className="bg-background py-14 md:py-20">
       <div className="mx-auto max-w-6xl px-5 md:px-10">
-        <p className="mb-3 font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-[#16A34A] md:text-xs">
+        <p className="mb-3 text-center font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-[#16A34A] md:text-xs">
           Vantagens
         </p>
-        <h2 className="font-hero text-4xl font-bold uppercase leading-[1.02] text-neutral-900 md:text-5xl">
+        <h2 className="text-center font-hero text-4xl font-bold uppercase leading-[1.02] text-neutral-900 md:text-5xl">
           Compre e <span className="text-[#16A34A]">ganhe</span> de volta
         </h2>
 
