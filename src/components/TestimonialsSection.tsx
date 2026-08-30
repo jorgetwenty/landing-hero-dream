@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react";
+import poster1 from "@/assets/testimonial-poster-1.jpg";
+import poster2 from "@/assets/testimonial-poster-2.jpg";
 
 const DEPOIMENTO_1 =
   "https://eynifdmidipyhvdwmfes.supabase.co/storage/v1/object/public/video%20de%20depoimento%20biomundo/primeiro%20video%20de%20depoimento.mp4";
@@ -6,9 +8,9 @@ const DEPOIMENTO_2 =
   "https://eynifdmidipyhvdwmfes.supabase.co/storage/v1/object/public/video%20de%20depoimento%20biomundo/segundo%20video%20de%20depoimento%20biomundo.mp4";
 
 const testimonials = [
-  { name: "Débora M.", role: "Cliente há 2 anos", quote: "Achei tudo que eu procurava sem açúcar em um lugar só.", video: DEPOIMENTO_1 },
-  { name: "Mikael S.", role: "Treina 5x na semana", quote: "O cashback fez eu voltar a comprar toda semana.", video: DEPOIMENTO_2 },
-  { name: "Rayssa L.", role: "Cliente desde 2024", quote: "Sabor de sobremesa e ainda encaixa na dieta.", video: DEPOIMENTO_1 },
+  { name: "Débora M.", role: "Cliente há 2 anos", quote: "Achei tudo que eu procurava sem açúcar em um lugar só.", video: DEPOIMENTO_1, poster: poster1 },
+  { name: "Mikael S.", role: "Treina 5x na semana", quote: "O cashback fez eu voltar a comprar toda semana.", video: DEPOIMENTO_2, poster: poster2 },
+  { name: "Rayssa L.", role: "Cliente desde 2024", quote: "Sabor de sobremesa e ainda encaixa na dieta.", video: DEPOIMENTO_1, poster: poster1 },
 ];
 
 const VideoCard = ({
@@ -25,6 +27,7 @@ const VideoCard = ({
   sectionVisible: boolean;
 }) => {
   const ref = useRef<HTMLVideoElement>(null);
+  const [playing, setPlaying] = useState(false);
   const isActive = active === index;
 
   useEffect(() => {
@@ -37,22 +40,35 @@ const VideoCard = ({
     } else {
       v.pause();
       v.currentTime = 0;
+      setPlaying(false);
     }
   }, [isActive, sectionVisible]);
 
   return (
     <article className="overflow-hidden rounded-xl border-2 border-neutral-900 bg-white shadow-[6px_6px_0_0_#1c1917] transition-transform duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5">
-      <div className="relative aspect-[9/16] w-full overflow-hidden border-b-2 border-neutral-900 bg-neutral-900">
+      <div className="relative aspect-[9/16] w-full overflow-hidden border-b-2 border-neutral-900 bg-[#F1E9D9]">
         <video
           ref={ref}
           src={t.video}
           playsInline
           muted
           loop
-          preload="none"
+          preload={isActive ? "auto" : "none"}
+          poster={t.poster}
+          onPlaying={() => setPlaying(true)}
+          onPause={() => setPlaying(false)}
           onEnded={() => setActive((index + 1) % testimonials.length)}
           className="h-full w-full object-cover"
         />
+        {/* Preview estático — aparece enquanto o vídeo não está rodando */}
+        {!playing && (
+          <img
+            src={t.poster}
+            alt=""
+            aria-hidden
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        )}
       </div>
 
       <div className="p-5">
