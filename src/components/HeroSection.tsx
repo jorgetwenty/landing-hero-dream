@@ -40,16 +40,16 @@ const HeroSection = () => {
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            className="font-hero text-2xl font-bold uppercase leading-[1.05] text-white [text-shadow:0_2px_14px_rgba(0,0,0,0.45)] sm:text-3xl md:text-5xl"
+className="font-hero text-2xl font-bold uppercase leading-[1.05] text-white [text-shadow:0_1px_3px_rgba(0,0,0,0.85),0_2px_12px_rgba(0,0,0,0.6),0_4px_28px_rgba(0,0,0,0.45)] sm:text-3xl md:text-5xl"
           >
-            Tem coisa <span className="text-[#4ADE80]">gostosa</span> que você ainda não descobriu.
+            Tem coisa <span className="text-[#4ADE80] [text-shadow:0_1px_3px_rgba(0,0,0,0.85),0_2px_12px_rgba(0,0,0,0.6)]">gostosa</span> que você ainda não descobriu.
           </motion.h1>
           <motion.p
             custom={1}
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            className="mt-3 max-w-md font-sans text-sm font-normal leading-relaxed text-white/85 [text-shadow:0_1px_10px_rgba(0,0,0,0.5)] md:mt-4 md:text-base"
+            className="mt-3 max-w-md font-sans text-sm font-normal leading-relaxed text-white [text-shadow:0_1px_3px_rgba(0,0,0,0.85),0_2px_12px_rgba(0,0,0,0.6)] md:mt-4 md:text-base"
           >
             Dos snacks aos suplementos, encontre novas opções para colocar na sua rotina.
           </motion.p>
