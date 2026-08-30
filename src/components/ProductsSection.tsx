@@ -25,7 +25,7 @@ const ProductsSection = () => {
           {products.map((p) => (
 <article
               key={p.title}
-              className="group flex flex-col overflow-hidden rounded-3xl border border-neutral-900/10 bg-white shadow-[0_10px_30px_-14px_rgba(28,25,23,0.18)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_-14px_rgba(28,25,23,0.25)]"
+              className="group flex flex-col overflow-hidden rounded-xl border border-neutral-900/10 bg-white shadow-[0_10px_30px_-14px_rgba(28,25,23,0.18)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_-14px_rgba(28,25,23,0.25)]"
             >
               {/* Imagem */}
               <div className="relative flex items-center justify-center overflow-hidden bg-gradient-to-b from-white to-[#F6F1E7] p-6">
