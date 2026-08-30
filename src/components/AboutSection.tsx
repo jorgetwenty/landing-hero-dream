@@ -4,7 +4,7 @@ import AnimatedCheck from "@/components/AnimatedCheck";
 const highlights = [
   "Snacks, suplementos, vitaminas e muito mais",
   "Sem açúcar, sem glúten e sem lactose",
-  "Atendimento próximo e humanizado",
+  "Estamos no ParkShopping",
 ];
 
 const AboutSection = () => {
