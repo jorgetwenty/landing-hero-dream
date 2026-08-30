@@ -21,7 +21,7 @@ const ProductsSection = () => {
           Escolhidos a <span className="text-[#16A34A]">dedo</span> pra você
         </h2>
 
-<div className="mt-8 grid grid-cols-1 gap-2.5 md:mt-10 md:grid-cols-2 md:gap-3 lg:grid-cols-3 lg:gap-4">
+<div className="mt-8 grid grid-cols-1 gap-2.5 md:mt-10 md:grid-cols-2 md:gap-3 lg:grid-cols-3 lg:gap-4 [&>*:last-child]:lg:col-start-2">
           {products.map((p) => (
             <article
               key={p.title}
