@@ -32,19 +32,13 @@ const AboutSection = () => {
               Sobre a nossa loja
             </p>
             <h2 className="font-hero text-4xl font-black uppercase leading-[1.02] text-neutral-900 md:text-5xl">
-              Prazer e <span className="texto-gradiente">saúde</span> na sua rotina
+              Prazer e <span className="text-[#4ADE80]">saúde</span> na sua rotina
             </h2>
-            <p className="mt-5 font-sans leading-relaxed text-neutral-600">
-              Somos uma loja que está no mercado há mais de [XX] anos. Durante todo
-              esse tempo, aprendemos uma coisa: cuidar de si não precisa ser um
-              sacrifício — e prazer também não deveria vir acompanhado de culpa.
+<p className="mt-4 max-w-md font-sans text-sm leading-relaxed text-neutral-600 md:text-base">
+              Somos uma loja que está no mercado há mais de [XX] anos, vendendo para
+              quem quer unir prazer e saúde no dia a dia.
             </p>
-            <p className="mt-4 font-sans leading-relaxed text-neutral-600">
-              Vendemos para pessoas que querem juntar prazer e saúde na sua rotina:
-              produtos selecionados, sabor de verdade e uma experiência pensada para
-              o seu bem-estar, do primeiro clique até a sua porta. [texto mockado]
-            </p>
-            <ul className="mt-7 space-y-4">
+            <ul className="mt-6 space-y-3">
               {highlights.map((item, index) => (
                 <li key={item} className="flex items-center gap-4 font-sans font-semibold text-neutral-800">
                   <AnimatedCheck delay={index * 350} size={40} />
