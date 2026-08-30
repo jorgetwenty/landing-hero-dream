@@ -64,7 +64,7 @@ const Navbar = () => {
           const { width } = el.getBoundingClientRect();
           setPosition({ left: el.offsetLeft, width, opacity: 1 });
         }}
-className="relative mx-auto flex w-full min-w-[320px] max-w-[350px] rounded-full border-2 border-neutral-900 bg-[#F1E8D6] p-2 shadow-[2px_2px_0_0_#1c1917] md:w-fit md:min-w-0 md:max-w-none md:p-1"
+className="relative mx-auto flex w-full min-w-[330px] max-w-[360px] rounded-full border-2 border-neutral-900 bg-[#F1E8D6] p-2 shadow-[2px_2px_0_0_#1c1917] md:w-fit md:min-w-0 md:max-w-none md:p-1"
       >
         {TABS.map((tab, i) => (
           <Tab
@@ -108,7 +108,7 @@ const Tab = forwardRef<HTMLLIElement, TabProps>(
         const { width } = ref.current.getBoundingClientRect();
         setPosition({ left: ref.current.offsetLeft, width, opacity: 1 });
       }}
-      className="relative z-10 block flex-1 cursor-pointer select-none whitespace-nowrap px-2 py-1.5 text-center text-xs font-medium uppercase text-white mix-blend-difference md:flex-none md:px-4 md:py-1.5 md:text-sm md:tracking-wide"
+      className="relative z-10 block min-w-0 flex-1 cursor-pointer select-none whitespace-nowrap px-2 py-1.5 text-center text-[11px] font-medium uppercase text-white mix-blend-difference md:flex-none md:px-4 md:py-1.5 md:text-sm md:tracking-wide"
     >
       {children}
     </li>
