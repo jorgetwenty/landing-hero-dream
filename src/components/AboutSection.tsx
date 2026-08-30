@@ -2,8 +2,8 @@ import aboutVideo from "@/assets/loja-video.mp4.asset.json";
 import AnimatedCheck from "@/components/AnimatedCheck";
 
 const highlights = [
-  "Produtos selecionados por quem entende",
-  "Qualidade que cabe na sua rotina",
+  "Snacks, suplementos, vitaminas e muito mais",
+  "Sem açúcar, sem glúten e sem lactose",
   "Atendimento próximo e humanizado",
 ];
 
