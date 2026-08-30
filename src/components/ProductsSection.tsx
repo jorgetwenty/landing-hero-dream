@@ -44,10 +44,12 @@ const ProductsSection = () => {
   const [atStart, setAtStart] = useState(true);
   const [atEnd, setAtEnd] = useState(false);
 
-  const scroll = (dir: number) => {
+const scroll = (dir: number) => {
     const el = trackRef.current;
     if (!el) return;
-    el.scrollBy({ left: dir * el.clientWidth * 0.85, behavior: "smooth" });
+    const gap = 16; // lg:gap-4
+    const card = (el.clientWidth - 2 * gap) / 3;
+    el.scrollTo({ left: el.scrollLeft + dir * (card + gap), behavior: "smooth" });
   };
 
   const updateArrows = () => {
