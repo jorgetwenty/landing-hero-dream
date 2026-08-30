@@ -21,17 +21,14 @@ const ProductsSection = () => {
           Escolhidos a <span className="text-[#16A34A]">dedo</span> pra você
         </h2>
 
-        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+<div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {products.map((p) => (
-<article
+            <article
               key={p.title}
-              className="group flex flex-col overflow-hidden rounded-xl border border-neutral-900/10 bg-white shadow-[0_10px_30px_-14px_rgba(28,25,23,0.18)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_-14px_rgba(28,25,23,0.25)]"
+              className="group flex flex-col overflow-hidden rounded-xl border border-neutral-900/10 bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_-14px_rgba(28,25,23,0.25)]"
             >
               {/* Imagem */}
-<div className="relative flex items-center justify-center overflow-hidden bg-gradient-to-b from-white to-[#F6F1E7] p-6">
-                <span className="absolute right-4 top-4 rounded-full bg-neutral-900 px-2.5 py-1 font-sans text-[10px] font-semibold uppercase tracking-wide text-[#4ADE80]">
-                  +10% de volta
-                </span>
+              <div className="flex items-center justify-center overflow-hidden bg-white p-6">
                 <img
                   src={p.image}
                   alt={p.title}
@@ -41,23 +38,18 @@ const ProductsSection = () => {
               </div>
 
               {/* Info */}
-              <div className="flex flex-1 flex-col p-5 pt-4">
+              <div className="flex flex-1 flex-col p-5 pt-3">
                 <p className="font-sans text-[10px] font-medium uppercase tracking-[0.2em] text-neutral-400">
                   {p.brand}
                 </p>
-                <h3 className="mt-1 font-hero text-lg font-bold uppercase leading-tight text-neutral-900">
+                <h3 className="mt-1 font-hero text-base font-bold uppercase leading-tight text-neutral-900">
                   {p.title}
                 </h3>
-<div className="mt-3 flex items-baseline gap-2">
-                  <span className="font-sans text-lg font-semibold text-neutral-900">{p.price}</span>
-                </div>
-                <p className="mt-2 inline-flex w-fit items-center gap-1.5 rounded-full bg-[#4ADE80]/30 px-2.5 py-1 font-sans text-[11px] font-semibold text-[#16A34A]">
-                  <span aria-hidden>⟲</span> 10% de cashback: {p.cashback} de volta
+                <span className="mt-3 font-sans text-lg font-semibold text-neutral-900">{p.price}</span>
+                <p className="mt-1 font-sans text-[11px] font-medium text-[#16A34A]">
+                  10% de cashback · {p.cashback} de volta
                 </p>
-                <button
-                  type="button"
-                  className="nb-btn mt-5 w-full font-sans"
-                >
+                <button type="button" className="nb-btn mt-4 w-full font-sans">
                   Comprar
                 </button>
               </div>
