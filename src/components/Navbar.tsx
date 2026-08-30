@@ -64,7 +64,7 @@ const Navbar = () => {
           const { width } = el.getBoundingClientRect();
           setPosition({ left: el.offsetLeft, width, opacity: 1 });
         }}
-        className="relative mx-auto flex w-fit rounded-full border-2 border-neutral-900 bg-[#FAF7F0] p-1 shadow-[2px_2px_0_0_#1c1917]"
+className="relative mx-auto flex w-fit rounded-full border-2 border-neutral-900 bg-[#F1E8D6] p-1.5 shadow-[2px_2px_0_0_#1c1917] md:p-1"
       >
         {TABS.map((tab, i) => (
           <Tab
@@ -108,7 +108,7 @@ const Tab = forwardRef<HTMLLIElement, TabProps>(
         const { width } = ref.current.getBoundingClientRect();
         setPosition({ left: ref.current.offsetLeft, width, opacity: 1 });
       }}
-      className="relative z-10 block cursor-pointer select-none px-2.5 py-1 text-[11px] font-medium uppercase tracking-wide text-white mix-blend-difference md:px-4 md:py-1.5 md:text-sm"
+      className="relative z-10 block cursor-pointer select-none px-3 py-1.5 text-xs font-medium uppercase tracking-wide text-white mix-blend-difference md:px-4 md:py-1.5 md:text-sm"
     >
       {children}
     </li>
