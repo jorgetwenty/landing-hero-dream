@@ -64,7 +64,7 @@ const Navbar = () => {
           const { width } = el.getBoundingClientRect();
           setPosition({ left: el.offsetLeft, width, opacity: 1 });
         }}
-className="relative mx-auto flex w-fit rounded-full border-2 border-neutral-900 bg-[#F1E8D6] p-1.5 shadow-[2px_2px_0_0_#1c1917] md:p-1"
+className="relative mx-auto flex w-full min-w-[320px] max-w-[350px] rounded-full border-2 border-neutral-900 bg-[#F1E8D6] p-2 shadow-[2px_2px_0_0_#1c1917] md:w-fit md:min-w-0 md:max-w-none md:p-1"
       >
         {TABS.map((tab, i) => (
           <Tab
