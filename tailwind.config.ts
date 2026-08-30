@@ -14,7 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        hero: ['"Playfair Display"', 'serif'],
+        hero: ['"Anton"', 'sans-serif'],
+        sans: ['"Inter"', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
