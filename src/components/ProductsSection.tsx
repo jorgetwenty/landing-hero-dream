@@ -52,7 +52,7 @@ const ProductsSection = () => {
                   <span className="font-sans text-lg font-semibold text-neutral-900">{p.price}</span>
                 </div>
                 <p className="mt-2 inline-flex w-fit items-center gap-1.5 rounded-full bg-[#4ADE80]/30 px-2.5 py-1 font-sans text-[11px] font-semibold text-[#16A34A]">
-                  <span aria-hidden>↩</span> 10% de cashback: {p.cashback} de volta
+                  <span aria-hidden>⟲</span> 10% de cashback: {p.cashback} de volta
                 </p>
                 <button
                   type="button"
