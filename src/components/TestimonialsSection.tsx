@@ -1,11 +1,15 @@
 import { useRef, useState } from "react";
 import { Play, Pause } from "lucide-react";
-import placeholderVideo from "@/assets/loja-video.mp4.asset.json";
+
+const DEPOIMENTO_1 =
+  "https://eynifdmidipyhvdwmfes.supabase.co/storage/v1/object/public/video%20de%20depoimento%20biomundo/primeiro%20video%20de%20depoimento.mp4";
+const DEPOIMENTO_2 =
+  "https://eynifdmidipyhvdwmfes.supabase.co/storage/v1/object/public/video%20de%20depoimento%20biomundo/segundo%20video%20de%20depoimento%20biomundo.mp4";
 
 const testimonials = [
-  { name: "Débora M.", role: "Cliente há 2 anos", quote: "Achei tudo que eu procurava sem açúcar em um lugar só.", video: placeholderVideo.url },
-  { name: "Mikael S.", role: "Treina 5x na semana", quote: "O cashback fez eu voltar a comprar toda semana.", video: placeholderVideo.url },
-  { name: "Rayssa L.", role: "Cliente desde 2024", quote: "Sabor de sobremesa e ainda encaixa na dieta.", video: placeholderVideo.url },
+  { name: "Débora M.", role: "Cliente há 2 anos", quote: "Achei tudo que eu procurava sem açúcar em um lugar só.", video: DEPOIMENTO_1 },
+  { name: "Mikael S.", role: "Treina 5x na semana", quote: "O cashback fez eu voltar a comprar toda semana.", video: DEPOIMENTO_2 },
+  { name: "Rayssa L.", role: "Cliente desde 2024", quote: "Sabor de sobremesa e ainda encaixa na dieta.", video: DEPOIMENTO_1 },
 ];
 
 const VideoCard = ({ t }: { t: (typeof testimonials)[number] }) => {
