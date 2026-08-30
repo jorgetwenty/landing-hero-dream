@@ -108,7 +108,7 @@ const Tab = forwardRef<HTMLLIElement, TabProps>(
         const { width } = ref.current.getBoundingClientRect();
         setPosition({ left: ref.current.offsetLeft, width, opacity: 1 });
       }}
-      className="relative z-10 block cursor-pointer select-none px-3 py-1.5 text-xs font-medium uppercase tracking-wide text-white mix-blend-difference md:px-4 md:py-1.5 md:text-sm"
+      className="relative z-10 block flex-1 cursor-pointer select-none whitespace-nowrap px-2 py-1.5 text-center text-xs font-medium uppercase text-white mix-blend-difference md:flex-none md:px-4 md:py-1.5 md:text-sm md:tracking-wide"
     >
       {children}
     </li>
@@ -121,7 +121,7 @@ const Cursor = ({ position }: { position: CursorPosition }) => (
   <motion.li
     aria-hidden
     animate={{ left: position.left, width: position.width, opacity: position.opacity }}
-    className="absolute inset-y-1.5 left-0 z-0 rounded-full bg-neutral-900 md:inset-y-1"
+    className="absolute inset-y-2 left-0 z-0 rounded-full bg-neutral-900 md:inset-y-1"
   />
 );
 
