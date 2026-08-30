@@ -1,6 +1,6 @@
 const BenefitsSection = () => {
   return (
-    <section id="vantagens" className="bg-background py-14 md:py-20">
+    <section id="vantagens" className="bg-background pt-14 pb-6 md:pt-20 md:pb-8">
       <div className="mx-auto max-w-6xl px-5 md:px-10">
         <p className="mb-3 text-center font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-[#16A34A] md:text-xs">
           Vantagens
