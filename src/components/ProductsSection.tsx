@@ -37,26 +37,26 @@ const ProductsSection = () => {
                 />
               </div>
 
-              {/* Info — compacta */}
-              <div className="flex flex-col p-2 pt-1 md:p-4 md:pt-2">
-                <p className="font-sans text-[8px] font-medium uppercase tracking-[0.2em] text-neutral-400 md:text-[9px]">
+{/* Info — compacta */}
+              <div className="flex flex-col p-2 pt-1 md:p-4 md:pt-2.5">
+                <p className="font-sans text-[8px] font-medium uppercase tracking-[0.2em] text-neutral-400 md:text-[10px]">
                   {p.brand}
                 </p>
-                <h3 className="mt-0.5 font-hero text-[10px] font-bold uppercase leading-tight text-neutral-900 md:text-[13px]">
+                <h3 className="mt-0.5 font-hero text-[10px] font-bold uppercase leading-tight text-neutral-900 md:text-sm">
                   {p.title}
                 </h3>
                 <div className="mt-1.5 flex items-center justify-between gap-1.5 md:mt-2.5 md:gap-2">
-                  <span className="min-w-0 font-sans text-[12px] font-semibold text-neutral-900 md:text-[15px]">
+                  <span className="min-w-0 font-sans text-[12px] font-semibold text-neutral-900 md:text-base">
                     {p.price}
                   </span>
                   <button
                     type="button"
-                    className="nb-btn w-auto shrink-0 !px-2.5 !py-1 !text-[8px] md:!px-3.5 md:!py-1.5 md:!text-[10px]"
+                    className="nb-btn w-auto shrink-0 !px-2.5 !py-1 !text-[8px] md:!px-3.5 md:!py-1.5 md:!text-[11px]"
                   >
                     Comprar
                   </button>
                 </div>
-                <p className="mt-0.5 font-sans text-[8px] font-medium text-[#16A34A] md:mt-1.5 md:text-[10px]">
+                <p className="mt-0.5 font-sans text-[8px] font-medium text-[#16A34A] md:mt-1.5 md:text-[11px]">
                   10% de volta · {p.cashback}
                 </p>
               </div>
