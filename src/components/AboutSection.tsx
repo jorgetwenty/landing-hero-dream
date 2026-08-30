@@ -32,7 +32,7 @@ const AboutSection = () => {
               Sobre a nossa loja
             </p>
             <h2 className="font-hero text-4xl font-bold uppercase leading-[1.02] text-neutral-900 md:text-5xl">
-              Unimos prazer e <span className="text-[#16A34A]">saúde</span> no dia a dia
+              Tem coisa <span className="text-[#16A34A]">gostosa</span> que você ainda não descobriu.
             </h2>
 <p className="mt-4 max-w-md font-sans text-base leading-relaxed text-neutral-600 md:text-lg">
 Somos uma loja que está no mercado há mais de [XX] anos, vendendo para

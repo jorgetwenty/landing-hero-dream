@@ -4,10 +4,10 @@ import cacaoWhey from "@/assets/cacao-whey-cut.png";
 import creatina from "@/assets/creatina-creapure-cut.png";
 
 const products = [
-{ brand: "Essential", title: "Beef Protein Pure Cacao", oldPrice: "R$ 490,00", price: "R$ 389,90", image: beefProtein },
-  { brand: "Essential", title: "Vanilla Whey", oldPrice: "R$ 570,00", price: "R$ 454,00", image: vanillaWhey },
-  { brand: "Essential", title: "Cacao Whey", oldPrice: "R$ 570,00", price: "R$ 454,00", image: cacaoWhey },
-  { brand: "Nutrify", title: "Creatina Creapure", oldPrice: "R$ 269,90", price: "R$ 209,99", image: creatina },
+  { brand: "Essential", title: "Beef Protein Pure Cacao", price: "R$ 389,90", cashback: "R$ 38,99", image: beefProtein },
+  { brand: "Essential", title: "Vanilla Whey", price: "R$ 454,00", cashback: "R$ 45,40", image: vanillaWhey },
+  { brand: "Essential", title: "Cacao Whey", price: "R$ 454,00", cashback: "R$ 45,40", image: cacaoWhey },
+  { brand: "Nutrify", title: "Creatina Creapure", price: "R$ 209,99", cashback: "R$ 21,00", image: creatina },
 ];
 
 const ProductsSection = () => {
@@ -28,9 +28,9 @@ const ProductsSection = () => {
               className="group flex flex-col overflow-hidden rounded-xl border border-neutral-900/10 bg-white shadow-[0_10px_30px_-14px_rgba(28,25,23,0.18)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_-14px_rgba(28,25,23,0.25)]"
             >
               {/* Imagem */}
-              <div className="relative flex items-center justify-center overflow-hidden bg-gradient-to-b from-white to-[#F6F1E7] p-6">
-                <span className="absolute right-4 top-4 rounded-full bg-[#4ADE80] px-2.5 py-1 font-sans text-[10px] font-bold uppercase tracking-wide text-neutral-900">
-                  Oferta
+<div className="relative flex items-center justify-center overflow-hidden bg-gradient-to-b from-white to-[#F6F1E7] p-6">
+                <span className="absolute right-4 top-4 rounded-full bg-neutral-900 px-2.5 py-1 font-sans text-[10px] font-semibold uppercase tracking-wide text-[#4ADE80]">
+                  +10% de volta
                 </span>
                 <img
                   src={p.image}
@@ -48,10 +48,12 @@ const ProductsSection = () => {
                 <h3 className="mt-1 font-hero text-lg font-bold uppercase leading-tight text-neutral-900">
                   {p.title}
                 </h3>
-                <div className="mt-3 flex items-baseline gap-2">
-                  <span className="font-sans text-xs text-neutral-400 line-through">{p.oldPrice}</span>
+<div className="mt-3 flex items-baseline gap-2">
                   <span className="font-sans text-lg font-semibold text-neutral-900">{p.price}</span>
                 </div>
+                <p className="mt-2 inline-flex w-fit items-center gap-1.5 rounded-full bg-[#4ADE80]/30 px-2.5 py-1 font-sans text-[11px] font-semibold text-[#16A34A]">
+                  <span aria-hidden>⟲</span> 10% de cashback: {p.cashback} de volta
+                </p>
                 <button
                   type="button"
                   className="nb-btn mt-5 w-full font-sans"
