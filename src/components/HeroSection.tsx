@@ -1,144 +1,38 @@
-import { useRef, useEffect } from "react";
-import logo from "@/assets/logo.png";
-
-const avatars = [
-  { src: "https://i.postimg.cc/sXRBYx6r/attractive-young-man-is-relaxing-home.jpg", alt: "Aluno 1" },
-  { src: "https://i.postimg.cc/k4dVQGj0/happy-successful-woman-posing-with-folded-arms.jpg", alt: "Aluna 2" },
-  { src: "https://i.postimg.cc/fLh3cyH7/middle-aged-man-wearing-smiling-rusty-colored-background.jpg", alt: "Aluno 3" },
-  { src: "https://i.postimg.cc/B6G8Tbhd/portrait-beautiful-woman.jpg", alt: "Aluna 4" },
-  { src: "https://i.postimg.cc/Y9w460nM/vertical-view-handsome-man-sitting-chair-leaned-table-smiling-looking-camera-image-cozy-kitchen.jpg", alt: "Aluno 5" },
-];
-
-const PriceCard = ({ mobile }: { mobile?: boolean }) => (
-  <div className={`price-card-wrapper relative ${mobile ? 'rounded-xl' : 'rounded-2xl'} p-[2px] shrink-0`} style={{ isolation: 'isolate' }}>
-    <div className={`absolute inset-0 ${mobile ? 'rounded-xl' : 'rounded-2xl'} price-border-anim pointer-events-none`} />
-    <div className={`absolute inset-0 ${mobile ? 'rounded-xl' : 'rounded-2xl'} price-dots pointer-events-none`} />
-    <div className={`liquid-glass relative ${mobile ? 'rounded-[10px] px-3 py-2.5' : 'rounded-[14px] px-6 py-5'} overflow-hidden text-right`}>
-      <span className={`relative z-[2] text-white ${mobile ? 'text-[11px]' : 'text-base'} font-semibold line-through decoration-red-500 ${mobile ? 'decoration-[1.5px]' : 'decoration-[2px]'}`}>DE R$97</span>
-      <p className={`relative z-[2] text-white ${mobile ? 'text-[9px] mt-0.5' : 'text-sm mt-1'} font-semibold tracking-widest uppercase`}>Por Apenas</p>
-      <div className={`relative z-[2] flex items-baseline justify-end ${mobile ? 'gap-0.5 mt-0.5' : 'gap-1 mt-1'}`}>
-        <span className={`text-white ${mobile ? 'text-lg' : 'text-3xl'} font-bold`}>R$</span>
-        <span className={`text-white ${mobile ? 'text-4xl' : 'text-7xl'} font-black tracking-tighter leading-none`} style={{ fontFamily: "'SF Pro Display', 'Inter', sans-serif" }}>27</span>
-      </div>
-    </div>
-  </div>
-);
+import heroBg from "@/assets/hero-proteina.png.asset.json";
 
 const HeroSection = () => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.play().catch(() => {});
-    }
-  }, []);
-
   return (
-    <section className="relative h-screen w-full overflow-hidden">
-      <video
-        ref={videoRef}
-        className="absolute inset-0 h-full w-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        poster=""
-      >
-        <source src="/hero-video.webm" type="video/webm" />
-      </video>
-      <div className="absolute inset-0 bg-black -z-10" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-[1]" />
-      <div
-        className="absolute bottom-0 left-0 w-full z-[2] pointer-events-none"
-        style={{
-          height: '140px',
-          background: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 25%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.65) 75%, rgba(0,0,0,1) 100%)',
-        }}
+    <section className="relative h-screen min-h-[560px] w-full overflow-hidden bg-black">
+      {/* Background image */}
+      <img
+        src={heroBg.url}
+        alt="Suplementos proteicos da nossa loja"
+        className="absolute inset-0 h-full w-full object-cover object-center"
       />
 
-      {/* Logo */}
-      <div className="absolute top-6 md:top-8 left-0 right-0 flex justify-center z-10">
-        <img src={logo} alt="Logo" className="h-8 md:h-14 w-auto" />
-      </div>
+      {/* Gradient overlay for legibility */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/10" />
 
-      {/* Desktop layout */}
-      <div className="hidden md:block absolute bottom-16 left-16 z-10 max-w-xl">
-        <div className="flex items-center mb-5">
-          {avatars.map((avatar, i) => (
-            <div key={i} className="imgg">
-              <img src={avatar.src} alt={avatar.alt} className="w-12 h-12 object-cover" width="48" height="48" loading="lazy" />
-            </div>
-          ))}
-          <span className="ml-6 text-white/70 text-sm font-medium whitespace-nowrap">+22000 alunos</span>
+      {/* Content */}
+      <div className="relative z-10 flex h-full items-end pb-14 md:pb-24">
+        <div className="mx-auto w-full max-w-6xl px-5 md:px-10">
+          <p className="mb-3 text-[11px] md:text-sm font-semibold uppercase tracking-[0.3em] text-white/70">
+            Sua rotina merece mais
+          </p>
+          <h1 className="font-hero max-w-2xl text-3xl md:text-6xl font-black leading-tight text-white">
+            Prazer e <span className="texto-gradiente">saúde</span> na sua rotina
+          </h1>
+          <p className="mt-3 max-w-xl text-sm md:text-lg leading-relaxed text-white/85">
+            Somos uma loja que está no mercado há mais de [XX] anos, vendendo para
+            quem quer unir prazer e saúde no dia a dia.
+          </p>
+          <a href="#sobre" className="shiny-cta-hero mt-8">
+            <span>Quero começar</span>
+          </a>
         </div>
-        <h1 className="text-white text-2xl lg:text-[28px] leading-[1.2] mb-3 font-semibold" style={{ fontFamily: "'SF Pro Display', 'Inter', sans-serif" }}>
-          Eles esconderam o maior poder da sua vida. Agora é sua chance de desbloquear.
-        </h1>
-        <p className="text-white text-[15px] lg:text-base leading-relaxed mb-8 max-w-lg font-normal" style={{ fontFamily: "'SF Pro Display', 'Inter', sans-serif" }}>
-          Durante anos, te ensinaram a aceitar pouco… a viver limitado… a ser fraco. Mentiram. Existe uma energia dentro de você capaz de mudar seu corpo, sua mente e seu destino. E agora, você vai reativá-la.
-        </p>
-        <a href="https://pay.cakto.com.br/7exfjyy_807964" target="_blank" rel="noopener noreferrer" className="shiny-cta-hero">
-          <span>Quero começar</span>
-        </a>
-      </div>
-
-      {/* Mobile layout */}
-      <div className="md:hidden absolute bottom-0 left-0 right-0 z-10 px-4 pb-5">
-        <div className="flex items-center mb-2.5">
-          {avatars.map((avatar, i) => (
-            <div key={i} className="imgg">
-              <img src={avatar.src} alt={avatar.alt} className="w-8 h-8 object-cover" width="32" height="32" loading="lazy" />
-            </div>
-          ))}
-          <span className="ml-4 text-white/70 text-xs font-medium whitespace-nowrap">+22000 alunos</span>
-        </div>
-        <h1 className="text-white text-[17px] leading-snug mb-1.5 font-semibold" style={{ fontFamily: "'SF Pro Display', 'Inter', sans-serif" }}>
-          Eles esconderam o maior poder da sua vida. Agora é sua chance de desbloquear.
-        </h1>
-        <p className="text-white/80 text-[12.5px] leading-relaxed mb-3.5 font-normal" style={{ fontFamily: "'SF Pro Display', 'Inter', sans-serif" }}>
-          Durante anos, te ensinaram a aceitar pouco… a viver limitado… a ser fraco. Mentiram. Existe uma energia dentro de você capaz de mudar seu corpo, sua mente e seu destino. E agora, você vai reativá-la.
-        </p>
-        <a href="https://pay.cakto.com.br/7exfjyy_807964" target="_blank" rel="noopener noreferrer" className="shiny-cta-hero shiny-cta-hero--mobile">
-          <span>Quero começar</span>
-        </a>
       </div>
 
       <style>{`
-        @property --price-border-angle {
-          syntax: "<angle>";
-          initial-value: 0deg;
-          inherits: true;
-        }
-        .price-card-wrapper {
-          --price-border-angle: 0deg;
-          animation: price-border-spin 2.5s linear infinite;
-        }
-        .price-border-anim {
-          background: conic-gradient(
-            from var(--price-border-angle),
-            transparent 0%, #a855f7 5%, #d8b4fe 15%, #a855f7 30%, transparent 40%, transparent 100%
-          );
-        }
-        @keyframes price-border-spin {
-          to { --price-border-angle: 360deg; }
-        }
-        .price-dots {
-          --space: 4px;
-          --position: 2px;
-          background: radial-gradient(circle at var(--position) var(--position), white 0.5px, transparent 0);
-          background-size: var(--space) var(--space);
-          background-repeat: space;
-          mask-image: conic-gradient(from calc(var(--price-border-angle) + 45deg), black, transparent 10% 90%, black);
-          opacity: 0.4;
-        }
-        .liquid-glass {
-          background: rgba(0, 0, 0, 0.5);
-          backdrop-filter: blur(8px);
-          -webkit-backdrop-filter: blur(8px);
-          box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
-        }
-
         @property --hero-gradient-angle {
           syntax: "<angle>";
           initial-value: 0deg;
@@ -170,10 +64,6 @@ const HeroSection = () => {
           text-decoration: none;
           display: inline-block;
           transition: transform 0.15s;
-        }
-        .shiny-cta-hero--mobile {
-          padding: 0.7rem 1.4rem;
-          font-size: 0.875rem;
         }
         @keyframes hero-border-spin {
           to { --hero-gradient-angle: 360deg; }
@@ -237,19 +127,6 @@ const HeroSection = () => {
         @keyframes hero-breathe {
           0%, 100% { transform: translate(-50%, -50%) scale(1); }
           50% { transform: translate(-50%, -50%) scale(1.20); }
-        }
-        .imgg {
-          margin-right: -12px;
-          transition: 0.5s ease all;
-        }
-        .imgg:hover {
-          margin-left: 10px;
-          filter: grayscale(100%);
-        }
-        .imgg img {
-          border-radius: 200px;
-          border: solid 1px rgba(255, 255, 255, 0.38);
-          transition: 0.5s ease all;
         }
       `}</style>
     </section>
