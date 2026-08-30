@@ -50,7 +50,7 @@ const ProductsSection = () => {
                 </h3>
                 <div className="mt-3 flex items-baseline gap-2">
                   <span className="font-sans text-xs text-neutral-500 line-through">{p.oldPrice}</span>
-                  <span className="font-sans text-lg font-bold text-neutral-900">{p.price}</span>
+                  <span className="font-sans text-lg font-semibold text-neutral-900">{p.price}</span>
                 </div>
                 <button
                   type="button"

@@ -28,13 +28,13 @@ const HeroSection = () => {
 <h1 className="font-hero max-w-2xl text-4xl font-bold uppercase leading-[1.02] text-[hsl(var(--hero-text))] md:text-6xl">
             Prazer e <span className="text-[#4ADE80]">saúde</span> na sua rotina
           </h1>
-          <p className="mt-3 max-w-xl font-sans text-[13px] font-normal leading-relaxed text-[hsl(var(--hero-subtitle))] md:text-base">
+          <p className="mt-3 max-w-xl font-sans text-xs font-medium leading-relaxed text-[hsl(var(--hero-subtitle))] md:text-sm">
             Somos uma loja que está no mercado há mais de [XX] anos, vendendo para
             quem quer unir prazer e saúde no dia a dia.
           </p>
           <a
             href="#sobre"
-            className="mt-6 inline-block border-2 border-neutral-900 bg-[#4ADE80] px-6 py-3 font-sans text-sm font-medium uppercase tracking-wide text-neutral-900 shadow-[4px_4px_0_0_#1c1917] transition-transform duration-150 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0_0_#1c1917] active:translate-x-0 active:translate-y-0 active:shadow-[2px_2px_0_0_#1c1917] md:text-base"
+            className="mt-5 inline-block border-2 border-neutral-900 bg-[#4ADE80] px-5 py-2.5 font-sans text-xs font-medium uppercase tracking-wide text-neutral-900 shadow-[3px_3px_0_0_#1c1917] transition-transform duration-150 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0_0_#1c1917] active:translate-x-0 active:translate-y-0 active:shadow-[1px_1px_0_0_#1c1917] md:text-sm"
           >
             Quero começar
           </a>
