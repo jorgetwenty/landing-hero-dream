@@ -28,15 +28,16 @@ const AboutSection = () => {
 
           {/* Texto — embaixo no mobile, direita no desktop */}
           <div className="order-2 md:order-none">
-            <p className="mb-4 font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-[#16A34A] md:text-xs">
+            <p className="mb-4 font-sans text-[11px] font-medium uppercase tracking-[0.25em] text-[#16A34A] md:text-xs">
               Sobre a nossa loja
             </p>
             <h2 className="font-hero text-4xl font-bold uppercase leading-[1.02] text-neutral-900 md:text-5xl">
-              Prazer e <span className="text-[#16A34A]">saúde</span> na sua rotina
+              Unimos prazer e <span className="text-[#16A34A]">saúde</span> no dia a dia
             </h2>
 <p className="mt-4 max-w-md font-sans text-base leading-relaxed text-neutral-600 md:text-lg">
-              Somos uma loja que está no mercado há mais de [XX] anos, vendendo para
-              quem quer unir prazer e saúde no dia a dia.
+Somos uma loja que está no mercado há mais de [XX] anos, vendendo para
+              quem quer unir prazer e saúde no dia a dia. De um lanche rápido ao
+              pré-treino, do café da manhã à sobremesa.
             </p>
             <ul className="mt-6 space-y-2.5">
               {highlights.map((item, index) => (
