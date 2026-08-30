@@ -126,8 +126,8 @@ const LocationSection = () => {
                   <p className="font-sans text-[11px] font-bold uppercase tracking-[0.18em] text-neutral-400">
                     Telefone / WhatsApp
                   </p>
-                  <a
-                    href={STORE.mapsDir.replace("maps/dir", "maps")}
+<a
+                    href={`tel:${STORE.phone.replace(/[^\d]/g, "")}`}
                     className="mt-0.5 inline-block font-sans text-sm font-medium text-neutral-800 hover:text-[#16A34A]"
                   >
                     {STORE.phone}
