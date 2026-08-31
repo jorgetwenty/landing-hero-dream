@@ -90,7 +90,7 @@ const Footer = () => {
               Instagram
             </a>
             <a
-              href="https://wa.me/5561999999999"
+              href={whatsappLink("Olá! Vim pelo site da Biomundo ParkShopping e gostaria de tirar uma dúvida.")}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp da Biomundo ParkShopping"
