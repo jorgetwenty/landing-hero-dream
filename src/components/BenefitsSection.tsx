@@ -79,9 +79,14 @@ const BenefitsSection = () => {
               Use o cupom <strong className="font-semibold text-neutral-900">BIOMUNDOPKS10</strong> na
               sua primeira compra e economize na hora.
             </p>
-            <button type="button" className="nb-btn mt-auto font-sans">
+            <a
+              href={whatsappLink("Olá! Quero usar o cupom BIOMUNDOPKS10 na Biomundo ParkShopping.")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nb-btn mt-auto font-sans"
+            >
               Usar cupom
-            </button>
+            </a>
           </article>
         </div>
       </div>
