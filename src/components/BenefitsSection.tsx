@@ -1,3 +1,5 @@
+import { whatsappLink } from "@/lib/whatsapp";
+
 const BenefitsSection = () => {
   return (
     <section id="vantagens" className="bg-background pt-14 pb-6 md:pt-20 md:pb-8">
