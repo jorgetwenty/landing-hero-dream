@@ -56,9 +56,14 @@ const HeroSection = () => {
             Produtos naturais, sem açúcar e sem glúten. Para quem não abre mão do sabor.
           </motion.p>
           <motion.div custom={2} initial="hidden" animate="visible" variants={fadeUp} className="mt-5 flex justify-center md:mt-7 md:justify-start">
-            <button onClick={scrollToProducts} className="nb-btn !px-8 !py-3 !text-sm">
+            <a
+              href={whatsappLink("Olá! Vim pelo site da Biomundo ParkShopping e quero conhecer os produtos.")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nb-btn !px-8 !py-3 !text-sm"
+            >
               Quero descobrir
-            </button>
+            </a>
           </motion.div>
         </div>
       </div>
