@@ -41,38 +41,52 @@ const ArrowButton = ({
 );
 
 const CouponVoucher = ({ onClick }: { onClick: () => void }) => (
-  <button
-    type="button"
+  <div
     onClick={onClick}
-    className="group/coupon relative mt-2 w-full overflow-hidden rounded-lg border border-[#D9C9AE] bg-[#FDFBF7] transition-colors duration-150 hover:border-[#16A34A]/40 hover:bg-[#F5F1E9]"
+    role="button"
+    tabIndex={0}
+    onKeyDown={(e) => {
+      if (e.key === "Enter" || e.key === " ") onClick();
+    }}
+    className="relative mt-2 w-full cursor-pointer overflow-hidden rounded-[5px] border border-[#D9C9AE] bg-[#FDFBF7] px-2.5 py-2.5 shadow-[0_2px_4px_0_rgba(0,0,0,0.08)] transition-colors duration-150 hover:border-[#16A34A]/40 hover:bg-[#F5F1E9] md:mt-3"
   >
     {/* side cutouts */}
-    <span className="pointer-events-none absolute -left-2.5 top-1/2 z-10 h-5 w-5 -translate-y-1/2 rounded-full bg-white md:h-6 md:w-6" />
-    <span className="pointer-events-none absolute -right-2.5 top-1/2 z-10 h-5 w-5 -translate-y-1/2 rounded-full bg-white md:h-6 md:w-6" />
+    <span
+      className="pointer-events-none absolute z-[1] h-8 w-8 rounded-full bg-white md:h-10 md:w-10"
+      style={{ left: "-16px", top: "50%", transform: "translateY(-50%)" }}
+    />
+    <span
+      className="pointer-events-none absolute z-[1] h-8 w-8 rounded-full bg-white md:h-10 md:w-10"
+      style={{ right: "-16px", top: "50%", transform: "translateY(-50%)" }}
+    />
 
-    <div className="flex items-stretch px-2 py-2 md:px-3 md:py-2.5">
+    <div className="relative flex h-[72px] items-center justify-between md:h-[88px]">
       {/* discount value */}
-      <div className="flex w-[34%] flex-col items-center justify-center pr-1">
-        <span className="font-hero text-xl font-bold leading-none text-[#16A34A] md:text-2xl">10%</span>
-        <span className="mt-0.5 font-sans text-[8px] font-medium uppercase tracking-wide text-[#16A34A]/80 md:text-[9px]">OFF</span>
+      <div className="flex w-[34%] items-center justify-center">
+        <span className="font-hero text-[26px] font-bold leading-none text-[#16A34A] md:text-[32px]">10%</span>
       </div>
 
       {/* dotted divider */}
-      <div className="relative mx-1 w-0 border-l-2 border-dotted border-[#D9C9AE]" />
+      <div
+        className="absolute top-1/2 h-[52px] -translate-y-1/2 border-l-[4px] border-dotted border-[#D9C9AE] md:h-[68px]"
+        style={{ left: "40%" }}
+      />
 
       {/* code + validity */}
-      <div className="flex flex-1 flex-col justify-center pl-2 text-left">
-        <span className="font-sans text-[10px] font-semibold uppercase tracking-wide text-neutral-700 md:text-[11px]">Na loja física</span>
-        <span className="font-hero text-base font-bold uppercase tracking-wide text-[#8B5A2B] md:text-lg">PARK10</span>
+      <div className="flex flex-1 flex-col justify-center pl-5 pr-2 text-left md:pl-7">
+        <span className="font-hero text-sm font-bold uppercase tracking-wide text-[#565656] md:text-base">PARK10</span>
+        <span className="mt-0.5 font-sans text-[10px] font-medium text-[#696969] md:text-[11px]">Na loja física</span>
       </div>
     </div>
 
     {/* bottom strip */}
-    <div className="flex items-center justify-between border-t border-dashed border-[#D9C9AE] px-2.5 py-1.5 md:px-3 md:py-2">
-      <span className="font-sans text-[9px] font-medium text-[#8B5A2B] md:text-[10px]">BioMundo ParkShopping</span>
-      <span className="font-sans text-[9px] font-semibold text-[#16A34A] md:text-[10px]">Apresente no caixa</span>
+    <div className="mt-1 flex h-[34px] items-center justify-between border-t-2 border-[#E5DDD0] px-1 pt-2 md:h-[40px] md:pt-2.5">
+      <span className="truncate pr-2 font-sans text-[9px] font-medium text-[#696969] md:text-[10px]">BioMundo ParkShopping</span>
+      <span className="shrink-0 rounded-sm bg-[#16A34A] px-2 py-1 font-sans text-[9px] font-semibold text-white md:px-2.5 md:text-[10px]">
+        USE IT
+      </span>
     </div>
-  </button>
+  </div>
 );
 
 const CouponModal = ({ open, onOpenChange }: { open: boolean; onOpenChange: (v: boolean) => void }) => (
