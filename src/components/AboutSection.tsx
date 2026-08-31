@@ -29,12 +29,10 @@ const AboutSection = () => {
           {/* Texto — embaixo no mobile, direita no desktop */}
           <div className="order-2 md:order-none">
             <h2 className="font-hero text-4xl font-bold uppercase leading-[1.02] text-neutral-900 md:text-5xl">
-              O que você <span className="text-[#16A34A]">gosta</span>, do jeito que você procura.
+              Tem coisa <span className="text-[#16A34A]">gostosa</span> que você ainda não descobriu.
             </h2>
 <p className="mt-4 max-w-md font-sans text-base leading-relaxed text-neutral-600 md:text-lg">
-              De um lanche rápido ao pré-treino, do café da manhã à sobremesa: na
-              Biomundo do ParkShopping você encontra opções para diferentes momentos da sua
-              rotina, sem abrir mão do sabor.
+              Dos snacks aos suplementos, encontre novas opções para colocar na sua rotina.
             </p>
             <ul className="mt-6 space-y-2.5">
               {highlights.map((item, index) => (
