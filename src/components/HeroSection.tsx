@@ -76,14 +76,17 @@ const HeroSection = () => {
 
       {/* Logo de branding abaixo da navbar, centralizada e destacada */}
       <div className="pointer-events-none absolute inset-x-0 top-[26px] z-20 flex flex-col items-center justify-center px-6 md:top-[34px]">
-        <motion.img
+        <motion.div
           initial={{ opacity: 0, y: -12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.35, duration: 0.6, ease: "easeOut" }}
-          src={biomundoLogo.url}
-          alt="Biomundo ParkShopping"
-          className="h-auto w-full max-w-[300px] drop-shadow-[0_4px_16px_rgba(0,0,0,0.45)] md:max-w-[420px]"
-        />
+          className="flex flex-col items-center gap-2 drop-shadow-[0_4px_16px_rgba(0,0,0,0.45)]"
+        >
+          <LeafMark className="h-10 w-10 md:h-12 md:w-12" />
+          <span className="font-hero text-4xl font-bold tracking-tight text-white md:text-5xl">
+            Biomundo
+          </span>
+        </motion.div>
       </div>
 
 
