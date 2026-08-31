@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import { whatsappLink } from "@/lib/whatsapp";
 import biomundoLogo from "@/assets/biomundo-logo.png.asset.json";
 import heroVideo from "@/assets/biomundo.mp4.asset.json";
-import heroBg from "@/assets/hero-proteina.png.asset.json";
+import heroBg from "@/assets/hero-poster.jpg.asset.json";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
