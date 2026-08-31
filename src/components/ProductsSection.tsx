@@ -70,6 +70,9 @@ const scroll = (dir: number) => {
             <h2 className="font-hero text-4xl font-bold uppercase leading-[1.02] text-neutral-900 md:text-5xl">
               Escolhidos a <span className="text-[#16A34A]">dedo</span> pra você
             </h2>
+            <p className="mt-2 font-sans text-xs font-medium text-[#16A34A] md:text-sm">
+              Curadoria exclusiva da Biomundo ParkShopping.
+            </p>
           </div>
           {/* Botões do carrossel — apenas desktop */}
           <div className="hidden shrink-0 gap-2 pb-1 lg:flex">
