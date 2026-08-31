@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import beefProtein from "@/assets/beef-protein-cut.png";
 import vanillaWhey from "@/assets/vanilla-whey-cut.png";
 import cacaoWhey from "@/assets/cacao-whey-cut.png";
@@ -39,15 +40,86 @@ const ArrowButton = ({
   </button>
 );
 
+const CouponVoucher = () => (
+  <div className="relative mt-2 flex w-full items-center overflow-hidden rounded-md border border-[#8B5A2B]/30 bg-[#F5F1E9]">
+    {/* Left green block with discount */}
+    <div className="flex shrink-0 flex-col items-center justify-center bg-[#16A34A] px-2 py-1.5 text-center">
+      <span className="font-hero text-[11px] font-bold leading-none text-white md:text-xs">10%</span>
+      <span className="mt-0.5 font-sans text-[7px] font-medium uppercase tracking-wide text-white/90">OFF</span>
+    </div>
+
+    {/* Dotted divider */}
+    <div className="relative mx-1 h-7 border-l border-dashed border-[#8B5A2B]/40" />
+
+    {/* Coupon text */}
+    <div className="flex min-w-0 flex-1 flex-col justify-center pr-1">
+      <span className="truncate font-sans text-[8px] font-semibold uppercase tracking-wide text-[#16A34A] md:text-[9px]">
+        Na loja física
+      </span>
+      <span className="truncate font-sans text-[7px] font-medium text-[#8B5A2B] md:text-[8px]">
+        BioMundo ParkShopping
+      </span>
+    </div>
+
+    {/* Side cutouts */}
+    <div className="pointer-events-none absolute -left-1.5 top-1/2 h-3 w-3 -translate-y-1/2 rounded-full bg-[#F5F1E9]" />
+    <div className="pointer-events-none absolute -right-1.5 top-1/2 h-3 w-3 -translate-y-1/2 rounded-full bg-[#F5F1E9]" />
+  </div>
+);
+
+const CouponModal = ({ open, onOpenChange }: { open: boolean; onOpenChange: (v: boolean) => void }) => (
+  <Dialog open={open} onOpenChange={onOpenChange}>
+    <DialogContent className="max-w-sm rounded-2xl border-2 border-[#1c1917] bg-[#F5F1E9] p-0 shadow-[4px_4px_0_0_#1c1917] sm:max-w-md">
+      <div className="relative overflow-hidden rounded-t-2xl bg-[#16A34A] px-6 py-5 text-center">
+        <span className="font-hero text-xs font-bold uppercase tracking-[0.2em] text-white/90">Cupom liberado</span>
+        <h3 className="mt-1 font-hero text-2xl font-bold text-white md:text-3xl">10% de desconto</h3>
+        <div className="pointer-events-none absolute -bottom-3 -left-3 h-6 w-6 rounded-full bg-[#F5F1E9]" />
+        <div className="pointer-events-none absolute -bottom-3 -right-3 h-6 w-6 rounded-full bg-[#F5F1E9]" />
+      </div>
+
+      <div className="px-6 pb-6 pt-2">
+        <DialogHeader>
+          <DialogTitle className="sr-only">Cupom liberado</DialogTitle>
+        </DialogHeader>
+
+        <p className="text-center font-sans text-sm font-medium text-neutral-700">
+          Válido exclusivamente na BioMundo ParkShopping.
+        </p>
+        <p className="mt-1 text-center font-sans text-xs text-neutral-500">
+          Mostre esta tela no caixa para receber o desconto.
+        </p>
+
+        <div className="relative mt-5 flex items-center justify-between overflow-hidden rounded-xl border-2 border-dashed border-[#8B5A2B]/40 bg-white px-5 py-4">
+          <div className="flex flex-col">
+            <span className="font-sans text-[10px] font-semibold uppercase tracking-wide text-[#8B5A2B]">Código visual</span>
+            <span className="font-hero text-2xl font-bold tracking-wide text-[#16A34A]">PARK10</span>
+          </div>
+          <div className="h-10 border-l border-dashed border-[#8B5A2B]/30" />
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16A34A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+          <div className="pointer-events-none absolute -left-2 top-1/2 h-4 w-4 -translate-y-1/2 rounded-full bg-[#F5F1E9]" />
+          <div className="pointer-events-none absolute -right-2 top-1/2 h-4 w-4 -translate-y-1/2 rounded-full bg-[#F5F1E9]" />
+        </div>
+
+        <p className="mt-4 text-center font-sans text-[10px] font-medium text-neutral-400">
+          Apresente este cupom no caixa da loja física.
+        </p>
+      </div>
+    </DialogContent>
+  </Dialog>
+);
+
 const ProductsSection = () => {
   const trackRef = useRef<HTMLDivElement>(null);
   const [atStart, setAtStart] = useState(true);
   const [atEnd, setAtEnd] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
-const scroll = (dir: number) => {
+  const scroll = (dir: number) => {
     const el = trackRef.current;
     if (!el) return;
-    const gap = 12; // lg:gap-3
+    const gap = 12;
     const card = (el.clientWidth - 2 * gap) / 3;
     el.scrollTo({ left: el.scrollLeft + dir * (card + gap), behavior: "smooth" });
   };
@@ -74,14 +146,12 @@ const scroll = (dir: number) => {
               Curadoria exclusiva da Biomundo ParkShopping.
             </p>
           </div>
-          {/* Botões do carrossel — apenas desktop */}
           <div className="hidden shrink-0 gap-2 pb-1 lg:flex">
             <ArrowButton direction="left" disabled={atStart} onClick={() => scroll(-1)} />
             <ArrowButton direction="right" disabled={atEnd} onClick={() => scroll(1)} />
           </div>
         </div>
 
-        {/* Mobile/tablet: grade empilhada. Desktop: carrossel com scroll lateral */}
         <div
           ref={trackRef}
           onScroll={updateArrows}
@@ -92,7 +162,6 @@ const scroll = (dir: number) => {
               key={p.title}
               className="group flex aspect-[1/1.12] flex-col overflow-hidden rounded-lg border border-neutral-200 bg-white shadow-[2px_2px_0_0_rgba(28,25,23,0.06)] transition-shadow duration-200 hover:shadow-[3px_3px_0_0_rgba(28,25,23,0.1)] lg:w-1/3 lg:shrink-0 lg:snap-start"
             >
-              {/* Imagem — preenche o card, catálogo uniforme */}
               <div className="flex min-h-0 flex-1 items-center justify-center overflow-hidden bg-white p-2.5 md:p-4">
                 <img
                   src={p.image}
@@ -102,7 +171,6 @@ const scroll = (dir: number) => {
                 />
               </div>
 
-              {/* Info — compacta */}
               <div className="flex flex-col p-3 pt-1.5 md:p-5 md:pt-2.5">
                 <p className="font-sans text-[9px] font-medium uppercase tracking-[0.2em] text-neutral-400 md:text-[11px]">
                   {p.brand}
@@ -110,18 +178,23 @@ const scroll = (dir: number) => {
                 <h3 className="mt-0.5 font-hero text-sm font-bold uppercase leading-tight text-neutral-900 md:text-lg">
                   {p.title}
                 </h3>
+
                 <div className="mt-1.5 flex items-center justify-between gap-2 md:mt-2.5 md:gap-2.5">
                   <span className="min-w-0 font-sans text-base font-semibold text-neutral-900 md:text-xl">
                     {p.price}
                   </span>
                   <button
                     type="button"
+                    onClick={() => setModalOpen(true)}
                     className="nb-btn w-auto shrink-0 !px-3 !py-1.5 !text-[10px] md:!px-4 md:!py-2 md:!text-xs"
                   >
-                    Comprar
+                    Pegar cupom de 10%
                   </button>
                 </div>
-                <p className="mt-1 font-sans text-[10px] font-medium text-[#16A34A] md:mt-2 md:text-sm">
+
+                <CouponVoucher />
+
+                <p className="mt-1.5 font-sans text-[10px] font-medium text-[#16A34A] md:mt-2 md:text-sm">
                   10% de volta · {p.cashback}
                 </p>
               </div>
@@ -129,6 +202,8 @@ const scroll = (dir: number) => {
           ))}
         </div>
       </div>
+
+      <CouponModal open={modalOpen} onOpenChange={setModalOpen} />
     </section>
   );
 };
