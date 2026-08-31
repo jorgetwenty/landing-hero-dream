@@ -40,8 +40,12 @@ const ArrowButton = ({
   </button>
 );
 
-const CouponVoucher = () => (
-  <div className="relative mt-2 flex w-full items-stretch overflow-hidden rounded-md border border-[#8B5A2B]/30 bg-[#F5F1E9]">
+const CouponVoucher = ({ onClick }: { onClick: () => void }) => (
+  <button
+    type="button"
+    onClick={onClick}
+    className="relative mt-2 flex w-full items-stretch overflow-hidden rounded-md border border-[#8B5A2B]/30 bg-[#F5F1E9] text-left transition-transform duration-150 hover:-translate-y-0.5 hover:shadow-[2px_2px_0_0_rgba(139,90,43,0.12)] active:translate-y-0"
+  >
     {/* Left green block with discount */}
     <div className="flex shrink-0 flex-col items-center justify-center bg-[#16A34A] px-2.5 py-2 text-center md:px-3 md:py-2.5">
       <span className="font-hero text-xs font-bold leading-none text-white md:text-sm">10%</span>
@@ -67,7 +71,7 @@ const CouponVoucher = () => (
     {/* Side cutouts */}
     <div className="pointer-events-none absolute -left-2 top-1/2 h-3.5 w-3.5 -translate-y-1/2 rounded-full bg-[#F5F1E9] md:h-4 md:w-4" />
     <div className="pointer-events-none absolute -right-2 top-1/2 h-3.5 w-3.5 -translate-y-1/2 rounded-full bg-[#F5F1E9] md:h-4 md:w-4" />
-  </div>
+  </button>
 );
 
 const CouponModal = ({ open, onOpenChange }: { open: boolean; onOpenChange: (v: boolean) => void }) => (
