@@ -214,15 +214,7 @@ const ProductsSection = () => {
                 </div>
 
                 <div className="mt-auto">
-                  <button
-                    type="button"
-                    onClick={() => setModalOpen(true)}
-                    className="mt-2 flex h-8 w-full items-center justify-center rounded-full border border-[#1c1917] bg-[#16A34A] px-4 font-sans text-[10px] font-bold uppercase tracking-wide text-white shadow-[2px_2px_0_0_#1c1917] transition-all duration-150 hover:translate-y-[-1px] hover:shadow-[3px_3px_0_0_#1c1917] active:translate-y-0 active:shadow-none md:mt-2.5 md:h-9 md:text-xs"
-                  >
-                    Pegar cupom de 10%
-                  </button>
-
-                  <CouponVoucher />
+                  <CouponVoucher onClick={() => setModalOpen(true)} />
 
                   <p className="mt-1.5 font-sans text-[10px] font-medium text-[#16A34A] md:mt-2 md:text-sm">
                     10% de volta · {p.cashback}
