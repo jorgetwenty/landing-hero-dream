@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
+import biomundoLogo from "@/assets/biomundo-logo.png.asset.json";
 import heroVideo from "@/assets/biomundo.mp4.asset.json";
 import heroBg from "@/assets/hero-proteina.png.asset.json";
 
@@ -53,13 +54,27 @@ className="font-hero text-3xl font-bold uppercase leading-[1.05] text-white [tex
           >
             Dos snacks aos suplementos, encontre novas opções para colocar na sua rotina.
           </motion.p>
-<motion.div custom={2} initial="hidden" animate="visible" variants={fadeUp} className="mt-5 flex justify-center md:mt-7 md:justify-start">
+          <motion.div custom={2} initial="hidden" animate="visible" variants={fadeUp} className="mt-5 flex justify-center md:mt-7 md:justify-start">
             <button onClick={scrollToProducts} className="nb-btn !px-8 !py-3 !text-sm">
               Quero descobrir
             </button>
           </motion.div>
         </div>
       </div>
+
+      {/* Logo de branding abaixo da navbar, centralizada e destacada */}
+      <motion.div
+        initial={{ opacity: 0, y: -12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.35, duration: 0.6, ease: "easeOut" }}
+        className="absolute left-1/2 top-[88px] z-20 w-full max-w-[260px] -translate-x-1/2 md:top-[100px] md:max-w-[320px]"
+      >
+        <img
+          src={biomundoLogo.url}
+          alt="Bio Mundo ParkShopping"
+          className="h-auto w-full drop-shadow-[0_4px_16px_rgba(0,0,0,0.45)]"
+        />
+      </motion.div>
 
       <Navbar />
     </section>
