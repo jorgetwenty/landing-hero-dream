@@ -44,33 +44,14 @@ const CouponVoucher = ({ onClick }: { onClick: () => void }) => (
   <button
     type="button"
     onClick={onClick}
-    className="relative mt-2 flex w-full items-stretch overflow-hidden rounded-md border border-[#8B5A2B]/30 bg-[#F5F1E9] text-left transition-transform duration-150 hover:-translate-y-0.5 hover:shadow-[2px_2px_0_0_rgba(139,90,43,0.12)] active:translate-y-0"
+    className="mt-2 w-full rounded-lg border border-[#D9C9AE] bg-[#FDFBF7] px-3 py-2 text-left transition-colors duration-150 hover:border-[#16A34A]/40 hover:bg-[#F5F1E9]"
   >
-    {/* Left green block with discount */}
-    <div className="flex shrink-0 flex-col items-center justify-center bg-[#16A34A] px-2.5 py-2 text-center md:px-3 md:py-2.5">
-      <span className="font-hero text-xs font-bold leading-none text-white md:text-sm">10%</span>
-      <span className="mt-0.5 font-sans text-[8px] font-medium uppercase tracking-wide text-white/90 md:text-[10px]">OFF</span>
-    </div>
-
-    {/* Dotted divider */}
-    <div className="mx-1.5 my-1.5 border-l border-dashed border-[#8B5A2B]/40 md:mx-2" />
-
-    {/* Coupon text */}
-    <div className="flex min-w-0 flex-1 flex-col justify-center py-1.5 pr-1.5">
-      <span className="truncate font-sans text-[9px] font-semibold uppercase tracking-wide text-[#16A34A] md:text-[11px]">
-        Na loja física
-      </span>
-      <span className="truncate font-sans text-[8px] font-medium text-[#8B5A2B] md:text-[10px]">
-        BioMundo ParkShopping
-      </span>
-      <span className="truncate font-sans text-[8px] font-medium text-neutral-500 md:text-[10px]">
-        Apresente no caixa
-      </span>
-    </div>
-
-    {/* Side cutouts */}
-    <div className="pointer-events-none absolute -left-2 top-1/2 h-3.5 w-3.5 -translate-y-1/2 rounded-full bg-[#F5F1E9] md:h-4 md:w-4" />
-    <div className="pointer-events-none absolute -right-2 top-1/2 h-3.5 w-3.5 -translate-y-1/2 rounded-full bg-[#F5F1E9] md:h-4 md:w-4" />
+    <p className="font-sans text-[10px] font-semibold uppercase tracking-wide text-[#16A34A] md:text-[11px]">
+      10% OFF na loja física
+    </p>
+    <p className="mt-0.5 font-sans text-[9px] font-medium text-[#8B5A2B] md:text-[10px]">
+      BioMundo ParkShopping · Apresente no caixa
+    </p>
   </button>
 );
 
@@ -167,9 +148,9 @@ const ProductsSection = () => {
           {products.map((p) => (
             <article
               key={p.title}
-              className="group flex h-full flex-col overflow-hidden rounded-lg border border-neutral-200 bg-white shadow-[2px_2px_0_0_rgba(28,25,23,0.06)] transition-shadow duration-200 hover:shadow-[3px_3px_0_0_rgba(28,25,23,0.1)] lg:w-1/3 lg:shrink-0 lg:snap-start"
+              className="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#D9C9AE] bg-[#FAF7F0] lg:w-1/3 lg:shrink-0 lg:snap-start"
             >
-              <div className="flex aspect-square w-full items-center justify-center overflow-hidden bg-white p-3 md:p-5">
+              <div className="flex aspect-square w-full items-center justify-center overflow-hidden bg-white p-4 md:p-6">
                 <img
                   src={p.image}
                   alt={p.title}
@@ -178,24 +159,24 @@ const ProductsSection = () => {
                 />
               </div>
 
-              <div className="flex flex-1 flex-col p-3 pt-1.5 md:p-5 md:pt-2.5">
-                <p className="font-sans text-[9px] font-medium uppercase tracking-[0.2em] text-neutral-400 md:text-[11px]">
-                  {p.brand}
-                </p>
-                <h3 className="mt-0.5 line-clamp-2 min-h-[2.2em] font-hero text-sm font-bold uppercase leading-tight text-neutral-900 md:min-h-[2.2em] md:text-lg">
-                  {p.title}
-                </h3>
-
-                <div className="mt-1.5 flex items-center justify-between gap-2 md:mt-2.5 md:gap-2.5">
-                  <span className="min-w-0 font-sans text-base font-semibold text-neutral-900 md:text-xl">
+              <div className="flex flex-1 flex-col p-3.5 md:p-5">
+                <div className="flex items-start justify-between gap-2">
+                  <div>
+                    <p className="font-sans text-[9px] font-medium uppercase tracking-[0.2em] text-neutral-400 md:text-[11px]">
+                      {p.brand}
+                    </p>
+                    <h3 className="mt-0.5 line-clamp-2 min-h-[2.2em] font-hero text-sm font-bold uppercase leading-tight text-neutral-900 md:text-lg">
+                      {p.title}
+                    </h3>
+                  </div>
+                  <span className="shrink-0 font-sans text-base font-semibold text-neutral-900 md:text-xl">
                     {p.price}
                   </span>
                 </div>
 
-                <div className="mt-auto">
+                <div className="mt-auto pt-2">
                   <CouponVoucher onClick={() => setModalOpen(true)} />
-
-                  <p className="mt-1.5 font-sans text-[10px] font-medium text-[#16A34A] md:mt-2 md:text-sm">
+                  <p className="mt-2 font-sans text-[10px] font-medium text-[#16A34A] md:text-xs">
                     10% de volta · {p.cashback}
                   </p>
                 </div>
