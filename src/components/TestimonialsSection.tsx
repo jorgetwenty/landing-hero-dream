@@ -100,7 +100,7 @@ const TestimonialsSection = () => {
   return (
     <section ref={sectionRef} id="depoimentos" className="bg-background pt-6 pb-14 md:pt-8 md:pb-20">
       <div className="mx-auto max-w-6xl px-5 md:px-10">
-        <p className="mb-3 text-center font-sans text-xs font-normal text-neutral-500 md:text-sm">
+        <p className="mb-3 text-center font-sans text-[11px] font-medium uppercase tracking-[0.25em] text-[#16A34A] md:text-xs">
           Depoimentos
         </p>
         <p className="mb-2 text-center font-sans text-lg font-medium text-[#16A34A] md:text-xl">
