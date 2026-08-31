@@ -80,7 +80,7 @@ const Footer = () => {
           {/* Botões sociais neobrutalist pill */}
           <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4">
             <a
-              href="https://instagram.com/biomundoparkshopping"
+              href="https://www.instagram.com/biomundodfparkshopping/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram da Biomundo ParkShopping"
