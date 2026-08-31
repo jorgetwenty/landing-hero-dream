@@ -72,15 +72,8 @@ const HeroSection = () => {
           alt="Biomundo ParkShopping"
           className="h-auto w-full max-w-[300px] drop-shadow-[0_4px_16px_rgba(0,0,0,0.45)] md:max-w-[420px]"
         />
-        <motion.span
-          initial={{ opacity: 0, y: -6 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.55, duration: 0.5, ease: "easeOut" }}
-          className="mt-1 inline-block rounded-full border-2 border-white/80 bg-white/90 px-3 py-0.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-neutral-900 shadow-[0_2px_8px_rgba(0,0,0,0.25)] backdrop-blur-sm md:mt-2 md:px-4 md:text-xs"
-        >
-          ParkShopping
-        </motion.span>
       </div>
+
 
 
       <Navbar />
