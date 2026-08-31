@@ -221,6 +221,16 @@ const ProductsSection = () => {
                   <p className="mt-1.5 font-sans text-[10px] font-medium text-[#16A34A] md:mt-2 md:text-sm">
                     10% de volta · {p.cashback}
                   </p>
+
+                  <a
+                    href={whatsappLink(p.message)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="nb-btn mt-2 inline-flex w-full items-center justify-center gap-2 !px-3 !py-2 text-[10px] md:mt-2.5 md:!py-2.5 md:text-xs"
+                  >
+                    <MessageCircle className="h-3.5 w-3.5" strokeWidth={2.2} />
+                    Quero este produto
+                  </a>
                 </div>
               </div>
             </article>
