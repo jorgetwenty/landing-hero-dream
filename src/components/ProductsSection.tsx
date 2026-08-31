@@ -44,7 +44,7 @@ const CouponVoucher = ({ onClick }: { onClick?: () => void }) => (
   <button
     type="button"
     onClick={onClick}
-    className="group/voucher relative mt-2 w-full overflow-hidden rounded-lg border border-[#16A34A]/30 bg-white text-left md:mt-2.5"
+    className="group/voucher relative mt-2 w-full overflow-hidden rounded-lg bg-[#F1E8D6] text-left md:mt-2.5"
   >
     {/* side cutouts */}
     <span
@@ -59,19 +59,19 @@ const CouponVoucher = ({ onClick }: { onClick?: () => void }) => (
     <div className="flex items-center px-2.5 py-2.5 md:px-3 md:py-3">
       {/* discount block */}
       <div className="flex w-[30%] flex-col items-center justify-center pr-2 md:w-[28%]">
-        <span className="font-hero text-2xl font-bold leading-none text-[#16A34A] md:text-3xl">10%</span>
-        <span className="font-sans text-[10px] font-semibold uppercase tracking-wide text-[#16A34A]/80 md:text-[11px]">OFF</span>
+        <span className="font-hero text-2xl font-bold leading-none text-[#1c1917] md:text-3xl">10%</span>
+        <span className="font-sans text-[10px] font-semibold uppercase tracking-wide text-[#1c1917]/70 md:text-[11px]">OFF</span>
       </div>
 
       {/* dotted divider */}
       <div
-        className="h-11 border-l-[3px] border-dotted border-[#16A34A]/40 md:h-12"
+        className="h-11 border-l-[3px] border-dotted border-[#1c1917]/40 md:h-12"
         style={{ borderStyle: "dotted" }}
       />
 
       {/* content */}
       <div className="flex flex-1 flex-col justify-center pl-2.5 md:pl-3">
-        <p className="font-sans text-[10px] font-bold uppercase tracking-wide text-[#16A34A] md:text-[11px]">
+        <p className="font-sans text-[10px] font-bold uppercase tracking-wide text-[#1c1917] md:text-[11px]">
           Na loja física
         </p>
         <p className="font-sans text-[9px] font-semibold text-[#1c1917]/70 md:text-[10px]">
@@ -84,11 +84,11 @@ const CouponVoucher = ({ onClick }: { onClick?: () => void }) => (
     </div>
 
     {/* bottom strip */}
-    <div className="flex items-center justify-between border-t border-[#16A34A]/20 bg-[#16A34A] px-2.5 py-2 md:px-3 md:py-2.5">
-      <span className="font-sans text-[9px] font-semibold text-white/90 md:text-[10px]">
-        Código: PARK10
+    <div className="flex items-center justify-between border-t border-[#1c1917]/10 bg-[#EDE4CF] px-2.5 py-2 md:px-3 md:py-2.5">
+      <span className="font-sans text-[9px] font-medium text-[#1c1917]/60 md:text-[10px]">
+        Cupom: PARK10
       </span>
-      <span className="nb-btn inline-flex items-center rounded-full border border-white bg-white px-3.5 py-1 font-sans text-[10px] font-bold uppercase tracking-wide text-[#16A34A] shadow-[2px_2px_0_0_#1c1917] transition-all group-hover/voucher:-translate-y-0.5 group-hover/voucher:shadow-[3px_3px_0_0_#1c1917] md:px-4 md:py-1.5 md:text-xs">
+      <span className="nb-btn inline-flex items-center rounded-full border border-[#1c1917] bg-[#16A34A] px-3 py-1 font-sans text-[10px] font-bold uppercase tracking-wide text-white shadow-[2px_2px_0_0_#1c1917] transition-all group-hover/voucher:-translate-y-0.5 group-hover/voucher:shadow-[3px_3px_0_0_#1c1917] md:px-3.5 md:py-1.5 md:text-xs">
         Usar
       </span>
     </div>
