@@ -103,18 +103,12 @@ const TestimonialsSection = () => {
         <p className="mb-3 text-center font-sans text-[11px] font-bold uppercase tracking-[0.25em] text-[#16A34A] md:text-xs">
           Depoimentos
         </p>
+        <p className="mb-2 text-center font-sans text-lg font-medium text-[#16A34A] md:text-xl">
+          Biomundo ParkShopping.
+        </p>
         <h2 className="text-center font-hero text-4xl font-bold uppercase leading-[1.02] text-neutral-900 md:text-5xl">
           Quem prova, <span className="text-[#16A34A]">volta</span>
-          <span className="mt-1 block text-2xl md:text-3xl">no mundo do ParkShopping</span>
         </h2>
-        <div className="mt-6 flex justify-center">
-          <a
-            href="#localizacao"
-            className="nb-btn inline-flex items-center justify-center rounded-full bg-[#16A34A] px-6 py-2.5 text-sm font-medium text-white"
-          >
-            Quero conhecer
-          </a>
-        </div>
 
         <div className="mx-auto mt-10 grid max-w-4xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((t, i) => (
