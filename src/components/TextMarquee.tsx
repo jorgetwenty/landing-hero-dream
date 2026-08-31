@@ -1,4 +1,4 @@
-const phrases = ["uma vida saudável", "para uma vida plena"];
+const phrases = ["Biomundo ParkShopping", "uma vida saudável", "para uma vida plena"];
 
 const TextMarquee = () => {
   const items = Array.from({ length: 8 }, (_, i) => (
