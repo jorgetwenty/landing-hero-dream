@@ -148,9 +148,9 @@ const ProductsSection = () => {
           {products.map((p) => (
             <article
               key={p.title}
-              className="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#D9C9AE] bg-[#FAF7F0] lg:w-1/3 lg:shrink-0 lg:snap-start"
+              className="group flex h-full flex-col overflow-hidden rounded-lg border border-neutral-200 bg-white shadow-[2px_2px_0_0_rgba(28,25,23,0.06)] transition-shadow duration-200 hover:shadow-[3px_3px_0_0_rgba(28,25,23,0.1)] lg:w-1/3 lg:shrink-0 lg:snap-start"
             >
-              <div className="flex aspect-square w-full items-center justify-center overflow-hidden bg-white p-4 md:p-6">
+              <div className="flex aspect-square w-full items-center justify-center overflow-hidden bg-white p-3 md:p-5">
                 <img
                   src={p.image}
                   alt={p.title}
@@ -159,24 +159,24 @@ const ProductsSection = () => {
                 />
               </div>
 
-              <div className="flex flex-1 flex-col p-3.5 md:p-5">
-                <div className="flex items-start justify-between gap-2">
-                  <div>
-                    <p className="font-sans text-[9px] font-medium uppercase tracking-[0.2em] text-neutral-400 md:text-[11px]">
-                      {p.brand}
-                    </p>
-                    <h3 className="mt-0.5 line-clamp-2 min-h-[2.2em] font-hero text-sm font-bold uppercase leading-tight text-neutral-900 md:text-lg">
-                      {p.title}
-                    </h3>
-                  </div>
-                  <span className="shrink-0 font-sans text-base font-semibold text-neutral-900 md:text-xl">
+              <div className="flex flex-1 flex-col p-3 pt-1.5 md:p-5 md:pt-2.5">
+                <p className="font-sans text-[9px] font-medium uppercase tracking-[0.2em] text-neutral-400 md:text-[11px]">
+                  {p.brand}
+                </p>
+                <h3 className="mt-0.5 line-clamp-2 min-h-[2.2em] font-hero text-sm font-bold uppercase leading-tight text-neutral-900 md:min-h-[2.2em] md:text-lg">
+                  {p.title}
+                </h3>
+
+                <div className="mt-1.5 flex items-center justify-between gap-2 md:mt-2.5 md:gap-2.5">
+                  <span className="min-w-0 font-sans text-base font-semibold text-neutral-900 md:text-xl">
                     {p.price}
                   </span>
                 </div>
 
-                <div className="mt-auto pt-2">
+                <div className="mt-auto">
                   <CouponVoucher onClick={() => setModalOpen(true)} />
-                  <p className="mt-2 font-sans text-[10px] font-medium text-[#16A34A] md:text-xs">
+
+                  <p className="mt-1.5 font-sans text-[10px] font-medium text-[#16A34A] md:mt-2 md:text-sm">
                     10% de volta · {p.cashback}
                   </p>
                 </div>
