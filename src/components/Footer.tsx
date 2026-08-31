@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Instagram, Phone } from "lucide-react";
 import {
   Dialog,
   DialogContent,
