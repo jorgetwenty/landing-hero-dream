@@ -63,7 +63,7 @@ className="font-hero text-3xl font-bold uppercase leading-[1.05] text-white [tex
       </div>
 
       {/* Logo de branding abaixo da navbar, centralizada e destacada */}
-      <div className="pointer-events-none absolute inset-x-0 top-[30px] z-20 flex justify-center px-6 md:top-[38px]">
+      <div className="pointer-events-none absolute inset-x-0 top-[26px] z-20 flex justify-center px-6 md:top-[34px]">
         <motion.img
           initial={{ opacity: 0, y: -12 }}
           animate={{ opacity: 1, y: 0 }}
