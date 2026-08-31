@@ -105,6 +105,7 @@ const TestimonialsSection = () => {
         </p>
         <h2 className="text-center font-hero text-4xl font-bold uppercase leading-[1.02] text-neutral-900 md:text-5xl">
           Quem prova, <span className="text-[#16A34A]">volta</span>
+          <span className="mt-1 block text-2xl md:text-3xl">na Biomundo do ParkShopping</span>
         </h2>
 
         <div className="mx-auto mt-10 grid max-w-4xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
