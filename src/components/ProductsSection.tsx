@@ -40,8 +40,12 @@ const ArrowButton = ({
   </button>
 );
 
-const CouponVoucher = () => (
-  <div className="relative mt-2 w-full overflow-hidden rounded-lg border border-[#D9C9AE] bg-[#FDFBF7] md:mt-2.5">
+const CouponVoucher = ({ onClick }: { onClick?: () => void }) => (
+  <button
+    type="button"
+    onClick={onClick}
+    className="group/voucher relative mt-2 w-full overflow-hidden rounded-lg bg-[#EFEFEF] text-left md:mt-2.5"
+  >
     {/* side cutouts */}
     <span
       className="pointer-events-none absolute z-[1] h-7 w-7 rounded-full bg-white md:h-8 md:w-8"
@@ -52,33 +56,43 @@ const CouponVoucher = () => (
       style={{ right: "-14px", top: "50%", transform: "translateY(-50%)" }}
     />
 
-    <div className="flex items-center px-2 py-2.5 md:px-2.5 md:py-3">
+    <div className="flex items-center px-2 py-2 md:px-2.5 md:py-2.5">
       {/* discount block */}
-      <div className="flex w-[28%] flex-col items-center justify-center pr-2 md:w-[30%]">
-        <span className="font-hero text-lg font-bold leading-none text-[#16A34A] md:text-xl">10%</span>
-        <span className="font-sans text-[8px] font-semibold uppercase tracking-wide text-[#16A34A] md:text-[9px]">OFF</span>
+      <div className="flex w-[30%] flex-col items-center justify-center pr-2 md:w-[28%]">
+        <span className="font-hero text-xl font-bold leading-none text-[#1c1917] md:text-2xl">10%</span>
+        <span className="font-sans text-[9px] font-semibold uppercase tracking-wide text-[#1c1917]/70 md:text-[10px]">OFF</span>
       </div>
 
       {/* dotted divider */}
       <div
-        className="h-10 border-l-[3px] border-dotted border-[#D9C9AE] md:h-11"
+        className="h-10 border-l-[3px] border-dotted border-[#1c1917]/40 md:h-11"
         style={{ borderStyle: "dotted" }}
       />
 
       {/* content */}
       <div className="flex flex-1 flex-col justify-center pl-2.5 md:pl-3">
-        <p className="font-sans text-[9px] font-bold uppercase tracking-wide text-[#16A34A] md:text-[10px]">
+        <p className="font-sans text-[10px] font-bold uppercase tracking-wide text-[#1c1917] md:text-[11px]">
           Na loja física
         </p>
-        <p className="font-sans text-[9px] font-semibold text-[#8B5A2B] md:text-[10px]">
+        <p className="font-sans text-[9px] font-semibold text-[#1c1917]/70 md:text-[10px]">
           BioMundo ParkShopping
         </p>
-        <p className="font-sans text-[8px] font-medium text-[#8B5A2B]/80 md:text-[9px]">
-          Apresente este cupom no caixa
+        <p className="font-sans text-[8px] font-medium text-[#1c1917]/50 md:text-[9px]">
+          Apresente no caixa
         </p>
       </div>
     </div>
-  </div>
+
+    {/* bottom strip */}
+    <div className="flex items-center justify-between border-t border-[#1c1917]/10 px-2 py-1.5 md:px-2.5 md:py-2">
+      <span className="font-sans text-[8px] font-medium text-[#1c1917]/60 md:text-[9px]">
+        Cupom: PARK10
+      </span>
+      <span className="inline-flex items-center rounded bg-[#16A34A] px-2 py-0.5 font-sans text-[8px] font-bold uppercase tracking-wide text-white transition-colors group-hover/voucher:bg-[#15803D] md:text-[9px]">
+        Usar
+      </span>
+    </div>
+  </button>
 );
 
 const CouponModal = ({ open, onOpenChange }: { open: boolean; onOpenChange: (v: boolean) => void }) => (
@@ -200,15 +214,7 @@ const ProductsSection = () => {
                 </div>
 
                 <div className="mt-auto">
-                  <button
-                    type="button"
-                    onClick={() => setModalOpen(true)}
-                    className="mt-2 flex h-8 w-full items-center justify-center rounded-full border border-[#1c1917] bg-[#16A34A] px-4 font-sans text-[10px] font-bold uppercase tracking-wide text-white shadow-[2px_2px_0_0_#1c1917] transition-all duration-150 hover:translate-y-[-1px] hover:shadow-[3px_3px_0_0_#1c1917] active:translate-y-0 active:shadow-none md:mt-2.5 md:h-9 md:text-xs"
-                  >
-                    Pegar cupom de 10%
-                  </button>
-
-                  <CouponVoucher />
+                  <CouponVoucher onClick={() => setModalOpen(true)} />
 
                   <p className="mt-1.5 font-sans text-[10px] font-medium text-[#16A34A] md:mt-2 md:text-sm">
                     10% de volta · {p.cashback}
