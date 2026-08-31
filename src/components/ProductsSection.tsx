@@ -1,5 +1,7 @@
 import { useRef, useState } from "react";
+import { MessageCircle } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { whatsappLink } from "@/lib/whatsapp";
 import beefProtein from "@/assets/beef-protein-cut.png";
 import vanillaWhey from "@/assets/vanilla-whey-cut.png";
 import cacaoWhey from "@/assets/cacao-whey-cut.png";
