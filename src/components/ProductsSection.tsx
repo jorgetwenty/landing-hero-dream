@@ -44,33 +44,14 @@ const CouponVoucher = ({ onClick }: { onClick: () => void }) => (
   <button
     type="button"
     onClick={onClick}
-    className="relative mt-2 flex w-full items-stretch overflow-hidden rounded-md border border-[#8B5A2B]/30 bg-[#F5F1E9] text-left transition-transform duration-150 hover:-translate-y-0.5 hover:shadow-[2px_2px_0_0_rgba(139,90,43,0.12)] active:translate-y-0"
+    className="mt-2 w-full rounded-lg border border-[#D9C9AE] bg-[#FDFBF7] px-3 py-2 text-left transition-colors duration-150 hover:border-[#16A34A]/40 hover:bg-[#F5F1E9]"
   >
-    {/* Left green block with discount */}
-    <div className="flex shrink-0 flex-col items-center justify-center bg-[#16A34A] px-2.5 py-2 text-center md:px-3 md:py-2.5">
-      <span className="font-hero text-xs font-bold leading-none text-white md:text-sm">10%</span>
-      <span className="mt-0.5 font-sans text-[8px] font-medium uppercase tracking-wide text-white/90 md:text-[10px]">OFF</span>
-    </div>
-
-    {/* Dotted divider */}
-    <div className="mx-1.5 my-1.5 border-l border-dashed border-[#8B5A2B]/40 md:mx-2" />
-
-    {/* Coupon text */}
-    <div className="flex min-w-0 flex-1 flex-col justify-center py-1.5 pr-1.5">
-      <span className="truncate font-sans text-[9px] font-semibold uppercase tracking-wide text-[#16A34A] md:text-[11px]">
-        Na loja física
-      </span>
-      <span className="truncate font-sans text-[8px] font-medium text-[#8B5A2B] md:text-[10px]">
-        BioMundo ParkShopping
-      </span>
-      <span className="truncate font-sans text-[8px] font-medium text-neutral-500 md:text-[10px]">
-        Apresente no caixa
-      </span>
-    </div>
-
-    {/* Side cutouts */}
-    <div className="pointer-events-none absolute -left-2 top-1/2 h-3.5 w-3.5 -translate-y-1/2 rounded-full bg-[#F5F1E9] md:h-4 md:w-4" />
-    <div className="pointer-events-none absolute -right-2 top-1/2 h-3.5 w-3.5 -translate-y-1/2 rounded-full bg-[#F5F1E9] md:h-4 md:w-4" />
+    <p className="font-sans text-[10px] font-semibold uppercase tracking-wide text-[#16A34A] md:text-[11px]">
+      10% OFF na loja física
+    </p>
+    <p className="mt-0.5 font-sans text-[9px] font-medium text-[#8B5A2B] md:text-[10px]">
+      BioMundo ParkShopping · Apresente no caixa
+    </p>
   </button>
 );
 
