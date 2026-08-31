@@ -52,7 +52,7 @@ const HeroSection = () => {
             variants={fadeUp}
             className="mt-3 max-w-md font-sans text-sm font-normal leading-relaxed text-white [text-shadow:0_1px_3px_rgba(0,0,0,0.6),0_2px_10px_rgba(0,0,0,0.35)] md:mt-4 md:text-base"
           >
-            Produtos naturais, sem açúcar e sem glúten — para quem não abre mão do sabor.
+            Produtos naturais, sem açúcar e sem glúten. Para quem não abre mão do sabor.
           </motion.p>
           <motion.div custom={2} initial="hidden" animate="visible" variants={fadeUp} className="mt-5 flex justify-center md:mt-7 md:justify-start">
             <button onClick={scrollToProducts} className="nb-btn !px-8 !py-3 !text-sm">
