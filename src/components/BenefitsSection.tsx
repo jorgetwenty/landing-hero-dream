@@ -2,7 +2,10 @@ const BenefitsSection = () => {
   return (
     <section id="vantagens" className="bg-background pt-14 pb-6 md:pt-20 md:pb-8">
       <div className="mx-auto max-w-6xl px-5 md:px-10">
-<h2 className="text-center font-hero text-4xl font-bold uppercase leading-[1.02] text-neutral-900 md:text-5xl">
+        <p className="mb-3 text-center font-sans text-[11px] font-medium uppercase tracking-[0.25em] text-[#16A34A] md:text-xs">
+          Biomundo ParkShopping
+        </p>
+        <h2 className="text-center font-hero text-4xl font-bold uppercase leading-[1.02] text-neutral-900 md:text-5xl">
           Compre e <span className="text-[#16A34A]">ganhe</span> de volta
         </h2>
 
