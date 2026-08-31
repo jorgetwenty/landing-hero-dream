@@ -44,9 +44,14 @@ const BenefitsSection = () => {
               A cada compra, 10% do valor volta pra sua carteira e pode ser usado no
               próximo pedido. Simples assim.
             </p>
-            <button type="button" className="nb-btn mt-auto font-sans">
+            <a
+              href={whatsappLink("Olá! Quero saber mais sobre o cashback da Biomundo ParkShopping.")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nb-btn mt-auto font-sans"
+            >
               Quero meu cashback
-            </button>
+            </a>
           </article>
 
           {/* Card 2 — Cupom */}
