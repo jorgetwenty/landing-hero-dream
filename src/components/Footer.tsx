@@ -7,7 +7,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
-import logo from "@/assets/biomundo-logo.png";
+import logo from "@/assets/biomundo-logo.png.asset.json";
 
 const privacyText = `A sua privacidade é importante para nós. É política da Biomundo respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site, e outros sites que possuímos e operamos.
 
