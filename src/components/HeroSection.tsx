@@ -15,10 +15,6 @@ const fadeUp = {
 };
 
 const HeroSection = () => {
-  const scrollToProducts = () => {
-    document.getElementById("produtos")?.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
-
   return (
     <section id="inicio" className="relative h-screen min-h-[560px] w-full overflow-hidden rounded-b-xl md:rounded-b-2xl">
       {/* Background video — sem gradiente, imagem vívida */}
