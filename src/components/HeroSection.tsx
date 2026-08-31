@@ -64,24 +64,14 @@ const HeroSection = () => {
 
       {/* Logo de branding abaixo da navbar, centralizada e destacada */}
       <div className="pointer-events-none absolute inset-x-0 top-[26px] z-20 flex flex-col items-center justify-center px-6 md:top-[34px]">
-        <div className="relative">
-          <motion.img
-            initial={{ opacity: 0, y: -12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.35, duration: 0.6, ease: "easeOut" }}
-            src={biomundoLogo.url}
-            alt="Biomundo ParkShopping"
-            className="h-auto w-full max-w-[300px] drop-shadow-[0_4px_16px_rgba(0,0,0,0.45)] md:max-w-[420px]"
-          />
-          <motion.span
-            initial={{ opacity: 0, scale: 0.85 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.65, duration: 0.4, ease: "easeOut" }}
-            className="pointer-events-auto absolute -bottom-2 left-1/2 -translate-x-1/2 translate-y-full rounded-full border-2 border-[#16A34A] bg-[#F1E8D6] px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-[#16A34A] shadow-[2px_2px_0_0_#16A34A] md:-bottom-3 md:px-4 md:py-1.5 md:text-xs"
-          >
-            ParkShopping
-          </motion.span>
-        </div>
+        <motion.img
+          initial={{ opacity: 0, y: -12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.35, duration: 0.6, ease: "easeOut" }}
+          src={biomundoLogo.url}
+          alt="Biomundo ParkShopping"
+          className="h-auto w-full max-w-[300px] drop-shadow-[0_4px_16px_rgba(0,0,0,0.45)] md:max-w-[420px]"
+        />
       </div>
 
 
