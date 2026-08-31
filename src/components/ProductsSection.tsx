@@ -44,12 +44,12 @@ const CouponVoucher = ({ onClick }: { onClick: () => void }) => (
   <button
     type="button"
     onClick={onClick}
-    className="mt-2 w-full rounded-lg border border-[#D9C9AE] bg-[#FDFBF7] px-3 py-2 text-left transition-colors duration-150 hover:border-[#16A34A]/40 hover:bg-[#F5F1E9]"
+    className="mt-2 w-full rounded-lg border border-[#D9C9AE] bg-[#FDFBF7] px-3 pt-2 pb-1.5 text-left transition-colors duration-150 hover:border-[#16A34A]/40 hover:bg-[#F5F1E9]"
   >
     <p className="font-sans text-[10px] font-semibold uppercase tracking-wide text-[#16A34A] md:text-[11px]">
       10% OFF na loja física
     </p>
-    <p className="mt-0.5 font-sans text-[9px] font-medium text-[#8B5A2B] md:text-[10px]">
+    <p className="font-sans text-[9px] font-medium leading-snug text-[#8B5A2B] md:text-[10px]">
       BioMundo ParkShopping · Apresente no caixa
     </p>
   </button>
