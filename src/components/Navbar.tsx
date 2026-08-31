@@ -1,6 +1,5 @@
 import { forwardRef, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import biomundoLogo from "@/assets/biomundo-logo.png.asset.json";
 
 const TABS = [
   { label: "Início", id: "inicio" },
@@ -67,11 +66,6 @@ return (
         }}
         className="relative mx-auto flex w-full min-w-[330px] max-w-[360px] flex-col items-center gap-1.5 rounded-full border-2 border-neutral-900 bg-[#F1E8D6] p-2 shadow-[2px_2px_0_0_#1c1917] md:w-fit md:min-w-0 md:max-w-none md:flex-row md:gap-0 md:p-1"
       >
-        <img
-          src={biomundoLogo.url}
-          alt="Bio Mundo"
-          className="h-8 w-auto md:mr-2 md:h-10"
-        />
         <div className="relative flex w-full md:w-auto">
           {TABS.map((tab, i) => (
             <Tab
