@@ -8,10 +8,10 @@ import cacaoWhey from "@/assets/cacao-whey-cut.png";
 import creatina from "@/assets/creatina-creapure-cut.png";
 
 const products = [
-  { brand: "Essential", title: "Beef Protein Pure Cacao", price: "R$ 389,90", cashback: "R$ 38,99", image: beefProtein },
-  { brand: "Essential", title: "Vanilla Whey", price: "R$ 454,00", cashback: "R$ 45,40", image: vanillaWhey },
-  { brand: "Essential", title: "Cacao Whey", price: "R$ 454,00", cashback: "R$ 45,40", image: cacaoWhey },
-  { brand: "Nutrify", title: "Creatina Creapure", price: "R$ 209,99", cashback: "R$ 21,00", image: creatina },
+  { brand: "Essential", title: "Beef Protein Pure Cacao", price: "R$ 389,90", cashback: "R$ 38,99", image: beefProtein, message: "Olá! Vi o Beef Protein Pure Cacao no site da Biomundo ParkShopping. Gostaria de mais informações." },
+  { brand: "Essential", title: "Vanilla Whey", price: "R$ 454,00", cashback: "R$ 45,40", image: vanillaWhey, message: "Olá! Vi o Vanilla Whey no site da Biomundo ParkShopping. Gostaria de mais informações." },
+  { brand: "Essential", title: "Cacao Whey", price: "R$ 454,00", cashback: "R$ 45,40", image: cacaoWhey, message: "Olá! Vi o Cacao Whey no site da Biomundo ParkShopping. Gostaria de mais informações." },
+  { brand: "Nutrify", title: "Creatina Creapure", price: "R$ 209,99", cashback: "R$ 21,00", image: creatina, message: "Olá! Vi a Creatina Creapure no site da Biomundo ParkShopping. Gostaria de mais informações." },
 ];
 
 const ArrowButton = ({
