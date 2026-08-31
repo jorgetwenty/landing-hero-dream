@@ -44,14 +44,34 @@ const CouponVoucher = ({ onClick }: { onClick: () => void }) => (
   <button
     type="button"
     onClick={onClick}
-    className="mt-2 w-full rounded-lg border border-[#D9C9AE] bg-[#FDFBF7] px-3 pt-2 pb-1.5 text-left transition-colors duration-150 hover:border-[#16A34A]/40 hover:bg-[#F5F1E9]"
+    className="group/coupon relative mt-2 w-full overflow-hidden rounded-lg border border-[#D9C9AE] bg-[#FDFBF7] transition-colors duration-150 hover:border-[#16A34A]/40 hover:bg-[#F5F1E9]"
   >
-    <p className="font-sans text-[10px] font-semibold uppercase tracking-wide text-[#16A34A] md:text-[11px]">
-      10% OFF na loja física
-    </p>
-    <p className="font-sans text-[9px] font-medium leading-snug text-[#8B5A2B] md:text-[10px]">
-      BioMundo ParkShopping · Apresente no caixa
-    </p>
+    {/* side cutouts */}
+    <span className="pointer-events-none absolute -left-2.5 top-1/2 z-10 h-5 w-5 -translate-y-1/2 rounded-full bg-white md:h-6 md:w-6" />
+    <span className="pointer-events-none absolute -right-2.5 top-1/2 z-10 h-5 w-5 -translate-y-1/2 rounded-full bg-white md:h-6 md:w-6" />
+
+    <div className="flex items-stretch px-2 py-2 md:px-3 md:py-2.5">
+      {/* discount value */}
+      <div className="flex w-[34%] flex-col items-center justify-center pr-1">
+        <span className="font-hero text-xl font-bold leading-none text-[#16A34A] md:text-2xl">10%</span>
+        <span className="mt-0.5 font-sans text-[8px] font-medium uppercase tracking-wide text-[#16A34A]/80 md:text-[9px]">OFF</span>
+      </div>
+
+      {/* dotted divider */}
+      <div className="relative mx-1 w-0 border-l-2 border-dotted border-[#D9C9AE]" />
+
+      {/* code + validity */}
+      <div className="flex flex-1 flex-col justify-center pl-2 text-left">
+        <span className="font-sans text-[10px] font-semibold uppercase tracking-wide text-neutral-700 md:text-[11px]">Na loja física</span>
+        <span className="font-hero text-base font-bold uppercase tracking-wide text-[#8B5A2B] md:text-lg">PARK10</span>
+      </div>
+    </div>
+
+    {/* bottom strip */}
+    <div className="flex items-center justify-between border-t border-dashed border-[#D9C9AE] px-2.5 py-1.5 md:px-3 md:py-2">
+      <span className="font-sans text-[9px] font-medium text-[#8B5A2B] md:text-[10px]">BioMundo ParkShopping</span>
+      <span className="font-sans text-[9px] font-semibold text-[#16A34A] md:text-[10px]">Apresente no caixa</span>
+    </div>
   </button>
 );
 
