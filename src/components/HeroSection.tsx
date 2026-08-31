@@ -67,7 +67,7 @@ className="font-hero text-3xl font-bold uppercase leading-[1.05] text-white [tex
         initial={{ opacity: 0, y: -12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.35, duration: 0.6, ease: "easeOut" }}
-        className="absolute left-1/2 top-[88px] z-20 w-full max-w-[260px] -translate-x-1/2 md:top-[100px] md:max-w-[320px]"
+        className="absolute left-1/2 top-[84px] z-20 w-full max-w-[300px] -translate-x-1/2 md:top-[92px] md:max-w-[420px]"
       >
         <img
           src={biomundoLogo.url}
