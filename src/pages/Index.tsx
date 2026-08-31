@@ -6,6 +6,7 @@ import TextMarquee from "@/components/TextMarquee";
 import BenefitsSection from "@/components/BenefitsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import LocationSection from "@/components/LocationSection";
+import Footer from "@/components/Footer";
 
 const Index = () => (
   <main>
@@ -17,6 +18,7 @@ const Index = () => (
     <BenefitsSection />
     <TestimonialsSection />
     <LocationSection />
+    <Footer />
   </main>
 );
 
