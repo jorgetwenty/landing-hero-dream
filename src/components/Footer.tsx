@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Instagram, MessageCircle, MapPin } from "lucide-react";
+import { whatsappLink } from "@/lib/whatsapp";
 import {
   Dialog,
   DialogContent,
