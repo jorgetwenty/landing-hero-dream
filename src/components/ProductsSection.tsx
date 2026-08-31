@@ -41,7 +41,7 @@ const ArrowButton = ({
 );
 
 const CouponVoucher = () => (
-  <div className="relative mt-2 flex w-full items-center overflow-hidden rounded-md border border-[#8B5A2B]/30 bg-[#F5F1E9]">
+  <div className="relative mt-2 flex w-full items-stretch overflow-hidden rounded-md border border-[#8B5A2B]/30 bg-[#F5F1E9]">
     {/* Left green block with discount */}
     <div className="flex shrink-0 flex-col items-center justify-center bg-[#16A34A] px-2 py-1.5 text-center">
       <span className="font-hero text-[11px] font-bold leading-none text-white md:text-xs">10%</span>
@@ -49,15 +49,18 @@ const CouponVoucher = () => (
     </div>
 
     {/* Dotted divider */}
-    <div className="relative mx-1 h-7 border-l border-dashed border-[#8B5A2B]/40" />
+    <div className="mx-1 my-1 border-l border-dashed border-[#8B5A2B]/40" />
 
     {/* Coupon text */}
-    <div className="flex min-w-0 flex-1 flex-col justify-center pr-1">
+    <div className="flex min-w-0 flex-1 flex-col justify-center py-1 pr-1">
       <span className="truncate font-sans text-[8px] font-semibold uppercase tracking-wide text-[#16A34A] md:text-[9px]">
         Na loja física
       </span>
       <span className="truncate font-sans text-[7px] font-medium text-[#8B5A2B] md:text-[8px]">
         BioMundo ParkShopping
+      </span>
+      <span className="truncate font-sans text-[7px] font-medium text-neutral-500 md:text-[8px]">
+        Apresente no caixa
       </span>
     </div>
 
