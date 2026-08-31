@@ -58,7 +58,7 @@ const BenefitsSection = () => {
                 </div>
               </div>
               <div className="right">
-                <div>BEMVINDO10</div>
+                <div>BIOMUNDOPKS10</div>
               </div>
             </div>
 
@@ -66,7 +66,7 @@ const BenefitsSection = () => {
               Cupom de 10%
             </h3>
 <p className="mb-6 mt-3 max-w-sm font-sans text-sm font-medium leading-relaxed text-neutral-600">
-              Use o cupom <strong className="font-semibold text-neutral-900">BEMVINDO10</strong> na
+              Use o cupom <strong className="font-semibold text-neutral-900">BIOMUNDOPKS10</strong> na
               sua primeira compra e economize na hora.
             </p>
             <button type="button" className="nb-btn mt-auto font-sans">
