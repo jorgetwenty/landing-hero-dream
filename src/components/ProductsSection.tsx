@@ -41,52 +41,31 @@ const ArrowButton = ({
 );
 
 const CouponVoucher = ({ onClick }: { onClick: () => void }) => (
-  <div
+  <button
+    type="button"
     onClick={onClick}
-    role="button"
-    tabIndex={0}
-    onKeyDown={(e) => {
-      if (e.key === "Enter" || e.key === " ") onClick();
-    }}
-    className="relative mt-2 w-full cursor-pointer overflow-hidden rounded-[5px] border border-[#D9C9AE] bg-[#FDFBF7] px-2.5 py-2.5 shadow-[0_2px_4px_0_rgba(0,0,0,0.08)] transition-colors duration-150 hover:border-[#16A34A]/40 hover:bg-[#F5F1E9] md:mt-3"
+    className="mt-2 w-full rounded-xl border border-[#D9C9AE] bg-[#FDFBF7] p-2 text-left transition-all duration-150 hover:-translate-y-0.5 hover:shadow-[2px_2px_0_0_rgba(139,90,43,0.12)] active:translate-y-0 md:mt-3 md:p-2.5"
   >
-    {/* side cutouts */}
-    <span
-      className="pointer-events-none absolute z-[1] h-8 w-8 rounded-full bg-white md:h-10 md:w-10"
-      style={{ left: "-16px", top: "50%", transform: "translateY(-50%)" }}
-    />
-    <span
-      className="pointer-events-none absolute z-[1] h-8 w-8 rounded-full bg-white md:h-10 md:w-10"
-      style={{ right: "-16px", top: "50%", transform: "translateY(-50%)" }}
-    />
-
-    <div className="relative flex h-[72px] items-center justify-between md:h-[88px]">
-      {/* discount value */}
-      <div className="flex w-[34%] items-center justify-center">
-        <span className="font-hero text-[26px] font-bold leading-none text-[#16A34A] md:text-[32px]">10%</span>
+    <div className="flex items-center gap-2 md:gap-2.5">
+      <div className="flex h-10 w-10 shrink-0 flex-col items-center justify-center rounded-lg bg-[#16A34A] text-white md:h-12 md:w-12">
+        <span className="font-hero text-sm font-bold leading-none md:text-base">10%</span>
+        <span className="font-sans text-[8px] font-medium uppercase leading-none md:text-[9px]">OFF</span>
       </div>
 
-      {/* dotted divider */}
-      <div
-        className="absolute top-1/2 h-[52px] -translate-y-1/2 border-l-[4px] border-dotted border-[#D9C9AE] md:h-[68px]"
-        style={{ left: "40%" }}
-      />
-
-      {/* code + validity */}
-      <div className="flex flex-1 flex-col justify-center pl-5 pr-2 text-left md:pl-7">
-        <span className="font-hero text-sm font-bold uppercase tracking-wide text-[#565656] md:text-base">PARK10</span>
-        <span className="mt-0.5 font-sans text-[10px] font-medium text-[#696969] md:text-[11px]">Na loja física</span>
+      <div className="min-w-0 flex-1">
+        <p className="font-sans text-[10px] font-semibold uppercase tracking-wide text-[#16A34A] md:text-[11px]">
+          Na loja física
+        </p>
+        <p className="truncate font-sans text-[9px] font-medium text-[#8B5A2B] md:text-[10px]">
+          BioMundo ParkShopping · Apresente no caixa
+        </p>
       </div>
     </div>
 
-    {/* bottom strip */}
-    <div className="mt-1 flex h-[34px] items-center justify-between border-t-2 border-[#E5DDD0] px-1 pt-2 md:h-[40px] md:pt-2.5">
-      <span className="truncate pr-2 font-sans text-[9px] font-medium text-[#696969] md:text-[10px]">BioMundo ParkShopping</span>
-      <span className="shrink-0 rounded-sm bg-[#16A34A] px-2 py-1 font-sans text-[9px] font-semibold text-white md:px-2.5 md:text-[10px]">
-        USE IT
-      </span>
+    <div className="mt-2 flex h-7 items-center justify-center rounded-lg border border-dashed border-[#16A34A]/40 bg-white font-sans text-[10px] font-bold uppercase tracking-wide text-[#16A34A] transition-colors hover:bg-[#16A34A] hover:text-white md:mt-2.5 md:h-8 md:text-xs">
+      Pegar cupom de 10%
     </div>
-  </div>
+  </button>
 );
 
 const CouponModal = ({ open, onOpenChange }: { open: boolean; onOpenChange: (v: boolean) => void }) => (
