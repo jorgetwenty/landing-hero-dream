@@ -28,10 +28,7 @@ const AboutSection = () => {
 
           {/* Texto — embaixo no mobile, direita no desktop */}
           <div className="order-2 md:order-none">
-            <p className="mb-4 font-sans text-[11px] font-medium uppercase tracking-[0.25em] text-[#16A34A] md:text-xs">
-              Biomundo ParkShopping
-            </p>
-<h2 className="font-hero text-4xl font-bold uppercase leading-[1.02] text-neutral-900 md:text-5xl">
+            <h2 className="font-hero text-4xl font-bold uppercase leading-[1.02] text-neutral-900 md:text-5xl">
               O que você <span className="text-[#16A34A]">gosta</span>, do jeito que você procura.
             </h2>
 <p className="mt-4 max-w-md font-sans text-base leading-relaxed text-neutral-600 md:text-lg">
