@@ -54,22 +54,22 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="w-full bg-[#F1E8D6] border-t-2 border-[#1c1917]/10 py-14 md:py-20 px-6">
-        <div className="max-w-5xl mx-auto flex flex-col items-center text-center gap-8 md:gap-10">
+      <footer className="w-full bg-[#F1E8D6] border-t-2 border-[#1c1917]/10 py-8 md:py-10 px-6">
+        <div className="max-w-5xl mx-auto flex flex-col items-center text-center gap-5 md:gap-6">
 
           {/* Logo */}
           <img
             src={logo}
             alt="Biomundo ParkShopping"
-            className="w-36 md:w-48 h-auto"
+            className="w-28 md:w-36 h-auto"
             loading="lazy"
           />
 
           {/* Localização */}
           <div className="flex items-center gap-2 text-[#1c1917]">
-            <MapPin className="w-4 h-4 text-[#16A34A]" strokeWidth={2.2} />
+            <MapPin className="w-3.5 h-3.5 text-[#16A34A]" strokeWidth={2.2} />
             <span
-              className="text-xs md:text-sm font-medium tracking-[0.18em] uppercase"
+              className="text-[11px] md:text-xs font-medium tracking-[0.16em] uppercase"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
               ParkShopping · Brasília
@@ -83,9 +83,9 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram da Biomundo ParkShopping"
-              className="nb-btn !gap-2"
+              className="nb-btn !gap-2 !px-4 !py-2 text-xs"
             >
-              <Instagram className="w-4 h-4" strokeWidth={2.2} />
+              <Instagram className="w-3.5 h-3.5" strokeWidth={2.2} />
               Instagram
             </a>
             <a
@@ -93,23 +93,23 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp da Biomundo ParkShopping"
-              className="nb-btn !gap-2"
+              className="nb-btn !gap-2 !px-4 !py-2 text-xs"
               style={{ backgroundColor: "#F5F1E9" }}
             >
-              <MessageCircle className="w-4 h-4" strokeWidth={2.2} />
+              <MessageCircle className="w-3.5 h-3.5" strokeWidth={2.2} />
               WhatsApp
             </a>
           </div>
 
           {/* Divisor */}
-          <div className="w-full max-w-xs h-px bg-[#1c1917]/15" />
+          <div className="w-full max-w-[16rem] h-px bg-[#1c1917]/15" />
 
           {/* Disclaimer + copyright */}
-          <div className="space-y-2">
-            <p className="text-[#1c1917]/50 text-[11px] md:text-xs leading-relaxed max-w-md mx-auto">
+          <div className="space-y-1.5">
+            <p className="text-[#1c1917]/50 text-[10px] md:text-[11px] leading-relaxed max-w-sm mx-auto">
               Este site não é afiliado ao Facebook ou qualquer entidade do Facebook. Ao sair do Facebook ou Instagram, a responsabilidade não é deles e sim do nosso site.
             </p>
-            <p className="text-[#1c1917]/70 text-[11px] md:text-xs font-medium">
+            <p className="text-[#1c1917]/70 text-[10px] md:text-[11px] font-medium">
               Copyright © 2026 · Biomundo ParkShopping · Todos os direitos reservados.
             </p>
           </div>
@@ -118,14 +118,14 @@ const Footer = () => {
           <div className="flex items-center justify-center gap-3">
             <button
               onClick={() => setPrivacyOpen(true)}
-              className="text-[#1c1917]/50 text-[11px] md:text-xs underline underline-offset-4 hover:text-[#1c1917] transition-colors"
+              className="text-[#1c1917]/50 text-[10px] md:text-[11px] underline underline-offset-4 hover:text-[#1c1917] transition-colors"
             >
               Política de privacidade
             </button>
             <span className="text-[#1c1917]/30 text-xs">·</span>
             <button
               onClick={() => setTermsOpen(true)}
-              className="text-[#1c1917]/50 text-[11px] md:text-xs underline underline-offset-4 hover:text-[#1c1917] transition-colors"
+              className="text-[#1c1917]/50 text-[10px] md:text-[11px] underline underline-offset-4 hover:text-[#1c1917] transition-colors"
             >
               Termos de uso
             </button>
