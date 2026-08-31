@@ -77,6 +77,29 @@ const Footer = () => {
           <p className="text-foreground text-xs md:text-sm">
             Todos os direitos reservados.
           </p>
+          <div className="flex items-center justify-center gap-4 pt-2">
+            <a
+              href="https://instagram.com/biomundoparkshopping"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram da Biomundo ParkShopping"
+              className="flex items-center gap-2 text-muted-foreground text-xs md:text-sm hover:text-foreground transition-colors"
+            >
+              <Instagram className="w-4 h-4" />
+              <span className="underline underline-offset-4">Instagram</span>
+            </a>
+            <a
+              href="https://wa.me/5561999999999"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp da Biomundo ParkShopping"
+              className="flex items-center gap-2 text-muted-foreground text-xs md:text-sm hover:text-foreground transition-colors"
+            >
+              <Phone className="w-4 h-4" />
+              <span className="underline underline-offset-4">WhatsApp</span>
+            </a>
+          </div>
+
           <div className="flex items-center justify-center gap-2 pt-2">
             <button
               onClick={() => setPrivacyOpen(true)}
