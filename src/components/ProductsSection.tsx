@@ -190,17 +190,10 @@ const ProductsSection = () => {
                   <span className="min-w-0 font-sans text-base font-semibold text-neutral-900 md:text-xl">
                     {p.price}
                   </span>
-                  <button
-                    type="button"
-                    onClick={() => setModalOpen(true)}
-                    className="nb-btn w-auto shrink-0 !px-3 !py-1.5 !text-[10px] md:!px-4 md:!py-2 md:!text-xs"
-                  >
-                    Pegar cupom de 10%
-                  </button>
                 </div>
 
                 <div className="mt-auto">
-                  <CouponVoucher />
+                  <CouponVoucher onClick={() => setModalOpen(true)} />
 
                   <p className="mt-1.5 font-sans text-[10px] font-medium text-[#16A34A] md:mt-2 md:text-sm">
                     10% de volta · {p.cashback}
