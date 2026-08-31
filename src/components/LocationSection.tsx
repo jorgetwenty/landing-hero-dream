@@ -3,7 +3,7 @@ import { Clock, MapPin, Phone } from "lucide-react";
 
 /* ====== Troque pelos dados reais da loja ====== */
 const STORE = {
-  name: "Biomundo Parkshopping",
+  name: "Biomundo ParkShopping",
   tagline: "Loja física • Suplementos e alimentação natural",
   address: "ParkShopping Brasília — SAI/SO Trecho 1, Guará",
   city: "Brasília / DF",
