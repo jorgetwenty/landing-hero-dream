@@ -1,20 +1,8 @@
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
+import biomundoLogo from "@/assets/biomundo-logo.png.asset.json";
 import heroVideo from "@/assets/biomundo.mp4.asset.json";
 import heroBg from "@/assets/hero-proteina.png.asset.json";
-
-const LeafMark = ({ className }: { className?: string }) => (
-  <svg viewBox="0 0 40 40" fill="none" className={className} aria-hidden>
-    <path
-      d="M20 2C10 8 6 18 20 38C34 18 30 8 20 2Z"
-      fill="#4ADE80"
-      stroke="#16A34A"
-      strokeWidth="2"
-      strokeLinejoin="round"
-    />
-    <path d="M20 8V32" stroke="#16A34A" strokeWidth="2" strokeLinecap="round" />
-  </svg>
-);
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
