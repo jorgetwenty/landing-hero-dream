@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
+import { whatsappLink } from "@/lib/whatsapp";
 import biomundoLogo from "@/assets/biomundo-logo.png.asset.json";
 import heroVideo from "@/assets/biomundo.mp4.asset.json";
 import heroBg from "@/assets/hero-proteina.png.asset.json";
@@ -14,10 +15,6 @@ const fadeUp = {
 };
 
 const HeroSection = () => {
-  const scrollToProducts = () => {
-    document.getElementById("produtos")?.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
-
   return (
     <section id="inicio" className="relative h-screen min-h-[560px] w-full overflow-hidden rounded-b-xl md:rounded-b-2xl">
       {/* Background video — sem gradiente, imagem vívida */}
@@ -55,9 +52,14 @@ const HeroSection = () => {
             Produtos naturais, sem açúcar e sem glúten. Para quem não abre mão do sabor.
           </motion.p>
           <motion.div custom={2} initial="hidden" animate="visible" variants={fadeUp} className="mt-5 flex justify-center md:mt-7 md:justify-start">
-            <button onClick={scrollToProducts} className="nb-btn !px-8 !py-3 !text-sm">
+            <a
+              href={whatsappLink("Olá! Vim pelo site da Biomundo ParkShopping e quero conhecer os produtos.")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nb-btn !px-8 !py-3 !text-sm"
+            >
               Quero descobrir
-            </button>
+            </a>
           </motion.div>
         </div>
       </div>

@@ -1,15 +1,17 @@
 import { useRef, useState } from "react";
+import { MessageCircle } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { whatsappLink } from "@/lib/whatsapp";
 import beefProtein from "@/assets/beef-protein-cut.png";
 import vanillaWhey from "@/assets/vanilla-whey-cut.png";
 import cacaoWhey from "@/assets/cacao-whey-cut.png";
 import creatina from "@/assets/creatina-creapure-cut.png";
 
 const products = [
-  { brand: "Essential", title: "Beef Protein Pure Cacao", price: "R$ 389,90", cashback: "R$ 38,99", image: beefProtein },
-  { brand: "Essential", title: "Vanilla Whey", price: "R$ 454,00", cashback: "R$ 45,40", image: vanillaWhey },
-  { brand: "Essential", title: "Cacao Whey", price: "R$ 454,00", cashback: "R$ 45,40", image: cacaoWhey },
-  { brand: "Nutrify", title: "Creatina Creapure", price: "R$ 209,99", cashback: "R$ 21,00", image: creatina },
+  { brand: "Essential", title: "Beef Protein Pure Cacao", price: "R$ 389,90", cashback: "R$ 38,99", image: beefProtein, message: "Olá! Vi o Beef Protein Pure Cacao no site da Biomundo ParkShopping. Gostaria de mais informações." },
+  { brand: "Essential", title: "Vanilla Whey", price: "R$ 454,00", cashback: "R$ 45,40", image: vanillaWhey, message: "Olá! Vi o Vanilla Whey no site da Biomundo ParkShopping. Gostaria de mais informações." },
+  { brand: "Essential", title: "Cacao Whey", price: "R$ 454,00", cashback: "R$ 45,40", image: cacaoWhey, message: "Olá! Vi o Cacao Whey no site da Biomundo ParkShopping. Gostaria de mais informações." },
+  { brand: "Nutrify", title: "Creatina Creapure", price: "R$ 209,99", cashback: "R$ 21,00", image: creatina, message: "Olá! Vi a Creatina Creapure no site da Biomundo ParkShopping. Gostaria de mais informações." },
 ];
 
 const ArrowButton = ({
@@ -219,6 +221,16 @@ const ProductsSection = () => {
                   <p className="mt-1.5 font-sans text-[10px] font-medium text-[#16A34A] md:mt-2 md:text-sm">
                     10% de volta · {p.cashback}
                   </p>
+
+                  <a
+                    href={whatsappLink(p.message)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="nb-btn mt-2 inline-flex w-full items-center justify-center gap-2 !px-3 !py-2 text-[10px] md:mt-2.5 md:!py-2.5 md:text-xs"
+                  >
+                    <MessageCircle className="h-3.5 w-3.5" strokeWidth={2.2} />
+                    Quero este produto
+                  </a>
                 </div>
               </div>
             </article>
