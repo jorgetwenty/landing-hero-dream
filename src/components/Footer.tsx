@@ -85,6 +85,14 @@ const Footer = () => {
               rel="noopener noreferrer"
               aria-label="Instagram da Biomundo ParkShopping"
               className="nb-btn !gap-2 !px-4 !py-2 text-xs"
+              onClick={(e) => {
+                e.preventDefault();
+                window.open(
+                  "https://www.instagram.com/biomundodfparkshopping/",
+                  "_blank",
+                  "noopener,noreferrer"
+                );
+              }}
             >
               <Instagram className="w-3.5 h-3.5" strokeWidth={2.2} />
               Instagram
