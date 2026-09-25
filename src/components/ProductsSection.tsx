@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, ShoppingBag } from "lucide-react";
+import CartDrawer, { type CartItem } from "@/components/CartDrawer";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { whatsappLink } from "@/lib/whatsapp";
 import beefProtein from "@/assets/beef-protein-cut.png";
@@ -145,6 +146,20 @@ const ProductsSection = () => {
   const [atStart, setAtStart] = useState(true);
   const [atEnd, setAtEnd] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
+  const [cart, setCart] = useState<CartItem[]>([]);
+  const [cartOpen, setCartOpen] = useState(false);
+
+  const addToCart = (p: (typeof products)[number]) => {
+    setCart((c) => {
+      const found = c.find((i) => i.title === p.title);
+      if (found) return c.map((i) => (i.title === p.title ? { ...i, qty: i.qty + 1 } : i));
+      return [...c, { title: p.title, brand: p.brand, price: p.price, image: p.image, qty: 1 }];
+    });
+    setCartOpen(true);
+  };
+  const changeQty = (title: string, d: number) =>
+    setCart((c) => c.map((i) => (i.title === title ? { ...i, qty: i.qty + d } : i)).filter((i) => i.qty > 0));
+  const removeItem = (title: string) => setCart((c) => c.filter((i) => i.title !== title));
 
   const scroll = (dir: number) => {
     const el = trackRef.current;
@@ -231,6 +246,14 @@ const ProductsSection = () => {
                     <MessageCircle className="h-3.5 w-3.5" strokeWidth={2.2} />
                     Quero este produto
                   </a>
+                  <button
+                    type="button"
+                    onClick={() => addToCart(p)}
+                    className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-full border border-neutral-900 bg-white px-3 py-2 font-sans text-[10px] font-medium uppercase tracking-wide text-neutral-900 transition-colors hover:bg-[#F1E8D6] md:py-2.5 md:text-xs"
+                  >
+                    <ShoppingBag className="h-3.5 w-3.5" strokeWidth={2.2} />
+                    Adicionar ao carrinho
+                  </button>
                 </div>
               </div>
             </article>
@@ -240,6 +263,7 @@ const ProductsSection = () => {
       </div>
 
       <CouponModal open={modalOpen} onOpenChange={setModalOpen} />
+      <CartDrawer items={cart} open={cartOpen} onOpenChange={setCartOpen} onChangeQty={changeQty} onRemove={removeItem} />
     </section>
   );
 };
