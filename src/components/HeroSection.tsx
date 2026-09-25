@@ -3,7 +3,6 @@ import Navbar from "@/components/Navbar";
 import { whatsappLink } from "@/lib/whatsapp";
 import biomundoLogo from "@/assets/biomundo-logo.png.asset.json";
 import heroVideo from "@/assets/hero-novo.mp4.asset.json";
-import heroBg from "@/assets/hero-poster.jpg.asset.json";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -24,7 +23,6 @@ const HeroSection = () => {
         loop
         playsInline
         preload="auto"
-        poster={heroBg.url}
         className="absolute inset-0 h-full w-full object-cover object-center"
       >
         <source src={heroVideo.url} type="video/mp4" />
