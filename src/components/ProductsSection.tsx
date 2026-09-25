@@ -239,7 +239,7 @@ const ProductsSection = () => {
 
                   <a
                     href={whatsappLink(p.message)}
-                    target="_blank"
+                    target="_top"
                     rel="noopener noreferrer"
                     className="nb-btn mt-2 inline-flex w-full items-center justify-center gap-2 !px-3 !py-2 text-[10px] md:mt-2.5 md:!py-2.5 md:text-xs"
                   >

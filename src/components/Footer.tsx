@@ -81,7 +81,7 @@ const Footer = () => {
           <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4">
             <a
               href="https://www.instagram.com/biomundodfparkshopping/"
-              target="_blank"
+              target="_top"
               rel="noopener noreferrer"
               aria-label="Instagram da Biomundo ParkShopping"
               className="nb-btn !gap-2 !px-4 !py-2 text-xs"
