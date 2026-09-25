@@ -46,7 +46,7 @@ const BenefitsSection = () => {
             </p>
             <a
               href={whatsappLink("Olá! Quero saber mais sobre o cashback da Biomundo ParkShopping.")}
-              target="_blank"
+              target="_top"
               rel="noopener noreferrer"
               className="nb-btn mt-auto font-sans"
             >
@@ -81,7 +81,7 @@ const BenefitsSection = () => {
             </p>
             <a
               href={whatsappLink("Olá! Quero usar o cupom BIOMUNDOPKS10 na Biomundo ParkShopping.")}
-              target="_blank"
+              target="_top"
               rel="noopener noreferrer"
               className="nb-btn mt-auto font-sans"
             >

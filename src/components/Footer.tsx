@@ -99,7 +99,7 @@ const Footer = () => {
             </a>
             <a
               href={whatsappLink("Olá! Vim pelo site da Biomundo ParkShopping e gostaria de tirar uma dúvida.")}
-              target="_blank"
+              target="_top"
               rel="noopener noreferrer"
               aria-label="WhatsApp da Biomundo ParkShopping"
               className="nb-btn !gap-2 !px-4 !py-2 text-xs"

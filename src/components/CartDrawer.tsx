@@ -87,7 +87,7 @@ const CartDrawer = ({ items, open, onOpenChange, onChangeQty, onRemove }: Props)
                 </div>
                 <a
                   href={whatsappLink(message)}
-                  target="_blank"
+                  target="_top"
                   rel="noopener noreferrer"
                   className="nb-btn mt-4 inline-flex w-full items-center justify-center !py-3 text-xs"
                 >
